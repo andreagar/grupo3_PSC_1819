@@ -1,2 +1,7 @@
 hola soy andrea
+<<<<<<< HEAD
 que tal?
+=======
+
+push de Ainhoa
+>>>>>>> a63be28af7fceb2dc060d0ed5c0e13d37a5e0b6e
