@@ -33,20 +33,21 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		contentPane.setLayout(null);
 		
 		btnLogIn = new JButton("LOG IN");
-		btnLogIn.setFont(new Font("Stencil", Font.BOLD, 18));
-		btnLogIn.setBounds(10, 141, 438, 75);
+		btnLogIn.setFont(new Font("Candara", Font.BOLD, 18));
+		btnLogIn.setBounds(140, 130, 200, 75);
 		contentPane.add(btnLogIn);
 		//btnLogIn.addActionListener(this);
 		
 		btnRegistrarse = new JButton("REGISTRARSE");
-		btnRegistrarse.setFont(new Font("Stencil", Font.BOLD, 18));
-		btnRegistrarse.setBounds(10, 227, 438, 75);
+		btnRegistrarse.setFont(new Font("Candara", Font.BOLD, 18));
+		btnRegistrarse.setBounds(140, 227, 200, 75);
 		contentPane.add(btnRegistrarse);
 		btnRegistrarse.addActionListener(this);
 		
-		JLabel lblNewLabel = new JLabel("HyraCar");
-		lblNewLabel.setFont(new Font("Stencil", Font.BOLD, 24));
-		lblNewLabel.setBounds(153, 50, 212, 41);
+		JLabel lblNewLabel = new JLabel("Alquiler de coches HyraCar", SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Candara", Font.BOLD, 24));
+		lblNewLabel.setBounds(80, 50, 300, 41);
+		lblNewLabel.setVerticalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
 		//btnRegistrarse.addActionListener(this);
 		

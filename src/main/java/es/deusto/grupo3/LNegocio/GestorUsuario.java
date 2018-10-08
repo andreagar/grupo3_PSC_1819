@@ -67,7 +67,7 @@ public class GestorUsuario {
 	
 		
 	/** AÃ±ade un usuario a la tabla USUARIO de BD, 
-	 * que debe estar abierta y tener el formato y los nombres de campos apropiados: (int numJuego, Sting nombre, String contrasenya)
+	 * que debe estar abierta y tener el formato y los nombres de campos apropiados: (int idUsuario, Sting nombre, String password)
 	 * Usa la sentencia INSERT de SQL.
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al usuario)
 	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
