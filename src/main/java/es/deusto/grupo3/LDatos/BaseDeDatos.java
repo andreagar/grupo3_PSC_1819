@@ -42,4 +42,34 @@ public class BaseDeDatos {
 			e.printStackTrace();
 		}
 	}
+	
+	/** Devuelve la conexion si ha sido establecida previamente (#initBD()).
+	 * @return	Conexion con la BD, null si no se ha establecido correctamente.
+	 */
+	public static Connection getConnection() {
+		return connection;
+	}
+	
+	/** Devuelve una sentencia para trabajar con la BD,
+	 * si la conexion si ha sido establecida previamente (#initBD()).
+	 * @return	Sentencia de trabajo con la BD, null si no se ha establecido correctamente.
+	 */
+	public static Statement getStatement() {
+		return statement;
+	}
+	
+	/** Crea una tabla en una base de datos, si no existia ya.
+	 * Debe haberse inicializado la conexion correctamente.
+	 */
+	//CREAR TABLA USUARIO
+	public static void crearTablaBDUsuario() {
+		if (statement==null) return;
+		try {
+			statement.executeUpdate("create table if not exists USUARIO (nombre string, contrasenya string)");
+		} catch (SQLException e) {
+			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+			if (!e.getMessage().equals("table interaccion already exists"))
+				e.printStackTrace();  
+		}
+	}
 }
