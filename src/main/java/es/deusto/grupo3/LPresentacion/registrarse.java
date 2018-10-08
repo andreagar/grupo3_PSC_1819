@@ -25,7 +25,7 @@ public class registrarse extends JFrame implements ActionListener{
 	private JTextField textField;
 	private JPasswordField passwordField;
 	private JLabel lblNombreDeUsuario;
-	private JLabel lblContrasea;
+	private JLabel lblContrasena;
 	private JButton btnAceptar;
 	private JButton btnCancelar;
 
@@ -54,10 +54,10 @@ public class registrarse extends JFrame implements ActionListener{
 		lblNombreDeUsuario.setBounds(123, 50, 264, 20);
 		contentPane.add(lblNombreDeUsuario);
 		
-		lblContrasea = new JLabel("Contrase\u00F1a");
-		lblContrasea.setFont(new Font("Candara", Font.PLAIN, 25));
-		lblContrasea.setBounds(160, 145, 169, 32);
-		contentPane.add(lblContrasea);
+		lblContrasena = new JLabel("Contrase\u00F1a");
+		lblContrasena.setFont(new Font("Candara", Font.PLAIN, 25));
+		lblContrasena.setBounds(160, 145, 169, 32);
+		contentPane.add(lblContrasena);
 		
 		btnAceptar = new JButton("ACEPTAR");
 		btnAceptar.setFont(new Font("Candara", Font.BOLD, 18));
@@ -79,16 +79,11 @@ public class registrarse extends JFrame implements ActionListener{
 		char[] elChar = passwordField.getPassword();
 		String contrasenya = String.valueOf(elChar);						
 		
-		
 		if (e.getSource() == btnAceptar){
-			
 			GestorUsuario usuario = new GestorUsuario(nombre, contrasenya);
-
-			BaseDeDatos.crearTablaBDUsuario();
-			
+			BaseDeDatos.crearTablaBDUsuario();	
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
-			usuario.anyadirFilaATablauUsuario(BaseDeDatos.getStatement(), nombre);
-				
+			usuario.anyadirFilaATablauUsuario(BaseDeDatos.getStatement(), nombre);	
 			dispose();
 		}
 		

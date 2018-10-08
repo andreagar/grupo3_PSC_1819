@@ -15,15 +15,19 @@ import javax.swing.border.EmptyBorder;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 
-public class vistaPrincipal extends JFrame implements ActionListener{
+public class menuUsuario extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JButton btnLogIn;
-	private JButton btnRegistrarse;
+	private JButton btnAlquilar;
+	private JButton btnHistorial;
+	private JButton btnSalir;
+	private String nombre;
 	
-	public vistaPrincipal()
+	public menuUsuario (String nombre)
 	{
+		this.nombre = nombre;
+		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 474, 393);
@@ -32,17 +36,23 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		btnLogIn = new JButton("LOG IN");
-		btnLogIn.setFont(new Font("Candara", Font.BOLD, 18));
-		btnLogIn.setBounds(140, 130, 200, 75);
-		contentPane.add(btnLogIn);
-		btnLogIn.addActionListener(this);
+		btnAlquilar = new JButton("Alquilar coche");
+		btnAlquilar.setFont(new Font("Candara", Font.BOLD, 18));
+		btnAlquilar.setBounds(140, 130, 200, 55);
+		contentPane.add(btnAlquilar);
+		btnAlquilar.addActionListener(this);
 		
-		btnRegistrarse = new JButton("REGISTRARSE");
-		btnRegistrarse.setFont(new Font("Candara", Font.BOLD, 18));
-		btnRegistrarse.setBounds(140, 227, 200, 75);
-		contentPane.add(btnRegistrarse);
-		btnRegistrarse.addActionListener(this);
+		btnHistorial = new JButton("Ver mi historial");
+		btnHistorial.setFont(new Font("Candara", Font.BOLD, 18));
+		btnHistorial.setBounds(140, 230, 200, 55);
+		contentPane.add(btnHistorial);
+		btnHistorial.addActionListener(this);
+		
+		btnSalir = new JButton("Cerrar sesion");
+		btnSalir.setFont(new Font("Candara", Font.BOLD, 12));
+		btnSalir.setBounds(10, 330, 120, 27);
+		contentPane.add(btnSalir);
+		btnSalir.addActionListener(this);
 		
 		JLabel lblNewLabel = new JLabel("Alquiler de coches HyraCar", SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Candara", Font.BOLD, 24));
@@ -64,16 +74,24 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
-		if (e.getSource() == btnRegistrarse){
-			registrarse registrarse = new registrarse();
-			registrarse.setVisible(true);
+		if (e.getSource() == btnHistorial){
+//			registrarse registrarse = new registrarse();
+//			registrarse.setVisible(true);
 			
 		}
 		
-		if (e.getSource() == btnLogIn){
-			login logIn = new login();
-			logIn.setVisible(true);
+		if (e.getSource() == btnAlquilar){
+//			LOGIN LOGIN = NEW LOGIN();
+//			LOGIN.SETVISIBLE(TRUE);
+//			DIspose();
+			
+		}
+		
+		if (e.getSource() == btnSalir){
+			nombre = null;
 			dispose();
+			vistaPrincipal frame = new vistaPrincipal();
+			frame.setVisible(true);
 			
 		}
 	}
