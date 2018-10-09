@@ -75,20 +75,21 @@ public class GestorUsuario {
 	public boolean anyadirFilaATablauUsuario( Statement st, String nombre ) {
 	//INSERT
 
-//		if (chequearYaEnTabla(st, nombre)) {  // Si esta ya en la tabla
-//			return modificarFilaEnTablaUsuario(st);
-//		}
-		// Insercion normal
-		try {
-			String sentSQL = "insert into USUARIO values(" + "'" + nombre + "', " + "'" + password + "')"; 
-			System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
-			int val = st.executeUpdate( sentSQL );
-			if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
-			return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
-			return false;
+		if (chequearYaEnTabla(st, nombre) == true) {  // Si esta ya en la tabla
+			// Insercion normal
+			try {
+				String sentSQL = "insert into USUARIO values(" + "'" + nombre + "', " + "'" + password + "')"; 
+				System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+				int val = st.executeUpdate( sentSQL );
+				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+				return true;
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return false;
+			}
 		}
+		return false;
+		
 	}
 
 }
