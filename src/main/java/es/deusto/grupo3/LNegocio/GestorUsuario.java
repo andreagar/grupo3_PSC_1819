@@ -75,7 +75,7 @@ public class GestorUsuario {
 	public boolean anyadirFilaATablauUsuario( Statement st, String nombre ) {
 	//INSERT
 
-		if (chequearYaEnTabla(st, nombre) == true) {  // Si esta ya en la tabla
+		if (chequearYaEnTabla(st, nombre) == false) {  // Si esta ya en la tabla
 			// Insercion normal
 			try {
 				String sentSQL = "insert into USUARIO values(" + "'" + nombre + "', " + "'" + password + "')"; 
