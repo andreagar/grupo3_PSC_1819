@@ -2,9 +2,9 @@ package es.deusto.grupo3.LNegocio;
 
 public class Coche {
 
-	String marca, modelo, anyo;
+	String marca, modelo, matricula;
 
-	public Coche(String marca, String modelo, String anyo){
+	public Coche(String marca, String modelo, String matricula){
 		
 	}
 
@@ -24,12 +24,12 @@ public class Coche {
 		this.modelo = modelo;
 	}
 
-	public String getAnyo() {
-		return anyo;
+	public String getMatricula() {
+		return matricula;
 	}
 
-	public void setAnyo(String anyo) {
-		this.anyo = anyo;
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
 	}
 
 	

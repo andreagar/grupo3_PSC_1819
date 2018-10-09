@@ -11,10 +11,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-        
         BaseDeDatos.initBD("nuestroBD.db");
 		BaseDeDatos.crearTablaBDUsuario();
+		BaseDeDatos.crearTablaBDCoche();
+		
 
 		//menu de log in y registrarse
 		vistaPrincipal frame = new vistaPrincipal();

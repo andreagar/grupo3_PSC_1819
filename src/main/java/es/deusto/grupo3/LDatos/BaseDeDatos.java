@@ -2,6 +2,7 @@ package es.deusto.grupo3.LDatos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -60,8 +61,10 @@ public class BaseDeDatos {
 	
 	/** Crea una tabla en una base de datos, si no existia ya.
 	 * Debe haberse inicializado la conexion correctamente.
+	 * 
+	 * @param nombre
+	 * @param contrasenya
 	 */
-	//CREAR TABLA USUARIO
 	public static void crearTablaBDUsuario() {
 		if (statement==null) return;
 		try {
@@ -72,4 +75,24 @@ public class BaseDeDatos {
 				e.printStackTrace();  
 		}
 	}
+	/**
+	 * Crea la tabla Coche si no existe
+	 * 
+	 * @param marca
+	 * @param modelo
+	 * @param matricula
+	 * 
+	 */
+	 public static void crearTablaBDCoche(){
+		if (statement==null)
+			return ;
+		 try {
+			statement.executeUpdate("create table if not exists COCHE (marca string, modelo string, matricula string)");
+		} catch (SQLException e) {
+			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+			if (!e.getMessage().equals("table interaccion already exists"))
+				e.printStackTrace();  
+		}
+	 }
+	
 }
