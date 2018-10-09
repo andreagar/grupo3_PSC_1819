@@ -4,7 +4,7 @@ public class Usuario {
 
 	String password;
 
-	public Usuario(String nombre, String password, int punt, String fecha){
+	public Usuario(String nombre, String password){
 		this.password = password;
 	}
 
