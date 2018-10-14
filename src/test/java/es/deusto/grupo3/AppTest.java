@@ -1,20 +1,23 @@
 package es.deusto.grupo3;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.GestorCoche;
+
 /**
- * Unit test for simple App.
+ * Test para HyreCar
  */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
+    
     @Test
-    public void shouldAnswerWithTrue()
+    public void testInsertMismoCoche()
     {
-        assertTrue( true );
+    	GestorCoche coche = new GestorCoche("Audi", "A7", "1234ABC");
+		assertEquals(false, coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), "1234ABC"));
+    	;
     }
 }
