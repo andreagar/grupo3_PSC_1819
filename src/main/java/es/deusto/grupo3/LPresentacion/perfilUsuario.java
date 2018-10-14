@@ -8,11 +8,15 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JPasswordField;
 import javax.swing.JLabel;
+
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 
-public class perfilUsuario extends JFrame {
+public class perfilUsuario extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private JPasswordField passwordOld;
@@ -72,5 +76,11 @@ public class perfilUsuario extends JFrame {
 		JButton btnGuardar = new JButton("Guardar");
 		btnGuardar.setBounds(335, 228, 89, 23);
 		contentPane.add(btnGuardar);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
