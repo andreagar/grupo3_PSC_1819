@@ -23,7 +23,8 @@ public class GestorCoche {
 		
 	}
 		
-	/** Comprueba si un coche ya esta en la tabla COCHE de BD,considerando la trayectoria completa del disco como informacion clave.
+	/** Comprueba si un coche ya esta en la tabla COCHE de BD,
+	 * considerando la trayectoria completa del disco como informacion clave.
 	 * @param st	Sentencia ya abierta de base de datos
 	 * @return	true si el usuario ya esta en la tabla, false en caso contrario
 	 */
@@ -48,8 +49,9 @@ public class GestorCoche {
 			}
 		}
 			
-	/** AÃ±ade un usuario a la tabla USUARIO de BD, 
-	 * que debe estar abierta y tener el formato y los nombres de campos apropiados: (int idUsuario, Sting nombre, String password)
+	/** Añade un coche a la tabla COCHE de BD, 
+	 * que debe estar abierta y tener el formato y los nombres 
+	 * de campos apropiados: (int idUsuario, Sting nombre, String password)
 	 * Usa la sentencia INSERT de SQL.
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
