@@ -4,7 +4,9 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JPasswordField;
 import javax.swing.JLabel;
@@ -12,15 +14,24 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Statement;
 
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
+
+import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.GestorUsuario;
 
 public class perfilUsuario extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private JPasswordField passwordOld;
 	private JPasswordField passwordField;
+	private JLabel lblContraseaActual;
+	private JLabel lblNewPassword;
+	private JButton btnGuardar;
+	private JButton btnCancelar;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -49,15 +60,15 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		passwordOld = new JPasswordField();
-		passwordOld.setBounds(140, 70, 131, 20);
-		contentPane.add(passwordOld);
-		
 		JLabel lblContraseaActual = new JLabel("Contraseña actual");
 		lblContraseaActual.setHorizontalAlignment(SwingConstants.CENTER);
 		lblContraseaActual.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblContraseaActual.setBounds(129, 30, 148, 22);
 		contentPane.add(lblContraseaActual);
+		
+		passwordOld = new JPasswordField();
+		passwordOld.setBounds(140, 70, 131, 20);
+		contentPane.add(passwordOld);
 		
 		JLabel lblNewPassword = new JLabel("Contraseña nueva");
 		lblNewPassword.setHorizontalAlignment(SwingConstants.CENTER);
@@ -81,6 +92,34 @@ public class perfilUsuario extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		String nombre = textField.getText();
+		char[] elChar = passwordField.getPassword();
+		String contrasenya = String.valueOf(elChar);
+		GestorUsuario gestor = new GestorUsuario(nombre, contrasenya);
+		
+		if (e.getSource() == btnGuardar){
+			Statement st = BaseDeDatos.getStatement();
+			boolean correcto = gestor.chequearYaEnTablaLOGIN(st, nombre, contrasenya);
+			
+			if(correcto == true){
+				dispose();
+				menuUsuario frameMenu = new menuUsuario(nombre);
+				frameMenu.setVisible(true);
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "La contrasenya antigua no es la correcta","Mensaje de error",JOptionPane.ERROR_MESSAGE);
+			}
+
+		}
+		
+		if (e.getSource() == btnCancelar){
+			dispose();
+			vistaPrincipal frame = new vistaPrincipal();
+			frame.setVisible(true);
+		}
+		
+		
+		
 		
 	}
 }
