@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -21,6 +22,7 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private JButton btnLogIn;
 	private JButton btnRegistrarse;
+	private JButton btnSalir;
 	
 	public vistaPrincipal()
 	{
@@ -43,6 +45,12 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		btnRegistrarse.setBounds(140, 227, 200, 75);
 		contentPane.add(btnRegistrarse);
 		btnRegistrarse.addActionListener(this);
+		
+		btnSalir = new JButton("Salir");
+		btnSalir.setFont(new Font("Candara", Font.BOLD, 12));
+		btnSalir.setBounds(10, 430, 120, 27);
+		contentPane.add(btnSalir);
+		btnSalir.addActionListener(this);
 		
 		JLabel lblNewLabel = new JLabel("Alquiler de coches HyraCar", SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Candara", Font.BOLD, 24));
@@ -75,6 +83,18 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 			logIn.setVisible(true);
 			dispose();
 			
+		}
+		
+		if (e.getSource() == btnSalir){
+			try {
+				BaseDeDatos.close();
+				BaseDeDatos.getStatement().close();
+				BaseDeDatos.getConnection().close();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			dispose();
 		}
 	}
 

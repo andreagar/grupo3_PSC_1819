@@ -91,5 +91,28 @@ public class GestorUsuario {
 		return false;
 		
 	}
-
+	
+	/** Modifica los datos de un usuario en la tabla USUARIO de BD, 
+	 * que debe estar abierta y tener el formato y los nombres de campos apropiados:(int numJuego, Sting nombre, String contrasenya)
+	 * Usa la sentencia UPDATE de SQL.
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al usuario)
+	 * @return	true si la modificacion es correcta, false en caso contrario
+	 */
+	public boolean cambiarContrasenya (Statement st, String nombre, String nueva){
+			
+			try {
+				String sentSQL = "update USUARIO set "+
+									"contrasenya = '" + nueva + "'" +
+									" WHERE nombre = '" + nombre + "'";
+				
+				System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+				int val = st.executeUpdate( sentSQL );
+				if (val!=1) return false;  // Se tiene que modificar 1, error si no
+				return true;
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return false;
+			}
+	}
 }

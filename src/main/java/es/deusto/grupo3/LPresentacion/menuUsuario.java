@@ -97,7 +97,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 		if (e.getSource() == btnModificar){
 			
 			dispose();
-			perfilUsuario framePerfil = new perfilUsuario();
+			perfilUsuario framePerfil = new perfilUsuario(nombre);
 			framePerfil.setVisible(true);
 			
 		}
@@ -107,7 +107,6 @@ public class menuUsuario extends JFrame implements ActionListener{
 			dispose();
 			vistaPrincipal frame = new vistaPrincipal();
 			frame.setVisible(true);
-			
 		}
 	}
 

@@ -21,6 +21,7 @@ import javax.swing.JButton;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.GestorUsuario;
+import es.deusto.grupo3.LNegocio.Usuario;
 
 public class perfilUsuario extends JFrame implements ActionListener {
 
@@ -32,27 +33,16 @@ public class perfilUsuario extends JFrame implements ActionListener {
 	private JButton btnGuardar;
 	private JButton btnCancelar;
 	private JTextField textField;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					perfilUsuario frame = new perfilUsuario();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
+	private String nombre;
 
 	/**
 	 * Create the frame.
 	 */
-	public perfilUsuario() {
+	public perfilUsuario(String nombre) {
+		
+		this.nombre = nombre;
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -80,31 +70,47 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		passwordField.setBounds(140, 145, 131, 20);
 		contentPane.add(passwordField);
 		
-		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setBounds(10, 228, 89, 23);
 		contentPane.add(btnCancelar);
+		btnCancelar.addActionListener(this);
 		
-		JButton btnGuardar = new JButton("Guardar");
+		btnGuardar = new JButton("Guardar");
 		btnGuardar.setBounds(335, 228, 89, 23);
 		contentPane.add(btnGuardar);
+		btnGuardar.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		String nombre = textField.getText();
+		
 		char[] elChar = passwordField.getPassword();
-		String contrasenya = String.valueOf(elChar);
-		GestorUsuario gestor = new GestorUsuario(nombre, contrasenya);
+		String nueva = String.valueOf(elChar);
+		
+		char[] elChar2 = passwordOld.getPassword();
+		String antigua = String.valueOf(elChar2);
+		
+		GestorUsuario gestor = new GestorUsuario(nombre, antigua);
+		
+		System.out.println(nombre);
+		System.out.println(antigua);
+		System.out.println(nueva);
+		
+		//llanar al gestor para que me devuelva el nombre del usuario
+		//crear dos variables para guardar las dos contraseñas
 		
 		if (e.getSource() == btnGuardar){
 			Statement st = BaseDeDatos.getStatement();
-			boolean correcto = gestor.chequearYaEnTablaLOGIN(st, nombre, contrasenya);
+			boolean correcto = gestor.chequearYaEnTablaLOGIN(st, nombre, antigua);
 			
 			if(correcto == true){
 				dispose();
-				menuUsuario frameMenu = new menuUsuario(nombre);
-				frameMenu.setVisible(true);
+				boolean cambio = gestor.cambiarContrasenya(st, nombre, nueva);
+				if (cambio == true){
+					menuUsuario frameMenu = new menuUsuario(nombre);
+					frameMenu.setVisible(true);
+				}
 			}
 			else{
 				JOptionPane.showMessageDialog(null, "La contrasenya antigua no es la correcta","Mensaje de error",JOptionPane.ERROR_MESSAGE);
