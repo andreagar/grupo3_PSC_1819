@@ -28,17 +28,5 @@ public class AppTest {
 		BaseDeDatos.close();
 	}
     
-    @Test
-	public void testchequearTablaCoche() {
-    	GestorCoche gestor = new GestorCoche("Audi", "A7", "1234ABC");
-    	boolean prueba = gestor.chequearYaEnTabla(BaseDeDatos.getStatement(), "1234ABC");
-    	assertTrue(prueba);		
-	}
-    
-    @Test
-   	public void testchequearTablaUsuario() {
-    	GestorUsuario gestor = new GestorUsuario("andrea","andrea");
-    	boolean prueba = gestor.chequearYaEnTabla(BaseDeDatos.getStatement(), "andrea");
-       	assertTrue(prueba);		
-   	}
+   
 }
