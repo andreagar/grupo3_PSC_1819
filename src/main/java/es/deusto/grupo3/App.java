@@ -6,7 +6,7 @@ import es.deusto.grupo3.LNegocio.GestorUsuario;
 import es.deusto.grupo3.LPresentacion.vistaPrincipal;
 
 /**
- * Hello world!
+ * Main de nuestro proyecto donde se incializa la BD y se crean coches además de visualizar la pantalla principal
  *
  */
 public class App 
