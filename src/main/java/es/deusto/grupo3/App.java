@@ -18,6 +18,10 @@ public class App
 		BaseDeDatos.crearTablaBDUsuario();
 		BaseDeDatos.crearTablaBDCoche();
 		
+		/*
+		 * 
+		 * Insertamos los coches predeterminados para poder trabajar con ellos
+		 */
 		GestorCoche coche;
 		
 		coche = new GestorCoche("Audi", "A7", "1234ABC");
