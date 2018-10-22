@@ -13,6 +13,7 @@ public class App
 {
     public static void main( String[] args )
     {
+    	//inicialización de BD
         BaseDeDatos.initBD("nuestroBD.db");
 		BaseDeDatos.crearTablaBDUsuario();
 		BaseDeDatos.crearTablaBDCoche();
