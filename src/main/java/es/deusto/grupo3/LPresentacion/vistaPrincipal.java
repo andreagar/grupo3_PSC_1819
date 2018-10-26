@@ -57,6 +57,10 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		lblNewLabel.setBounds(80, 50, 300, 41);
 		lblNewLabel.setVerticalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
+		
+		JButton btnAdministrador = new JButton("Administrador");
+		btnAdministrador.setBounds(355, 316, 103, 27);
+		contentPane.add(btnAdministrador);
 	
 		addWindowListener( new WindowAdapter() {
 			@Override
@@ -97,5 +101,4 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 			dispose();
 		}
 	}
-
 }
