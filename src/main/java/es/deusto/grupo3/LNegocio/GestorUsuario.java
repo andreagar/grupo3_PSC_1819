@@ -6,10 +6,16 @@ import java.sql.Statement;
 
 import javax.swing.JOptionPane;
 
+import org.apache.log4j.Logger;
+
+import es.deusto.grupo3.App;
+
 public class GestorUsuario {
 
 	String password;
 	String nombre;
+	
+	private final static Logger log = Logger.getLogger(App.class.getName());
 		
 	public GestorUsuario (String nombre, String password){
 		this.nombre = nombre;
@@ -28,7 +34,7 @@ public class GestorUsuario {
 			try {
 
 				String sentSQL = "select * from USUARIO where (nombre = '" + nombre + "')";
-				System.out.println( sentSQL ); 
+				log.info(sentSQL); 
 				
 				ResultSet rs = st.executeQuery( sentSQL );
 				
@@ -49,7 +55,7 @@ public class GestorUsuario {
 			try {
 
 				String sentSQL = "select * from USUARIO where ( nombre = '" + nombre + "' and contrasenya = '" + contrasenya + "')";
-				System.out.println( sentSQL ); 
+				log.info(sentSQL); 
 				
 				ResultSet rs = st.executeQuery( sentSQL );
 				
@@ -79,7 +85,7 @@ public class GestorUsuario {
 			// Insercion normal
 			try {
 				String sentSQL = "insert into USUARIO values(" + "'" + nombre + "', " + "'" + password + "')"; 
-				System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+				log.info(sentSQL); 
 				int val = st.executeUpdate( sentSQL );
 				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 				return true;
@@ -105,7 +111,7 @@ public class GestorUsuario {
 									"contrasenya = '" + nueva + "'" +
 									" WHERE nombre = '" + nombre + "'";
 				
-				System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+				log.info(sentSQL); 
 				int val = st.executeUpdate( sentSQL );
 				if (val!=1) return false;  // Se tiene que modificar 1, error si no
 				return true;
