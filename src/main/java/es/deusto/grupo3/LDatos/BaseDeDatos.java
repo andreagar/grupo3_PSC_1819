@@ -8,10 +8,16 @@ import java.sql.Statement;
 
 import javax.swing.JOptionPane;
 
+import org.apache.log4j.Logger;
+
+import es.deusto.grupo3.App;
+
+
 public class BaseDeDatos {
 
 	private static Connection connection = null;
 	private static Statement statement = null;
+	private final static Logger log = Logger.getLogger(App.class.getName());
 	
 	/** Inicializa una BD SQLITE y devuelve una conexion con ella. Debe llamarse a este 
 	 * metodo antes que ningun otro, y debe devolver no null para poder seguir trabajando con la BD.
@@ -25,7 +31,8 @@ public class BaseDeDatos {
 			statement = connection.createStatement();
 			statement.setQueryTimeout(30);  // poner timeout 30 msg. 
 			//TIMEOUT: Si estamos esperando una respuesta y si no nos dan en 30 mseg (en este caso), dejamos de esperar.
-			JOptionPane.showMessageDialog( null, "Ondo!! Nombre: " + nombreBD + " / DATU BASEA KONEKTATU DA" , "BIEN", JOptionPane.INFORMATION_MESSAGE);
+			log.info("Nombre: " + nombreBD + " / Base de datos conectada");
+			//JOptionPane.showMessageDialog( null, "Ondo!! Nombre: " + nombreBD + " / DATU BASEA KONEKTATU DA" , "BIEN", JOptionPane.INFORMATION_MESSAGE);
 		    return connection;
 		} catch (ClassNotFoundException | SQLException e) {
 			JOptionPane.showMessageDialog( null, "Error!! Nombre: " + nombreBD + " / no se ha conectado la base de datos" , "ERROR", JOptionPane.ERROR_MESSAGE );

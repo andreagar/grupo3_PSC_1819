@@ -8,6 +8,11 @@ import java.sql.Statement;
 
 import javax.swing.JOptionPane;
 
+import org.apache.log4j.Logger;
+
+
+
+import es.deusto.grupo3.App;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 
 public class GestorCoche {
@@ -15,6 +20,8 @@ public class GestorCoche {
 	String marca;
 	String modelo;
 	String matricula;
+	
+	private final static Logger log = Logger.getLogger(App.class.getName());
 		
 	public GestorCoche (String marca, String modelo, String matricula){
 		this.marca = marca;
@@ -33,13 +40,13 @@ public class GestorCoche {
 			try {
 
 				String sentSQL = "select * from COCHE where (matricula = '" + matricula + "')";
-				System.out.println( sentSQL ); 
-				
+				log.info(sentSQL);
 				ResultSet rs = st.executeQuery( sentSQL );
 				
 				if (rs.next()) {  // Normalmente se recorre con un while, pero aqui solo hay que ver si ya existe
 					rs.close();
-					JOptionPane.showMessageDialog(null, "El coche ya existe, prueba con otro","Mensaje de error",JOptionPane.ERROR_MESSAGE);
+					log.info("El coche ya existe, prueba con otro");
+					//JOptionPane.showMessageDialog(null, "El coche ya existe, prueba con otro","Mensaje de error",JOptionPane.ERROR_MESSAGE);
 					return true;
 				}
 				return false;
@@ -63,7 +70,7 @@ public class GestorCoche {
 			// Insercion normal
 			try {
 				String sentSQL = "insert into COCHE values(" + "'" + marca + "', " + "'" + modelo + "', " +"'" + matricula + "')"; 
-				System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+				log.info(sentSQL);
 				int val = st.executeUpdate( sentSQL );
 				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 				return true;
