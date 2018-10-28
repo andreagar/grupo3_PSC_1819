@@ -52,7 +52,7 @@ public class menuAdmin extends JFrame {
 		
 		JButton btnRegistrarCoche = new JButton("Registrar coche");
 		btnRegistrarCoche.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnRegistrarCoche.setBounds(51, 97, 150, 51);
+		btnRegistrarCoche.setBounds(51, 97, 173, 51);
 		contentPane.add(btnRegistrarCoche);
 		
 		JButton btnRegistrarMoto = new JButton("Registrar moto");

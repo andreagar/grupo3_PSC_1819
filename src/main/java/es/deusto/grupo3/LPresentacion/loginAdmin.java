@@ -1,80 +1,108 @@
 package es.deusto.grupo3.LPresentacion;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Statement;
+
 import javax.swing.JButton;
-import javax.swing.JTextField;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
-public class loginAdmin extends JFrame {
+import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.GestorUsuario;
 
+public class loginAdmin extends JFrame implements ActionListener{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JPasswordField passwordField;
+	private JLabel lblNewLabel;
+	private JLabel lblContrasena;
+	private JButton btnAceptar;
+	private JButton btnCancelar;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					loginAdmin frame = new loginAdmin();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public loginAdmin() {
+		setResizable(false);
+		setTitle("LOG IN ADMINISTRADOR");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 474, 393);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblLoginAdministrador = new JLabel("Login Administrador");
-		lblLoginAdministrador.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblLoginAdministrador.setHorizontalAlignment(SwingConstants.CENTER);
-		lblLoginAdministrador.setBounds(132, 27, 183, 35);
-		contentPane.add(lblLoginAdministrador);
-		
-		JButton btnCancelar = new JButton("Cancelar");
-		btnCancelar.setBounds(23, 216, 89, 23);
-		contentPane.add(btnCancelar);
-		
-		JButton btnEntrar = new JButton("Entrar");
-		btnEntrar.setBounds(293, 216, 89, 23);
-		contentPane.add(btnEntrar);
-		
 		textField = new JTextField();
-		textField.setBounds(168, 89, 122, 20);
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		textField.setBounds(130, 90, 184, 33);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblId = new JLabel("ID");
-		lblId.setBounds(88, 92, 46, 14);
-		contentPane.add(lblId);
-		
-		JLabel lblContrasea = new JLabel("Contraseña");
-		lblContrasea.setBounds(71, 131, 76, 14);
-		contentPane.add(lblContrasea);
-		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(168, 128, 122, 17);
+		passwordField.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		passwordField.setBounds(130, 185, 184, 32);
 		contentPane.add(passwordField);
+		
+		lblNewLabel = new JLabel("ID admin");
+		lblNewLabel.setFont(new Font("Candara", Font.PLAIN, 25));
+		lblNewLabel.setBounds(182, 50, 264, 20);
+		contentPane.add(lblNewLabel);
+		
+		lblContrasena = new JLabel("Contrase\u00F1a");
+		lblContrasena.setFont(new Font("Candara", Font.PLAIN, 25));
+		lblContrasena.setBounds(160, 145, 169, 32);
+		contentPane.add(lblContrasena);
+		
+		btnAceptar = new JButton("ACEPTAR");
+		btnAceptar.setFont(new Font("Candara", Font.BOLD, 18));
+		btnAceptar.setBounds(50, 270, 150, 44);
+		contentPane.add(btnAceptar);
+		btnAceptar.addActionListener(this);
+		
+		btnCancelar = new JButton("CANCELAR");
+		btnCancelar.setFont(new Font("Candara", Font.BOLD, 18));
+		btnCancelar.setBounds(250, 270, 150, 44);
+		contentPane.add(btnCancelar);
+		btnCancelar.addActionListener(this);
+		
 	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		String nombre = textField.getText();
+		char[] elChar = passwordField.getPassword();
+		String contrasenya = String.valueOf(elChar);
+			
+		if (e.getSource() == btnAceptar){
+			
+			if(nombre.equals("admin") && contrasenya.equals("admin")){
+				dispose();
+				menuAdmin frameMenu = new menuAdmin();
+				frameMenu.setVisible(true);
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "El nombre de usuario y la contrasenya no son correctas. Pruebe de nuevo.","Mensaje de error",JOptionPane.ERROR_MESSAGE);
+			}
+
+		}
+		
+		if (e.getSource() == btnCancelar){
+			dispose();
+			vistaPrincipal frame = new vistaPrincipal();
+			frame.setVisible(true);
+		}
+			
+		
+	}
+
 }

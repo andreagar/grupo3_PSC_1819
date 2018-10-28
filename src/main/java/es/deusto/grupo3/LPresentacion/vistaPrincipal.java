@@ -23,6 +23,7 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 	private JButton btnLogIn;
 	private JButton btnRegistrarse;
 	private JButton btnSalir;
+	private JButton btnAdministrador;
 	
 	public vistaPrincipal()
 	{
@@ -58,9 +59,10 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		lblNewLabel.setVerticalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnAdministrador = new JButton("Administrador");
-		btnAdministrador.setBounds(355, 316, 103, 27);
+		btnAdministrador = new JButton("Administrador");
+		btnAdministrador.setBounds(300, 316, 120, 27);
 		contentPane.add(btnAdministrador);
+		btnAdministrador.addActionListener(this);
 	
 		addWindowListener( new WindowAdapter() {
 			@Override
@@ -85,6 +87,13 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		if (e.getSource() == btnLogIn){
 			login logIn = new login();
 			logIn.setVisible(true);
+			dispose();
+			
+		}
+		
+		if (e.getSource() == btnAdministrador){
+			loginAdmin logInAdmin = new loginAdmin();
+			logInAdmin.setVisible(true);
 			dispose();
 			
 		}
