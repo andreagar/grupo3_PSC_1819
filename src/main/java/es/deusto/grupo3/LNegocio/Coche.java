@@ -13,6 +13,7 @@ public class Coche {
 		this.alquilado=alquilado;
 		this.comprado=comprado;
 		this.averiado=averiado;
+		
 	}
 
 	public String getMarca() {
