@@ -17,6 +17,7 @@ import java.awt.Font;
 import javax.swing.JTextField;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorUsuario;
 
@@ -99,10 +100,10 @@ public class registrarCoche extends JFrame implements ActionListener {
 		String matricula = textMatricula.getText();
 		
 		if (e.getSource() == btnAceptar){
-			GestorCoche coche = new GestorCoche(marca, modelo, matricula);
-			BaseDeDatos.crearTablaBDUsuario();	
+			Coche c = new Coche(marca, modelo, matricula, false, false, false);
+			GestorCoche coche = new GestorCoche();
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
-			coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), matricula);	
+			coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), c);	
 			dispose();
 		}
 		

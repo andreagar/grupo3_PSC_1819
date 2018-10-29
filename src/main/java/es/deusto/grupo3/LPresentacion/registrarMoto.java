@@ -17,8 +17,10 @@ import java.awt.Font;
 import javax.swing.JTextField;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorMoto;
+import es.deusto.grupo3.LNegocio.Moto;
 
 public class registrarMoto extends JFrame implements ActionListener {
 
@@ -97,10 +99,10 @@ public class registrarMoto extends JFrame implements ActionListener {
 		String matricula = textMatricula.getText();
 		
 		if (e.getSource() == btnAceptar){
-			GestorMoto moto = new GestorMoto(marca, modelo, matricula);
-			BaseDeDatos.crearTablaBDUsuario();	
+			Moto m = new Moto(marca, modelo, matricula, false, false, false);
+			GestorMoto moto = new GestorMoto();	
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
-			moto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), matricula);	
+			moto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), m);	
 			dispose();
 		}
 		

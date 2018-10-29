@@ -3,6 +3,7 @@ package es.deusto.grupo3.LNegocio;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
@@ -10,17 +11,13 @@ import es.deusto.grupo3.App;
 
 public class GestorMoto {
 
-	String marca;
-	String modelo;
-	String matricula;
+	ArrayList<Moto> listaMoto;
 	
 	private final static Logger log = Logger.getLogger(App.class.getName());
 		
-	public GestorMoto (String marca, String modelo, String matricula){
-		this.marca = marca;
-		this.modelo = modelo;
-		this.matricula = matricula;
+	public GestorMoto (){
 		
+		listaMoto = new ArrayList<Moto>();
 	}
 		
 	/** Comprueba si una moto ya esta en la tabla MOTO de BD,
@@ -56,13 +53,16 @@ public class GestorMoto {
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
 	 */
-	public boolean anyadirFilaATablaCoche( Statement st, String matricula ) {
+	public boolean anyadirFilaATablaMoto( Statement st, Moto moto ) {
 	//INSERT
 
-		if (chequearYaEnTabla(st, matricula) == false) {  // Si esta ya en la tabla
+		if (chequearYaEnTabla(st, moto.matricula) == false) {  // Si esta ya en la tabla
 			// Insercion normal
 			try {
-				String sentSQL = "insert into MOTO values(" + "'" + marca + "', " + "'" + modelo + "', " +"'" + matricula + "')"; 
+				String sentSQL = "insert into COCHE values(" + "'" + moto.marca + "', '" 
+									+ moto.modelo + "', '" + moto.matricula + "', '"
+									  + moto.alquilado + "', '" + moto.comprado + "', '" 
+									 + moto.averiado + "')";  
 				log.info(sentSQL);
 				int val = st.executeUpdate( sentSQL );
 				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
