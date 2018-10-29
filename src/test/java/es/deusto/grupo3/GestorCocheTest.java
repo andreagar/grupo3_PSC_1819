@@ -7,16 +7,19 @@ import org.junit.Before;
 import org.junit.Test;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 
 public class GestorCocheTest {
 
 	GestorCoche gestor;
+	Coche coche;
 	
 	@Before
 	public void setUp() throws Exception {
 		BaseDeDatos.initBD("nuestroBD.db");
-		gestor = new GestorCoche("Audi", "A7", "1234ABC");
+		coche = new Coche("Audi", "A7", "1234ABC", false, false, false);
+		gestor = new GestorCoche();
 	}
 	
 	@After
@@ -27,13 +30,13 @@ public class GestorCocheTest {
 	
 	@Test
 	public void testchequearTablaCoche() {
-    	boolean prueba = gestor.chequearYaEnTabla(BaseDeDatos.getStatement(), "1234ABC");
+    	boolean prueba = gestor.chequearYaEnTabla(BaseDeDatos.getStatement(), coche.getMatricula());
     	assertTrue(prueba);		
 	}
     
 	@Test
     public void testanyadirFilaATablaCoche(){
-    	boolean prueba = gestor.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), "1234ABC");
+    	boolean prueba = gestor.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
     	assertFalse(prueba);
     }
 

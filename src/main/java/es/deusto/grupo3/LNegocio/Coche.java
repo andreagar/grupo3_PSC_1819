@@ -6,7 +6,13 @@ public class Coche {
 	boolean alquilado, comprado, averiado;
 
 	public Coche(String marca, String modelo, String matricula, boolean alquilado, boolean comprado, boolean averiado){
-		
+
+		this.marca=marca;
+		this.modelo=modelo;
+		this.matricula=matricula;
+		this.alquilado=alquilado;
+		this.comprado=comprado;
+		this.averiado=averiado;
 	}
 
 	public String getMarca() {
@@ -57,5 +63,7 @@ public class Coche {
 		this.averiado = averiado;
 	}
 
-	
+	public String toString(){
+		return matricula + ", " + modelo + ", " + marca + ", " + alquilado + ", " + comprado + ", " + averiado;
+	}
 }

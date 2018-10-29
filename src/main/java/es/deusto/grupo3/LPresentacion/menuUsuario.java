@@ -88,10 +88,9 @@ public class menuUsuario extends JFrame implements ActionListener{
 		}
 		
 		if (e.getSource() == btnAlquilar){
-//			LOGIN LOGIN = NEW LOGIN();
-//			LOGIN.SETVISIBLE(TRUE);
-//			DIspose();
-			
+			dispose();
+			alquilarCoche alquilar = new alquilarCoche(nombre);
+			alquilar.setVisible(true);			
 		}
 		
 		if (e.getSource() == btnModificar){

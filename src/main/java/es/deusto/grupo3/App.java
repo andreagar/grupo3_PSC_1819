@@ -1,6 +1,10 @@
 package es.deusto.grupo3;
 
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorUsuario;
 import es.deusto.grupo3.LPresentacion.vistaPrincipal;
@@ -22,16 +26,18 @@ public class App
 		 * 
 		 * Insertamos los coches predeterminados para poder trabajar con ellos
 		 */
-		GestorCoche coche;
+		GestorCoche gestorCoche  = new GestorCoche();
+		Coche coche;
 		
-		coche = new GestorCoche("Audi", "A7", "1234ABC");
-		coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), "1234ABC");
+		coche = new Coche ("Audi", "A7", "1234ABC", false, false, false);
+		System.out.println(coche.toString());
+		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 		
-		coche = new GestorCoche("Audi", "Q3", "9999BBB");
-		coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), "9999BBB");
+		coche = new Coche ("Audi", "Q3", "9999BBB", false, false, false);
+		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 		
-		coche = new GestorCoche("Ford", "Kuga", "5678HHH");
-		coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), "5678HHH");
+		coche = new Coche ("Ford", "Kuga", "5678HHH", false, false, false);
+		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 
 		//menu de log in y registrarse
 		vistaPrincipal frame = new vistaPrincipal();

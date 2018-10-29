@@ -94,7 +94,7 @@ public class BaseDeDatos {
 		if (statement==null)
 			return ;
 		 try {
-			statement.executeUpdate("create table if not exists COCHE (marca string, modelo string, matricula string)");
+			statement.executeUpdate("create table if not exists COCHE (marca string, modelo string, matricula string, alquilado boolean, comprado boolean, averiado boolean)");
 		} catch (SQLException e) {
 			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
 			if (!e.getMessage().equals("table interaccion already exists"))
