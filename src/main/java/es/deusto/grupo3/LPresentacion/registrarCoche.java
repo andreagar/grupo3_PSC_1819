@@ -11,15 +11,23 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
 import java.awt.Font;
+
 import javax.swing.JTextField;
+
+import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.GestorCoche;
+import es.deusto.grupo3.LNegocio.GestorUsuario;
 
 public class registrarCoche extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private JTextField txtMarca;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField textModelo;
+	private JTextField textMatricula;
+	private JButton btnCancelar;
+	private JButton btnAceptar;
 
 	
 
@@ -34,13 +42,15 @@ public class registrarCoche extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setBounds(21, 237, 89, 23);
 		contentPane.add(btnCancelar);
+		btnAceptar.addActionListener(this);
 		
-		JButton btnAceptar = new JButton("Aceptar");
+		btnAceptar = new JButton("Aceptar");
 		btnAceptar.setBounds(331, 237, 89, 23);
 		contentPane.add(btnAceptar);
+		btnCancelar.addActionListener(this);
 		
 		JLabel lblRegistrarCocheNuevo = new JLabel("Registrar coche nuevo");
 		lblRegistrarCocheNuevo.setFont(new Font("Source Sans Pro Black", Font.BOLD, 18));
@@ -58,20 +68,20 @@ public class registrarCoche extends JFrame implements ActionListener {
 		lblMarca.setBounds(122, 76, 46, 14);
 		contentPane.add(lblMarca);
 		
-		textField = new JTextField();
-		textField.setBounds(198, 115, 154, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textModelo = new JTextField();
+		textModelo.setBounds(198, 115, 154, 20);
+		contentPane.add(textModelo);
+		textModelo.setColumns(10);
 		
 		JLabel lblModelo = new JLabel("Modelo:");
 		lblModelo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblModelo.setBounds(122, 116, 66, 14);
 		contentPane.add(lblModelo);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(198, 161, 154, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		textMatricula = new JTextField();
+		textMatricula.setBounds(198, 161, 154, 20);
+		contentPane.add(textMatricula);
+		textMatricula.setColumns(10);
 		
 		JLabel lblMatricula = new JLabel("Matricula:");
 		lblMatricula.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -84,6 +94,20 @@ public class registrarCoche extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		String marca = txtMarca.getText();
+		String modelo = textModelo.getText();
+		String matricula = textMatricula.getText();
 		
+		if (e.getSource() == btnAceptar){
+			GestorCoche coche = new GestorCoche(marca, modelo, matricula);
+			BaseDeDatos.crearTablaBDUsuario();	
+		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
+			coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), matricula);	
+			dispose();
+		}
+		
+		if (e.getSource() == btnCancelar){
+			dispose();
+		}
 	}
 }
