@@ -21,6 +21,7 @@ public class App
         BaseDeDatos.initBD("nuestroBD.db");
 		BaseDeDatos.crearTablaBDUsuario();
 		BaseDeDatos.crearTablaBDCoche();
+		BaseDeDatos.crearTablaBDMoto();
 		
 		/*
 		 * 

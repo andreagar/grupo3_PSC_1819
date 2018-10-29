@@ -88,7 +88,9 @@ public class BaseDeDatos {
 	 * @param marca
 	 * @param modelo
 	 * @param matricula
-	 * 
+	 * @param alquilado
+	 * @param comprado
+	 * @param averiado
 	 */
 	 public static void crearTablaBDCoche(){
 		if (statement==null)
@@ -101,5 +103,27 @@ public class BaseDeDatos {
 				e.printStackTrace();  
 		}
 	 }
+	 
+	 /**
+		 * Crea la tabla Coche si no existe
+		 * 
+		 * @param marca
+		 * @param modelo
+		 * @param matricula
+		 * @param alquilado
+		 * @param comprado
+		 * @param averiado
+		 */
+		 public static void crearTablaBDMoto(){
+			if (statement==null)
+				return ;
+			 try {
+				statement.executeUpdate("create table if not exists MOTO (marca string, modelo string, matricula string, alquilado boolean, comprado boolean, averiado boolean)");
+			} catch (SQLException e) {
+				// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+				if (!e.getMessage().equals("table interaccion already exists"))
+					e.printStackTrace();  
+			}
+		 }
 	
 }
