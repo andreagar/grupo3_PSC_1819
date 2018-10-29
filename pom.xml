@@ -40,7 +40,7 @@
   </dependencies>
 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
@@ -99,7 +99,7 @@
 				<archive>
 					<manifest>
 						<addClasspath>true</addClasspath>
-						<mainClass>main.java.es.deusto.grupo3.App</mainClass>
+						<mainClass>es.deusto.grupo3.App</mainClass>
 					</manifest>
 				</archive>
 			</configuration>
@@ -114,6 +114,6 @@
 		</plugin>
 		
       </plugins>
-    </pluginManagement>
+    
   </build>
 </project>
