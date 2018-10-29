@@ -1,5 +1,8 @@
-INFO - 10:58:51,877 - main - es.deusto.grupo3.App - insert into COCHE values('Audi', 'Q3', '9999BBB', 'false', 'false', 'false')
-INFO - 10:58:51,892 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
-INFO - 10:58:51,892 - main - es.deusto.grupo3.App - insert into COCHE values('Ford', 'Kuga', '5678HHH', 'false', 'false', 'false')
-INFO - 10:59:04,487 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
-INFO - 10:59:06,730 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 12:16:47,523 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 12:16:47,523 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 12:16:47,523 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 12:16:47,523 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 12:16:47,538 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 12:16:47,538 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 12:16:53,425 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+INFO - 12:16:55,241 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE

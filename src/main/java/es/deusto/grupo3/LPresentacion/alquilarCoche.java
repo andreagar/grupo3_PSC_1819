@@ -56,7 +56,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		String sel = "<html><body>SELECCIONE UN<br> C\u00D3DIGO</body></html>";
+		String sel = "<html><body>SELECCIONE UNA<br>MATRICULA:</body></html>";
 		JLabel lblSeleccioneUnCdigo = new JLabel(sel);
 		lblSeleccioneUnCdigo.setBounds(23, 11, 145, 40);
 		lblSeleccioneUnCdigo.setFont(new Font("Candara", Font.BOLD, 14));

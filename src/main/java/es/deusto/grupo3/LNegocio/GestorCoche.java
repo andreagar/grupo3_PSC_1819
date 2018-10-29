@@ -88,6 +88,7 @@ public class GestorCoche {
 	{
 		ResultSet rs;
 		Coche cocheBD = null;
+		Coche[] coch = null;
 		ArrayList<Coche> c = new ArrayList();
 		try {
 			String sentSQL = "select * from COCHE";
@@ -95,20 +96,14 @@ public class GestorCoche {
 			rs = st.executeQuery( sentSQL );
 			int i=0;
 			while (rs.next()) {
-			    //System.out.println("si data");
-				cocheBD.setMatricula(rs.getString("matricula"));
-				cocheBD.setMarca(rs.getString("marca"));
-				cocheBD.setModelo(rs.getString("modelo"));
-				cocheBD.setAlquilado(Boolean.valueOf(rs.getString("alquilado")));
-				cocheBD.setComprado(Boolean.valueOf(rs.getString("comprado")));
-				cocheBD.setAveriado(Boolean.valueOf(rs.getString("averiado")));
-				c.add(cocheBD);
 				
-				i++;
+				c.add(new Coche (rs.getString(1),rs.getString(2), rs.getString(3), 
+								 rs.getBoolean(4), rs.getBoolean(5), rs.getBoolean(6)));
 				
-			}
+			} 
 			
 			for(int k=0; k<c.size();k++)  System.out.println(c);
+			
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
