@@ -11,8 +11,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
 import java.awt.Font;
+
 import javax.swing.JTextField;
+
+import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.GestorCoche;
+import es.deusto.grupo3.LNegocio.GestorMoto;
 
 public class registrarMoto extends JFrame implements ActionListener {
 
@@ -37,10 +43,12 @@ public class registrarMoto extends JFrame implements ActionListener {
 		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setBounds(21, 237, 89, 23);
 		contentPane.add(btnCancelar);
+		btnCancelar.addActionListener(this);
 		
 		btnAceptar = new JButton("Aceptar");
 		btnAceptar.setBounds(331, 237, 89, 23);
 		contentPane.add(btnAceptar);
+		btnCancelar.addActionListener(this);
 		
 		JLabel lblRegistrarCocheNuevo = new JLabel("Registrar moto nueva");
 		lblRegistrarCocheNuevo.setFont(new Font("Source Sans Pro Black", Font.BOLD, 18));
@@ -84,6 +92,20 @@ public class registrarMoto extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		String marca = txtMarca.getText();
+		String modelo = textModelo.getText();
+		String matricula = textMatricula.getText();
 		
+		if (e.getSource() == btnAceptar){
+			GestorMoto moto = new GestorMoto(marca, modelo, matricula);
+			BaseDeDatos.crearTablaBDUsuario();	
+		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
+			moto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), matricula);	
+			dispose();
+		}
+		
+		if (e.getSource() == btnCancelar){
+			dispose();
+		}
 	}
 }
