@@ -1,0 +1,5 @@
+INFO - 10:58:51,877 - main - es.deusto.grupo3.App - insert into COCHE values('Audi', 'Q3', '9999BBB', 'false', 'false', 'false')
+INFO - 10:58:51,892 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 10:58:51,892 - main - es.deusto.grupo3.App - insert into COCHE values('Ford', 'Kuga', '5678HHH', 'false', 'false', 'false')
+INFO - 10:59:04,487 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+INFO - 10:59:06,730 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
