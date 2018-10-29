@@ -87,8 +87,6 @@ public class GestorCoche {
 	public ArrayList<Coche> GetArrayCoche(Statement st)
 	{
 		ResultSet rs;
-		Coche cocheBD = null;
-		Coche[] coch = null;
 		ArrayList<Coche> c = new ArrayList();
 		try {
 			String sentSQL = "select * from COCHE";
