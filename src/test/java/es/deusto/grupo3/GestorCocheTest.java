@@ -2,6 +2,8 @@ package es.deusto.grupo3;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,6 +40,21 @@ public class GestorCocheTest {
     public void testanyadirFilaATablaCoche(){
     	boolean prueba = gestor.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
     	assertFalse(prueba);
+    }
+	
+	@Test
+    public void testGetArrayCoche(){
+		ArrayList<Coche> cocheArray = new ArrayList<Coche>();
+		cocheArray = gestor.GetArrayCoche(BaseDeDatos.getStatement());
+		boolean comprobacion = false;
+		
+		for (int i=0; i<cocheArray.size(); i++){
+			if (cocheArray.get(i).getMatricula().equals(coche.getMatricula())){
+				comprobacion = true;
+			}
+		}
+		
+		assertTrue(comprobacion);
     }
 
 }

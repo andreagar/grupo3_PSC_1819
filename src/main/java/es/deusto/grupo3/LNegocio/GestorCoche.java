@@ -87,7 +87,7 @@ public class GestorCoche {
 	public ArrayList<Coche> GetArrayCoche(Statement st)
 	{
 		ResultSet rs;
-		ArrayList<Coche> c = new ArrayList();
+		ArrayList<Coche> c = new ArrayList<Coche>();
 		try {
 			String sentSQL = "select * from COCHE";
 			log.info(sentSQL);
@@ -98,27 +98,13 @@ public class GestorCoche {
 				c.add(new Coche (rs.getString(1),rs.getString(2), rs.getString(3), 
 								 rs.getBoolean(4), rs.getBoolean(5), rs.getBoolean(6)));
 				
-			} 
-			
-			for(int k=0; k<c.size();k++)  System.out.println(c);
-			
+			}			
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		 
-		
-		ArrayList<Serializable> cocheArray; 
-		
-		
-		cocheArray=new ArrayList<Serializable>();
-		//objDatos=new clsDatos();
-		
-//		for(Serializable a: cocheArray)
-//			retornoArray.add((Coche)a);
-		
+
 		return c;
 		
 	}
