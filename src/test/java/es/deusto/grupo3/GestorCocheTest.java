@@ -43,9 +43,9 @@ public class GestorCocheTest {
     }
 	
 	@Test
-    public void testGetArrayCoche(){
+    public void testGetArrayCocheGlobal(){
 		ArrayList<Coche> cocheArray = new ArrayList<Coche>();
-		cocheArray = gestor.GetArrayCoche(BaseDeDatos.getStatement());
+		cocheArray = gestor.GetArrayCocheGlobal(BaseDeDatos.getStatement());
 		boolean comprobacion = false;
 		
 		for (int i=0; i<cocheArray.size(); i++){
@@ -55,6 +55,15 @@ public class GestorCocheTest {
 		}
 		
 		assertTrue(comprobacion);
+    }
+	
+	@Test
+    public void testGetArrayCochesDisponibles(){
+		ArrayList<Coche> cocheArray = new ArrayList<Coche>();
+		cocheArray = gestor.GetArrayCochesDisponibles(BaseDeDatos.getStatement());
+		boolean comprobacion = false;
+		
+		assertNotSame(cocheArray.get(1), comprobacion);
     }
 
 }

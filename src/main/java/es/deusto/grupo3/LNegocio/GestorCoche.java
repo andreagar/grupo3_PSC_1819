@@ -84,7 +84,11 @@ public class GestorCoche {
 		
 	}
 	
-	public ArrayList<Coche> GetArrayCoche(Statement st)
+	/** Seleccionar todos los coches de la BD
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	 * @return	Array de los coches de la BD
+	 */
+	public ArrayList<Coche> GetArrayCocheGlobal(Statement st)
 	{
 		ResultSet rs;
 		ArrayList<Coche> c = new ArrayList<Coche>();
@@ -106,6 +110,26 @@ public class GestorCoche {
 		}
 
 		return c;
+		
+	}
+	
+	/** Seleccionar coches que estén disponibles (no alquilados, no comprados y no averiados)
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	 * @return	Array de los coches disponibles
+	 */
+	public ArrayList<Coche> GetArrayCochesDisponibles(Statement st)
+	{
+		ArrayList<Coche> cochesGlobal = new ArrayList<Coche>();
+		cochesGlobal = this.GetArrayCocheGlobal(st);
+		ArrayList<Coche> cochesDisp = new ArrayList<Coche>();
+		
+		for(int i=0; i<cochesGlobal.size(); i++){
+			if(cochesGlobal.get(i).getAlquilado() == false && cochesGlobal.get(i).getComprado() == false && cochesGlobal.get(i).getAveriado() == false){
+				cochesDisp.add(cochesGlobal.get(i));
+			}
+		}
+		
+		return cochesDisp;
 		
 	}
 }

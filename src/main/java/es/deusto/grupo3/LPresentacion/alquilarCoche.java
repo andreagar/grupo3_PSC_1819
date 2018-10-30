@@ -4,6 +4,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
@@ -11,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
@@ -36,7 +38,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 	private JLabel lblAviso;
 	private JLabel lblApuntaElCdigo;
 	private int limCoche;
-	private Integer CochesSelec;
+	private String cocheSelected;
 	private GestorCoche objCoche;
 	private JTextArea textArea;
 	private DefaultListModel modeloCoche;
@@ -72,7 +74,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		contentPane.add(listCoche);
 		
 		textArea = new JTextArea();
-		textArea.setFont(new Font("Candara", Font.BOLD, 12));
+		textArea.setFont(new Font("Candara", Font.BOLD, 14));
 		textArea.setBounds(193, 36, 400, 38);
 		contentPane.add(textArea);
 		
@@ -81,6 +83,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		button.setBounds(550, 299, 70, 28);
 		button.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(button);
+		button.addActionListener(this);
 		button.setActionCommand("Atras");
 		
 		detalles = new JButton("Mostrar Detalles");
@@ -88,6 +91,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		detalles.setBounds(23, 298, 145, 29);
 		detalles.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(detalles);
+		detalles.addActionListener(this);
 		detalles.setActionCommand("Detalles");
 		
 		btnComprar = new JButton("COMPRAR");
@@ -95,6 +99,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		btnComprar.setBounds(206, 298, 101, 29);
 		btnComprar.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(btnComprar);
+		btnComprar.addActionListener(this);
 		btnComprar.setActionCommand("COMPRAR");
 		
 		lblAviso = new JLabel("Aviso:");
@@ -113,6 +118,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		btnAlquilar.setBounds(338, 299, 101, 28);
 		btnAlquilar.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(btnAlquilar);
+		btnAlquilar.addActionListener(this);
 		btnAlquilar.setActionCommand("ALQUILAR");
 		
 		objCoche=new GestorCoche();
@@ -122,12 +128,27 @@ public class alquilarCoche extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if (e.getSource() == button){
-			//nombre = null;
-			dispose();
-			menuUsuario frame = new menuUsuario(usuario);
-			frame.setVisible(true);
+		switch(e.getActionCommand()){
+			case "COMPRAR":
+				//this.Asignar(0);
+				break;
+				
+			case "ALQUILAR":
+				//this.Asignar(1);
+				break;
+				
+			case "Detalles":
+				this.MostrarDetalles();
+				break;
+			
+			case "Atras":
+				dispose();
+				menuUsuario frame = new menuUsuario(usuario);
+				frame.setVisible(true);
+				break;
+		
 		}
+
 	}
 	
 	public void CargarLista(GestorCoche coche){
@@ -135,16 +156,51 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		modeloCoche=new DefaultListModel();
 		
 		Statement st = BaseDeDatos.getStatement();
-			for (Coche s : coche.GetArrayCoche(st) ){
-				if(s.getAlquilado()==false && s.getComprado()==false && s.getAveriado()==false){
-				
-					modeloCoche.addElement( s.getMatricula() );
-				}
+	
+		for (Coche s : coche.GetArrayCochesDisponibles(st) ){
+			if(s.getAlquilado()==false && s.getComprado()==false && s.getAveriado()==false){
+			
+				modeloCoche.addElement( s.getMatricula() );
 			}
+		}
 		
 		
 		listCoche.setModel( modeloCoche );
 	
+	}
+	
+	public void MostrarDetalles(){
+		
+		textArea.setText("");
+		textArea.disable();
+		
+		limCoche=listCoche.getSelectedIndex();
+		cocheSelected =(String)listCoche.getSelectedValue();
+		Statement st = BaseDeDatos.getStatement();
+		
+		if(limCoche!=-1)
+		{
+			for (Coche c : objCoche.GetArrayCochesDisponibles(st))
+			{
+				if(cocheSelected.equals(c.getMatricula()))
+				{
+					textArea.append(" Matricula: ");
+					textArea.append(c.getMatricula());
+					textArea.append(", Marca: ");
+					textArea.append(c.getMarca());
+					textArea.append(", Modelo: ");
+					textArea.append(c.getModelo());
+					textArea.append("\n Precio: ");
+					//textArea.append(c.getPrecio()+"€");
+					break;
+				}			
+			}
+
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "Seleccion incorrecta (debes selccionar al menos un elemento).","Mensaje de error",JOptionPane.ERROR_MESSAGE);
+		}
 	}
 
 }
