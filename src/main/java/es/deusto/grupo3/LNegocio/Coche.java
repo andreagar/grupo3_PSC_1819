@@ -3,17 +3,27 @@ package es.deusto.grupo3.LNegocio;
 public class Coche {
 
 	String marca, modelo, matricula;
+	double precio;
 	boolean alquilado, comprado, averiado;
 
-	public Coche(String marca, String modelo, String matricula, boolean alquilado, boolean comprado, boolean averiado){
+	public Coche(String marca, String modelo, String matricula, double precio, boolean alquilado, boolean comprado, boolean averiado){
 
 		this.marca=marca;
 		this.modelo=modelo;
 		this.matricula=matricula;
+		this.precio=precio;
 		this.alquilado=alquilado;
 		this.comprado=comprado;
 		this.averiado=averiado;
 		
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
 	}
 
 	public String getMarca() {
