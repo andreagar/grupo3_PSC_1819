@@ -3,9 +3,10 @@ package es.deusto.grupo3.LNegocio;
 public class Moto {
 	
 	String marca, modelo, matricula;
+	double precio;
 	boolean alquilado, comprado, averiado;
 	
-	public Moto(String marca, String modelo, String matricula, boolean alquilado, boolean comprado, boolean averiado) {
+	public Moto(String marca, String modelo, String matricula, double precio, boolean alquilado, boolean comprado, boolean averiado) {
 	}
 
 	public String getMarca() {
@@ -26,6 +27,14 @@ public class Moto {
 
 	public String getMatricula() {
 		return matricula;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
 	}
 
 	public void setMatricula(String matricula) {

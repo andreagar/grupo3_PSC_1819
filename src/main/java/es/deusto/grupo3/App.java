@@ -30,14 +30,14 @@ public class App
 		GestorCoche gestorCoche  = new GestorCoche();
 		Coche coche;
 		
-		coche = new Coche ("Audi", "A7", "1234ABC", false, false, false);
+		coche = new Coche ("Audi", "A7", "1234ABC", 74000, false, false, false);
 		System.out.println(coche.toString());
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 		
-		coche = new Coche ("Audi", "Q3", "9999BBB", false, false, false);
+		coche = new Coche ("Audi", "Q3", "9999BBB", 43000, false, false, false);
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 		
-		coche = new Coche ("Ford", "Kuga", "5678HHH", false, false, false);
+		coche = new Coche ("Ford", "Kuga", "5678HHH", 24600, false, false, false);
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 
 		//menu de log in y registrarse
