@@ -36,12 +36,12 @@ public class alquilarCoche extends JFrame implements ActionListener{
 	private JList listCoche;
 	private String usuario;
 	private JLabel lblAviso;
-	private JLabel lblApuntaElCdigo;
 	private int limCoche;
 	private String cocheSelected;
 	private GestorCoche objCoche;
 	private JTextArea textArea;
 	private DefaultListModel modeloCoche;
+	private JLabel imagen;
 	
 	/**
 	 * Create the frame.
@@ -78,6 +78,10 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		textArea.setBounds(193, 36, 400, 38);
 		contentPane.add(textArea);
 		
+		imagen = new JLabel();
+		imagen.setBounds(200, 80, 300, 150);
+		contentPane.add(imagen);
+		
 		button = new JButton("Atras");
 		button.addActionListener(this);
 		button.setBounds(550, 299, 70, 28);
@@ -102,16 +106,11 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		btnComprar.addActionListener(this);
 		btnComprar.setActionCommand("COMPRAR");
 		
-		lblAviso = new JLabel("Aviso:");
-		lblAviso.setBounds(208, 85, 46, 14);
-		lblAviso.setFont(new Font("Candara", Font.BOLD, 14));
+		String texto = "<html><body>Aviso:<br>Apunta la matricula del vehiculo para que luego puedas eliminar<br> la operaci\u00F3n. </body></html>";
+		lblAviso = new JLabel(texto);
+		lblAviso.setBounds(200, 230, 435, 50);
+		lblAviso.setFont(new Font("Candara", Font.BOLD, 13));
 		contentPane.add(lblAviso);
-		
-		String texto = "<html><body>Apunta el c\u00F3digo de la vivienda para que luego puedas<br> eliminar la operaci\u00F3n. </body></html>";
-		lblApuntaElCdigo = new JLabel(texto);
-		lblApuntaElCdigo.setBounds(208, 110, 435, 50);
-		lblApuntaElCdigo.setFont(new Font("Candara", Font.BOLD, 14));
-		contentPane.add(lblApuntaElCdigo);
 		
 		btnAlquilar = new JButton("ALQUILAR");
 		btnAlquilar.addActionListener(this);
@@ -192,6 +191,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 					textArea.append(c.getModelo());
 					textArea.append("\n Precio: ");
 					//textArea.append(c.getPrecio()+"€");
+					imagen.setIcon(new ImageIcon (alquilarCoche.class.getResource("/es/deusto/grupo3/img/Audi_A7.jpg")));
 					break;
 				}			
 			}
