@@ -27,6 +27,7 @@ public class registrarCoche extends JFrame implements ActionListener {
 	private JTextField txtMarca;
 	private JTextField textModelo;
 	private JTextField textMatricula;
+	private JTextField textPrecio;
 	private JButton btnCancelar;
 	private JButton btnAceptar;
 
@@ -98,9 +99,10 @@ public class registrarCoche extends JFrame implements ActionListener {
 		String marca = txtMarca.getText();
 		String modelo = textModelo.getText();
 		String matricula = textMatricula.getText();
+		double precio = 700;
 		
 		if (e.getSource() == btnAceptar){
-			Coche c = new Coche(marca, modelo, matricula, false, false, false);
+			Coche c = new Coche(marca, modelo, matricula, precio, false, false, false);
 			GestorCoche coche = new GestorCoche();
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
 			coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), c);	

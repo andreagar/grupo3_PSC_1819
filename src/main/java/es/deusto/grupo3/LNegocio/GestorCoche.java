@@ -99,8 +99,8 @@ public class GestorCoche {
 			int i=0;
 			while (rs.next()) {
 				
-				c.add(new Coche (rs.getString(1),rs.getString(2), rs.getString(3), 
-								 rs.getBoolean(4), rs.getBoolean(5), rs.getBoolean(6)));
+				c.add(new Coche (rs.getString(1),rs.getString(2), rs.getString(3), rs.getDouble(4),
+								 rs.getBoolean(5), rs.getBoolean(6), rs.getBoolean(7)));
 				
 			}			
 			

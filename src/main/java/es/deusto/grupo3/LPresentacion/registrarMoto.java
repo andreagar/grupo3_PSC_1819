@@ -97,9 +97,10 @@ public class registrarMoto extends JFrame implements ActionListener {
 		String marca = txtMarca.getText();
 		String modelo = textModelo.getText();
 		String matricula = textMatricula.getText();
+		double precio = 800;
 		
 		if (e.getSource() == btnAceptar){
-			Moto m = new Moto(marca, modelo, matricula, false, false, false);
+			Moto m = new Moto(marca, modelo, matricula, precio, false, false, false);
 			GestorMoto moto = new GestorMoto();	
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
 			moto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), m);	

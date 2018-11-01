@@ -20,7 +20,7 @@ public class GestorCocheTest {
 	@Before
 	public void setUp() throws Exception {
 		BaseDeDatos.initBD("nuestroBD.db");
-		coche = new Coche("Audi", "A7", "1234ABC", false, false, false);
+		coche = new Coche("Audi", "A7", "1234ABC", 700, false, false, false);
 		gestor = new GestorCoche();
 	}
 	
