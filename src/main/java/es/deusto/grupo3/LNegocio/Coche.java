@@ -2,11 +2,11 @@ package es.deusto.grupo3.LNegocio;
 
 public class Coche {
 
-	String marca, modelo, matricula;
+	String marca, modelo, matricula, imagen;
 	double precio;
 	boolean alquilado, comprado, averiado;
 
-	public Coche(String marca, String modelo, String matricula, double precio, boolean alquilado, boolean comprado, boolean averiado){
+	public Coche(String marca, String modelo, String matricula, double precio, boolean alquilado, boolean comprado, boolean averiado, String imagen){
 
 		this.marca=marca;
 		this.modelo=modelo;
@@ -15,6 +15,7 @@ public class Coche {
 		this.alquilado=alquilado;
 		this.comprado=comprado;
 		this.averiado=averiado;
+		this.imagen = imagen;
 		
 	}
 
@@ -73,8 +74,16 @@ public class Coche {
 	public void setAveriado(boolean averiado) {
 		this.averiado = averiado;
 	}
+	
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
 
 	public String toString(){
-		return matricula + ", " + modelo + ", " + marca + ", " + alquilado + ", " + comprado + ", " + averiado;
+		return matricula + ", " + modelo + ", " + marca + ", " + alquilado + ", " + comprado + ", " + averiado + ", " + imagen;
 	}
 }

@@ -67,10 +67,10 @@ public class GestorCoche {
 		if (chequearYaEnTabla(st, coche.getMatricula()) == false) {  // Si esta ya en la tabla
 			// Insercion normal
 			try {
-				String sentSQL = "insert into COCHE values(" + "'" + coche.marca + "', '" 
-															+ coche.modelo + "', '" + coche.matricula + "', '"
-															  + coche.alquilado + "', '" + coche.comprado + "', '" 
-															 + coche.averiado + "')"; 
+				String sentSQL = "insert into COCHE values(" + "'" + coche.marca + "', '" + coche.modelo + "', '" 
+															 + coche.matricula + "', '" + coche.precio + "', '"
+															 + coche.alquilado + "', '" + coche.comprado + "', '" 
+															 + coche.averiado + "', '" + coche.imagen + "')"; 
 				log.info(sentSQL);
 				int val = st.executeUpdate( sentSQL );
 				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
@@ -97,8 +97,8 @@ public class GestorCoche {
 			int i=0;
 			while (rs.next()) {
 				
-				c.add(new Coche (rs.getString(1),rs.getString(2), rs.getString(3), 
-								 rs.getBoolean(4), rs.getBoolean(5), rs.getBoolean(6)));
+				c.add(new Coche (rs.getString(1),rs.getString(2), rs.getString(3), rs.getDouble(4), 
+									rs.getBoolean(5), rs.getBoolean(6), rs.getBoolean(7), rs.getString(8)));
 				
 			} 
 			
@@ -110,18 +110,7 @@ public class GestorCoche {
 			e.printStackTrace();
 		}
 		
-		 
-		
-		ArrayList<Serializable> cocheArray; 
-		
-		
-		cocheArray=new ArrayList<Serializable>();
-		//objDatos=new clsDatos();
-		
-//		for(Serializable a: cocheArray)
-//			retornoArray.add((Coche)a);
-		
-		return c;
+	return c;
 		
 	}
 }

@@ -13,9 +13,12 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class menuAdmin extends JFrame {
+public class menuAdmin extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
+	private JButton btnRegistrarCoche;
+	private JButton btnRegistrarMoto;
+	private JButton btnCerrar;
 
 	/**
 	 * Launch the application.
@@ -45,27 +48,44 @@ public class menuAdmin extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblHyracarAdministracion = new JLabel("HyraCar: Administracion");
-		lblHyracarAdministracion.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblHyracarAdministracion.setFont(new Font("Candara", Font.BOLD, 20));
 		lblHyracarAdministracion.setHorizontalAlignment(SwingConstants.CENTER);
 		lblHyracarAdministracion.setBounds(96, 25, 265, 40);
 		contentPane.add(lblHyracarAdministracion);
 		
-		JButton btnRegistrarCoche = new JButton("Registrar coche");
-		btnRegistrarCoche.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnRegistrarCoche = new JButton("Registrar coche");
+		btnRegistrarCoche.setFont(new Font("Candara", Font.BOLD, 15));
 		btnRegistrarCoche.setBounds(51, 97, 173, 51);
 		contentPane.add(btnRegistrarCoche);
+		btnRegistrarCoche.addActionListener(this);
 		
-		JButton btnRegistrarMoto = new JButton("Registrar moto");
-		btnRegistrarMoto.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnRegistrarMoto.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnRegistrarMoto = new JButton("Registrar moto");
+		btnRegistrarMoto.setFont(new Font("Candara", Font.BOLD, 15));
 		btnRegistrarMoto.setBounds(256, 97, 150, 51);
 		contentPane.add(btnRegistrarMoto);
+		btnRegistrarMoto.addActionListener(this);
 		
-		JButton btnCerrar = new JButton("Cerrar");
+		btnCerrar = new JButton("Cerrar");
 		btnCerrar.setBounds(22, 328, 89, 23);
 		contentPane.add(btnCerrar);
+		btnCerrar.addActionListener(this);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		if (e.getSource() == btnRegistrarCoche){
+			
+		}
+		if (e.getSource() == btnRegistrarMoto){
+			
+		}
+		if (e.getSource() == btnCerrar){
+			dispose();
+			vistaPrincipal vista = new vistaPrincipal();
+			vista.setVisible(true);
+		}
+		
 	}
 }

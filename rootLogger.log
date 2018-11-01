@@ -1,8 +1,9 @@
-INFO - 12:16:47,523 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
-INFO - 12:16:47,523 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
-INFO - 12:16:47,523 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
-INFO - 12:16:47,523 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
-INFO - 12:16:47,538 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
-INFO - 12:16:47,538 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
-INFO - 12:16:53,425 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
-INFO - 12:16:55,241 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:21:28,435 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 11:21:28,437 - main - es.deusto.grupo3.App - insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+INFO - 11:21:50,677 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 11:21:50,695 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 11:21:50,698 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:21:50,698 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 11:21:50,700 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:21:50,708 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 11:21:50,708 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro

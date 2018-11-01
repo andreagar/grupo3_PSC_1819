@@ -1,7 +1,10 @@
 package es.deusto.grupo3;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import org.apache.log4j.Logger;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Coche;
@@ -18,11 +21,11 @@ public class App
     public static void main( String[] args )
     {
     	//inicialización de BD
-        BaseDeDatos.initBD("nuestroBD.db");
+    	BaseDeDatos.initBD("nuestroBD.db");
 		BaseDeDatos.crearTablaBDUsuario();
 		BaseDeDatos.crearTablaBDCoche();
 		BaseDeDatos.crearTablaBDMoto();
-		
+	
 		/*
 		 * 
 		 * Insertamos los coches predeterminados para poder trabajar con ellos
@@ -30,14 +33,13 @@ public class App
 		GestorCoche gestorCoche  = new GestorCoche();
 		Coche coche;
 		
-		coche = new Coche ("Audi", "A7", "1234ABC", 74000, false, false, false);
-		System.out.println(coche.toString());
+		coche = new Coche ("Audi", "A7", "1234ABC", 74000, false, false, false, "/es/deusto/grupo3/img/Audi_A7.jpg");
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 		
-		coche = new Coche ("Audi", "Q3", "9999BBB", 43000, false, false, false);
+		coche = new Coche ("Audi", "Q3", "9999BBB", 43000, false, false, false, "/es/deusto/grupo3/img/Audi_Q3.png");
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 		
-		coche = new Coche ("Ford", "Kuga", "5678HHH", 24600, false, false, false);
+		coche = new Coche ("Ford", "Kuga", "5678HHH", 24600, false, false, false, "/es/deusto/grupo3/img/Ford_Kuga.png");
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 
 		//menu de log in y registrarse

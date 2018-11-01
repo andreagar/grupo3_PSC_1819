@@ -88,15 +88,17 @@ public class BaseDeDatos {
 	 * @param marca
 	 * @param modelo
 	 * @param matricula
+	 * @param precio
 	 * @param alquilado
 	 * @param comprado
 	 * @param averiado
+	 * @param imagen                                      
 	 */
 	 public static void crearTablaBDCoche(){
 		if (statement==null)
 			return ;
 		 try {
-			statement.executeUpdate("create table if not exists COCHE (marca string, modelo string, matricula string, alquilado boolean, comprado boolean, averiado boolean)");
+			statement.executeUpdate("create table if not exists COCHE (marca string, modelo string, matricula string, double precio, alquilado boolean, comprado boolean, averiado boolean, imagen string)");
 		} catch (SQLException e) {
 			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
 			if (!e.getMessage().equals("table interaccion already exists"))
@@ -105,20 +107,22 @@ public class BaseDeDatos {
 	 }
 	 
 	 /**
-		 * Crea la tabla Coche si no existe
+		 * Crea la tabla Moto si no existe
 		 * 
 		 * @param marca
 		 * @param modelo
 		 * @param matricula
+		 * @param precio
 		 * @param alquilado
 		 * @param comprado
 		 * @param averiado
+		 * @param imagen
 		 */
 		 public static void crearTablaBDMoto(){
 			if (statement==null)
 				return ;
 			 try {
-				statement.executeUpdate("create table if not exists MOTO (marca string, modelo string, matricula string, alquilado boolean, comprado boolean, averiado boolean)");
+				statement.executeUpdate("create table if not exists MOTO (marca string, modelo string, matricula string, double precio, alquilado boolean, comprado boolean, averiado boolean, imagen string)");
 			} catch (SQLException e) {
 				// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
 				if (!e.getMessage().equals("table interaccion already exists"))

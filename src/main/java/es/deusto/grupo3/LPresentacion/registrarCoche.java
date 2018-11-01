@@ -27,6 +27,8 @@ public class registrarCoche extends JFrame implements ActionListener {
 	private JTextField txtMarca;
 	private JTextField textModelo;
 	private JTextField textMatricula;
+	private JTextField textPrecio;
+	private JTextField textImagen;
 	private JButton btnCancelar;
 	private JButton btnAceptar;
 
@@ -88,6 +90,26 @@ public class registrarCoche extends JFrame implements ActionListener {
 		lblMatricula.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblMatricula.setBounds(122, 162, 66, 14);
 		contentPane.add(lblMatricula);
+		
+		textPrecio = new JTextField();
+		textPrecio.setBounds(198, 161, 154, 20);
+		contentPane.add(textPrecio);
+		textPrecio.setColumns(10);
+		
+		JLabel lblPrecio = new JLabel("Precio:");
+		lblPrecio.setFont(new Font("Candara", Font.PLAIN, 14));
+		lblPrecio.setBounds(122, 162, 86, 14);
+		contentPane.add(lblPrecio);
+		
+		textImagen = new JTextField();
+		textImagen.setBounds(198, 211, 154, 20);
+		contentPane.add(textImagen);
+		textImagen.setColumns(10);
+		
+		JLabel lblImagen = new JLabel("Dir. Imagen:");
+		lblImagen.setFont(new Font("Candara", Font.PLAIN, 14));
+		lblImagen.setBounds(122, 212, 66, 14);
+		contentPane.add(lblImagen);
 	}
 
 
@@ -98,9 +120,11 @@ public class registrarCoche extends JFrame implements ActionListener {
 		String marca = txtMarca.getText();
 		String modelo = textModelo.getText();
 		String matricula = textMatricula.getText();
+		double precio = Double.parseDouble(textPrecio.getText());
+		String imagen = textImagen.getText();
 		
 		if (e.getSource() == btnAceptar){
-			Coche c = new Coche(marca, modelo, matricula, false, false, false);
+			Coche c = new Coche(marca, modelo, matricula, precio, false, false, false, imagen);
 			GestorCoche coche = new GestorCoche();
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
 			coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), c);	

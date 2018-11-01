@@ -18,7 +18,7 @@ public class GestorCocheTest {
 	@Before
 	public void setUp() throws Exception {
 		BaseDeDatos.initBD("nuestroBD.db");
-		coche = new Coche("Audi", "A7", "1234ABC", false, false, false);
+		coche = new Coche("Audi", "A7", "1234ABC", 74000, false, false, false, "/es/deusto/grupo3/img/Audi_A7.jpg");
 		gestor = new GestorCoche();
 	}
 	
