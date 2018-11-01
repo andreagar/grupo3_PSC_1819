@@ -106,13 +106,13 @@ public class registrarCoche extends JFrame implements ActionListener {
 		textPrecio.setColumns(10);
 
 		textImagen = new JTextField();
-		textImagen.setBounds(198, 211, 154, 20);
+		textImagen.setBounds(198, 232, 154, 20);
 		contentPane.add(textImagen);
 		textImagen.setColumns(10);
 		
 		JLabel lblImagen = new JLabel("Dir. Imagen:");
 		lblImagen.setFont(new Font("Candara", Font.PLAIN, 14));
-		lblImagen.setBounds(122, 212, 66, 14);
+		lblImagen.setBounds(122, 232, 66, 14);
 		contentPane.add(lblImagen);
 	}
 
@@ -134,10 +134,14 @@ public class registrarCoche extends JFrame implements ActionListener {
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
 			coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), c);	
 			dispose();
+			menuAdmin vistaAdmin = new menuAdmin();
+			vistaAdmin.setVisible(true);
 		}
 		
 		if (e.getSource() == btnCancelar){
 			dispose();
+			menuAdmin vistaAdmin = new menuAdmin();
+			vistaAdmin.setVisible(true);
 		}
 	}
 }

@@ -57,7 +57,7 @@ public class registrarMoto extends JFrame implements ActionListener {
 		btnAceptar = new JButton("Aceptar");
 		btnAceptar.setBounds(331, 237, 89, 23);
 		contentPane.add(btnAceptar);
-		btnCancelar.addActionListener(this);
+		btnAceptar.addActionListener(this);
 		
 		JLabel lblRegistrarCocheNuevo = new JLabel("Registrar moto nueva");
 		lblRegistrarCocheNuevo.setFont(new Font("Source Sans Pro Black", Font.BOLD, 18));
@@ -106,13 +106,13 @@ public class registrarMoto extends JFrame implements ActionListener {
 		textPrecio.setColumns(10);
 		
 		textImagen = new JTextField();
-		textImagen.setBounds(198, 211, 154, 20);
+		textImagen.setBounds(198, 232, 154, 20);
 		contentPane.add(textImagen);
 		textImagen.setColumns(10);
 		
 		JLabel lblImagen = new JLabel("Dir. Imagen:");
 		lblImagen.setFont(new Font("Candara", Font.PLAIN, 14));
-		lblImagen.setBounds(122, 212, 66, 14);
+		lblImagen.setBounds(122, 232, 66, 14);
 		contentPane.add(lblImagen);
 	}
 
@@ -133,10 +133,14 @@ public class registrarMoto extends JFrame implements ActionListener {
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
 			moto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), m);	
 			dispose();
+			menuAdmin vistaAdmin = new menuAdmin();
+			vistaAdmin.setVisible(true);
 		}
 		
 		if (e.getSource() == btnCancelar){
 			dispose();
+			menuAdmin vistaAdmin = new menuAdmin();
+			vistaAdmin.setVisible(true);
 		}
 	}
 }
