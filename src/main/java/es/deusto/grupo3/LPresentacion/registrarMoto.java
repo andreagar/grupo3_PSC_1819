@@ -24,6 +24,10 @@ import es.deusto.grupo3.LNegocio.Moto;
 
 public class registrarMoto extends JFrame implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtMarca;
 	private JTextField textModelo;

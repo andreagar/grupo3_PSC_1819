@@ -23,6 +23,10 @@ import es.deusto.grupo3.LNegocio.GestorUsuario;
 
 public class registrarCoche extends JFrame implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtMarca;
 	private JTextField textModelo;
@@ -48,12 +52,12 @@ public class registrarCoche extends JFrame implements ActionListener {
 		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setBounds(10, 264, 89, 23);
 		contentPane.add(btnCancelar);
-		btnAceptar.addActionListener(this);
+		btnCancelar.addActionListener(this);
 		
 		btnAceptar = new JButton("Aceptar");
 		btnAceptar.setBounds(331, 264, 89, 23);
 		contentPane.add(btnAceptar);
-		btnCancelar.addActionListener(this);
+		btnAceptar.addActionListener(this);
 		
 		JLabel lblRegistrarCocheNuevo = new JLabel("Registrar coche nuevo");
 		lblRegistrarCocheNuevo.setFont(new Font("Source Sans Pro Black", Font.BOLD, 18));

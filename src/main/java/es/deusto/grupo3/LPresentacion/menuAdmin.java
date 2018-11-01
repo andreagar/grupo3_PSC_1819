@@ -20,22 +20,7 @@ public class menuAdmin extends JFrame implements ActionListener{
 	private JButton btnRegistrarMoto;
 	private JButton btnCerrar;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					menuAdmin frame = new menuAdmin();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	
 	/**
 	 * Create the frame.
 	 */
@@ -77,9 +62,15 @@ public class menuAdmin extends JFrame implements ActionListener{
 		
 		if (e.getSource() == btnRegistrarCoche){
 			
+			registrarCoche vistaCoche = new registrarCoche();
+			vistaCoche.setVisible(true);
+			dispose();
 		}
 		if (e.getSource() == btnRegistrarMoto){
 			
+			registrarMoto vistaMoto = new registrarMoto();
+			vistaMoto.setVisible(true);
+			dispose();
 		}
 		if (e.getSource() == btnCerrar){
 			dispose();
