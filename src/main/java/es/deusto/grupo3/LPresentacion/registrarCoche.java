@@ -28,6 +28,7 @@ public class registrarCoche extends JFrame implements ActionListener {
 	private JTextField textModelo;
 	private JTextField textMatricula;
 	private JTextField textPrecio;
+	private JTextField textImagen;
 	private JButton btnCancelar;
 	private JButton btnAceptar;
 
@@ -38,19 +39,19 @@ public class registrarCoche extends JFrame implements ActionListener {
 	 */
 	public registrarCoche() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 446, 308);
+		setBounds(100, 100, 446, 336);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		btnCancelar = new JButton("Cancelar");
-		btnCancelar.setBounds(21, 237, 89, 23);
+		btnCancelar.setBounds(10, 264, 89, 23);
 		contentPane.add(btnCancelar);
 		btnAceptar.addActionListener(this);
 		
 		btnAceptar = new JButton("Aceptar");
-		btnAceptar.setBounds(331, 237, 89, 23);
+		btnAceptar.setBounds(331, 264, 89, 23);
 		contentPane.add(btnAceptar);
 		btnCancelar.addActionListener(this);
 		
@@ -66,7 +67,7 @@ public class registrarCoche extends JFrame implements ActionListener {
 		txtMarca.setColumns(10);
 		
 		JLabel lblMarca = new JLabel("Marca:");
-		lblMarca.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblMarca.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblMarca.setBounds(122, 76, 46, 14);
 		contentPane.add(lblMarca);
 		
@@ -76,7 +77,7 @@ public class registrarCoche extends JFrame implements ActionListener {
 		textModelo.setColumns(10);
 		
 		JLabel lblModelo = new JLabel("Modelo:");
-		lblModelo.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblModelo.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblModelo.setBounds(122, 116, 66, 14);
 		contentPane.add(lblModelo);
 		
@@ -86,9 +87,29 @@ public class registrarCoche extends JFrame implements ActionListener {
 		textMatricula.setColumns(10);
 		
 		JLabel lblMatricula = new JLabel("Matricula:");
-		lblMatricula.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblMatricula.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblMatricula.setBounds(122, 162, 66, 14);
 		contentPane.add(lblMatricula);
+		
+		JLabel lblPrecio = new JLabel("Precio:");
+		lblPrecio.setFont(new Font("Candara", Font.PLAIN, 14));
+		lblPrecio.setBounds(122, 206, 66, 14);
+		contentPane.add(lblPrecio);
+		
+		textPrecio = new JTextField();
+		textPrecio.setBounds(198, 205, 154, 21);
+		contentPane.add(textPrecio);
+		textPrecio.setColumns(10);
+
+		textImagen = new JTextField();
+		textImagen.setBounds(198, 211, 154, 20);
+		contentPane.add(textImagen);
+		textImagen.setColumns(10);
+		
+		JLabel lblImagen = new JLabel("Dir. Imagen:");
+		lblImagen.setFont(new Font("Candara", Font.PLAIN, 14));
+		lblImagen.setBounds(122, 212, 66, 14);
+		contentPane.add(lblImagen);
 	}
 
 
@@ -99,10 +120,11 @@ public class registrarCoche extends JFrame implements ActionListener {
 		String marca = txtMarca.getText();
 		String modelo = textModelo.getText();
 		String matricula = textMatricula.getText();
-		double precio = 700;
+		double precio = Double.parseDouble(textPrecio.getText());
+		String imagen = textImagen.getText();
 		
 		if (e.getSource() == btnAceptar){
-			Coche c = new Coche(marca, modelo, matricula, precio, false, false, false);
+			Coche c = new Coche(marca, modelo, matricula, precio, false, false, false, imagen);
 			GestorCoche coche = new GestorCoche();
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
 			coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), c);	

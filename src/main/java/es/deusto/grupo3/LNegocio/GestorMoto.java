@@ -59,10 +59,10 @@ public class GestorMoto {
 		if (chequearYaEnTabla(st, moto.matricula) == false) {  // Si esta ya en la tabla
 			// Insercion normal
 			try {
-				String sentSQL = "insert into COCHE values(" + "'" + moto.marca + "', '" 
-									+ moto.modelo + "', '" + moto.matricula + "', '"
-									  + moto.alquilado + "', '" + moto.comprado + "', '" 
-									 + moto.averiado + "')";  
+				String sentSQL = "insert into COCHE values(" + "'" + moto.marca + "', '" + moto.modelo + "', '" 
+															 + moto.matricula + "', '" + moto.precio + "', '"
+															 + moto.alquilado + "', '" + moto.comprado + "', '" 
+															 + moto.averiado + "', '" + moto.imagen + "')";  
 				log.info(sentSQL);
 				int val = st.executeUpdate( sentSQL );
 				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no

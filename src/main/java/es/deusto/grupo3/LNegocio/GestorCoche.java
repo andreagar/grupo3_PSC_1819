@@ -67,10 +67,10 @@ public class GestorCoche {
 		if (chequearYaEnTabla(st, coche.getMatricula()) == false) {  // Si esta ya en la tabla
 			// Insercion normal
 			try {
-				String sentSQL = "insert into COCHE values(" + "'" + coche.marca + "', '" 
-															+ coche.modelo + "', '" + coche.matricula + "', '"
-															  + coche.alquilado + "', '" + coche.comprado + "', '" 
-															 + coche.averiado + "')"; 
+				String sentSQL = "insert into COCHE values(" + "'" + coche.marca + "', '" + coche.modelo + "', '" 
+															 + coche.matricula + "', '" + coche.precio + "', '"
+															 + coche.alquilado + "', '" + coche.comprado + "', '" 
+															 + coche.averiado + "', '" + coche.imagen + "')"; 
 				log.info(sentSQL);
 				int val = st.executeUpdate( sentSQL );
 				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
@@ -98,10 +98,9 @@ public class GestorCoche {
 			rs = st.executeQuery( sentSQL );
 			int i=0;
 			while (rs.next()) {
-				
-				c.add(new Coche (rs.getString(1),rs.getString(2), rs.getString(3), rs.getDouble(4),
-								 rs.getBoolean(5), rs.getBoolean(6), rs.getBoolean(7)));
-				
+				c.add(new Coche (rs.getString(1),rs.getString(2), rs.getString(3), rs.getDouble(4), 
+									rs.getBoolean(5), rs.getBoolean(6), rs.getBoolean(7), rs.getString(8)));
+
 			}			
 			
 		} catch (SQLException e) {
@@ -110,7 +109,7 @@ public class GestorCoche {
 		}
 
 		return c;
-		
+
 	}
 	
 	/** Seleccionar coches que estén disponibles (no alquilados, no comprados y no averiados)
@@ -130,6 +129,7 @@ public class GestorCoche {
 		}
 		
 		return cochesDisp;
+
 		
 	}
 }

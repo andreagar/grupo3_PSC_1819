@@ -28,8 +28,11 @@ public class registrarMoto extends JFrame implements ActionListener {
 	private JTextField txtMarca;
 	private JTextField textModelo;
 	private JTextField textMatricula;
+	private JTextField textPrecio;
+	private JTextField textImagen;
 	private JButton btnAceptar;
 	private JButton btnCancelar;
+	private JLabel lblPrecio;
 	
 	/**
 	 * Create the frame.
@@ -64,7 +67,7 @@ public class registrarMoto extends JFrame implements ActionListener {
 		txtMarca.setColumns(10);
 		
 		JLabel lblMarca = new JLabel("Marca:");
-		lblMarca.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblMarca.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblMarca.setBounds(122, 76, 46, 14);
 		contentPane.add(lblMarca);
 		
@@ -74,7 +77,7 @@ public class registrarMoto extends JFrame implements ActionListener {
 		textModelo.setColumns(10);
 		
 		JLabel lblModelo = new JLabel("Modelo:");
-		lblModelo.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblModelo.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblModelo.setBounds(122, 116, 66, 14);
 		contentPane.add(lblModelo);
 		
@@ -84,9 +87,29 @@ public class registrarMoto extends JFrame implements ActionListener {
 		textMatricula.setColumns(10);
 		
 		JLabel lblMatricula = new JLabel("Matricula:");
-		lblMatricula.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblMatricula.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblMatricula.setBounds(122, 162, 66, 14);
 		contentPane.add(lblMatricula);
+
+		lblPrecio = new JLabel("Precio:");
+		lblPrecio.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblPrecio.setBounds(122, 198, 66, 14);
+		contentPane.add(lblPrecio);
+		
+		textPrecio = new JTextField();
+		textPrecio.setBounds(197, 197, 155, 20);
+		contentPane.add(textPrecio);
+		textPrecio.setColumns(10);
+		
+		textImagen = new JTextField();
+		textImagen.setBounds(198, 211, 154, 20);
+		contentPane.add(textImagen);
+		textImagen.setColumns(10);
+		
+		JLabel lblImagen = new JLabel("Dir. Imagen:");
+		lblImagen.setFont(new Font("Candara", Font.PLAIN, 14));
+		lblImagen.setBounds(122, 212, 66, 14);
+		contentPane.add(lblImagen);
 	}
 
 
@@ -97,10 +120,11 @@ public class registrarMoto extends JFrame implements ActionListener {
 		String marca = txtMarca.getText();
 		String modelo = textModelo.getText();
 		String matricula = textMatricula.getText();
-		double precio = 800;
+		double precio = Double.parseDouble(textPrecio.getText());
+		String imagen = textImagen.getText();
 		
 		if (e.getSource() == btnAceptar){
-			Moto m = new Moto(marca, modelo, matricula, precio, false, false, false);
+			Moto m = new Moto(marca, modelo, matricula, precio, false, false, false, imagen);
 			GestorMoto moto = new GestorMoto();	
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
 			moto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), m);	
