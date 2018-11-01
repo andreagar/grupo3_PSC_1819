@@ -32,6 +32,7 @@ public class registrarMoto extends JFrame implements ActionListener {
 	private JTextField textImagen;
 	private JButton btnAceptar;
 	private JButton btnCancelar;
+	private JLabel lblPrecio;
 	
 	/**
 	 * Create the frame.
@@ -89,16 +90,16 @@ public class registrarMoto extends JFrame implements ActionListener {
 		lblMatricula.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblMatricula.setBounds(122, 162, 66, 14);
 		contentPane.add(lblMatricula);
+
+		lblPrecio = new JLabel("Precio:");
+		lblPrecio.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblPrecio.setBounds(122, 198, 66, 14);
+		contentPane.add(lblPrecio);
 		
 		textPrecio = new JTextField();
-		textPrecio.setBounds(198, 161, 154, 20);
+		textPrecio.setBounds(197, 197, 155, 20);
 		contentPane.add(textPrecio);
 		textPrecio.setColumns(10);
-		
-		JLabel lblPrecio = new JLabel("Precio:");
-		lblPrecio.setFont(new Font("Candara", Font.PLAIN, 14));
-		lblPrecio.setBounds(122, 162, 86, 14);
-		contentPane.add(lblPrecio);
 		
 		textImagen = new JTextField();
 		textImagen.setBounds(198, 211, 154, 20);
