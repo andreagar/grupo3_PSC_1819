@@ -121,4 +121,10 @@ public class GestorUsuario {
 				return false;
 			}
 	}
+
+	public boolean bloquearUsuario(String string) {
+		return false;
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -1,14 +1,17 @@
 package es.deusto.grupo3;
 
 import static org.junit.Assert.*;
+import junit.framework.Assert;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorUsuario;
+import es.deusto.grupo3.LNegocio.Usuario;
 
 public class GestorUsuarioTest {
 
@@ -42,6 +45,14 @@ public class GestorUsuarioTest {
     public void testcambiarContrasenya(){
     	boolean prueba = gestor.cambiarContrasenya(BaseDeDatos.getStatement(), "Simon", "contrasenyaNueva");
     	assertTrue(prueba);
+    }
+    
+    @Test
+    public void testbloquearUsuario(){
+    	GestorUsuario gesUsu = Mockito.mock(GestorUsuario.class);
+    	Mockito.when(gesUsu.bloquearUsuario("oscar")).thenReturn(true);  
+    	
+    	assertTrue(gesUsu.bloquearUsuario("oscar"));
     }
 
 }
