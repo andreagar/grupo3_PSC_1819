@@ -47,12 +47,4 @@ public class GestorUsuarioTest {
     	assertTrue(prueba);
     }
     
-    @Test
-    public void testbloquearUsuario(){
-    	GestorUsuario gesUsu = Mockito.mock(GestorUsuario.class);
-    	Mockito.when(gesUsu.bloquearUsuario("oscar")).thenReturn(true);  
-    	
-    	assertTrue(gesUsu.bloquearUsuario("oscar"));
-    }
-
 }
