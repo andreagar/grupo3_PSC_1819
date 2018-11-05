@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,6 +15,8 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Asignaciones;
+import es.deusto.grupo3.LNegocio.GestorCoche;
 
 public class menuUsuario extends JFrame implements ActionListener{
 
@@ -84,6 +87,12 @@ public class menuUsuario extends JFrame implements ActionListener{
 		if (e.getSource() == btnHistorial){
 //			registrarse registrarse = new registrarse();
 //			registrarse.setVisible(true);
+			GestorCoche g = new GestorCoche();
+			ArrayList<Asignaciones> a = new ArrayList<Asignaciones>();
+			a = g.getUsuarioHistorial(BaseDeDatos.getStatement(), nombre);
+			for (int i = 0; i<a.size(); i++){
+				a.get(i).toString();
+			}
 			
 		}
 		
@@ -103,7 +112,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 		
 		if (e.getSource() == btnSalir){
 			nombre = null;
-			dispose();
+			this.dispose();
 			vistaPrincipal frame = new vistaPrincipal();
 			frame.setVisible(true);
 		}

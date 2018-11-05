@@ -92,11 +92,7 @@ public class BaseDeDatos {
 	 * @param alquilado
 	 * @param comprado
 	 * @param averiado
-<<<<<<< HEAD
-	 * @param imagen
-=======
-	 * @param imagen                                      
->>>>>>> master
+	 * @param imagen      
 	 */
 	 public static void crearTablaBDCoche(){
 		if (statement==null)
@@ -137,5 +133,28 @@ public class BaseDeDatos {
 					e.printStackTrace();  
 			}
 		 }
+		 
+		 /**
+			 * Crea la tabla Asignaciones si no existe
+			 * 
+			 * @param usuario
+			 * @param matricula
+			 * @param alquilado
+			 * @param comprado
+			 * @param averiado
+			 */
+			 public static void crearTablaBDAsignaciones(){
+				if (statement==null)
+					return ;
+				 try {
+
+					statement.executeUpdate("create table if not exists ASIGNACIONES (usuario string, matricula string, alquilado boolean, comprado boolean, averiado boolean)");
+
+				} catch (SQLException e) {
+					// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+					if (!e.getMessage().equals("table interaccion already exists"))
+						e.printStackTrace();  
+				}
+			 }
 	
 }

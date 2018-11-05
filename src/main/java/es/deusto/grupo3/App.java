@@ -22,9 +22,18 @@ public class App
     {
     	//inicialización de BD
     	BaseDeDatos.initBD("nuestroBD.db");
+    	String s = "drop table ASIGNACIONES";
+    	try {
+			BaseDeDatos.getStatement().executeUpdate(s);
+			System.out.println(s);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		BaseDeDatos.crearTablaBDUsuario();
 		BaseDeDatos.crearTablaBDCoche();
 		BaseDeDatos.crearTablaBDMoto();
+		BaseDeDatos.crearTablaBDAsignaciones();
 	
 		/*
 		 * 
@@ -36,7 +45,7 @@ public class App
 		coche = new Coche ("Audi", "A7", "1234ABC", 74000, false, false, false, "/es/deusto/grupo3/img/Audi_A7.jpg");
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 		
-		coche = new Coche ("Audi", "Q3", "9999BBB", 43000, false, false, false, "/es/deusto/grupo3/img/Audi_Q3.png");
+		coche = new Coche ("Audi", "Q3", "9999BBB", 43000, false, false, false, "/es/deusto/grupo3/img/Audi_Q3.jpg");
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 		
 		coche = new Coche ("Ford", "Kuga", "5678HHH", 24600, false, false, false, "/es/deusto/grupo3/img/Ford_Kuga.png");

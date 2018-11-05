@@ -1,8 +1,1 @@
-INFO - 12:16:47,523 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
-INFO - 12:16:47,523 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
-INFO - 12:16:47,523 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
-INFO - 12:16:47,523 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
-INFO - 12:16:47,538 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
-INFO - 12:16:47,538 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
-INFO - 12:16:53,425 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
-INFO - 12:16:55,241 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 19:13:01,031 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro

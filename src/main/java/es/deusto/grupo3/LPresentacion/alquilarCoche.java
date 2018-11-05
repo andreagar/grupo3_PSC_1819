@@ -4,6 +4,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Statement;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
@@ -18,6 +19,7 @@ import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Asignaciones;
 import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 
@@ -133,7 +135,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 				break;
 				
 			case "ALQUILAR":
-				//this.Asignar(1);
+				this.Asignar(1);
 				break;
 				
 			case "Detalles":
@@ -169,13 +171,15 @@ public class alquilarCoche extends JFrame implements ActionListener{
 	}
 	
 	public void MostrarDetalles(){
-		
+
 		textArea.setText("");
 		textArea.disable();
 		
 		limCoche=listCoche.getSelectedIndex();
 		cocheSelected =(String)listCoche.getSelectedValue();
 		Statement st = BaseDeDatos.getStatement();
+		System.out.println("Coche Selected: " + listCoche.getSelectedValue());
+		System.out.println("limCoche: " + limCoche);
 		
 		if(limCoche!=-1)
 		{
@@ -183,6 +187,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 			{
 				if(cocheSelected.equals(c.getMatricula()))
 				{
+					
 					textArea.append(" Matricula: ");
 					textArea.append(c.getMatricula());
 					textArea.append(", Marca: ");
@@ -190,8 +195,9 @@ public class alquilarCoche extends JFrame implements ActionListener{
 					textArea.append(", Modelo: ");
 					textArea.append(c.getModelo());
 					textArea.append("\n Precio: ");
-					//textArea.append(c.getPrecio()+"€");
-					imagen.setIcon(new ImageIcon (alquilarCoche.class.getResource("/es/deusto/grupo3/img/Audi_A7.jpg")));
+					DecimalFormat df = new DecimalFormat("#.00");
+					textArea.append((df.format(c.getPrecio()/365)) + " €/dia"); //dividido entre 365 para sacar precio por día
+					imagen.setIcon(new ImageIcon (alquilarCoche.class.getResource(c.getImagen())));
 					break;
 				}			
 			}
@@ -199,6 +205,36 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		}
 		else
 		{
+			JOptionPane.showMessageDialog(null, "Seleccion incorrecta (debes selccionar al menos un elemento).","Mensaje de error",JOptionPane.ERROR_MESSAGE);
+		}
+	}
+	
+	public void Asignar(int opc){
+		limCoche=listCoche.getSelectedIndex();
+		modeloCoche=(DefaultListModel)listCoche.getModel();
+		cocheSelected = (String)listCoche.getSelectedValue();
+		System.out.println("Coche Selected: " + listCoche.getSelectedValue());
+		System.out.println("limCoche: " + limCoche);
+		if(limCoche!=-1)
+		{
+			if(opc == 1) //ALQUILAR
+			{
+				Asignaciones asig = new Asignaciones (usuario, cocheSelected, true, false, false);
+				boolean ok = false;
+				ok = objCoche.AlquilarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
+				if (ok == true){
+					modeloCoche.remove(listCoche.getSelectedIndex());
+				}
+				
+			}
+			if(opc == 2) //COMPRAR
+			{
+//				Asignaciones asig = new Asignaciones (usuario, cocheSelected, false, true, false);
+//				objCoche.AsignarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
+//				modeloCoche.remove(listCoche.getSelectedIndex());
+			}
+			
+		}else{
 			JOptionPane.showMessageDialog(null, "Seleccion incorrecta (debes selccionar al menos un elemento).","Mensaje de error",JOptionPane.ERROR_MESSAGE);
 		}
 	}
