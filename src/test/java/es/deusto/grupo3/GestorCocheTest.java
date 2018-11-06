@@ -16,12 +16,10 @@ public class GestorCocheTest {
 
 	GestorCoche gestor;
 	Coche coche;
-	BaseDeDatos bd;
 	
 	@Before
 	public void setUp() throws Exception {
 		BaseDeDatos.initBD("nuestroBD.db");
-		bd = new BaseDeDatos();
 		coche = new Coche("Audi", "A7", "1234ABC", 74000, false, false, false, "/es/deusto/grupo3/img/Audi_A7.jpg");
 		gestor = new GestorCoche();
 	}
@@ -34,20 +32,20 @@ public class GestorCocheTest {
 	
 	@Test
 	public void testchequearTablaCoche() {
-    	boolean prueba = gestor.chequearYaEnTabla(bd.getStatement(), coche.getMatricula());
+    	boolean prueba = gestor.chequearYaEnTabla(BaseDeDatos.getStatement(), coche.getMatricula());
     	assertTrue(prueba);		
 	}
     
 	@Test
     public void testanyadirFilaATablaCoche(){
-    	boolean prueba = gestor.anyadirFilaATablaCoche(bd.getStatement(), coche);
+    	boolean prueba = gestor.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
     	assertFalse(prueba);
     }
 	
 	@Test
     public void testGetArrayCocheGlobal(){
 		ArrayList<Coche> cocheArray = new ArrayList<Coche>();
-		cocheArray = gestor.GetArrayCocheGlobal(bd.getStatement());
+		cocheArray = gestor.GetArrayCocheGlobal(BaseDeDatos.getStatement());
 		boolean comprobacion = false;
 		
 		for (int i=0; i<cocheArray.size(); i++){
@@ -62,7 +60,7 @@ public class GestorCocheTest {
 	@Test
     public void testGetArrayCochesDisponibles(){
 		ArrayList<Coche> cocheArray = new ArrayList<Coche>();
-		cocheArray = gestor.GetArrayCochesDisponibles(bd.getStatement());
+		cocheArray = gestor.GetArrayCochesDisponibles(BaseDeDatos.getStatement());
 		boolean comprobacion = false;
 		
 		assertNotSame(cocheArray.get(1), comprobacion);
@@ -70,7 +68,8 @@ public class GestorCocheTest {
 	
 	@Test
 	public void AlquilarVehiculoUsuario(){
-		
+		boolean prueba = gestor.chequearYaEnTabla(BaseDeDatos.getStatement(), coche.getMatricula());
+    	assertTrue(prueba);
 	}
 
 }
