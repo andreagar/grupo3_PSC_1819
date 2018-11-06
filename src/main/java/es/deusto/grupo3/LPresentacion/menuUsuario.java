@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,12 +15,15 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Asignaciones;
+import es.deusto.grupo3.LNegocio.GestorCoche;
 
 public class menuUsuario extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JButton btnAlquilar;
+	private JButton btnCoche;
+	private JButton btnMoto;
 	private JButton btnModificar;
 	private JButton btnHistorial;
 	private JButton btnSalir;
@@ -37,15 +41,21 @@ public class menuUsuario extends JFrame implements ActionListener{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		btnAlquilar = new JButton("Alquilar coche");
-		btnAlquilar.setFont(new Font("Candara", Font.BOLD, 18));
-		btnAlquilar.setBounds(140, 130, 200, 55);
-		contentPane.add(btnAlquilar);
-		btnAlquilar.addActionListener(this);
+		btnCoche = new JButton("Alquilar/Comprar coche");
+		btnCoche.setFont(new Font("Candara", Font.BOLD, 18));
+		btnCoche.setBounds(130, 120, 220, 55);
+		contentPane.add(btnCoche);
+		btnCoche.addActionListener(this);
+		
+		btnMoto = new JButton("Alquilar/Comprar moto");
+		btnMoto.setFont(new Font("Candara", Font.BOLD, 18));
+		btnMoto.setBounds(130, 190, 220, 55);
+		contentPane.add(btnMoto);
+		btnMoto.addActionListener(this);
 		
 		btnHistorial = new JButton("Ver mi historial");
 		btnHistorial.setFont(new Font("Candara", Font.BOLD, 18));
-		btnHistorial.setBounds(140, 230, 200, 55);
+		btnHistorial.setBounds(140, 260, 200, 55);
 		contentPane.add(btnHistorial);
 		btnHistorial.addActionListener(this);
 		
@@ -82,15 +92,27 @@ public class menuUsuario extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		
 		if (e.getSource() == btnHistorial){
-//			registrarse registrarse = new registrarse();
-//			registrarse.setVisible(true);
+			historialAsignaciones asig = new historialAsignaciones(nombre);
+			asig.setVisible(true);
+//			GestorCoche g = new GestorCoche();
+//			ArrayList<Asignaciones> a = new ArrayList<Asignaciones>();
+//			a = g.getUsuarioHistorial(BaseDeDatos.getStatement(), nombre);
+//			for (int i = 0; i<a.size(); i++){
+//				a.get(i).toString();
+//			}
 			
 		}
 		
-		if (e.getSource() == btnAlquilar){
+		if (e.getSource() == btnCoche){
 			dispose();
 			alquilarCoche alquilar = new alquilarCoche(nombre);
 			alquilar.setVisible(true);			
+		}
+		
+		if (e.getSource() == btnMoto){
+			dispose();
+			alquilarMoto alquilarMoto = new alquilarMoto(nombre);
+			alquilarMoto.setVisible(true);			
 		}
 		
 		if (e.getSource() == btnModificar){
@@ -103,7 +125,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 		
 		if (e.getSource() == btnSalir){
 			nombre = null;
-			dispose();
+			this.dispose();
 			vistaPrincipal frame = new vistaPrincipal();
 			frame.setVisible(true);
 		}

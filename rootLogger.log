@@ -1,9 +1,5 @@
-INFO - 11:21:28,435 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
-INFO - 11:21:28,437 - main - es.deusto.grupo3.App - insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
-INFO - 11:21:50,677 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
-INFO - 11:21:50,695 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
-INFO - 11:21:50,698 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
-INFO - 11:21:50,698 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
-INFO - 11:21:50,700 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
-INFO - 11:21:50,708 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
-INFO - 11:21:50,708 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 17:10:26,722 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 17:10:26,722 - main - es.deusto.grupo3.App - select * from COCHE
+INFO - 17:10:26,722 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 17:10:26,722 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 17:10:26,722 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
