@@ -150,7 +150,7 @@ public class GestorCoche {
             int val1 = pstmt.executeUpdate();
 			
 	        //INSERT
-			String sentSQL = "insert into ASIGNACIONES values(?, ?, ?, ?, ?)"; 	
+			String sentSQL = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
 			PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
             // set the corresponding param
             pstmt2.setString(1, asig.getUsuario());
@@ -158,6 +158,7 @@ public class GestorCoche {
             pstmt2.setBoolean(3, true);
             pstmt2.setBoolean(4, false);
             pstmt2.setBoolean(5, false);
+            pstmt2.setInt(6, asig.getVehiculo());
             // insert 
             int val2 = pstmt2.executeUpdate();
 	        
@@ -189,7 +190,7 @@ public class GestorCoche {
 
 			int i=0;
 			while (rs.next()) {
-				a.add(new Asignaciones (rs.getString(1), rs.getString(2), rs.getBoolean(3), rs.getBoolean(4), rs.getBoolean(5)));
+				a.add(new Asignaciones (rs.getString(1), rs.getString(2), rs.getBoolean(3), rs.getBoolean(4), rs.getBoolean(5), rs.getInt(6)));
 				System.out.println(a);
 			}			
 			

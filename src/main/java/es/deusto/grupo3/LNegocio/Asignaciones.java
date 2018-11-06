@@ -4,14 +4,16 @@ public class Asignaciones {
 
 	String usuario, matricula;
 	boolean alquilado, comprado, averiado;
+	int vehiculo; //1: coche, 2: moto
 
-	public Asignaciones(String usuario, String matricula, boolean alquilado, boolean comprado, boolean averiado){
+	public Asignaciones(String usuario, String matricula, boolean alquilado, boolean comprado, boolean averiado, int vehiculo){
 
 		this.matricula=matricula;
 		this.usuario=usuario;
 		this.alquilado=alquilado;
 		this.comprado=comprado;
 		this.averiado=averiado;
+		this.vehiculo=vehiculo;
 		
 	}
 
@@ -55,15 +57,31 @@ public class Asignaciones {
 		this.averiado = averiado;
 	}
 	
+	public int getVehiculo() {
+		return vehiculo;
+	}
+
+	public void setVehiculo(int vehiculo) {
+		this.vehiculo = vehiculo;
+	}
+	
 	public String toString(){
+		String v = null;
+		if(this.getVehiculo() == 1){
+			v = "Coche";
+		}
+		if(this.getVehiculo() == 2){
+			v = "Moto";
+		}
+		
 		if(this.getAlquilado()==true){
-			return "Usuario: "+ usuario + ", Matricula: " + matricula + ", Alquilado";
+			return "Usuario: "+ usuario + ", Matricula: " + matricula + ", " + v + " Alquilado";
 		}
 		if(this.getComprado()==true){
-			return "Usuario: "+ usuario + ", Matricula: " + matricula + ", Comprado";
+			return "Usuario: "+ usuario + ", Matricula: " + matricula + ", " + v + " Comprado";
 		}
 		if(this.getAveriado()==true){
-			return "Usuario: "+ usuario + ", Matricula: " + matricula + ", Averiado";
+			return "Usuario: "+ usuario + ", Matricula: " + matricula + ", " + v + " Averiado";
 		}
 		else{
 			return "Error";

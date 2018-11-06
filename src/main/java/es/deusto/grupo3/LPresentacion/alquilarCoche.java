@@ -210,7 +210,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		
 			if(opc == 1) //ALQUILAR
 			{
-				Asignaciones asig = new Asignaciones (usuario, cocheSelected, true, false, false);
+				Asignaciones asig = new Asignaciones (usuario, cocheSelected, true, false, false, 1);
 				boolean ok = false;
 				ok = objCoche.AlquilarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
 				if (ok == true){

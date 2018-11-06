@@ -31,7 +31,6 @@ public class historialAsignaciones extends JFrame implements ActionListener{
 	private JList listAsig;
 	private String usuario;
 	private GestorCoche objCoche;
-	private JTextArea textArea;
 	private DefaultListModel modeloAsig;
 	
 	/**
@@ -43,7 +42,7 @@ public class historialAsignaciones extends JFrame implements ActionListener{
 		
 		setTitle("ASIGNACIONES");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 385, 376);
+		setBounds(100, 100, 400, 376);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -56,11 +55,11 @@ public class historialAsignaciones extends JFrame implements ActionListener{
 		
 		listAsig = new JList();
 		listAsig.setFont(new Font("Candara", Font.BOLD, 14));
-		listAsig.setBounds(30, 36, 300, 38);
+		listAsig.setBounds(30, 36, 330, 38);
 		contentPane.add(listAsig);
 	
 		button = new JButton("Atras");
-		button.setBounds(280, 299, 70, 28);
+		button.setBounds(280, 299, 100, 28);
 		button.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(button);
 		button.addActionListener(this);

@@ -142,13 +142,14 @@ public class BaseDeDatos {
 			 * @param alquilado
 			 * @param comprado
 			 * @param averiado
+			 * @param vehiculo --> 1: coche, 2: moto
 			 */
 			 public static void crearTablaBDAsignaciones(){
 				if (statement==null)
 					return ;
 				 try {
 
-					statement.executeUpdate("create table if not exists ASIGNACIONES (usuario string, matricula string, alquilado boolean, comprado boolean, averiado boolean)");
+					statement.executeUpdate("create table if not exists ASIGNACIONES (usuario string, matricula string, alquilado boolean, comprado boolean, averiado boolean, vehiculo int)");
 
 				} catch (SQLException e) {
 					// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)

@@ -144,7 +144,7 @@ public class GestorMoto {
             int val1 = pstmt.executeUpdate();
 			
 	        //INSERT
-			String sentSQL = "insert into ASIGNACIONES values(?, ?, ?, ?, ?)"; 	
+			String sentSQL = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
 			PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
             // set the corresponding param
             pstmt2.setString(1, asig.getUsuario());
@@ -152,6 +152,7 @@ public class GestorMoto {
             pstmt2.setBoolean(3, true);
             pstmt2.setBoolean(4, false);
             pstmt2.setBoolean(5, false);
+            pstmt2.setInt(6, asig.getVehiculo());
             // insert 
             int val2 = pstmt2.executeUpdate();
 	        
@@ -162,35 +163,5 @@ public class GestorMoto {
 			return false;
 		}
 	}
-	
-	/** Recuperar las asignaciones hechas a un usuario específico
-	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
-	 * @param nombre	Nombre del usuario logeado
-	 * @return	Array de las asignaciones de un usaurio dado
-	 */
-	public ArrayList<Asignaciones> getUsuarioHistorial(Statement st, String nombre){
-		
-		ResultSet rs;
-		ArrayList<Asignaciones> a = new ArrayList<Asignaciones>();
-		try {
-			String sentSQL = "select * from ASIGNACIONES where usuario = ?";
-			
-			PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
-            // set the corresponding param
-            pstmt.setString(1, nombre);
-            // INSERT 
-            rs = pstmt.executeQuery();
 
-			while (rs.next()) {
-				a.add(new Asignaciones (rs.getString(1), rs.getString(2), rs.getBoolean(3), rs.getBoolean(4), rs.getBoolean(5)));
-				System.out.println(a);
-			}			
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return a;
-	}
 }

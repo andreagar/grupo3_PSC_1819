@@ -170,14 +170,12 @@ public class alquilarMoto extends JFrame implements ActionListener{
 
 		textArea.setText("");
 		textArea.disable();
-		
-		
-		motoSelected =(String)listMoto.getSelectedValue();
-		Statement st = BaseDeDatos.getStatement();
-		System.out.println("moto Selected: " + listMoto.getSelectedValue());
-		System.out.println("limmoto: " + limMoto);
+		limMoto=listMoto.getSelectedIndex();
 		
 		if(limMoto!=-1){
+			motoSelected =(String)listMoto.getSelectedValue();
+			Statement st = BaseDeDatos.getStatement();
+			
 			for (Moto m : objMoto.GetArrayMotosDisponibles(st))
 			{
 				if(motoSelected.equals(m.getMatricula()))
@@ -205,15 +203,14 @@ public class alquilarMoto extends JFrame implements ActionListener{
 	
 	public void Asignar(int opc){
 		limMoto=listMoto.getSelectedIndex();
-		modeloMoto=(DefaultListModel)listMoto.getModel();
-		motoSelected = (String)listMoto.getSelectedValue();
-		System.out.println("moto Selected: " + listMoto.getSelectedValue());
-		System.out.println("limmoto: " + limMoto);
-		limMoto=listMoto.getSelectedIndex();
+		
 		if(limMoto!=-1){
+			modeloMoto=(DefaultListModel)listMoto.getModel();
+			motoSelected = (String)listMoto.getSelectedValue();
+			
 			if(opc == 1) //ALQUILAR
 			{
-				Asignaciones asig = new Asignaciones (usuario, motoSelected, true, false, false);
+				Asignaciones asig = new Asignaciones (usuario, motoSelected, true, false, false, 2);
 				boolean ok = false;
 				ok = objMoto.AlquilarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
 				if (ok == true){

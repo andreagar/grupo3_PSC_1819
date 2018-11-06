@@ -24,14 +24,15 @@ public class App
     {
     	//inicialización de BD
     	BaseDeDatos.initBD("nuestroBD.db");
-    	String s = "drop table MOTO";
-    	try {
-			BaseDeDatos.getStatement().executeUpdate(s);
-			System.out.println(s);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//    	String s = "drop table MOTO";
+//    	try {
+//			BaseDeDatos.getStatement().executeUpdate(s);
+//			System.out.println(s);
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+    	
 		BaseDeDatos.crearTablaBDUsuario();
 		BaseDeDatos.crearTablaBDCoche();
 		BaseDeDatos.crearTablaBDMoto();
