@@ -38,6 +38,7 @@ public class modificarCoche extends JFrame implements ActionListener{
 	
 	private JButton detalles;
 	private JButton button;
+	private JButton modificar;
 	
 	private JList listCoche;
 	
@@ -53,7 +54,7 @@ public class modificarCoche extends JFrame implements ActionListener{
 		
 		setTitle("MODIFICAR COCHE");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 650, 376);
+		setBounds(100, 100, 582, 376);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -66,8 +67,8 @@ public class modificarCoche extends JFrame implements ActionListener{
 		contentPane.add(lblSeleccioneUnCdigo);
 		
 		JLabel lblDetallesDelCoche = new JLabel("DETALLES DEL COCHE SELECCIONADO");
-		lblDetallesDelCoche.setBounds(208, 11, 254, 14);
-		lblDetallesDelCoche.setFont(new Font("Candara", Font.BOLD, 14));
+		lblDetallesDelCoche.setBounds(200, 29, 296, 14);
+		lblDetallesDelCoche.setFont(new Font("Candara", Font.BOLD, 16));
 		contentPane.add(lblDetallesDelCoche);
 		
 		listCoche = new JList();
@@ -80,7 +81,7 @@ public class modificarCoche extends JFrame implements ActionListener{
 		contentPane.add(lblMarca);
 		
 			textMarca = new JTextField();
-			textMarca.setBounds(276, 75, 154, 20);
+			textMarca.setBounds(276, 72, 154, 20);
 			contentPane.add(textMarca);
 			textMarca.setColumns(10);
 		
@@ -91,7 +92,7 @@ public class modificarCoche extends JFrame implements ActionListener{
 		contentPane.add(lblModelo);
 		
 			textModelo = new JTextField();
-			textModelo.setBounds(276, 115, 154, 20);
+			textModelo.setBounds(276, 112, 154, 20);
 			contentPane.add(textModelo);
 			textModelo.setColumns(10);
 		
@@ -101,33 +102,33 @@ public class modificarCoche extends JFrame implements ActionListener{
 		contentPane.add(lblMatricula);
 		
 			textMatricula = new JTextField();
-			textMatricula.setBounds(276, 161, 154, 20);
+			textMatricula.setBounds(276, 158, 154, 20);
 			contentPane.add(textMatricula);
 			textMatricula.setColumns(10);
 		
 		JLabel lblPrecio = new JLabel("Precio:");
 		lblPrecio.setFont(new Font("Candara", Font.PLAIN, 14));
-		lblPrecio.setBounds(200, 206, 66, 14);
+		lblPrecio.setBounds(200, 209, 66, 14);
 		contentPane.add(lblPrecio);
 		
 			textPrecio = new JTextField();
-			textPrecio.setBounds(276, 205, 154, 21);
+			textPrecio.setBounds(250, 205, 180, 21);
 			contentPane.add(textPrecio);
 			textPrecio.setColumns(10);
 
 		
 		JLabel lblImagen = new JLabel("Dir. Imagen:");
 		lblImagen.setFont(new Font("Candara", Font.PLAIN, 14));
-		lblImagen.setBounds(200, 232, 66, 14);
+		lblImagen.setBounds(200, 246, 81, 14);
 		contentPane.add(lblImagen);
 		
 			textImagen = new JTextField();
-			textImagen.setBounds(276, 232, 235, 20);
+			textImagen.setBounds(286, 240, 235, 20);
 			contentPane.add(textImagen);
 			textImagen.setColumns(10);
 		
 		button = new JButton("Atras");
-		button.setBounds(550, 299, 70, 28);
+		button.setBounds(442, 298, 70, 28);
 		button.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(button);
 		button.addActionListener(this);
@@ -139,6 +140,13 @@ public class modificarCoche extends JFrame implements ActionListener{
 		contentPane.add(detalles);
 		detalles.addActionListener(this);
 		detalles.setActionCommand("Detalles");
+		
+		modificar = new JButton("Modificar");
+		modificar.setBounds(250, 299, 100, 28);
+		modificar.setFont(new Font("Candara", Font.BOLD, 14));
+		contentPane.add(modificar);
+		modificar.addActionListener(this);
+		modificar.setActionCommand("modificar");
 		
 		objCoche=new GestorCoche();
 		this.CargarLista(objCoche);
@@ -155,11 +163,43 @@ public class modificarCoche extends JFrame implements ActionListener{
 		if (e.getSource() == detalles){
 			this.MostrarDetalles();
 		}
+		
 		if (e.getSource() == button){
-			
 			dispose();
 			menuAdmin vista = new menuAdmin();
 			vista.setVisible(true);
+		}
+		
+		if (e.getSource() == modificar){
+			
+			if ((textMatricula.getText()).equals("")){
+				JOptionPane.showMessageDialog(null,"Seleccion incorrecta (debes selccionar al menos un elemento).",
+						"Mensaje de error",JOptionPane.ERROR_MESSAGE);
+			}else{
+				
+				Statement st = BaseDeDatos.getStatement();
+				GestorCoche gestor = new GestorCoche();
+				double price = Double.parseDouble(textPrecio.getText());
+				String id = textMatricula.getText();
+				String img = textImagen.getText();
+				
+				boolean correcto = gestor.chequearYaEnTabla(st, id);
+				
+				if(correcto == true){
+					dispose();
+					System.out.println(id);
+					System.out.println(price);
+					System.out.println(img);
+					boolean cambio = gestor.modificarDatos(st, id, price, img);
+					
+					if (cambio == true){
+						System.out.println("Modificacion hecha");
+						menuAdmin vista = new menuAdmin();
+						vista.setVisible(true);
+						dispose();
+					}
+				}
+			}
 		}
 	}
 	
@@ -178,8 +218,6 @@ public class modificarCoche extends JFrame implements ActionListener{
 	
 	public void MostrarDetalles(){
 		
-		
-
 		limCoche=listCoche.getSelectedIndex();
 		
 		if(limCoche!=-1){

@@ -197,6 +197,29 @@ public class GestorCoche {
 
 		return a;
 	}
+	
+	/** Modifica los datos de un coche en la tabla COCHE de BD, 
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al usuario)
+	 * @param coche datos nuevos del coche
+	 * @return	true si la modificacion es correcta, false en caso contrario
+	 */
+	public boolean modificarDatos (Statement st, String matricula, double precio, String imagen){
+			try {
+				String sentSQL = "update COCHE set "+
+									" precio = " + precio + //he quitado las comillas porque es Double pero no sé si es el fallo
+									" imagen = '" + imagen + "'" +
+									" where matricula = '" + matricula + "'";
+	
+				log.info(sentSQL); 
+				int val = st.executeUpdate( sentSQL );
+				if (val!=1) return false;  // Se tiene que modificar 1, error si no
+				return true;
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return false;
+			}
+	}
 }
 	
 	
