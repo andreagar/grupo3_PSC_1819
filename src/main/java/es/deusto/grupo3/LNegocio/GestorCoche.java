@@ -188,10 +188,8 @@ public class GestorCoche {
             // INSERT 
             rs = pstmt.executeQuery();
 
-			int i=0;
 			while (rs.next()) {
 				a.add(new Asignaciones (rs.getString(1), rs.getString(2), rs.getBoolean(3), rs.getBoolean(4), rs.getBoolean(5), rs.getInt(6)));
-				System.out.println(a);
 			}			
 			
 		} catch (SQLException e) {
