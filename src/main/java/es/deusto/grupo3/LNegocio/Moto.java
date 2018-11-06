@@ -81,5 +81,7 @@ public class Moto {
 		this.imagen = imagen;
 	}
 	
-	
+	public String toString(){
+		return matricula + ", " + modelo + ", " + marca + ", " + alquilado + ", " + comprado + ", " + averiado + ", " + imagen;
+	}
 }

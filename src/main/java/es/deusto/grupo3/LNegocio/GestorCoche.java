@@ -132,6 +132,11 @@ public class GestorCoche {
 
 	}
 	
+	/** Alquilar un coche con un usuario específico: poner el atributo alquilado de COCHE a true e insertar una nueva línea en ASIGNACIONES
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	 * @param asig	Objeto de clase Asignaciones
+	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
+	 */
 	public boolean AlquilarVehiculoUsuario(Statement st, Asignaciones asig){
 		
 		try {
@@ -164,6 +169,11 @@ public class GestorCoche {
 		}
 	}
 	
+	/** Recuperar las asignaciones hechas a un usuario específico
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	 * @param nombre	Nombre del usuario logeado
+	 * @return	Array de las asignaciones de un usaurio dado
+	 */
 	public ArrayList<Asignaciones> getUsuarioHistorial(Statement st, String nombre){
 		
 		ResultSet rs;
