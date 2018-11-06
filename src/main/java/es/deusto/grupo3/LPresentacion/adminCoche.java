@@ -61,8 +61,8 @@ public class adminCoche extends JFrame implements ActionListener{
 		}
 		if (e.getSource() == btnModificarCoche){
 			
-			registrarMoto vistaMoto = new registrarMoto();
-			vistaMoto.setVisible(true);
+			modificarCoche cocheMod = new modificarCoche();
+			cocheMod.setVisible(true);
 			dispose();
 		}
 		if (e.getSource() == btnAtras){

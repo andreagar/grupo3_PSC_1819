@@ -25,7 +25,6 @@ public class GestorCoche {
 		
 	public GestorCoche (){
 		listaCoche = new ArrayList<Coche>();
-		
 	}
 		
 	/** Comprueba si un coche ya esta en la tabla COCHE de BD,
@@ -88,8 +87,7 @@ public class GestorCoche {
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @return	Array de los coches de la BD
 	 */
-	public ArrayList<Coche> GetArrayCocheGlobal(Statement st)
-	{
+	public ArrayList<Coche> GetArrayCocheGlobal(Statement st){
 		ResultSet rs;
 		ArrayList<Coche> c = new ArrayList<Coche>();
 		try {
