@@ -8,15 +8,18 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
 import java.awt.Font;
+
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class menuAdmin extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
-	private JButton btnRegistrarCoche;
+	private JButton btnCoche;
 	private JButton btnRegistrarMoto;
 	private JButton btnCerrar;
 
@@ -38,13 +41,13 @@ public class menuAdmin extends JFrame implements ActionListener{
 		lblHyracarAdministracion.setBounds(96, 25, 265, 40);
 		contentPane.add(lblHyracarAdministracion);
 		
-		btnRegistrarCoche = new JButton("Registrar coche");
-		btnRegistrarCoche.setFont(new Font("Candara", Font.BOLD, 15));
-		btnRegistrarCoche.setBounds(51, 97, 173, 51);
-		contentPane.add(btnRegistrarCoche);
-		btnRegistrarCoche.addActionListener(this);
+		btnCoche = new JButton("Coche");
+		btnCoche.setFont(new Font("Candara", Font.BOLD, 15));
+		btnCoche.setBounds(51, 97, 173, 51);
+		contentPane.add(btnCoche);
+		btnCoche.addActionListener(this);
 		
-		btnRegistrarMoto = new JButton("Registrar moto");
+		btnRegistrarMoto = new JButton("Moto");
 		btnRegistrarMoto.setFont(new Font("Candara", Font.BOLD, 15));
 		btnRegistrarMoto.setBounds(256, 97, 150, 51);
 		contentPane.add(btnRegistrarMoto);
@@ -60,11 +63,10 @@ public class menuAdmin extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
-		if (e.getSource() == btnRegistrarCoche){
-			
-			registrarCoche vistaCoche = new registrarCoche();
-			vistaCoche.setVisible(true);
+		if (e.getSource() == btnCoche){
 			dispose();
+			adminCoche menuCoche = new adminCoche();
+			menuCoche.setVisible(true);
 		}
 		if (e.getSource() == btnRegistrarMoto){
 			

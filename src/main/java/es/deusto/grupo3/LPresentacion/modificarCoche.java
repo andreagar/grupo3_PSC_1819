@@ -1,31 +1,23 @@
 package es.deusto.grupo3.LPresentacion;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-
-import java.awt.Font;
-
+import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
-import es.deusto.grupo3.LNegocio.GestorUsuario;
 
-public class registrarCoche extends JFrame implements ActionListener {
+public class modificarCoche extends JFrame implements ActionListener{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtMarca;
@@ -41,7 +33,7 @@ public class registrarCoche extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
-	public registrarCoche() {
+	public modificarCoche() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 446, 336);
 		contentPane = new JPanel();
@@ -115,9 +107,7 @@ public class registrarCoche extends JFrame implements ActionListener {
 		lblImagen.setBounds(122, 232, 66, 14);
 		contentPane.add(lblImagen);
 	}
-
-
-
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
@@ -130,7 +120,7 @@ public class registrarCoche extends JFrame implements ActionListener {
 		if (e.getSource() == btnAceptar){
 			Coche c = new Coche(marca, modelo, matricula, precio, false, false, false, imagen);
 			GestorCoche coche = new GestorCoche();
-			//Si no existe, añadir fila con el coche nuevo y sus respectivos atributos
+		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
 			coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), c);	
 			dispose();
 			menuAdmin vistaAdmin = new menuAdmin();
