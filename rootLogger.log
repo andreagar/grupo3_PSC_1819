@@ -1,1 +1,7 @@
-INFO - 19:13:01,031 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 10:17:44,433 - main - es.deusto.grupo3.App - select * from MOTO
+INFO - 10:17:44,433 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 10:17:44,433 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 10:17:44,433 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 10:17:44,433 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 10:17:44,433 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 10:17:44,449 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
