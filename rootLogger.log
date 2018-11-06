@@ -1,2 +1,5 @@
-INFO - 16:58:10,845 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
-INFO - 16:58:10,845 - main - es.deusto.grupo3.App - insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+INFO - 17:10:26,722 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 17:10:26,722 - main - es.deusto.grupo3.App - select * from COCHE
+INFO - 17:10:26,722 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 17:10:26,722 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 17:10:26,722 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro

@@ -67,11 +67,5 @@ public class GestorMotoTest {
 		
 		assertNotSame(motoArray.get(1), comprobacion);
     }
-	
-	@Test
-	public void AlquilarVehiculoUsuario(){
-		boolean prueba = gestor.chequearYaEnTabla(BaseDeDatos.getStatement(), moto.getMatricula());
-    	assertTrue(prueba);
-	}
 
 }
