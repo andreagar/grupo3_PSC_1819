@@ -52,7 +52,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		
 		this.usuario=nombre;
 		
-		setTitle("LOCALES");
+		setTitle("COCHES");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 376);
 		contentPane = new JPanel();
@@ -66,10 +66,10 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		lblSeleccioneUnCdigo.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(lblSeleccioneUnCdigo);
 		
-		JLabel lblDetallesDelLocal = new JLabel("DETALLES DEL COCHE SELECCIONADO");
-		lblDetallesDelLocal.setBounds(208, 11, 254, 14);
-		lblDetallesDelLocal.setFont(new Font("Candara", Font.BOLD, 14));
-		contentPane.add(lblDetallesDelLocal);
+		JLabel lblDetallesDelCoche = new JLabel("DETALLES DEL COCHE SELECCIONADO");
+		lblDetallesDelCoche.setBounds(208, 11, 254, 14);
+		lblDetallesDelCoche.setFont(new Font("Candara", Font.BOLD, 14));
+		contentPane.add(lblDetallesDelCoche);
 		
 		listCoche = new JList();
 		listCoche.setBounds(23, 60, 130, 200);
@@ -85,7 +85,6 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		contentPane.add(imagen);
 		
 		button = new JButton("Atras");
-		button.addActionListener(this);
 		button.setBounds(550, 299, 70, 28);
 		button.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(button);
@@ -93,7 +92,6 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		button.setActionCommand("Atras");
 		
 		detalles = new JButton("Mostrar Detalles");
-		detalles.addActionListener(this);
 		detalles.setBounds(23, 298, 145, 29);
 		detalles.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(detalles);
@@ -101,7 +99,6 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		detalles.setActionCommand("Detalles");
 		
 		btnComprar = new JButton("COMPRAR");
-		btnComprar.addActionListener(this);
 		btnComprar.setBounds(206, 298, 101, 29);
 		btnComprar.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(btnComprar);

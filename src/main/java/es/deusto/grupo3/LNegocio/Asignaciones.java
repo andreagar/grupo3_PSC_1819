@@ -56,6 +56,19 @@ public class Asignaciones {
 	}
 	
 	public String toString(){
-		return usuario + ", " + matricula + ", " + alquilado + ", " + comprado + ", " + averiado;
+		if(this.getAlquilado()==true){
+			return "Usuario: "+ usuario + ", Matricula: " + matricula + ", Alquilado";
+		}
+		if(this.getComprado()==true){
+			return "Usuario: "+ usuario + ", Matricula: " + matricula + ", Comprado";
+		}
+		if(this.getAveriado()==true){
+			return "Usuario: "+ usuario + ", Matricula: " + matricula + ", Averiado";
+		}
+		else{
+			return "Error";
+		}
+		
+		
 	}
 }

@@ -92,14 +92,14 @@ public class menuUsuario extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		
 		if (e.getSource() == btnHistorial){
-//			registrarse registrarse = new registrarse();
-//			registrarse.setVisible(true);
-			GestorCoche g = new GestorCoche();
-			ArrayList<Asignaciones> a = new ArrayList<Asignaciones>();
-			a = g.getUsuarioHistorial(BaseDeDatos.getStatement(), nombre);
-			for (int i = 0; i<a.size(); i++){
-				a.get(i).toString();
-			}
+			historialAsignaciones asig = new historialAsignaciones(nombre);
+			asig.setVisible(true);
+//			GestorCoche g = new GestorCoche();
+//			ArrayList<Asignaciones> a = new ArrayList<Asignaciones>();
+//			a = g.getUsuarioHistorial(BaseDeDatos.getStatement(), nombre);
+//			for (int i = 0; i<a.size(); i++){
+//				a.get(i).toString();
+//			}
 			
 		}
 		
