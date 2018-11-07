@@ -44,8 +44,6 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		
-		
 		btnLogIn = new JButton("LOG IN");
 		btnLogIn.setFont(new Font("Verdana", Font.BOLD, 16));
 		btnLogIn.setBounds(49, 169, 164, 89);

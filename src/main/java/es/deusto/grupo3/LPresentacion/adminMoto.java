@@ -1,33 +1,24 @@
 package es.deusto.grupo3.LPresentacion;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-
-public class menuAdmin extends JFrame implements ActionListener{
-
-	private JPanel contentPane;
-	private JButton btnCoche;
-	private JButton btnRegistrarMoto;
-	private JButton btnCerrar;
-
+public class adminMoto extends JFrame implements ActionListener{
 	
-	/**
-	 * Create the frame.
-	 */
-	public menuAdmin() {
+	private JPanel contentPane;
+	private JButton btnRegistrarMoto;
+	private JButton btnModificarMoto;
+	private JButton btnAtras;
+
+	public adminMoto() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 458, 400);
 		contentPane = new JPanel();
@@ -41,41 +32,42 @@ public class menuAdmin extends JFrame implements ActionListener{
 		lblHyracarAdministracion.setBounds(96, 25, 265, 40);
 		contentPane.add(lblHyracarAdministracion);
 		
-		btnCoche = new JButton("Coche");
-		btnCoche.setFont(new Font("Candara", Font.BOLD, 15));
-		btnCoche.setBounds(51, 97, 173, 51);
-		contentPane.add(btnCoche);
-		btnCoche.addActionListener(this);
-		
-		btnRegistrarMoto = new JButton("Moto");
+		btnRegistrarMoto = new JButton("Registrar moto");
 		btnRegistrarMoto.setFont(new Font("Candara", Font.BOLD, 15));
-		btnRegistrarMoto.setBounds(256, 97, 150, 51);
+		btnRegistrarMoto.setBounds(51, 97, 173, 51);
 		contentPane.add(btnRegistrarMoto);
 		btnRegistrarMoto.addActionListener(this);
 		
-		btnCerrar = new JButton("Cerrar");
-		btnCerrar.setBounds(22, 328, 89, 23);
-		contentPane.add(btnCerrar);
-		btnCerrar.addActionListener(this);
+		btnModificarMoto = new JButton("Modificar moto");
+		btnModificarMoto.setFont(new Font("Candara", Font.BOLD, 15));
+		btnModificarMoto.setBounds(256, 97, 150, 51);
+		contentPane.add(btnModificarMoto);
+		btnModificarMoto.addActionListener(this);
+		
+		btnAtras = new JButton("Atrás");
+		btnAtras.setBounds(22, 328, 89, 23);
+		contentPane.add(btnAtras);
+		btnAtras.addActionListener(this);
 	}
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
-		if (e.getSource() == btnCoche){
-			dispose();
-			adminCoche menuCoche = new adminCoche();
-			menuCoche.setVisible(true);
-		}
 		if (e.getSource() == btnRegistrarMoto){
-			adminMoto vistaMoto = new adminMoto();
+			
+			registrarMoto vistaMoto = new registrarMoto();
 			vistaMoto.setVisible(true);
 			dispose();
 		}
-		if (e.getSource() == btnCerrar){
+		if (e.getSource() == btnModificarMoto){
+			
+			modificarMoto motoMod = new modificarMoto();
+			motoMod.setVisible(true);
 			dispose();
-			vistaPrincipal vista = new vistaPrincipal();
+		}
+		if (e.getSource() == btnAtras){
+			dispose();
+			menuAdmin vista = new menuAdmin();
 			vista.setVisible(true);
 		}
 		
