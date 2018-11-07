@@ -23,14 +23,23 @@ public class App
     {
     	//inicialización de BD
     	BaseDeDatos.initBD("nuestroBD.db");
-//    	String s = "drop table MOTO";
-//    	try {
-//			BaseDeDatos.getStatement().executeUpdate(s);
-//			System.out.println(s);
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+    	/*String s = "drop table MOTO";
+    	try {
+			BaseDeDatos.getStatement().executeUpdate(s);
+			System.out.println(s);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	String a = "drop table COCHE";
+    	try {
+			BaseDeDatos.getStatement().executeUpdate(a);
+			System.out.println(a);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
     	
 		BaseDeDatos.crearTablaBDUsuario();
 		BaseDeDatos.crearTablaBDCoche();

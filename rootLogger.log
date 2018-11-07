@@ -1,5 +1,4 @@
-INFO - 17:10:26,722 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
-INFO - 17:10:26,722 - main - es.deusto.grupo3.App - select * from COCHE
-INFO - 17:10:26,722 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
-INFO - 17:10:26,722 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
-INFO - 17:10:26,722 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 22:17:23,828 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 22:17:23,828 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 22:17:27,574 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 22:17:29,207 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE

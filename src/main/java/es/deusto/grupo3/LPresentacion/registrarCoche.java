@@ -130,7 +130,7 @@ public class registrarCoche extends JFrame implements ActionListener {
 		if (e.getSource() == btnAceptar){
 			Coche c = new Coche(marca, modelo, matricula, precio, false, false, false, imagen);
 			GestorCoche coche = new GestorCoche();
-		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
+			//Si no existe, añadir fila con el coche nuevo y sus respectivos atributos
 			coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), c);	
 			dispose();
 			menuAdmin vistaAdmin = new menuAdmin();

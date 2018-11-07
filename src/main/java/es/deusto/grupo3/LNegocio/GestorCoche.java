@@ -25,7 +25,6 @@ public class GestorCoche {
 		
 	public GestorCoche (){
 		listaCoche = new ArrayList<Coche>();
-		
 	}
 		
 	/** Comprueba si un coche ya esta en la tabla COCHE de BD,
@@ -36,7 +35,6 @@ public class GestorCoche {
 	public boolean chequearYaEnTabla( Statement st, String matricula ) {
 		//SELECT
 			try {
-
 				String sentSQL = "select * from COCHE where (matricula = '" + matricula + "')";
 				log.info(sentSQL);
 				ResultSet rs = st.executeQuery( sentSQL );
@@ -52,7 +50,7 @@ public class GestorCoche {
 				e.printStackTrace();
 				return false;
 			}
-		}
+	}
 			
 	/** Añade un coche a la tabla COCHE de BD, 
 	 * que debe estar abierta y tener el formato y los nombres 
@@ -88,8 +86,7 @@ public class GestorCoche {
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @return	Array de los coches de la BD
 	 */
-	public ArrayList<Coche> GetArrayCocheGlobal(Statement st)
-	{
+	public ArrayList<Coche> GetArrayCocheGlobal(Statement st){
 		ResultSet rs;
 		ArrayList<Coche> c = new ArrayList<Coche>();
 		try {
@@ -198,6 +195,32 @@ public class GestorCoche {
 		}
 
 		return a;
+	}
+	
+	/** Modifica los datos de un coche en la tabla COCHE de BD, 
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al usuario)
+	 * @param precio nuevo precio
+	 * @param imagen nueva imagen
+	 * @return	true si la modificacion es correcta, false en caso contrario
+	 */
+	public boolean modificarDatos (Statement st, String matricula, double precio, String imagen){
+			
+			try {
+				//UPDATE
+				String sentUpdate = "update COCHE set imagen = ?, precio = ? where matricula = ?";
+				PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentUpdate);  
+	            // set the corresponding param
+	            pstmt.setString(1, imagen);
+	            pstmt.setDouble(2, precio);
+	            pstmt.setString(3, matricula);
+	            // update 
+	            int val1 = pstmt.executeUpdate();
+	            if (val1!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+				return true;
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return false;
+			}
 	}
 }
 	
