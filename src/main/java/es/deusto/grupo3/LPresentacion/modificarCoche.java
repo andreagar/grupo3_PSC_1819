@@ -186,10 +186,6 @@ public class modificarCoche extends JFrame implements ActionListener{
 				boolean correcto = gestor.chequearYaEnTabla(st, id);
 				
 				if(correcto == true){
-					dispose();
-					System.out.println(id);
-					System.out.println(price);
-					System.out.println(img);
 					boolean cambio = gestor.modificarDatos(st, id, price, img);
 					
 					if (cambio == true){
@@ -213,7 +209,7 @@ public class modificarCoche extends JFrame implements ActionListener{
 				modeloCoche.addElement(s.getMatricula());
 			}
 		}
-		listCoche.setModel( modeloCoche );
+		listCoche.setModel(modeloCoche);
 	}
 	
 	public void MostrarDetalles(){

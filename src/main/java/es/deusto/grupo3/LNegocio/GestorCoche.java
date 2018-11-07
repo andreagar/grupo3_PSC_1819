@@ -35,7 +35,6 @@ public class GestorCoche {
 	public boolean chequearYaEnTabla( Statement st, String matricula ) {
 		//SELECT
 			try {
-
 				String sentSQL = "select * from COCHE where (matricula = '" + matricula + "')";
 				log.info(sentSQL);
 				ResultSet rs = st.executeQuery( sentSQL );
@@ -51,7 +50,7 @@ public class GestorCoche {
 				e.printStackTrace();
 				return false;
 			}
-		}
+	}
 			
 	/** Añade un coche a la tabla COCHE de BD, 
 	 * que debe estar abierta y tener el formato y los nombres 
@@ -200,22 +199,25 @@ public class GestorCoche {
 	
 	/** Modifica los datos de un coche en la tabla COCHE de BD, 
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al usuario)
-	 * @param coche datos nuevos del coche
+	 * @param precio nuevo precio
+	 * @param imagen nueva imagen
 	 * @return	true si la modificacion es correcta, false en caso contrario
 	 */
 	public boolean modificarDatos (Statement st, String matricula, double precio, String imagen){
+			
 			try {
-				String sentSQL = "update COCHE set "+
-									" precio = " + precio + //he quitado las comillas porque es Double pero no sé si es el fallo
-									" imagen = '" + imagen + "'" +
-									" where matricula = '" + matricula + "'";
-	
-				log.info(sentSQL); 
-				int val = st.executeUpdate( sentSQL );
-				if (val!=1) return false;  // Se tiene que modificar 1, error si no
+				//UPDATE
+				String sentUpdate = "update COCHE set imagen = ?, precio = ? where matricula = ?";
+				PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentUpdate);  
+	            // set the corresponding param
+	            pstmt.setString(1, imagen);
+	            pstmt.setDouble(2, precio);
+	            pstmt.setString(3, matricula);
+	            // update 
+	            int val1 = pstmt.executeUpdate();
+	            if (val1!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 				return true;
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				return false;
 			}
