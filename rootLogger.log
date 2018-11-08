@@ -1,3 +1,2 @@
-INFO - 19:11:04,818 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
-INFO - 19:11:04,818 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
-INFO - 19:11:04,819 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 20:40:25,800 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 20:40:25,800 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
