@@ -203,16 +203,19 @@ public class GestorCoche {
 	 * @param imagen nueva imagen
 	 * @return	true si la modificacion es correcta, false en caso contrario
 	 */
-	public boolean modificarDatos (Statement st, String matricula, double precio, String imagen){
+	public boolean modificarDatos (Statement st, String matricula, double precio, String imagen, Boolean alquilada, Boolean comprada, Boolean averiada){
 			
 			try {
 				//UPDATE
-				String sentUpdate = "update COCHE set imagen = ?, precio = ? where matricula = ?";
+				String sentUpdate = "update COCHE set imagen = ?, precio = ?, alquilado = ?, comprado = ?, averiado = ?   where matricula = ?";
 				PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentUpdate);  
 	            // set the corresponding param
-	            pstmt.setString(1, imagen);
+				pstmt.setString(1, imagen);
 	            pstmt.setDouble(2, precio);
-	            pstmt.setString(3, matricula);
+	            pstmt.setBoolean(3, alquilada);
+	            pstmt.setBoolean(4, comprada);
+	            pstmt.setBoolean(5, averiada);
+	            pstmt.setString(6, matricula);
 	            // update 
 	            int val1 = pstmt.executeUpdate();
 	            if (val1!=1) return false;  // Se tiene que aÃ±adir 1 - error si no

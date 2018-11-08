@@ -9,6 +9,7 @@ import java.text.DecimalFormat;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -35,6 +36,10 @@ public class modificarCoche extends JFrame implements ActionListener{
 	private JTextField textMatricula;
 	private JTextField textPrecio;
 	private JTextField textImagen;
+	
+	JCheckBox chckbxAlquilada;
+	JCheckBox chckbxComprada;
+	JCheckBox chckbxAveriada;
 	
 	private JButton detalles;
 	private JButton button;
@@ -154,6 +159,18 @@ public class modificarCoche extends JFrame implements ActionListener{
 		textMatricula.setEnabled(false);
 		textModelo.setEnabled(false);
 		textMarca.setEnabled(false);
+		
+		chckbxAlquilada = new JCheckBox("Alquilado");
+		chckbxAlquilada.setBounds(482, 71, 97, 23);
+		contentPane.add(chckbxAlquilada);
+		
+		chckbxComprada = new JCheckBox("Comprado");
+		chckbxComprada.setBounds(482, 111, 97, 23);
+		contentPane.add(chckbxComprada);
+		
+		chckbxAveriada = new JCheckBox("Averiado");
+		chckbxAveriada.setBounds(482, 157, 97, 23);
+		contentPane.add(chckbxAveriada);
 	}
 	
 	@Override
@@ -177,37 +194,41 @@ public class modificarCoche extends JFrame implements ActionListener{
 						"Mensaje de error",JOptionPane.ERROR_MESSAGE);
 			}else{
 				
-				Statement st = BaseDeDatos.getStatement();
-				GestorCoche gestor = new GestorCoche();
-				double price = Double.parseDouble(textPrecio.getText());
-				String id = textMatricula.getText();
-				String img = textImagen.getText();
-				
-				boolean correcto = gestor.chequearYaEnTabla(st, id);
-				
-				if(correcto == true){
-					boolean cambio = gestor.modificarDatos(st, id, price, img);
-					
-					if (cambio == true){
-						System.out.println("Modificacion hecha");
-						menuAdmin vista = new menuAdmin();
-						vista.setVisible(true);
-						dispose();
-					}
-				}
+				this.cambios();
 			}
 		}
 	}
 	
+	public void cambios(){
+		Statement st = BaseDeDatos.getStatement();
+		GestorCoche gestor = new GestorCoche();
+		double price = Double.parseDouble(textPrecio.getText());
+		String id = textMatricula.getText();
+		String img = textImagen.getText();
+		Boolean alquilada = chckbxAlquilada.isSelected();
+		Boolean comprada = chckbxComprada.isSelected();
+		Boolean averiada = chckbxAveriada.isSelected();
+		
+		boolean correcto = gestor.chequearYaEnTabla(st, id);
+		
+		if(correcto == true){
+			boolean cambio = gestor.modificarDatos(st, id, price, img, alquilada, comprada, averiada);
+			
+			if (cambio == true){
+				System.out.println("Modificacion hecha");
+				menuAdmin vista = new menuAdmin();
+				vista.setVisible(true);
+				dispose();
+			}
+		}
+	}
 	public void CargarLista(GestorCoche coche){
 		
 		modeloCoche=new DefaultListModel();
 		Statement st = BaseDeDatos.getStatement();
 	
-		for (Coche s : coche.GetArrayCochesDisponibles(st) ){
-			if(s.getAlquilado()==false && s.getComprado()==false && s.getAveriado()==false){
-				modeloCoche.addElement(s.getMatricula());
-			}
+		for (Coche s : coche.GetArrayCocheGlobal(st) ){
+			modeloCoche.addElement(s.getMatricula());
 		}
 		listCoche.setModel(modeloCoche);
 	}
@@ -220,7 +241,7 @@ public class modificarCoche extends JFrame implements ActionListener{
 			cocheSelected =(String)listCoche.getSelectedValue();
 			Statement st = BaseDeDatos.getStatement();
 			
-			for (Coche c : objCoche.GetArrayCochesDisponibles(st)){
+			for (Coche c : objCoche.GetArrayCocheGlobal(st)){
 				if(cocheSelected.equals(c.getMatricula())){
 					textMarca.setText((c.getMarca()));
 					textModelo.setText(c.getModelo());
@@ -228,6 +249,9 @@ public class modificarCoche extends JFrame implements ActionListener{
 					precioAux = String.valueOf(c.getPrecio());
 					textPrecio.setText(precioAux);
 					textImagen.setText(c.getImagen());
+					chckbxAlquilada.setSelected(c.getAlquilado());
+					chckbxComprada.setSelected(c.getComprado());
+					chckbxAveriada.setSelected(c.getAveriado());
 					break;
 				}			
 			}

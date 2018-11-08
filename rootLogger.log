@@ -797,3 +797,194 @@ INFO - 12:53:27,634 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MO
 INFO - 12:53:27,634 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
 INFO - 12:53:29,259 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
 INFO - 12:53:30,820 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:08:23,618 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 13:08:23,634 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:08:23,634 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:08:23,634 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 13:08:23,634 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:08:23,649 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 13:08:23,650 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:08:23,650 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 13:08:23,650 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:08:23,650 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 13:08:23,650 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:08:23,650 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 13:08:23,650 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:08:30,015 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'andrea' and contrasenya = 'andrea')
+INFO - 13:08:35,559 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:08:38,417 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:08:42,084 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:09:01,092 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:09:22,401 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 13:09:22,417 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:09:22,417 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:09:22,417 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 13:09:22,417 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:09:22,417 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 13:09:22,417 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:09:22,433 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 13:09:22,433 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:09:22,433 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 13:09:22,433 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:09:22,433 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 13:09:22,433 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:09:29,344 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:10:25,169 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 13:10:25,184 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:10:25,184 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:10:25,184 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 13:10:25,184 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:10:25,184 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 13:10:25,184 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:10:25,201 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 13:10:25,201 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:10:25,201 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 13:10:25,201 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:10:25,201 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 13:10:25,201 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:10:34,676 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:10:36,674 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:10:38,220 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:10:45,226 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:10:47,161 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:10:49,034 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:10:53,081 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:10:55,228 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:10:56,851 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:11:16,345 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 13:11:16,361 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:11:16,361 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:11:16,361 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 13:11:16,361 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:11:16,377 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 13:11:16,377 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:11:16,377 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 13:11:16,377 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:11:16,377 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 13:11:16,377 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:11:16,377 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 13:11:16,377 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:11:22,811 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:11:24,621 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:11:29,115 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO where (matricula = '1234AAA')
+INFO - 13:11:29,115 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:11:31,559 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:11:33,387 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:01,732 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 13:17:01,747 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:17:01,747 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:17:01,747 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 13:17:01,747 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:17:01,747 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 13:17:01,747 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:17:01,765 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 13:17:01,765 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:17:01,765 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 13:17:01,765 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:17:01,765 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 13:17:01,765 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:17:08,742 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:10,319 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:12,239 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO where (matricula = '1234AAA')
+INFO - 13:17:12,270 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:17:14,314 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:15,829 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:20,246 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO where (matricula = '1234AAA')
+INFO - 13:17:20,246 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:17:21,919 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:23,153 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:26,293 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO where (matricula = '1234AAA')
+INFO - 13:17:26,293 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:17:27,433 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:29,228 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:36,424 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO where (matricula = '1234AAA')
+INFO - 13:17:36,440 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:17:38,485 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:43,653 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:17:52,939 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'andrea' and contrasenya = 'andrea')
+INFO - 13:17:55,781 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:18:05,993 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:18:07,444 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:18:09,551 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO where (matricula = '1234AAA')
+INFO - 13:18:09,551 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:18:17,013 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'andrea' and contrasenya = 'andrea')
+INFO - 13:18:19,089 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:18:22,150 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:18:33,671 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:18:35,638 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 13:21:45,292 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 13:21:45,308 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:21:45,308 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:21:45,308 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 13:21:45,308 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:21:45,323 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 13:21:45,324 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:21:45,324 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 13:21:45,324 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:21:45,324 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 13:21:45,324 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:21:45,324 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 13:21:45,324 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:21:54,314 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:21:55,895 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:21:59,001 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:21:59,017 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:22:01,451 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:22:44,963 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 13:22:44,979 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 13:22:44,995 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:22:52,408 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:24:05,935 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 13:24:05,951 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:24:05,951 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:24:05,951 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 13:24:05,951 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:24:05,951 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 13:24:05,951 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:24:05,967 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 13:24:05,967 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:24:05,967 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 13:24:05,967 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:24:05,967 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 13:24:05,967 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:24:14,397 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:24:50,788 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 13:24:50,804 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:24:50,804 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:24:50,804 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 13:24:50,804 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:24:50,820 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 13:24:50,820 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:24:50,820 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 13:24:50,820 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:24:50,820 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 13:24:50,820 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:24:50,820 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 13:24:50,820 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 13:24:57,345 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:24:58,955 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:25:07,152 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'andrea' and contrasenya = 'andrea')
+INFO - 13:25:09,357 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:25:18,390 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:25:20,653 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:25:22,402 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 13:25:22,402 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:25:28,092 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'andrea' and contrasenya = 'andrea')
+INFO - 13:25:29,982 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:25:34,901 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:25:45,189 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:25:47,312 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 13:25:50,324 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 13:25:50,324 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 13:25:55,865 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'andrea' and contrasenya = 'andrea')
+INFO - 13:25:58,190 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE

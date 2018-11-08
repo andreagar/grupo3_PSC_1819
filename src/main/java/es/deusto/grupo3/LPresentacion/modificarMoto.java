@@ -193,25 +193,31 @@ public class modificarMoto extends JFrame implements ActionListener{
 				JOptionPane.showMessageDialog(null,"Seleccion incorrecta (debes selccionar al menos un elemento).",
 						"Mensaje de error",JOptionPane.ERROR_MESSAGE);
 			}else{
-				
-				Statement st = BaseDeDatos.getStatement();
-				GestorMoto gestor = new GestorMoto();
-				double price = Double.parseDouble(textPrecio.getText());
-				String id = textMatricula.getText();
-				String img = textImagen.getText();
-				
-				boolean correcto = gestor.chequearYaEnTabla(st, id);
-				
-				if(correcto == true){
-					boolean cambio = gestor.modificarDatos(st, id, price, img);
-					
-					if (cambio == true){
-						System.out.println("Modificacion hecha");
-						menuAdmin vista = new menuAdmin();
-						vista.setVisible(true);
-						dispose();
-					}
-				}
+				this.cambios();
+			}
+		}
+	}
+	
+	public void cambios(){
+		Statement st = BaseDeDatos.getStatement();
+		GestorMoto gestor = new GestorMoto();
+		double price = Double.parseDouble(textPrecio.getText());
+		String id = textMatricula.getText();
+		String img = textImagen.getText();
+		Boolean alquilada = chckbxAlquilada.isSelected();
+		Boolean comprada = chckbxComprada.isSelected();
+		Boolean averiada = chckbxAveriada.isSelected();
+		
+		boolean correcto = gestor.chequearYaEnTabla(st, id);
+		
+		if(correcto == true){
+			boolean cambio = gestor.modificarDatos(st, id, price, img, alquilada, comprada, averiada);
+			
+			if (cambio == true){
+				System.out.println("Modificacion hecha");
+				menuAdmin vista = new menuAdmin();
+				vista.setVisible(true);
+				dispose();
 			}
 		}
 	}
@@ -221,7 +227,7 @@ public class modificarMoto extends JFrame implements ActionListener{
 		modeloMoto=new DefaultListModel();
 		Statement st = BaseDeDatos.getStatement();
 	
-		for (Moto s : Moto.GetArrayMotosDisponibles(st) ){
+		for (Moto s : Moto.GetArrayMotoGlobal(st) ){
 				modeloMoto.addElement(s.getMatricula());
 		}
 		listMoto.setModel(modeloMoto);
@@ -235,7 +241,7 @@ public class modificarMoto extends JFrame implements ActionListener{
 			MotoSelected =(String)listMoto.getSelectedValue();
 			Statement st = BaseDeDatos.getStatement();
 			
-			for (Moto c : objMoto.GetArrayMotosDisponibles(st)){
+			for (Moto c : objMoto.GetArrayMotoGlobal(st)){
 				if(MotoSelected.equals(c.getMatricula())){
 					textMarca.setText((c.getMarca()));
 					textModelo.setText(c.getModelo());
