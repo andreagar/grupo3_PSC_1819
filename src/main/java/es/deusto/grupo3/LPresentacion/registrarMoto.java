@@ -22,6 +22,7 @@ import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorMoto;
 import es.deusto.grupo3.LNegocio.Moto;
+import java.awt.Toolkit;
 
 public class registrarMoto extends JFrame implements ActionListener {
 
@@ -42,27 +43,30 @@ public class registrarMoto extends JFrame implements ActionListener {
 	private JLabel lblImagen;
 	
 	public registrarMoto() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(registrarMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		
-		setTitle("REGISTRAR Moto");
+		setTitle("HyraCar: registrar moto");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 446, 308);
+		setBounds(100, 100, 446, 361);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		btnCancelar = new JButton("Cancelar");
-		btnCancelar.setBounds(21, 237, 89, 23);
+		btnCancelar.setFont(new Font("Verdana", Font.PLAIN, 11));
+		btnCancelar.setBounds(10, 289, 89, 23);
 		contentPane.add(btnCancelar);
 		btnCancelar.addActionListener(this);
 		
 		btnAceptar = new JButton("Aceptar");
-		btnAceptar.setBounds(331, 237, 89, 23);
+		btnAceptar.setFont(new Font("Verdana", Font.PLAIN, 11));
+		btnAceptar.setBounds(331, 289, 89, 23);
 		contentPane.add(btnAceptar);
 		btnAceptar.addActionListener(this);
 		
 		lblRegistrarCocheNuevo = new JLabel("Registrar moto nueva");
-		lblRegistrarCocheNuevo.setFont(new Font("Source Sans Pro Black", Font.BOLD, 18));
+		lblRegistrarCocheNuevo.setFont(new Font("Verdana", Font.BOLD, 18));
 		lblRegistrarCocheNuevo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRegistrarCocheNuevo.setBounds(66, 11, 286, 36);
 		contentPane.add(lblRegistrarCocheNuevo);
@@ -74,7 +78,7 @@ public class registrarMoto extends JFrame implements ActionListener {
 		
 		lblMarca = new JLabel("Marca:");
 		lblMarca.setFont(new Font("Candara", Font.PLAIN, 14));
-		lblMarca.setBounds(122, 76, 46, 14);
+		lblMarca.setBounds(97, 79, 46, 14);
 		contentPane.add(lblMarca);
 		
 		textModelo = new JTextField();
@@ -84,7 +88,7 @@ public class registrarMoto extends JFrame implements ActionListener {
 		
 		lblModelo = new JLabel("Modelo:");
 		lblModelo.setFont(new Font("Candara", Font.PLAIN, 14));
-		lblModelo.setBounds(122, 116, 66, 14);
+		lblModelo.setBounds(97, 119, 66, 14);
 		contentPane.add(lblModelo);
 		
 		textMatricula = new JTextField();
@@ -94,27 +98,27 @@ public class registrarMoto extends JFrame implements ActionListener {
 		
 		lblMatricula = new JLabel("Matricula:");
 		lblMatricula.setFont(new Font("Candara", Font.PLAIN, 14));
-		lblMatricula.setBounds(122, 162, 66, 14);
+		lblMatricula.setBounds(97, 165, 66, 14);
 		contentPane.add(lblMatricula);
 
 		lblPrecio = new JLabel("Precio:");
 		lblPrecio.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblPrecio.setBounds(122, 198, 66, 14);
+		lblPrecio.setBounds(97, 209, 66, 14);
 		contentPane.add(lblPrecio);
 		
 		textPrecio = new JTextField();
-		textPrecio.setBounds(197, 197, 155, 20);
+		textPrecio.setBounds(198, 205, 154, 21);
 		contentPane.add(textPrecio);
 		textPrecio.setColumns(10);
 		
 		textImagen = new JTextField();
-		textImagen.setBounds(198, 232, 154, 20);
+		textImagen.setBounds(198, 248, 154, 20);
 		contentPane.add(textImagen);
 		textImagen.setColumns(10);
 		
 		lblImagen = new JLabel("Dir. Imagen:");
 		lblImagen.setFont(new Font("Candara", Font.PLAIN, 14));
-		lblImagen.setBounds(122, 232, 66, 14);
+		lblImagen.setBounds(97, 252, 91, 14);
 		contentPane.add(lblImagen);
 	}
 

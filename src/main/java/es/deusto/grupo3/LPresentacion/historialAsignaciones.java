@@ -18,6 +18,8 @@ import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Asignaciones;
 import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
+import javax.swing.SwingConstants;
+import java.awt.Toolkit;
 
 public class historialAsignaciones extends JFrame implements ActionListener{
 
@@ -37,10 +39,11 @@ public class historialAsignaciones extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public historialAsignaciones(String nombre) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(historialAsignaciones.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		
 		this.usuario=nombre;
 		
-		setTitle("ASIGNACIONES");
+		setTitle("HyraCar: asignaciones");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 376);
 		contentPane = new JPanel();
@@ -49,8 +52,9 @@ public class historialAsignaciones extends JFrame implements ActionListener{
 		contentPane.setLayout(null);
 		
 		JLabel lblabel = new JLabel("HISTORIAL DEL USUARIO "+ usuario);
-		lblabel.setBounds(90, 11, 254, 14);
-		lblabel.setFont(new Font("Candara", Font.BOLD, 14));
+		lblabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblabel.setBounds(30, 11, 330, 14);
+		lblabel.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblabel);
 		
 		listAsig = new JList();
@@ -60,7 +64,7 @@ public class historialAsignaciones extends JFrame implements ActionListener{
 	
 		button = new JButton("Atras");
 		button.setBounds(280, 299, 100, 28);
-		button.setFont(new Font("Candara", Font.BOLD, 14));
+		button.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(button);
 		button.addActionListener(this);
 		button.setActionCommand("Atras");

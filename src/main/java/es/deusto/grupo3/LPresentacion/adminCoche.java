@@ -1,6 +1,7 @@
 package es.deusto.grupo3.LPresentacion;
 
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,33 +20,37 @@ public class adminCoche extends JFrame implements ActionListener{
 	private JButton btnAtras;
 
 	public adminCoche() {
+		
+		setTitle("HyraCar: Administración");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 458, 400);
+		setBounds(100, 100, 486, 314);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblHyracarAdministracion = new JLabel("HyraCar: Administracion");
-		lblHyracarAdministracion.setFont(new Font("Candara", Font.BOLD, 20));
+		JLabel lblHyracarAdministracion = new JLabel("Administración: Coche");
+		lblHyracarAdministracion.setFont(new Font("Verdana", Font.BOLD, 20));
 		lblHyracarAdministracion.setHorizontalAlignment(SwingConstants.CENTER);
-		lblHyracarAdministracion.setBounds(96, 25, 265, 40);
+		lblHyracarAdministracion.setBounds(51, 25, 355, 40);
 		contentPane.add(lblHyracarAdministracion);
 		
 		btnRegistrarCoche = new JButton("Registrar coche");
-		btnRegistrarCoche.setFont(new Font("Candara", Font.BOLD, 15));
+		btnRegistrarCoche.setFont(new Font("Verdana", Font.PLAIN, 15));
 		btnRegistrarCoche.setBounds(51, 97, 173, 51);
 		contentPane.add(btnRegistrarCoche);
 		btnRegistrarCoche.addActionListener(this);
 		
 		btnModificarCoche = new JButton("Modificar Coche");
-		btnModificarCoche.setFont(new Font("Candara", Font.BOLD, 15));
-		btnModificarCoche.setBounds(256, 97, 150, 51);
+		btnModificarCoche.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnModificarCoche.setBounds(256, 97, 161, 51);
 		contentPane.add(btnModificarCoche);
 		btnModificarCoche.addActionListener(this);
 		
 		btnAtras = new JButton("Atrás");
-		btnAtras.setBounds(22, 328, 89, 23);
+		btnAtras.setFont(new Font("Verdana", Font.PLAIN, 11));
+		btnAtras.setBounds(10, 242, 89, 23);
 		contentPane.add(btnAtras);
 		btnAtras.addActionListener(this);
 	}

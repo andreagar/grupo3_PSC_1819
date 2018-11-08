@@ -24,6 +24,7 @@ import es.deusto.grupo3.LNegocio.Asignaciones;
 import es.deusto.grupo3.LNegocio.Moto;
 import es.deusto.grupo3.LNegocio.GestorMoto;
 import javax.swing.JCheckBox;
+import java.awt.Toolkit;
 
 public class modificarMoto extends JFrame implements ActionListener{
 
@@ -56,8 +57,9 @@ public class modificarMoto extends JFrame implements ActionListener{
 	private String precioAux;
 
 	public modificarMoto() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(modificarMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		
-		setTitle("MODIFICAR Moto");
+		setTitle("HyraCar: modificar moto");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 626, 376);
 		contentPane = new JPanel();
@@ -68,12 +70,12 @@ public class modificarMoto extends JFrame implements ActionListener{
 		String sel = "<html><body>SELECCIONE UNA<br>MATRICULA:</body></html>";
 		JLabel lblSeleccioneUnCdigo = new JLabel(sel);
 		lblSeleccioneUnCdigo.setBounds(23, 11, 145, 40);
-		lblSeleccioneUnCdigo.setFont(new Font("Candara", Font.BOLD, 14));
+		lblSeleccioneUnCdigo.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblSeleccioneUnCdigo);
 		
-		JLabel lblDetallesDelMoto = new JLabel("DETALLES DEL Moto SELECCIONADO");
-		lblDetallesDelMoto.setBounds(200, 29, 296, 14);
-		lblDetallesDelMoto.setFont(new Font("Candara", Font.BOLD, 16));
+		JLabel lblDetallesDelMoto = new JLabel("DETALLES DE LA MOTO SELECCIONADA");
+		lblDetallesDelMoto.setBounds(200, 29, 350, 14);
+		lblDetallesDelMoto.setFont(new Font("Verdana", Font.PLAIN, 16));
 		contentPane.add(lblDetallesDelMoto);
 		
 		listMoto = new JList();
@@ -133,22 +135,22 @@ public class modificarMoto extends JFrame implements ActionListener{
 			textImagen.setColumns(10);
 		
 		button = new JButton("Atras");
-		button.setBounds(519, 298, 70, 28);
-		button.setFont(new Font("Candara", Font.BOLD, 14));
+		button.setBounds(511, 298, 89, 28);
+		button.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(button);
 		button.addActionListener(this);
 		button.setActionCommand("Atras");
 		
 		detalles = new JButton("Seleccionar");
-		detalles.setBounds(23, 271, 130, 20);
-		detalles.setFont(new Font("Candara", Font.BOLD, 14));
+		detalles.setBounds(23, 271, 130, 28);
+		detalles.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(detalles);
 		detalles.addActionListener(this);
 		detalles.setActionCommand("Detalles");
 		
 		modificar = new JButton("Modificar");
 		modificar.setBounds(357, 298, 100, 28);
-		modificar.setFont(new Font("Candara", Font.BOLD, 14));
+		modificar.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(modificar);
 		modificar.addActionListener(this);
 		modificar.setActionCommand("modificar");
@@ -161,14 +163,17 @@ public class modificarMoto extends JFrame implements ActionListener{
 		textMarca.setEnabled(false);
 		
 		chckbxAlquilada = new JCheckBox("Alquilada");
+		chckbxAlquilada.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxAlquilada.setBounds(482, 71, 97, 23);
 		contentPane.add(chckbxAlquilada);
 		
 		chckbxComprada = new JCheckBox("Comprada");
+		chckbxComprada.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxComprada.setBounds(482, 111, 97, 23);
 		contentPane.add(chckbxComprada);
 		
 		chckbxAveriada = new JCheckBox("Averiada");
+		chckbxAveriada.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxAveriada.setBounds(482, 157, 97, 23);
 		contentPane.add(chckbxAveriada);
 	}

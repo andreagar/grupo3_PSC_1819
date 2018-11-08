@@ -34,6 +34,8 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 	private JButton btnAdministrador;
 	
 	public vistaPrincipal() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(vistaPrincipal.class.getResource("/es/deusto/grupo3/img/icon.png")));
+		setTitle("HyraCar");
 
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,12 +66,13 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		
 		JLabel lblNewLabel = new JLabel("Alquiler y compra de coches HyraCar", SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 19));
-		lblNewLabel.setBounds(45, 59, 406, 33);
+		lblNewLabel.setBounds(10, 59, 474, 33);
 		lblNewLabel.setVerticalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
 		
 		lblSubTitulo = new JLabel("Podemos ayudarte a encontrar el coche que se adapta a lo que buscas");
-		lblSubTitulo.setBounds(40, 103, 430, 14);
+		lblSubTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSubTitulo.setBounds(10, 103, 474, 14);
 		getContentPane().add(lblSubTitulo);
 		
 		btnAdministrador = new JButton("Administradores");

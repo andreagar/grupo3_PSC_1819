@@ -15,6 +15,7 @@ import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class menuAdmin extends JFrame implements ActionListener{
 
@@ -28,33 +29,36 @@ public class menuAdmin extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public menuAdmin() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(menuAdmin.class.getResource("/es/deusto/grupo3/img/icon.png")));
+		setTitle("HyraCar: Administración");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 458, 400);
+		setBounds(100, 100, 458, 313);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblHyracarAdministracion = new JLabel("HyraCar: Administracion");
-		lblHyracarAdministracion.setFont(new Font("Candara", Font.BOLD, 20));
+		JLabel lblHyracarAdministracion = new JLabel("HyraCar: Administración");
+		lblHyracarAdministracion.setFont(new Font("Verdana", Font.BOLD, 20));
 		lblHyracarAdministracion.setHorizontalAlignment(SwingConstants.CENTER);
-		lblHyracarAdministracion.setBounds(96, 25, 265, 40);
+		lblHyracarAdministracion.setBounds(73, 25, 288, 40);
 		contentPane.add(lblHyracarAdministracion);
 		
 		btnCoche = new JButton("Coche");
-		btnCoche.setFont(new Font("Candara", Font.BOLD, 15));
+		btnCoche.setFont(new Font("Verdana", Font.PLAIN, 18));
 		btnCoche.setBounds(51, 97, 173, 51);
 		contentPane.add(btnCoche);
 		btnCoche.addActionListener(this);
 		
 		btnRegistrarMoto = new JButton("Moto");
-		btnRegistrarMoto.setFont(new Font("Candara", Font.BOLD, 15));
+		btnRegistrarMoto.setFont(new Font("Verdana", Font.PLAIN, 18));
 		btnRegistrarMoto.setBounds(256, 97, 150, 51);
 		contentPane.add(btnRegistrarMoto);
 		btnRegistrarMoto.addActionListener(this);
 		
 		btnCerrar = new JButton("Cerrar");
-		btnCerrar.setBounds(22, 328, 89, 23);
+		btnCerrar.setFont(new Font("Verdana", Font.PLAIN, 11));
+		btnCerrar.setBounds(21, 236, 89, 23);
 		contentPane.add(btnCerrar);
 		btnCerrar.addActionListener(this);
 	}

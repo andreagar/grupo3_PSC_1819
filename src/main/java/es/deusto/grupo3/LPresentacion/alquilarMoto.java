@@ -22,6 +22,8 @@ import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Asignaciones;
 import es.deusto.grupo3.LNegocio.Moto;
 import es.deusto.grupo3.LNegocio.GestorMoto;
+import javax.swing.SwingConstants;
+import java.awt.Toolkit;
 
 public class alquilarMoto extends JFrame implements ActionListener{
 
@@ -49,10 +51,11 @@ public class alquilarMoto extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public alquilarMoto(String nombre) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(alquilarMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		
 		this.usuario=nombre;
 		
-		setTitle("MOTOS");
+		setTitle("HyraCar: Motos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 376);
 		contentPane = new JPanel();
@@ -63,12 +66,13 @@ public class alquilarMoto extends JFrame implements ActionListener{
 		String sel = "<html><body>SELECCIONE UNA<br>MATRICULA:</body></html>";
 		JLabel lblSeleccioneUnCdigo = new JLabel(sel);
 		lblSeleccioneUnCdigo.setBounds(23, 11, 145, 40);
-		lblSeleccioneUnCdigo.setFont(new Font("Candara", Font.BOLD, 14));
+		lblSeleccioneUnCdigo.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblSeleccioneUnCdigo);
 		
 		JLabel lblDetallesDelMoto = new JLabel("DETALLES DE LA MOTO SELECCIONADA");
-		lblDetallesDelMoto.setBounds(208, 11, 254, 14);
-		lblDetallesDelMoto.setFont(new Font("Candara", Font.BOLD, 14));
+		lblDetallesDelMoto.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDetallesDelMoto.setBounds(193, 11, 400, 14);
+		lblDetallesDelMoto.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblDetallesDelMoto);
 		
 		listMoto = new JList();
@@ -86,21 +90,21 @@ public class alquilarMoto extends JFrame implements ActionListener{
 		
 		button = new JButton("Atras");
 		button.setBounds(550, 299, 70, 28);
-		button.setFont(new Font("Candara", Font.BOLD, 14));
+		button.setFont(new Font("Verdana", Font.PLAIN, 13));
 		contentPane.add(button);
 		button.addActionListener(this);
 		button.setActionCommand("Atras");
 		
 		detalles = new JButton("Mostrar Detalles");
-		detalles.setBounds(23, 298, 145, 29);
-		detalles.setFont(new Font("Candara", Font.BOLD, 14));
+		detalles.setBounds(23, 271, 130, 29);
+		detalles.setFont(new Font("Verdana", Font.PLAIN, 11));
 		contentPane.add(detalles);
 		detalles.addActionListener(this);
 		detalles.setActionCommand("Detalles");
 		
 		btnComprar = new JButton("COMPRAR");
 		btnComprar.setBounds(206, 298, 101, 29);
-		btnComprar.setFont(new Font("Candara", Font.BOLD, 14));
+		btnComprar.setFont(new Font("Verdana", Font.PLAIN, 13));
 		contentPane.add(btnComprar);
 		btnComprar.addActionListener(this);
 		btnComprar.setActionCommand("COMPRAR");
@@ -108,12 +112,12 @@ public class alquilarMoto extends JFrame implements ActionListener{
 		String texto = "<html><body>Aviso:<br>Apunta la matricula del vehiculo para que luego puedas eliminar<br> la operaci\u00F3n. </body></html>";
 		lblAviso = new JLabel(texto);
 		lblAviso.setBounds(200, 230, 435, 50);
-		lblAviso.setFont(new Font("Candara", Font.BOLD, 13));
+		lblAviso.setFont(new Font("Verdana", Font.PLAIN, 13));
 		contentPane.add(lblAviso);
 		
 		btnAlquilar = new JButton("ALQUILAR");
 		btnAlquilar.setBounds(338, 299, 101, 28);
-		btnAlquilar.setFont(new Font("Candara", Font.BOLD, 14));
+		btnAlquilar.setFont(new Font("Verdana", Font.PLAIN, 13));
 		contentPane.add(btnAlquilar);
 		btnAlquilar.addActionListener(this);
 		btnAlquilar.setActionCommand("ALQUILAR");

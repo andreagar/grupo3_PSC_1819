@@ -17,6 +17,7 @@ import javax.swing.border.EmptyBorder;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Asignaciones;
 import es.deusto.grupo3.LNegocio.GestorCoche;
+import java.awt.Toolkit;
 
 public class menuUsuario extends JFrame implements ActionListener{
 
@@ -30,6 +31,8 @@ public class menuUsuario extends JFrame implements ActionListener{
 	private String nombre;
 	
 	public menuUsuario (String nombre){
+		setIconImage(Toolkit.getDefaultToolkit().getImage(menuUsuario.class.getResource("/es/deusto/grupo3/img/icon.png")));
+		setTitle("HyraCar");
 		
 		this.nombre = nombre;
 		
@@ -42,38 +45,38 @@ public class menuUsuario extends JFrame implements ActionListener{
 		contentPane.setLayout(null);
 		
 		btnCoche = new JButton("Alquilar/Comprar coche");
-		btnCoche.setFont(new Font("Candara", Font.BOLD, 18));
+		btnCoche.setFont(new Font("Verdana", Font.PLAIN, 15));
 		btnCoche.setBounds(130, 120, 220, 55);
 		contentPane.add(btnCoche);
 		btnCoche.addActionListener(this);
 		
 		btnMoto = new JButton("Alquilar/Comprar moto");
-		btnMoto.setFont(new Font("Candara", Font.BOLD, 18));
+		btnMoto.setFont(new Font("Verdana", Font.PLAIN, 15));
 		btnMoto.setBounds(130, 190, 220, 55);
 		contentPane.add(btnMoto);
 		btnMoto.addActionListener(this);
 		
 		btnHistorial = new JButton("Ver mi historial");
-		btnHistorial.setFont(new Font("Candara", Font.BOLD, 18));
+		btnHistorial.setFont(new Font("Verdana", Font.PLAIN, 15));
 		btnHistorial.setBounds(140, 260, 200, 55);
 		contentPane.add(btnHistorial);
 		btnHistorial.addActionListener(this);
 		
 		btnModificar = new JButton("Modificar mi contraseña");
-		btnModificar.setFont(new Font("Candara", Font.BOLD, 18));
+		btnModificar.setFont(new Font("Verdana", Font.PLAIN, 15));
 		btnModificar.setBounds(115, 330, 250, 55);
 		contentPane.add(btnModificar);
 		btnModificar.addActionListener(this);
 		
 		btnSalir = new JButton("Cerrar sesion");
-		btnSalir.setFont(new Font("Candara", Font.BOLD, 12));
+		btnSalir.setFont(new Font("Verdana", Font.PLAIN, 12));
 		btnSalir.setBounds(10, 430, 120, 27);
 		contentPane.add(btnSalir);
 		btnSalir.addActionListener(this);
 		
-		JLabel lblNewLabel = new JLabel("Alquiler de coches HyraCar", SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Candara", Font.BOLD, 24));
-		lblNewLabel.setBounds(80, 50, 300, 41);
+		JLabel lblNewLabel = new JLabel("Alquiler/compra coches HyraCar", SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 20));
+		lblNewLabel.setBounds(52, 50, 383, 41);
 		lblNewLabel.setVerticalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
 	

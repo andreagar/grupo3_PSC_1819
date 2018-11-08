@@ -14,6 +14,8 @@ import javax.swing.border.EmptyBorder;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.GestorUsuario;
+import java.awt.Toolkit;
+import javax.swing.SwingConstants;
 
 public class registrarse extends JFrame implements ActionListener{
 	
@@ -30,6 +32,8 @@ public class registrarse extends JFrame implements ActionListener{
 	private JButton btnCancelar;
 
 	public registrarse () {
+		setTitle("HyraCar: Log In");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(registrarse.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 474, 393);
@@ -50,23 +54,24 @@ public class registrarse extends JFrame implements ActionListener{
 		contentPane.add(passwordField);
 		
 		lblNombreDeUsuario = new JLabel("Nombre de usuario");
-		lblNombreDeUsuario.setFont(new Font("Candara", Font.PLAIN, 25));
-		lblNombreDeUsuario.setBounds(123, 50, 264, 20);
+		lblNombreDeUsuario.setFont(new Font("Verdana", Font.PLAIN, 25));
+		lblNombreDeUsuario.setBounds(97, 50, 264, 20);
 		contentPane.add(lblNombreDeUsuario);
 		
 		lblContrasena = new JLabel("Contrase\u00F1a");
-		lblContrasena.setFont(new Font("Candara", Font.PLAIN, 25));
-		lblContrasena.setBounds(160, 145, 169, 32);
+		lblContrasena.setHorizontalAlignment(SwingConstants.CENTER);
+		lblContrasena.setFont(new Font("Verdana", Font.PLAIN, 25));
+		lblContrasena.setBounds(130, 142, 184, 32);
 		contentPane.add(lblContrasena);
 		
 		btnAceptar = new JButton("ACEPTAR");
-		btnAceptar.setFont(new Font("Candara", Font.BOLD, 18));
+		btnAceptar.setFont(new Font("Verdana", Font.BOLD, 18));
 		btnAceptar.setBounds(50, 270, 150, 44);
 		contentPane.add(btnAceptar);
 		btnAceptar.addActionListener(this);
 		
 		btnCancelar = new JButton("CANCELAR");
-		btnCancelar.setFont(new Font("Candara", Font.BOLD, 18));
+		btnCancelar.setFont(new Font("Verdana", Font.BOLD, 18));
 		btnCancelar.setBounds(250, 270, 150, 44);
 		contentPane.add(btnCancelar);
 		btnCancelar.addActionListener(this);
