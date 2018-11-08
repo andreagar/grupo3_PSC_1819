@@ -14,22 +14,24 @@ import java.awt.Toolkit;
 
 public class adminMoto extends JFrame implements ActionListener{
 	
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JButton btnRegistrarMoto;
 	private JButton btnModificarMoto;
 	private JButton btnAtras;
+	private JLabel lblHyracarAdministracion;
 
 	public adminMoto() {
 		setTitle("HyraCar: Administración");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 458, 314);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblHyracarAdministracion = new JLabel("Administración: Moto");
+		lblHyracarAdministracion = new JLabel("Administración: Moto");
 		lblHyracarAdministracion.setFont(new Font("Verdana", Font.BOLD, 20));
 		lblHyracarAdministracion.setHorizontalAlignment(SwingConstants.CENTER);
 		lblHyracarAdministracion.setBounds(51, 25, 355, 40);

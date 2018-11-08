@@ -25,7 +25,7 @@ public class loginAdmin extends JFrame implements ActionListener{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JTextField textField;
 	private JPasswordField passwordField;
 	private JLabel lblNewLabel;
@@ -39,7 +39,8 @@ public class loginAdmin extends JFrame implements ActionListener{
 		setTitle("HyraCar: Log In Admin");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 474, 393);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(loginAdmin.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);

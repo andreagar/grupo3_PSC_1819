@@ -19,11 +19,11 @@ import java.awt.Toolkit;
 
 public class menuAdmin extends JFrame implements ActionListener{
 
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JButton btnCoche;
 	private JButton btnRegistrarMoto;
 	private JButton btnCerrar;
-
+	private JLabel lblHyracarAdministracion;
 	
 	/**
 	 * Create the frame.
@@ -33,12 +33,13 @@ public class menuAdmin extends JFrame implements ActionListener{
 		setTitle("HyraCar: Administración");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 458, 313);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(menuAdmin.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblHyracarAdministracion = new JLabel("HyraCar: Administración");
+		lblHyracarAdministracion = new JLabel("HyraCar: Administración");
 		lblHyracarAdministracion.setFont(new Font("Verdana", Font.BOLD, 20));
 		lblHyracarAdministracion.setHorizontalAlignment(SwingConstants.CENTER);
 		lblHyracarAdministracion.setBounds(73, 25, 288, 40);

@@ -25,36 +25,41 @@ import es.deusto.grupo3.LNegocio.Moto;
 import es.deusto.grupo3.LNegocio.GestorMoto;
 import javax.swing.JCheckBox;
 import java.awt.Toolkit;
+import javax.swing.border.EtchedBorder;
+import java.awt.SystemColor;
 
 public class modificarMoto extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 7430978011913089956L;
 
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	
 	private JTextField textMarca;
 	private JTextField textModelo;
 	private JTextField textMatricula;
 	private JTextField textPrecio;
 	private JTextField textImagen;
-	
-	JCheckBox chckbxAlquilada;
-	JCheckBox chckbxComprada;
-	JCheckBox chckbxAveriada;
-	
+	private JCheckBox chckbxAlquilada;
+	private JCheckBox chckbxComprada;
+	private JCheckBox chckbxAveriada;
 	private JButton detalles;
 	private JButton button;
 	private JButton modificar;
-	
 	private JList listMoto;
-	
 	private GestorMoto objMoto;
-	
+	private String sel;
 	private DefaultListModel modeloMoto;
-	
 	private int limMoto;
 	private String MotoSelected;
 	private String precioAux;
+	private JLabel lblDetallesDelMoto;
+	private JLabel lblSeleccioneUnCdigo;
+	private JLabel lblMarca;
+	private JLabel lblModelo;
+	private JLabel lblMatricula;
+	private JLabel lblPrecio;
+	private JLabel lblImagen;
+	
 
 	public modificarMoto() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(modificarMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
@@ -62,77 +67,77 @@ public class modificarMoto extends JFrame implements ActionListener{
 		setTitle("HyraCar: modificar moto");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 626, 376);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(modificarMoto.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		String sel = "<html><body>SELECCIONE UNA<br>MATRICULA:</body></html>";
-		JLabel lblSeleccioneUnCdigo = new JLabel(sel);
+		sel = "<html><body>SELECCIONE UNA<br>MATRICULA:</body></html>";
+		lblSeleccioneUnCdigo = new JLabel(sel);
 		lblSeleccioneUnCdigo.setBounds(23, 11, 145, 40);
 		lblSeleccioneUnCdigo.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblSeleccioneUnCdigo);
 		
-		JLabel lblDetallesDelMoto = new JLabel("DETALLES DE LA MOTO SELECCIONADA");
+		lblDetallesDelMoto = new JLabel("DETALLES DE LA MOTO SELECCIONADA");
 		lblDetallesDelMoto.setBounds(200, 29, 350, 14);
 		lblDetallesDelMoto.setFont(new Font("Verdana", Font.PLAIN, 16));
 		contentPane.add(lblDetallesDelMoto);
 		
 		listMoto = new JList();
+		listMoto.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		listMoto.setBounds(23, 60, 130, 200);
 		contentPane.add(listMoto);
 		
-		JLabel lblMarca = new JLabel("Marca:");
+		lblMarca = new JLabel("Marca:");
 		lblMarca.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblMarca.setBounds(200, 76, 46, 14);
 		contentPane.add(lblMarca);
 		
-			textMarca = new JTextField();
-			textMarca.setBounds(276, 72, 154, 20);
-			contentPane.add(textMarca);
-			textMarca.setColumns(10);
+		textMarca = new JTextField();
+		textMarca.setBounds(276, 72, 154, 20);
+		contentPane.add(textMarca);
+		textMarca.setColumns(10);
 		
-		
-		JLabel lblModelo = new JLabel("Modelo:");
+		lblModelo = new JLabel("Modelo:");
 		lblModelo.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblModelo.setBounds(200, 116, 66, 14);
 		contentPane.add(lblModelo);
 		
-			textModelo = new JTextField();
-			textModelo.setBounds(276, 112, 154, 20);
-			contentPane.add(textModelo);
-			textModelo.setColumns(10);
+		textModelo = new JTextField();
+		textModelo.setBounds(276, 112, 154, 20);
+		contentPane.add(textModelo);
+		textModelo.setColumns(10);
 		
-		JLabel lblMatricula = new JLabel("Matricula:");
+		lblMatricula = new JLabel("Matricula:");
 		lblMatricula.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblMatricula.setBounds(200, 162, 66, 14);
 		contentPane.add(lblMatricula);
 		
-			textMatricula = new JTextField();
-			textMatricula.setBounds(276, 158, 154, 20);
-			contentPane.add(textMatricula);
-			textMatricula.setColumns(10);
+		textMatricula = new JTextField();
+		textMatricula.setBounds(276, 158, 154, 20);
+		contentPane.add(textMatricula);
+		textMatricula.setColumns(10);
 		
-		JLabel lblPrecio = new JLabel("Precio:");
+		lblPrecio = new JLabel("Precio:");
 		lblPrecio.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblPrecio.setBounds(200, 209, 66, 14);
 		contentPane.add(lblPrecio);
 		
-			textPrecio = new JTextField();
-			textPrecio.setBounds(250, 205, 180, 21);
-			contentPane.add(textPrecio);
-			textPrecio.setColumns(10);
-
+		textPrecio = new JTextField();
+		textPrecio.setBounds(250, 205, 180, 21);
+		contentPane.add(textPrecio);
+		textPrecio.setColumns(10);
 		
-		JLabel lblImagen = new JLabel("Dir. Imagen:");
+		lblImagen = new JLabel("Dir. Imagen:");
 		lblImagen.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblImagen.setBounds(200, 246, 81, 14);
 		contentPane.add(lblImagen);
 		
-			textImagen = new JTextField();
-			textImagen.setBounds(286, 240, 235, 20);
-			contentPane.add(textImagen);
-			textImagen.setColumns(10);
+		textImagen = new JTextField();
+		textImagen.setBounds(286, 240, 235, 20);
+		contentPane.add(textImagen);
+		textImagen.setColumns(10);
 		
 		button = new JButton("Atras");
 		button.setBounds(511, 298, 89, 28);
@@ -163,16 +168,19 @@ public class modificarMoto extends JFrame implements ActionListener{
 		textMarca.setEnabled(false);
 		
 		chckbxAlquilada = new JCheckBox("Alquilada");
+		chckbxAlquilada.setBackground(SystemColor.text);
 		chckbxAlquilada.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxAlquilada.setBounds(482, 71, 97, 23);
 		contentPane.add(chckbxAlquilada);
 		
 		chckbxComprada = new JCheckBox("Comprada");
+		chckbxComprada.setBackground(SystemColor.text);
 		chckbxComprada.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxComprada.setBounds(482, 111, 97, 23);
 		contentPane.add(chckbxComprada);
 		
 		chckbxAveriada = new JCheckBox("Averiada");
+		chckbxAveriada.setBackground(SystemColor.text);
 		chckbxAveriada.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxAveriada.setBounds(482, 157, 97, 23);
 		contentPane.add(chckbxAveriada);

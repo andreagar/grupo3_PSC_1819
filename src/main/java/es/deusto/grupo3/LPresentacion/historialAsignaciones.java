@@ -28,12 +28,13 @@ public class historialAsignaciones extends JFrame implements ActionListener{
 	 */
 	private static final long serialVersionUID = 7430978011913089956L;
 
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JButton button;
 	private JList listAsig;
 	private String usuario;
 	private GestorCoche objCoche;
 	private DefaultListModel modeloAsig;
+	private JLabel lblabel;
 	
 	/**
 	 * Create the frame.
@@ -46,12 +47,13 @@ public class historialAsignaciones extends JFrame implements ActionListener{
 		setTitle("HyraCar: asignaciones");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 376);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(historialAsignaciones.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblabel = new JLabel("HISTORIAL DEL USUARIO "+ usuario);
+		lblabel = new JLabel("HISTORIAL DEL USUARIO "+ usuario);
 		lblabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblabel.setBounds(30, 11, 330, 14);
 		lblabel.setFont(new Font("Verdana", Font.PLAIN, 14));

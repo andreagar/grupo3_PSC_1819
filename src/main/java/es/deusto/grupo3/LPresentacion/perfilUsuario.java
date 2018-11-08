@@ -26,7 +26,7 @@ import java.awt.Toolkit;
 
 public class perfilUsuario extends JFrame implements ActionListener {
 
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JPasswordField passwordOld;
 	private JPasswordField passwordField;
 	private JLabel lblContraseaActual;
@@ -48,12 +48,13 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(perfilUsuario.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblContraseaActual = new JLabel("Contraseña actual");
+		lblContraseaActual = new JLabel("Contraseña actual");
 		lblContraseaActual.setHorizontalAlignment(SwingConstants.CENTER);
 		lblContraseaActual.setFont(new Font("Verdana", Font.PLAIN, 14));
 		lblContraseaActual.setBounds(124, 31, 164, 22);
@@ -63,7 +64,7 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		passwordOld.setBounds(140, 70, 131, 20);
 		contentPane.add(passwordOld);
 		
-		JLabel lblNewPassword = new JLabel("Contraseña nueva");
+		lblNewPassword = new JLabel("Contraseña nueva");
 		lblNewPassword.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewPassword.setFont(new Font("Verdana", Font.PLAIN, 14));
 		lblNewPassword.setBounds(129, 112, 148, 22);
@@ -125,8 +126,8 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		
 		if (e.getSource() == btnCancelar){
 			dispose();
-			vistaPrincipal frame = new vistaPrincipal();
-			frame.setVisible(true);
+			menuUsuario frameMenu = new menuUsuario(nombre);
+			frameMenu.setVisible(true);
 		}
 		
 		

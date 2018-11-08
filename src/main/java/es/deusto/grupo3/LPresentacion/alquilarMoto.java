@@ -24,6 +24,7 @@ import es.deusto.grupo3.LNegocio.Moto;
 import es.deusto.grupo3.LNegocio.GestorMoto;
 import javax.swing.SwingConstants;
 import java.awt.Toolkit;
+import javax.swing.border.EtchedBorder;
 
 public class alquilarMoto extends JFrame implements ActionListener{
 
@@ -32,7 +33,7 @@ public class alquilarMoto extends JFrame implements ActionListener{
 	 */
 	private static final long serialVersionUID = 7430978011913089956L;
 
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JButton button;
 	private JButton detalles;
 	private JButton btnComprar;
@@ -46,6 +47,9 @@ public class alquilarMoto extends JFrame implements ActionListener{
 	private JTextArea textArea;
 	private DefaultListModel modeloMoto;
 	private JLabel imagen;
+	private JLabel lblDetallesDelMoto;
+	private String sel;
+	private JLabel lblSeleccioneUnCdigo;
 	
 	/**
 	 * Create the frame.
@@ -58,24 +62,26 @@ public class alquilarMoto extends JFrame implements ActionListener{
 		setTitle("HyraCar: Motos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 376);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(alquilarMoto.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		String sel = "<html><body>SELECCIONE UNA<br>MATRICULA:</body></html>";
-		JLabel lblSeleccioneUnCdigo = new JLabel(sel);
+		sel = "<html><body>SELECCIONE UNA<br>MATRICULA:</body></html>";
+		lblSeleccioneUnCdigo = new JLabel(sel);
 		lblSeleccioneUnCdigo.setBounds(23, 11, 145, 40);
 		lblSeleccioneUnCdigo.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblSeleccioneUnCdigo);
 		
-		JLabel lblDetallesDelMoto = new JLabel("DETALLES DE LA MOTO SELECCIONADA");
+		lblDetallesDelMoto = new JLabel("DETALLES DE LA MOTO SELECCIONADA");
 		lblDetallesDelMoto.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDetallesDelMoto.setBounds(193, 11, 400, 14);
 		lblDetallesDelMoto.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblDetallesDelMoto);
 		
 		listMoto = new JList();
+		listMoto.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		listMoto.setBounds(23, 60, 130, 200);
 		contentPane.add(listMoto);
 		
@@ -112,7 +118,7 @@ public class alquilarMoto extends JFrame implements ActionListener{
 		String texto = "<html><body>Aviso:<br>Apunta la matricula del vehiculo para que luego puedas eliminar<br> la operaci\u00F3n. </body></html>";
 		lblAviso = new JLabel(texto);
 		lblAviso.setBounds(200, 230, 435, 50);
-		lblAviso.setFont(new Font("Verdana", Font.PLAIN, 13));
+		lblAviso.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(lblAviso);
 		
 		btnAlquilar = new JButton("ALQUILAR");

@@ -14,10 +14,11 @@ import javax.swing.border.EmptyBorder;
 
 public class adminCoche extends JFrame implements ActionListener{
 	
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JButton btnRegistrarCoche;
 	private JButton btnModificarCoche;
 	private JButton btnAtras;
+	private JLabel lblHyracarAdministracion;
 
 	public adminCoche() {
 		
@@ -25,12 +26,13 @@ public class adminCoche extends JFrame implements ActionListener{
 		setIconImage(Toolkit.getDefaultToolkit().getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 486, 314);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(adminCoche.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblHyracarAdministracion = new JLabel("Administración: Coche");
+		lblHyracarAdministracion = new JLabel("Administración: Coche");
 		lblHyracarAdministracion.setFont(new Font("Verdana", Font.BOLD, 20));
 		lblHyracarAdministracion.setHorizontalAlignment(SwingConstants.CENTER);
 		lblHyracarAdministracion.setBounds(51, 25, 355, 40);

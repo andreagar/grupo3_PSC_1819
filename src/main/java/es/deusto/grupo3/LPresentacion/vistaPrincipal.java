@@ -26,12 +26,13 @@ import es.deusto.grupo3.LDatos.BaseDeDatos;
 public class vistaPrincipal extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JLabel lblSubTitulo;
 	private JButton btnLogIn;
 	private JButton btnRegistrarse;
 	private JButton btnSalir;
 	private JButton btnAdministrador;
+	private JLabel lblNewLabel;
 	
 	public vistaPrincipal() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(vistaPrincipal.class.getResource("/es/deusto/grupo3/img/icon.png")));
@@ -40,7 +41,8 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 350);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(vistaPrincipal.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
 		setContentPane(contentPane);
@@ -64,7 +66,7 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		contentPane.add(btnSalir);
 		btnSalir.addActionListener(this);
 		
-		JLabel lblNewLabel = new JLabel("Alquiler y compra de coches HyraCar", SwingConstants.CENTER);
+		lblNewLabel = new JLabel("Alquiler y compra de coches HyraCar", SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 19));
 		lblNewLabel.setBounds(10, 59, 474, 33);
 		lblNewLabel.setVerticalAlignment(SwingConstants.CENTER);

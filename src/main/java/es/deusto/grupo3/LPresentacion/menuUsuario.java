@@ -18,17 +18,19 @@ import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Asignaciones;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 public class menuUsuario extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JButton btnCoche;
 	private JButton btnMoto;
 	private JButton btnModificar;
 	private JButton btnHistorial;
 	private JButton btnSalir;
 	private String nombre;
+	private JLabel lblNewLabel;
 	
 	public menuUsuario (String nombre){
 		setIconImage(Toolkit.getDefaultToolkit().getImage(menuUsuario.class.getResource("/es/deusto/grupo3/img/icon.png")));
@@ -39,32 +41,34 @@ public class menuUsuario extends JFrame implements ActionListener{
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 500);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(menuUsuario.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		btnCoche = new JButton("Alquilar/Comprar coche");
+		btnCoche = new JButton("<html><body>Alquilar/Comprar<br><center>COCHE</center></body></html>");
+		btnCoche.setToolTipText("");
 		btnCoche.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnCoche.setBounds(130, 120, 220, 55);
+		btnCoche.setBounds(52, 145, 157, 78);
 		contentPane.add(btnCoche);
 		btnCoche.addActionListener(this);
 		
-		btnMoto = new JButton("Alquilar/Comprar moto");
+		btnMoto = new JButton("<html><body>Alquilar/Comprar<br><center>MOTO</center></body></html>");
 		btnMoto.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnMoto.setBounds(130, 190, 220, 55);
+		btnMoto.setBounds(272, 145, 157, 78);
 		contentPane.add(btnMoto);
 		btnMoto.addActionListener(this);
 		
 		btnHistorial = new JButton("Ver mi historial");
 		btnHistorial.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnHistorial.setBounds(140, 260, 200, 55);
+		btnHistorial.setBounds(52, 266, 157, 82);
 		contentPane.add(btnHistorial);
 		btnHistorial.addActionListener(this);
 		
-		btnModificar = new JButton("Modificar mi contraseña");
+		btnModificar = new JButton("<html><body>Modificar mi<br><center>contraseña</center></body></html>");
 		btnModificar.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnModificar.setBounds(115, 330, 250, 55);
+		btnModificar.setBounds(272, 260, 157, 88);
 		contentPane.add(btnModificar);
 		btnModificar.addActionListener(this);
 		
@@ -74,7 +78,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 		contentPane.add(btnSalir);
 		btnSalir.addActionListener(this);
 		
-		JLabel lblNewLabel = new JLabel("Alquiler/compra coches HyraCar", SwingConstants.CENTER);
+		lblNewLabel = new JLabel("Alquiler/compra coches HyraCar", SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 20));
 		lblNewLabel.setBounds(52, 50, 383, 41);
 		lblNewLabel.setVerticalAlignment(SwingConstants.CENTER);
@@ -119,7 +123,6 @@ public class menuUsuario extends JFrame implements ActionListener{
 		}
 		
 		if (e.getSource() == btnModificar){
-			
 			dispose();
 			perfilUsuario framePerfil = new perfilUsuario(nombre);
 			framePerfil.setVisible(true);
@@ -128,7 +131,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 		
 		if (e.getSource() == btnSalir){
 			nombre = null;
-			this.dispose();
+			dispose();
 			vistaPrincipal frame = new vistaPrincipal();
 			frame.setVisible(true);
 		}
