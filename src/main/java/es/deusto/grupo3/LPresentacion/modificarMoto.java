@@ -23,6 +23,7 @@ import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Asignaciones;
 import es.deusto.grupo3.LNegocio.Moto;
 import es.deusto.grupo3.LNegocio.GestorMoto;
+import javax.swing.JCheckBox;
 
 public class modificarMoto extends JFrame implements ActionListener{
 
@@ -35,6 +36,10 @@ public class modificarMoto extends JFrame implements ActionListener{
 	private JTextField textMatricula;
 	private JTextField textPrecio;
 	private JTextField textImagen;
+	
+	JCheckBox chckbxAlquilada;
+	JCheckBox chckbxComprada;
+	JCheckBox chckbxAveriada;
 	
 	private JButton detalles;
 	private JButton button;
@@ -54,7 +59,7 @@ public class modificarMoto extends JFrame implements ActionListener{
 		
 		setTitle("MODIFICAR Moto");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 582, 376);
+		setBounds(100, 100, 626, 376);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -128,21 +133,21 @@ public class modificarMoto extends JFrame implements ActionListener{
 			textImagen.setColumns(10);
 		
 		button = new JButton("Atras");
-		button.setBounds(442, 298, 70, 28);
+		button.setBounds(519, 298, 70, 28);
 		button.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(button);
 		button.addActionListener(this);
 		button.setActionCommand("Atras");
 		
 		detalles = new JButton("Seleccionar");
-		detalles.setBounds(23, 298, 145, 29);
+		detalles.setBounds(23, 271, 130, 20);
 		detalles.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(detalles);
 		detalles.addActionListener(this);
 		detalles.setActionCommand("Detalles");
 		
 		modificar = new JButton("Modificar");
-		modificar.setBounds(250, 299, 100, 28);
+		modificar.setBounds(357, 298, 100, 28);
 		modificar.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(modificar);
 		modificar.addActionListener(this);
@@ -154,6 +159,18 @@ public class modificarMoto extends JFrame implements ActionListener{
 		textMatricula.setEnabled(false);
 		textModelo.setEnabled(false);
 		textMarca.setEnabled(false);
+		
+		chckbxAlquilada = new JCheckBox("Alquilada");
+		chckbxAlquilada.setBounds(482, 71, 97, 23);
+		contentPane.add(chckbxAlquilada);
+		
+		chckbxComprada = new JCheckBox("Comprada");
+		chckbxComprada.setBounds(482, 111, 97, 23);
+		contentPane.add(chckbxComprada);
+		
+		chckbxAveriada = new JCheckBox("Averiada");
+		chckbxAveriada.setBounds(482, 157, 97, 23);
+		contentPane.add(chckbxAveriada);
 	}
 	
 	@Override
@@ -205,9 +222,7 @@ public class modificarMoto extends JFrame implements ActionListener{
 		Statement st = BaseDeDatos.getStatement();
 	
 		for (Moto s : Moto.GetArrayMotosDisponibles(st) ){
-			if(s.isAlquilado()==false && s.isComprado()==false && s.isAveriado()==false){
 				modeloMoto.addElement(s.getMatricula());
-			}
 		}
 		listMoto.setModel(modeloMoto);
 	}
@@ -228,6 +243,10 @@ public class modificarMoto extends JFrame implements ActionListener{
 					precioAux = String.valueOf(c.getPrecio());
 					textPrecio.setText(precioAux);
 					textImagen.setText(c.getImagen());
+					chckbxAlquilada.setSelected(c.isAlquilado());
+					chckbxComprada.setSelected(c.isComprado());
+					chckbxAveriada.setSelected(c.isAveriado());
+					
 					break;
 				}			
 			}

@@ -36,8 +36,6 @@ public class registrarCoche extends JFrame implements ActionListener {
 	private JButton btnCancelar;
 	private JButton btnAceptar;
 
-	
-
 	/**
 	 * Create the frame.
 	 */
