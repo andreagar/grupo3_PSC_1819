@@ -19,7 +19,9 @@ import javax.swing.JTextField;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
+import es.deusto.grupo3.LNegocio.GestorMoto;
 import es.deusto.grupo3.LNegocio.GestorUsuario;
+import es.deusto.grupo3.LNegocio.Moto;
 
 public class registrarCoche extends JFrame implements ActionListener {
 
@@ -119,17 +121,9 @@ public class registrarCoche extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		String marca = txtMarca.getText();
-		String modelo = textModelo.getText();
-		String matricula = textMatricula.getText();
-		double precio = Double.parseDouble(textPrecio.getText());
-		String imagen = textImagen.getText();
 		
 		if (e.getSource() == btnAceptar){
-			Coche c = new Coche(marca, modelo, matricula, precio, false, false, false, imagen);
-			GestorCoche coche = new GestorCoche();
-			//Si no existe, añadir fila con el coche nuevo y sus respectivos atributos
-			coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), c);	
+			this.anyadirCoche();
 			dispose();
 			menuAdmin vistaAdmin = new menuAdmin();
 			vistaAdmin.setVisible(true);
@@ -140,5 +134,18 @@ public class registrarCoche extends JFrame implements ActionListener {
 			menuAdmin vistaAdmin = new menuAdmin();
 			vistaAdmin.setVisible(true);
 		}
+	}
+	
+	public void anyadirCoche(){
+		String marca = txtMarca.getText();
+		String modelo = textModelo.getText();
+		String matricula = textMatricula.getText();
+		double precio = Double.parseDouble(textPrecio.getText());
+		String imagen = textImagen.getText();
+
+		Coche c = new Coche(marca, modelo, matricula, precio, false, false, false, imagen);
+		GestorCoche coche = new GestorCoche();
+		//Si no existe, añadir fila con el coche nuevo y sus respectivos atributos
+		coche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), c);
 	}
 }
