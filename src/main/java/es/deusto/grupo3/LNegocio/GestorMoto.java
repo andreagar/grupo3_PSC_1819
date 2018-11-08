@@ -169,7 +169,7 @@ public class GestorMoto {
 	 * @param todos los demas parámetros son los nuevos datos para la moto
 	 * @return	true si la modificacion es correcta, false en caso contrario
 	 */
-	public boolean modificarDatos (Statement st, String matricula, double precio, String imagen, Boolean alquilada, Boolean comprada, Boolean averiada){
+	public boolean modificarDatos (Statement st, String matricula, double precio, String imagen, boolean alquilada, boolean comprada, boolean averiada){
 			
 			try {
 				//UPDATE
