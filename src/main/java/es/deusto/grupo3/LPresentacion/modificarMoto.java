@@ -217,9 +217,9 @@ public class modificarMoto extends JFrame implements ActionListener{
 		double price = Double.parseDouble(textPrecio.getText());
 		String id = textMatricula.getText();
 		String img = textImagen.getText();
-		Boolean alquilada = chckbxAlquilada.isSelected();
-		Boolean comprada = chckbxComprada.isSelected();
-		Boolean averiada = chckbxAveriada.isSelected();
+		boolean alquilada = chckbxAlquilada.isSelected();
+		boolean comprada = chckbxComprada.isSelected();
+		boolean averiada = chckbxAveriada.isSelected();
 		
 		boolean correcto = gestor.chequearYaEnTabla(st, id);
 		
