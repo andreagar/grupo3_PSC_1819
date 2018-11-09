@@ -51,7 +51,7 @@ public class GestorCochePerftTest {
 	
 	@Test
 	@PerfTest(invocations = 500, threads = 20, duration=500)
-	@Required(max = 200, average = 105, median=300)
+	@Required(max = 200, average = 110, median=300)
     public void testGetArrayCochesDisponibles() throws Exception{
 		Thread.sleep(100);
     }

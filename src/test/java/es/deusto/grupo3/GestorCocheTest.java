@@ -66,7 +66,13 @@ public class GestorCocheTest {
 		cocheArray = gestor.GetArrayCochesDisponibles(BaseDeDatos.getStatement());
 		boolean comprobacion = false;
 		
-		assertNotSame(cocheArray.get(1), comprobacion);
+		if(cocheArray.get(0).getAlquilado()==false && 
+				cocheArray.get(0).getAveriado()==false && 
+				cocheArray.get(0).getComprado()==false){
+			comprobacion = true;
+		}
+		
+		assertTrue(comprobacion);
     }
 	
 	@Test

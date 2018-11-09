@@ -25,14 +25,7 @@
       <artifactId>sqlite-jdbc</artifactId>
       <version>3.8.11.2</version>
     </dependency>
-    
-    <!-- https://mvnrepository.com/artifact/com.jgoodies/jgoodies-forms -->
-	<dependency>
-	    <groupId>com.jgoodies</groupId>
-	    <artifactId>jgoodies-forms</artifactId>
-	    <version>1.6.0</version>
-	</dependency>
-
+  
     
     <dependency>
       <groupId>junit</groupId>
@@ -101,8 +94,8 @@
 			<regex>
 			<!-- Más restricivo por paquete P2 -->
 			<pattern>es.deusto.grupo3.*</pattern>
-			<branchRate>90</branchRate>
-			<lineRate>90</lineRate>
+			<branchRate>50</branchRate>
+			<lineRate>50</lineRate>
 			</regex>
 			</regexes>
 			</check>

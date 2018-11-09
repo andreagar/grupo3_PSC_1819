@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Asignaciones;
 import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorMoto;
@@ -18,12 +19,14 @@ public class GestorMotoTest {
 
 	GestorMoto gestor;
 	Moto moto;
+	Asignaciones asig;
 	
 	@Before
 	public void setUp() throws Exception {
 		BaseDeDatos.initBD("nuestroBD.db");
 		moto = new Moto("Yamaha", "XV950R", "1212ABA", 36200, false, false, false, "/es/deusto/grupo3/img/Yamaha-xv950r.jpg");
 		gestor = new GestorMoto();
+		asig = new Asignaciones ("Ainhoa", "1234ABC", true, false, false, 1);
 	}
 	
 	@After
@@ -59,14 +62,27 @@ public class GestorMotoTest {
 		assertTrue(comprobacion);
     }
 	
+
 	@Test
     public void testGetArrayMotosDisponibles(){
 		ArrayList<Moto> motoArray = new ArrayList<Moto>();
 		motoArray = gestor.GetArrayMotosDisponibles(BaseDeDatos.getStatement());
 		boolean comprobacion = false;
 		
-		assertNotSame(motoArray.get(1), comprobacion);
+		if(motoArray.get(0).isAlquilado()==false && 
+				motoArray.get(0).isAveriado()==false && 
+						motoArray.get(0).isComprado()==false){
+			comprobacion = true;
+		}
+		
+		assertTrue(comprobacion);
     }
+	
+	@Test
+	public void AlquilarVehiculoUsuario(){
+		boolean prueba = gestor.AlquilarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
+		assertTrue(prueba);	
+	}
 	
 	@Test
     public void testModificarDatos(){

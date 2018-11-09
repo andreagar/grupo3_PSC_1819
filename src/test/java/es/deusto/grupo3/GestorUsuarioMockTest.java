@@ -28,7 +28,7 @@ public class GestorUsuarioMockTest {
 		    
     @Test
     public void testbloquearUsuario(){
-    	assertTrue(gesUsu.bloquearUsuario("oscar"));
+    	assertTrue(gesUsu.bloquearUsuario("grupo3"));
     }
 
 }
