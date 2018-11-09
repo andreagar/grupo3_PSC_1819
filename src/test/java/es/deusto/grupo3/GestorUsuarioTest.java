@@ -47,4 +47,10 @@ public class GestorUsuarioTest {
     	assertTrue(prueba);
     }
     
+    @Test
+    public void testchequearYaEnTablaLOGIN(){
+    	boolean prueba = gestor.chequearYaEnTablaLOGIN(BaseDeDatos.getStatement(), "PruebaTest2", "estoEsPrueba");
+    	assertFalse(prueba);
+    }
+    
 }
