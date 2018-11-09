@@ -22,10 +22,11 @@ import javax.swing.JButton;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.GestorUsuario;
 import es.deusto.grupo3.LNegocio.Usuario;
+import java.awt.Toolkit;
 
 public class perfilUsuario extends JFrame implements ActionListener {
 
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JPasswordField passwordOld;
 	private JPasswordField passwordField;
 	private JLabel lblContraseaActual;
@@ -40,29 +41,32 @@ public class perfilUsuario extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public perfilUsuario(String nombre) {
+		setTitle("HyraCar: modificar contraseña");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(perfilUsuario.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		
 		this.nombre = nombre;
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(perfilUsuario.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblContraseaActual = new JLabel("Contraseña actual");
+		lblContraseaActual = new JLabel("Contraseña actual");
 		lblContraseaActual.setHorizontalAlignment(SwingConstants.CENTER);
-		lblContraseaActual.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblContraseaActual.setBounds(129, 30, 148, 22);
+		lblContraseaActual.setFont(new Font("Verdana", Font.PLAIN, 14));
+		lblContraseaActual.setBounds(124, 31, 164, 22);
 		contentPane.add(lblContraseaActual);
 		
 		passwordOld = new JPasswordField();
 		passwordOld.setBounds(140, 70, 131, 20);
 		contentPane.add(passwordOld);
 		
-		JLabel lblNewPassword = new JLabel("Contraseña nueva");
+		lblNewPassword = new JLabel("Contraseña nueva");
 		lblNewPassword.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewPassword.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblNewPassword.setFont(new Font("Verdana", Font.PLAIN, 14));
 		lblNewPassword.setBounds(129, 112, 148, 22);
 		contentPane.add(lblNewPassword);
 		
@@ -71,11 +75,13 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		contentPane.add(passwordField);
 		
 		btnCancelar = new JButton("Cancelar");
+		btnCancelar.setFont(new Font("Verdana", Font.PLAIN, 11));
 		btnCancelar.setBounds(10, 228, 89, 23);
 		contentPane.add(btnCancelar);
 		btnCancelar.addActionListener(this);
 		
 		btnGuardar = new JButton("Guardar");
+		btnGuardar.setFont(new Font("Verdana", Font.PLAIN, 11));
 		btnGuardar.setBounds(335, 228, 89, 23);
 		contentPane.add(btnGuardar);
 		btnGuardar.addActionListener(this);
@@ -120,8 +126,8 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		
 		if (e.getSource() == btnCancelar){
 			dispose();
-			vistaPrincipal frame = new vistaPrincipal();
-			frame.setVisible(true);
+			menuUsuario frameMenu = new menuUsuario(nombre);
+			frameMenu.setVisible(true);
 		}
 		
 		

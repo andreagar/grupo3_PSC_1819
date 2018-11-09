@@ -9,7 +9,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
-
 import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorMoto;
@@ -67,6 +66,12 @@ public class GestorMotoTest {
 		boolean comprobacion = false;
 		
 		assertNotSame(motoArray.get(1), comprobacion);
+    }
+	
+	@Test
+    public void testModificarDatos(){
+		boolean prueba = gestor.modificarDatos(BaseDeDatos.getStatement(), "1212ABA", 36200, "/es/deusto/grupo3/img/Yamaha-xv950r.jpg", true, false, false);
+		assertTrue(prueba);
     }
 
 }

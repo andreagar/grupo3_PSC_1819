@@ -1,12 +1,19 @@
 package es.deusto.grupo3.LPresentacion;
 
+import java.awt.Component;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.imageio.ImageIO;
+import javax.swing.AbstractButton;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -19,31 +26,37 @@ import es.deusto.grupo3.LDatos.BaseDeDatos;
 public class vistaPrincipal extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
+	private JLabel lblSubTitulo;
 	private JButton btnLogIn;
 	private JButton btnRegistrarse;
 	private JButton btnSalir;
 	private JButton btnAdministrador;
+	private JLabel lblNewLabel;
 	
-	public vistaPrincipal()
-	{
+	public vistaPrincipal() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(vistaPrincipal.class.getResource("/es/deusto/grupo3/img/icon.png")));
+		setTitle("HyraCar");
+
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 474, 393);
-		contentPane = new JPanel();
+		setBounds(100, 100, 500, 350);
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(vistaPrincipal.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		btnLogIn = new JButton("LOG IN");
-		btnLogIn.setFont(new Font("Candara", Font.BOLD, 18));
-		btnLogIn.setBounds(140, 130, 200, 75);
+		btnLogIn.setFont(new Font("Verdana", Font.BOLD, 16));
+		btnLogIn.setBounds(49, 169, 164, 89);
 		contentPane.add(btnLogIn);
 		btnLogIn.addActionListener(this);
 		
 		btnRegistrarse = new JButton("REGISTRARSE");
-		btnRegistrarse.setFont(new Font("Candara", Font.BOLD, 18));
-		btnRegistrarse.setBounds(140, 227, 200, 75);
+		btnRegistrarse.setFont(new Font("Verdana", Font.BOLD, 16));
+		btnRegistrarse.setBounds(270, 171, 164, 89);
 		contentPane.add(btnRegistrarse);
 		btnRegistrarse.addActionListener(this);
 		
@@ -53,14 +66,19 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 		contentPane.add(btnSalir);
 		btnSalir.addActionListener(this);
 		
-		JLabel lblNewLabel = new JLabel("Alquiler de coches HyraCar", SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Candara", Font.BOLD, 24));
-		lblNewLabel.setBounds(80, 50, 300, 41);
+		lblNewLabel = new JLabel("Alquiler y compra de coches HyraCar", SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 19));
+		lblNewLabel.setBounds(10, 59, 474, 33);
 		lblNewLabel.setVerticalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
 		
-		btnAdministrador = new JButton("Administrador");
-		btnAdministrador.setBounds(300, 316, 120, 27);
+		lblSubTitulo = new JLabel("Podemos ayudarte a encontrar el coche que se adapta a lo que buscas");
+		lblSubTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSubTitulo.setBounds(10, 103, 474, 14);
+		getContentPane().add(lblSubTitulo);
+		
+		btnAdministrador = new JButton("Administradores");
+		btnAdministrador.setBounds(354, 11, 130, 23);
 		contentPane.add(btnAdministrador);
 		btnAdministrador.addActionListener(this);
 	

@@ -99,7 +99,7 @@ public class BaseDeDatos {
 			return ;
 		 try {
 
-			statement.executeUpdate("create table if not exists COCHE (marca string, modelo string, matricula string, double precio, alquilado boolean, comprado boolean, averiado boolean, imagen string)");
+			statement.executeUpdate("create table if not exists COCHE (marca string, modelo string, matricula string, precio double, alquilado boolean, comprado boolean, averiado boolean, imagen string)");
 
 		} catch (SQLException e) {
 			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
@@ -125,7 +125,7 @@ public class BaseDeDatos {
 				return ;
 			 try {
 
-				statement.executeUpdate("create table if not exists MOTO (marca string, modelo string, matricula string, double precio, alquilado boolean, comprado boolean, averiado boolean, imagen string)");
+				statement.executeUpdate("create table if not exists MOTO (marca string, modelo string, matricula string, precio double, alquilado boolean, comprado boolean, averiado boolean, imagen string)");
 
 			} catch (SQLException e) {
 				// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)

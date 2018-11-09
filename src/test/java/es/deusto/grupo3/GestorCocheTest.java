@@ -84,5 +84,11 @@ public class GestorCocheTest {
 		
 		assertSame(asigArray.get(1).getAlquilado(), comprobacion);
 	}
+	
+	@Test
+    public void testModificarDatos(){
+		boolean prueba = gestor.modificarDatos(BaseDeDatos.getStatement(), "1234ABC", 74000, "/es/deusto/grupo3/img/Audi_A7.jpg", true, false, false);
+		assertTrue(prueba);
+    }
 
 }

@@ -16,6 +16,8 @@ import javax.swing.border.EmptyBorder;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.GestorUsuario;
+import javax.swing.SwingConstants;
+import java.awt.Toolkit;
 
 public class loginAdmin extends JFrame implements ActionListener{
 	
@@ -23,7 +25,7 @@ public class loginAdmin extends JFrame implements ActionListener{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JTextField textField;
 	private JPasswordField passwordField;
 	private JLabel lblNewLabel;
@@ -32,11 +34,13 @@ public class loginAdmin extends JFrame implements ActionListener{
 	private JButton btnCancelar;
 
 	public loginAdmin() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(loginAdmin.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		setResizable(false);
-		setTitle("LOG IN ADMINISTRADOR");
+		setTitle("HyraCar: Log In Admin");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 474, 393);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(loginAdmin.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -53,23 +57,25 @@ public class loginAdmin extends JFrame implements ActionListener{
 		contentPane.add(passwordField);
 		
 		lblNewLabel = new JLabel("ID admin");
-		lblNewLabel.setFont(new Font("Candara", Font.PLAIN, 25));
-		lblNewLabel.setBounds(182, 50, 264, 20);
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Verdana", Font.PLAIN, 25));
+		lblNewLabel.setBounds(130, 48, 184, 20);
 		contentPane.add(lblNewLabel);
 		
 		lblContrasena = new JLabel("Contrase\u00F1a");
-		lblContrasena.setFont(new Font("Candara", Font.PLAIN, 25));
-		lblContrasena.setBounds(160, 145, 169, 32);
+		lblContrasena.setHorizontalAlignment(SwingConstants.CENTER);
+		lblContrasena.setFont(new Font("Verdana", Font.PLAIN, 25));
+		lblContrasena.setBounds(130, 142, 184, 32);
 		contentPane.add(lblContrasena);
 		
 		btnAceptar = new JButton("ACEPTAR");
-		btnAceptar.setFont(new Font("Candara", Font.BOLD, 18));
+		btnAceptar.setFont(new Font("Verdana", Font.PLAIN, 15));
 		btnAceptar.setBounds(50, 270, 150, 44);
 		contentPane.add(btnAceptar);
 		btnAceptar.addActionListener(this);
 		
 		btnCancelar = new JButton("CANCELAR");
-		btnCancelar.setFont(new Font("Candara", Font.BOLD, 18));
+		btnCancelar.setFont(new Font("Verdana", Font.PLAIN, 15));
 		btnCancelar.setBounds(250, 270, 150, 44);
 		contentPane.add(btnCancelar);
 		btnCancelar.addActionListener(this);

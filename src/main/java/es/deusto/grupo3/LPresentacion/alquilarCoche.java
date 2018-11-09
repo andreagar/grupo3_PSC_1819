@@ -22,6 +22,11 @@ import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Asignaciones;
 import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
+import java.awt.Toolkit;
+import javax.swing.SwingConstants;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EtchedBorder;
 
 public class alquilarCoche extends JFrame implements ActionListener{
 
@@ -30,7 +35,7 @@ public class alquilarCoche extends JFrame implements ActionListener{
 	 */
 	private static final long serialVersionUID = 7430978011913089956L;
 
-	private JPanel contentPane;
+	private PanelConImagen contentPane;
 	private JButton button;
 	private JButton detalles;
 	private JButton btnComprar;
@@ -44,34 +49,41 @@ public class alquilarCoche extends JFrame implements ActionListener{
 	private JTextArea textArea;
 	private DefaultListModel modeloCoche;
 	private JLabel imagen;
+	private JLabel lblDetallesDelCoche;
+	private JLabel lblSeleccioneUnCdigo;
 	
 	/**
 	 * Create the frame.
 	 */
 	public alquilarCoche(String nombre) {
 		
+		setIconImage(Toolkit.getDefaultToolkit().getImage(alquilarCoche.class.getResource("/es/deusto/grupo3/img/icon.png")));
+				
 		this.usuario=nombre;
 		
-		setTitle("COCHES");
+		setTitle("HyraCar: coches");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 376);
-		contentPane = new JPanel();
+		contentPane = new PanelConImagen();
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(alquilarCoche.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		String sel = "<html><body>SELECCIONE UNA<br>MATRICULA:</body></html>";
-		JLabel lblSeleccioneUnCdigo = new JLabel(sel);
+		lblSeleccioneUnCdigo = new JLabel(sel);
 		lblSeleccioneUnCdigo.setBounds(23, 11, 145, 40);
-		lblSeleccioneUnCdigo.setFont(new Font("Candara", Font.BOLD, 14));
+		lblSeleccioneUnCdigo.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblSeleccioneUnCdigo);
 		
-		JLabel lblDetallesDelCoche = new JLabel("DETALLES DEL COCHE SELECCIONADO");
-		lblDetallesDelCoche.setBounds(208, 11, 254, 14);
-		lblDetallesDelCoche.setFont(new Font("Candara", Font.BOLD, 14));
+		lblDetallesDelCoche = new JLabel("DETALLES DEL COCHE SELECCIONADO");
+		lblDetallesDelCoche.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDetallesDelCoche.setBounds(193, 11, 400, 14);
+		lblDetallesDelCoche.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblDetallesDelCoche);
 		
 		listCoche = new JList();
+		listCoche.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		listCoche.setBounds(23, 60, 130, 200);
 		contentPane.add(listCoche);
 		
@@ -86,21 +98,21 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		
 		button = new JButton("Atras");
 		button.setBounds(550, 299, 70, 28);
-		button.setFont(new Font("Candara", Font.BOLD, 14));
+		button.setFont(new Font("Verdana", Font.PLAIN, 13));
 		contentPane.add(button);
 		button.addActionListener(this);
 		button.setActionCommand("Atras");
 		
 		detalles = new JButton("Mostrar Detalles");
-		detalles.setBounds(23, 298, 145, 29);
-		detalles.setFont(new Font("Candara", Font.BOLD, 14));
+		detalles.setBounds(23, 271, 130, 29);
+		detalles.setFont(new Font("Verdana", Font.PLAIN, 11));
 		contentPane.add(detalles);
 		detalles.addActionListener(this);
 		detalles.setActionCommand("Detalles");
 		
 		btnComprar = new JButton("COMPRAR");
 		btnComprar.setBounds(206, 298, 101, 29);
-		btnComprar.setFont(new Font("Candara", Font.BOLD, 14));
+		btnComprar.setFont(new Font("Verdana", Font.PLAIN, 13));
 		contentPane.add(btnComprar);
 		btnComprar.addActionListener(this);
 		btnComprar.setActionCommand("COMPRAR");
@@ -108,12 +120,12 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		String texto = "<html><body>Aviso:<br>Apunta la matricula del vehiculo para que luego puedas eliminar<br> la operaci\u00F3n. </body></html>";
 		lblAviso = new JLabel(texto);
 		lblAviso.setBounds(200, 230, 435, 50);
-		lblAviso.setFont(new Font("Candara", Font.BOLD, 13));
+		lblAviso.setFont(new Font("Candara", Font.BOLD, 14));
 		contentPane.add(lblAviso);
 		
 		btnAlquilar = new JButton("ALQUILAR");
 		btnAlquilar.setBounds(338, 299, 101, 28);
-		btnAlquilar.setFont(new Font("Candara", Font.BOLD, 14));
+		btnAlquilar.setFont(new Font("Verdana", Font.PLAIN, 13));
 		contentPane.add(btnAlquilar);
 		btnAlquilar.addActionListener(this);
 		btnAlquilar.setActionCommand("ALQUILAR");

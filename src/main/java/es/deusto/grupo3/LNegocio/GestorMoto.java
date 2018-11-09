@@ -163,5 +163,33 @@ public class GestorMoto {
 			return false;
 		}
 	}
+	
+	/** Modifica los datos de un coche en la tabla MOTO de BD, 
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al usuario)
+	 * @param todos los demas parámetros son los nuevos datos para la moto
+	 * @return	true si la modificacion es correcta, false en caso contrario
+	 */
+	public boolean modificarDatos (Statement st, String matricula, double precio, String imagen, boolean alquilada, boolean comprada, boolean averiada){
+			
+			try {
+				//UPDATE
+				String sentUpdate = "update MOTO set imagen = ?, precio = ?, alquilado = ?, comprado = ?, averiado = ?   where matricula = ?";
+				PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentUpdate);  
+	            // set the corresponding param
+	            pstmt.setString(1, imagen);
+	            pstmt.setDouble(2, precio);
+	            pstmt.setBoolean(3, alquilada);
+	            pstmt.setBoolean(4, comprada);
+	            pstmt.setBoolean(5, averiada);
+	            pstmt.setString(6, matricula);
+	            // update 
+	            int val1 = pstmt.executeUpdate();
+	            if (val1!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+				return true;
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return false;
+			}
+	}
 
 }
