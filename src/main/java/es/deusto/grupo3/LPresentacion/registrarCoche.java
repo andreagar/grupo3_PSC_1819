@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -22,6 +24,7 @@ import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorMoto;
 import es.deusto.grupo3.LNegocio.GestorUsuario;
 import es.deusto.grupo3.LNegocio.Moto;
+
 import java.awt.Toolkit;
 
 public class registrarCoche extends JFrame implements ActionListener {
@@ -103,6 +106,12 @@ public class registrarCoche extends JFrame implements ActionListener {
 		textMatricula.setBounds(198, 161, 154, 20);
 		contentPane.add(textMatricula);
 		textMatricula.setColumns(10);
+		textMatricula.addKeyListener(new KeyAdapter() {
+			public void keyTyped(KeyEvent e) {
+				if (textMatricula.getText().length()== 7) 
+					e.consume();
+		   }
+		});
 		
 		lblMatricula = new JLabel("Matricula:");
 		lblMatricula.setFont(new Font("Candara", Font.PLAIN, 14));
