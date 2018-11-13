@@ -1,3 +1,6 @@
-WARN - 08:54:55,512 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
-INFO - 08:55:00,464 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'bbb' and contrasenya = 'bbb')
-WARN - 08:55:00,464 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 09:31:39,070 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 09:31:39,070 - main - es.deusto.grupo3.App - select * from USUARIO where (nombre = 'andrea')
+WARN - 09:31:39,070 - main - es.deusto.grupo3.App - El usuario ya existe, prueba con otro
+INFO - 09:31:39,491 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 09:31:39,491 - main - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'PruebaTest2' and contrasenya = 'estoEsPrueba')
+INFO - 09:47:19,729 - main - es.deusto.grupo3.App - Nombre: ./nuestroBD.db / Base de datos conectada

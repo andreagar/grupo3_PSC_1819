@@ -25,6 +25,9 @@ import es.deusto.grupo3.LDatos.BaseDeDatos;
 
 public class vistaPrincipal extends JFrame implements ActionListener{
 
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	private PanelConImagen contentPane;
 	private JLabel lblSubTitulo;

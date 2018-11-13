@@ -53,7 +53,7 @@ public class GestorMotoPerftTest {
 	
 	@Test
 	@PerfTest(invocations = 1000, threads = 20, duration=1000)
-	@Required(max = 180, average = 114, median=300)
+	@Required(max = 180, average = 116, median=300)
 	public void AlquilarVehiculoUsuario() throws Exception{
 		Thread.sleep(100);
 	}

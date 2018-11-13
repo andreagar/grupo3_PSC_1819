@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.apache.log4j.Logger;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Coche;
@@ -19,10 +20,11 @@ import es.deusto.grupo3.LPresentacion.vistaPrincipal;
  */
 public class App 
 {
+	private final static Logger log = Logger.getLogger(App.class.getName());
     public static void main( String[] args )
     {
     	//inicialización de BD
-    	BaseDeDatos.initBD("nuestroBD.db");
+    	BaseDeDatos.initBD("./nuestroBD.db");
     	/*String s = "drop table MOTO";
     	try {
 			BaseDeDatos.getStatement().executeUpdate(s);
@@ -66,13 +68,23 @@ public class App
 		Moto moto;
 		moto = new Moto ("Honda", "CB1000R", "3344PPS", 30000, false, false, false, "/es/deusto/grupo3/img/Honda_CB_1000_R.jpg");
 		gestorMoto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), moto);
+		log.warn("1");
 		moto = new Moto ("Yamaha", "XV950R", "1212ABA", 36200, false, false, false, "/es/deusto/grupo3/img/Yamaha-xv950r.jpg");
 		gestorMoto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), moto);
+		log.warn("2");
 		moto = new Moto ("Ducati", "Monster", "7892GFS", 18600, false, false, false, "/es/deusto/grupo3/img/Ducati_Moster.jpg");
 		gestorMoto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), moto);
-
+		log.warn("3");
+		
+		log.warn("Antes de visualizar");
+		
+		
 		//menu de log in y registrarse
+		
 		vistaPrincipal frame = new vistaPrincipal();
+		
 		frame.setVisible(true);
+		
+		log.warn("despues de visualizar");
     }
 }
