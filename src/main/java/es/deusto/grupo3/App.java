@@ -5,6 +5,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
+
+import org.apache.log4j.Logger;
+
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
@@ -19,10 +22,13 @@ import es.deusto.grupo3.LPresentacion.vistaPrincipal;
  */
 public class App 
 {
+	private final static Logger log = Logger.getLogger(App.class.getName());
     public static void main( String[] args )
     {
     	//inicialización de BD
+    	log.info("iniciando BD");
     	BaseDeDatos.initBD("nuestroBD.db");
+    	log.info("BD iniciada");
     	/*String s = "drop table MOTO";
     	try {
 			BaseDeDatos.getStatement().executeUpdate(s);

@@ -36,7 +36,7 @@ public class BaseDeDatos {
 		    return connection;
 		} catch (ClassNotFoundException | SQLException e) {
 			JOptionPane.showMessageDialog( null, "Error!! Nombre: " + nombreBD + " / no se ha conectado la base de datos" , "ERROR", JOptionPane.ERROR_MESSAGE );
-			System.out.println( "Error!! Nombre: " + nombreBD + " / Contrasenya incorreta");
+			log.fatal("Error!! Nombre: " + nombreBD + " / Contrasenya incorreta");
 			return null;
 		}
 	}
@@ -46,8 +46,10 @@ public class BaseDeDatos {
 		try {
 			statement.close();
 			connection.close();
+			log.info("BD cerrada correctamente");
 		} catch (SQLException e) {
 			e.printStackTrace();
+			log.error("no se ha cerrado bien la BD");
 		}
 	}
 	
@@ -80,6 +82,7 @@ public class BaseDeDatos {
 			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
 			if (!e.getMessage().equals("table interaccion already exists"))
 				e.printStackTrace();  
+			log.info("NO se ha creado tabla USUARIO: ya existe");
 		}
 	}
 	/**
@@ -105,6 +108,7 @@ public class BaseDeDatos {
 			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
 			if (!e.getMessage().equals("table interaccion already exists"))
 				e.printStackTrace();  
+			log.info("NO se ha creado tabla COCHE: ya existe");
 		}
 	 }
 	 
@@ -131,6 +135,7 @@ public class BaseDeDatos {
 				// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
 				if (!e.getMessage().equals("table interaccion already exists"))
 					e.printStackTrace();  
+				log.info("NO se ha creado tabla MOTO: ya existe");
 			}
 		 }
 		 
@@ -155,6 +160,7 @@ public class BaseDeDatos {
 					// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
 					if (!e.getMessage().equals("table interaccion already exists"))
 						e.printStackTrace();  
+					log.info("NO se ha creado tabla ASIGNACIONES: ya existe");
 				}
 			 }
 	
