@@ -41,7 +41,7 @@ public class GestorCoche {
 				
 				if (rs.next()) {  // Normalmente se recorre con un while, pero aqui solo hay que ver si ya existe
 					rs.close();
-					log.info("El coche ya existe, prueba con otro");
+					log.warn("El coche ya existe, prueba con otro");
 					//JOptionPane.showMessageDialog(null, "El coche ya existe, prueba con otro","Mensaje de error",JOptionPane.ERROR_MESSAGE);
 					return true;
 				}

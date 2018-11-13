@@ -40,6 +40,7 @@ public class GestorUsuario {
 				
 				if (rs.next()) {  // Normalmente se recorre con un while, pero aqui solo hay que ver si ya existe
 					rs.close();
+					log.warn("El usuario ya existe, prueba con otro");
 					JOptionPane.showMessageDialog(null, "El usuario ya existe, prueba con otro","Mensaje de error",JOptionPane.ERROR_MESSAGE);
 					return true;
 				}
@@ -61,6 +62,7 @@ public class GestorUsuario {
 				
 				if (rs.next()) { 
 					rs.close();
+					log.warn("Nombre de usuario y contrasenya correctas");
 					JOptionPane.showMessageDialog(null, "Nombre de usuario y contrasenya correctas","Correcto",JOptionPane.INFORMATION_MESSAGE);
 					return true;
 				}
