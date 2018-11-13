@@ -6,6 +6,9 @@ import java.sql.Statement;
 
 import org.apache.log4j.Logger;
 
+
+import org.apache.log4j.Logger;
+
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
@@ -24,7 +27,13 @@ public class App
     public static void main( String[] args )
     {
     	//inicialización de BD
+<<<<<<< HEAD
     	BaseDeDatos.initBD("./nuestroBD.db");
+=======
+    	log.info("iniciando BD");
+    	BaseDeDatos.initBD("nuestroBD.db");
+    	log.info("BD iniciada");
+>>>>>>> refs/remotes/origin/master
     	/*String s = "drop table MOTO";
     	try {
 			BaseDeDatos.getStatement().executeUpdate(s);
