@@ -27,13 +27,10 @@ public class App
     public static void main( String[] args )
     {
     	//inicialización de BD
-<<<<<<< HEAD
-    	BaseDeDatos.initBD("./nuestroBD.db");
-=======
+
     	log.info("iniciando BD");
     	BaseDeDatos.initBD("nuestroBD.db");
     	log.info("BD iniciada");
->>>>>>> refs/remotes/origin/master
     	/*String s = "drop table MOTO";
     	try {
 			BaseDeDatos.getStatement().executeUpdate(s);
