@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
 
 import javax.imageio.ImageIO;
@@ -20,6 +21,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.xml.crypto.dom.DOMStructure;
+
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 
@@ -36,16 +41,19 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 	private JButton btnSalir;
 	private JButton btnAdministrador;
 	private JLabel lblNewLabel;
+	private JLabel imagen;
+	
 	
 	public vistaPrincipal() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(vistaPrincipal.class.getResource("/es/deusto/grupo3/img/icon.png")));
+		setResizable(false);
 		setTitle("HyraCar");
 
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 350);
 		contentPane = new PanelConImagen();
-		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(vistaPrincipal.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
+		//contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(login.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
+		
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
 		setContentPane(contentPane);
@@ -94,7 +102,7 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 			}
 		});
 	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

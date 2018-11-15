@@ -18,74 +18,77 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
+import es.deusto.grupo3.App;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Asignaciones;
-import es.deusto.grupo3.LNegocio.Coche;
-import es.deusto.grupo3.LNegocio.GestorCoche;
-import java.awt.Toolkit;
+import es.deusto.grupo3.LNegocio.Moto;
+import es.deusto.grupo3.LNegocio.GestorMoto;
 import javax.swing.SwingConstants;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.CompoundBorder;
+import java.awt.Toolkit;
 import javax.swing.border.EtchedBorder;
 
-public class alquilarCoche extends JFrame implements ActionListener{
+import org.apache.log4j.Logger;
+
+public class asignarMoto extends JFrame implements ActionListener{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 7430978011913089956L;
+	
+	private final static Logger log = Logger.getLogger(App.class.getName());
 
 	private PanelConImagen contentPane;
 	private JButton button;
 	private JButton detalles;
 	private JButton btnComprar;
 	private JButton btnAlquilar;
-	private JList listCoche;
+	private JList listMoto;
 	private String usuario;
 	private JLabel lblAviso;
-	private int limCoche;
-	private String cocheSelected;
-	private GestorCoche objCoche;
+	private int limMoto;
+	private String motoSelected;
+	private GestorMoto objMoto;
 	private JTextArea textArea;
-	private DefaultListModel modeloCoche;
+	private DefaultListModel modeloMoto;
 	private JLabel imagen;
-	private JLabel lblDetallesDelCoche;
+	private JLabel lblDetallesDelMoto;
+	private String sel;
 	private JLabel lblSeleccioneUnCdigo;
 	
 	/**
 	 * Create the frame.
 	 */
-	public alquilarCoche(String nombre) {
+	public asignarMoto(String nombre) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(asignarMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		
-		setIconImage(Toolkit.getDefaultToolkit().getImage(alquilarCoche.class.getResource("/es/deusto/grupo3/img/icon.png")));
-				
 		this.usuario=nombre;
 		
-		setTitle("HyraCar: coches");
+		setTitle("HyraCar: Motos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 376);
 		contentPane = new PanelConImagen();
-		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(alquilarCoche.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
+		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(asignarMoto.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		String sel = "<html><body>SELECCIONE UNA<br>MATRICULA:</body></html>";
+		sel = "<html><body>SELECCIONE UNA<br>MATRICULA:</body></html>";
 		lblSeleccioneUnCdigo = new JLabel(sel);
 		lblSeleccioneUnCdigo.setBounds(23, 11, 145, 40);
 		lblSeleccioneUnCdigo.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblSeleccioneUnCdigo);
 		
-		lblDetallesDelCoche = new JLabel("DETALLES DEL COCHE SELECCIONADO");
-		lblDetallesDelCoche.setHorizontalAlignment(SwingConstants.CENTER);
-		lblDetallesDelCoche.setBounds(193, 11, 400, 14);
-		lblDetallesDelCoche.setFont(new Font("Verdana", Font.PLAIN, 14));
-		contentPane.add(lblDetallesDelCoche);
+		lblDetallesDelMoto = new JLabel("DETALLES DE LA MOTO SELECCIONADA");
+		lblDetallesDelMoto.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDetallesDelMoto.setBounds(193, 11, 400, 14);
+		lblDetallesDelMoto.setFont(new Font("Verdana", Font.PLAIN, 14));
+		contentPane.add(lblDetallesDelMoto);
 		
-		listCoche = new JList();
-		listCoche.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		listCoche.setBounds(23, 60, 130, 200);
-		contentPane.add(listCoche);
+		listMoto = new JList();
+		listMoto.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		listMoto.setBounds(23, 60, 130, 200);
+		contentPane.add(listMoto);
 		
 		textArea = new JTextArea();
 		textArea.setFont(new Font("Candara", Font.BOLD, 14));
@@ -130,20 +133,20 @@ public class alquilarCoche extends JFrame implements ActionListener{
 		btnAlquilar.addActionListener(this);
 		btnAlquilar.setActionCommand("ALQUILAR");
 		
-		objCoche=new GestorCoche();
-		this.CargarLista(objCoche);
+		objMoto=new GestorMoto();
+		this.CargarLista(objMoto);
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		switch(e.getActionCommand()){
-			case "COMPRAR":
-				//this.Asignar(0);
-				break;
-				
 			case "ALQUILAR":
 				this.Asignar(1);
+				break;
+				
+			case "COMPRAR":
+				this.Asignar(2);
 				break;
 				
 			case "Detalles":
@@ -160,21 +163,21 @@ public class alquilarCoche extends JFrame implements ActionListener{
 
 	}
 	
-	public void CargarLista(GestorCoche coche){
+	public void CargarLista(GestorMoto moto){
 		
-		modeloCoche=new DefaultListModel();
+		modeloMoto=new DefaultListModel();
 		
 		Statement st = BaseDeDatos.getStatement();
 	
-		for (Coche s : coche.GetArrayCochesDisponibles(st) ){
-			if(s.getAlquilado()==false && s.getComprado()==false && s.getAveriado()==false){
+		for (Moto s : moto.GetArrayMotosDisponibles(st) ){
+			if(s.isAlquilado()==false && s.isComprado()==false && s.isAveriado()==false){
 			
-				modeloCoche.addElement( s.getMatricula() );
+				modeloMoto.addElement( s.getMatricula() );
 			}
 		}
 		
 		
-		listCoche.setModel( modeloCoche );
+		listMoto.setModel( modeloMoto );
 	
 	}
 	
@@ -182,62 +185,67 @@ public class alquilarCoche extends JFrame implements ActionListener{
 
 		textArea.setText("");
 		textArea.disable();
-		limCoche=listCoche.getSelectedIndex();
+		limMoto=listMoto.getSelectedIndex();
 		
-		if(limCoche!=-1){
-			cocheSelected =(String)listCoche.getSelectedValue();
+		if(limMoto!=-1){
+			motoSelected =(String)listMoto.getSelectedValue();
 			Statement st = BaseDeDatos.getStatement();
 			
-			for (Coche c : objCoche.GetArrayCochesDisponibles(st))
+			for (Moto m : objMoto.GetArrayMotosDisponibles(st))
 			{
-				if(cocheSelected.equals(c.getMatricula()))
+				if(motoSelected.equals(m.getMatricula()))
 				{
 					
 					textArea.append(" Matricula: ");
-					textArea.append(c.getMatricula());
+					textArea.append(m.getMatricula());
 					textArea.append(", Marca: ");
-					textArea.append(c.getMarca());
+					textArea.append(m.getMarca());
 					textArea.append(", Modelo: ");
-					textArea.append(c.getModelo());
+					textArea.append(m.getModelo());
 					textArea.append("\n Precio: ");
 					DecimalFormat df = new DecimalFormat("#.00");
-					textArea.append((df.format(c.getPrecio()/365)) + " €/dia"); //dividido entre 365 para sacar precio por día
-					imagen.setIcon(new ImageIcon (alquilarCoche.class.getResource(c.getImagen())));
+					textArea.append((df.format(m.getPrecio()/365)) + " €/dia"); //dividido entre 365 para sacar precio por día
+					imagen.setIcon(new ImageIcon (asignarMoto.class.getResource(m.getImagen())));
 					break;
 				}			
 			}
 
 		}else{
+			log.warn("Seleccion incorrecta (debes selccionar al menos un elemento).");
 			JOptionPane.showMessageDialog(null, "Seleccion incorrecta (debes selccionar al menos un elemento).","Mensaje de error",JOptionPane.ERROR_MESSAGE);
 		}
 		
 	}
 	
 	public void Asignar(int opc){
-		limCoche=listCoche.getSelectedIndex();
+		limMoto=listMoto.getSelectedIndex();
 		
-		if(limCoche!=-1){
-			modeloCoche=(DefaultListModel)listCoche.getModel();
-			cocheSelected = (String)listCoche.getSelectedValue();
-		
+		if(limMoto!=-1){
+			modeloMoto=(DefaultListModel)listMoto.getModel();
+			motoSelected = (String)listMoto.getSelectedValue();
+			
+			boolean ok = false;
+			
 			if(opc == 1) //ALQUILAR
 			{
-				Asignaciones asig = new Asignaciones (usuario, cocheSelected, true, false, false, 1);
-				boolean ok = false;
-				ok = objCoche.AlquilarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
+				Asignaciones asig = new Asignaciones (usuario, motoSelected, true, false, false, 2);
+				ok = objMoto.AlquilarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
 				if (ok == true){
-					modeloCoche.remove(listCoche.getSelectedIndex());
+					modeloMoto.remove(listMoto.getSelectedIndex());
 				}
 				
 			}
 			if(opc == 2) //COMPRAR
 			{
-//				Asignaciones asig = new Asignaciones (usuario, cocheSelected, false, true, false);
-//				objCoche.AsignarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
-//				modeloCoche.remove(listCoche.getSelectedIndex());
+				Asignaciones asig = new Asignaciones (usuario, motoSelected, false, true, false, 2);
+				ok = objMoto.ComprarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
+				if (ok == true){
+					modeloMoto.remove(listMoto.getSelectedIndex());
+				}
 			}
 			
 		}else{
+			log.warn("Seleccion incorrecta (debes selccionar al menos un elemento).");
 			JOptionPane.showMessageDialog(null, "Seleccion incorrecta (debes selccionar al menos un elemento).","Mensaje de error",JOptionPane.ERROR_MESSAGE);
 		}
 		

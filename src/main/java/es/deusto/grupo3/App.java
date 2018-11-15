@@ -13,7 +13,6 @@ import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorMoto;
-import es.deusto.grupo3.LNegocio.GestorUsuario;
 import es.deusto.grupo3.LNegocio.Moto;
 import es.deusto.grupo3.LPresentacion.vistaPrincipal;
 

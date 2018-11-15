@@ -126,7 +126,7 @@ public class GestorMoto {
 
 	}
 	
-	/** Alquilar un coche con un usuario específico: poner el atributo alquilado de COCHE a true e insertar una nueva línea en ASIGNACIONES
+	/** Alquilar una moto con un usuario específico: poner el atributo alquilado de MOTO a true e insertar una nueva línea en ASIGNACIONES
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @param asig	Objeto de clase Asignaciones
 	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
@@ -159,6 +159,46 @@ public class GestorMoto {
 			if (val1!=1 && val2!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
+			log.error("Erro al alquilar moto");
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	/** Comprar una moto con un usuario específico: poner el atributo comprado de MOTO a true e insertar una nueva línea en ASIGNACIONES
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	 * @param asig	Objeto de clase Asignaciones
+	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
+	 */
+	public boolean ComprarVehiculoUsuario(Statement st, Asignaciones asig){
+		
+		try {
+			//UPDATE
+			String sentUpdate = "update MOTO set alquilado = ? where matricula = ?";
+			PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentUpdate);  
+            // set the corresponding param
+            pstmt.setBoolean(1, asig.getAlquilado());
+            pstmt.setString(2, asig.getMatricula());
+            // update 
+            int val1 = pstmt.executeUpdate();
+			
+	        //INSERT
+			String sentSQL = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
+			PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
+            // set the corresponding param
+            pstmt2.setString(1, asig.getUsuario());
+            pstmt2.setString(2, asig.getMatricula());
+            pstmt2.setBoolean(3, false);
+            pstmt2.setBoolean(4, true);
+            pstmt2.setBoolean(5, false);
+            pstmt2.setInt(6, asig.getVehiculo());
+            // insert 
+            int val2 = pstmt2.executeUpdate();
+	        
+			if (val1!=1 && val2!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+			return true;
+		} catch (SQLException e) {
+			log.error("Erro al alquilar moto");
 			e.printStackTrace();
 			return false;
 		}

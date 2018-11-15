@@ -33,7 +33,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 	private JLabel lblNewLabel;
 	
 	public menuUsuario (String nombre){
-		setIconImage(Toolkit.getDefaultToolkit().getImage(menuUsuario.class.getResource("/es/deusto/grupo3/img/icon.png")));
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(menuUsuario.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		setTitle("HyraCar");
 		
 		this.nombre = nombre;
@@ -42,7 +42,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 500);
 		contentPane = new PanelConImagen();
-		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(menuUsuario.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
+		//contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(menuUsuario.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -112,13 +112,13 @@ public class menuUsuario extends JFrame implements ActionListener{
 		
 		if (e.getSource() == btnCoche){
 			dispose();
-			alquilarCoche alquilar = new alquilarCoche(nombre);
+			asignarCoche alquilar = new asignarCoche(nombre);
 			alquilar.setVisible(true);			
 		}
 		
 		if (e.getSource() == btnMoto){
 			dispose();
-			alquilarMoto alquilarMoto = new alquilarMoto(nombre);
+			asignarMoto alquilarMoto = new asignarMoto(nombre);
 			alquilarMoto.setVisible(true);			
 		}
 		
