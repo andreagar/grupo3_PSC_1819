@@ -62,13 +62,14 @@ public class modificarMoto extends JFrame implements ActionListener{
 	
 
 	public modificarMoto() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(modificarMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
+		Toolkit toolkit = getToolkit();
+		setIconImage(toolkit.getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		
 		setTitle("HyraCar: modificar moto");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 626, 376);
 		contentPane = new PanelConImagen();
-		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(modificarMoto.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
+		contentPane.setBackgroundImage(toolkit.getImage(login.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);

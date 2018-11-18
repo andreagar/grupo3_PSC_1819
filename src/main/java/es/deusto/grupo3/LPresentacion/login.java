@@ -37,13 +37,14 @@ public class login extends JFrame implements ActionListener{
 	private JButton btnCancelar;
 
 	public login() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(login.class.getResource("/es/deusto/grupo3/img/icon.png")));
+		Toolkit toolkit = getToolkit();
+		setIconImage(toolkit.getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		setResizable(false);
 		setTitle("HyraCar: Log In");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 474, 393);
 		contentPane = new PanelConImagen();
-		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(login.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
+		contentPane.setBackgroundImage(toolkit.getImage(login.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);

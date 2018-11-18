@@ -68,7 +68,8 @@ public class asignarMoto extends JFrame implements ActionListener{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 376);
 		contentPane = new PanelConImagen();
-		contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(asignarMoto.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
+		Toolkit toolkit = getToolkit();
+		contentPane.setBackgroundImage(toolkit.getImage(login.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -205,7 +206,8 @@ public class asignarMoto extends JFrame implements ActionListener{
 					textArea.append("\n Precio: ");
 					DecimalFormat df = new DecimalFormat("#.00");
 					textArea.append((df.format(m.getPrecio()/365)) + " €/dia"); //dividido entre 365 para sacar precio por día
-					imagen.setIcon(new ImageIcon (asignarMoto.class.getResource(m.getImagen())));
+					ImageIcon imagenCoche = new ImageIcon (asignarCoche.class.getResource(m.getImagen()));
+					imagen.setIcon(imagenCoche);
 					break;
 				}			
 			}

@@ -1,8 +1,10 @@
 package es.deusto.grupo3.LPresentacion;
 
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -71,6 +73,9 @@ public class asignarCoche extends JFrame implements ActionListener{
 		setBounds(100, 100, 650, 376);
 		contentPane = new PanelConImagen();
 		//contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(asignarCoche.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
+		Toolkit toolkit = getToolkit();
+		contentPane.setBackgroundImage(toolkit.getImage(login.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
+		
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -138,7 +143,7 @@ public class asignarCoche extends JFrame implements ActionListener{
 		objCoche=new GestorCoche();
 		this.CargarLista(objCoche);
 	}
-	
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
@@ -207,7 +212,8 @@ public class asignarCoche extends JFrame implements ActionListener{
 					textArea.append("\n Precio: ");
 					DecimalFormat df = new DecimalFormat("#.00");
 					textArea.append((df.format(c.getPrecio()/365)) + " €/dia"); //dividido entre 365 para sacar precio por día
-					imagen.setIcon(new ImageIcon (asignarCoche.class.getResource(c.getImagen())));
+					ImageIcon imagenCoche = new ImageIcon (asignarCoche.class.getResource(c.getImagen()));
+					imagen.setIcon(imagenCoche);
 					break;
 				}			
 			}

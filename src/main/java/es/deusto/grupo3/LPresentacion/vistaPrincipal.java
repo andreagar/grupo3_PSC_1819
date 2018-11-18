@@ -47,12 +47,15 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 	public vistaPrincipal() {
 		setResizable(false);
 		setTitle("HyraCar");
+		
+		Toolkit toolkit = getToolkit();
+		setIconImage(toolkit.getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 350);
 		contentPane = new PanelConImagen();
-		//contentPane.setBackgroundImage(Toolkit.getDefaultToolkit().getImage(login.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
+		contentPane.setBackgroundImage(toolkit.getImage(login.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
