@@ -2365,3 +2365,59 @@ INFO - 17:49:51,437 - AWT-EventQueue-0 - es.deusto.grupo3.App - delete from ASIG
 INFO - 17:49:53,577 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
 INFO - 17:49:54,968 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
 INFO - 17:49:56,859 - AWT-EventQueue-0 - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:13:20,368 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:13:20,383 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:13:20,416 - main - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 18:13:20,416 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:13:20,431 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:13:20,431 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:13:20,462 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:13:20,462 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:13:20,462 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where usuario = ? AND matricula = ?
+INFO - 18:13:20,478 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:13:20,478 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:13:20,478 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:13:20,478 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:13:20,478 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:14:21,125 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:14:21,140 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:14:21,172 - main - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 18:14:21,172 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:14:21,188 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:14:21,188 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:14:21,219 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:14:21,219 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:14:21,235 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where usuario = ? AND matricula = ?
+INFO - 18:14:21,235 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:14:21,235 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:14:21,235 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:14:21,235 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:14:21,250 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:14:40,849 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:14:40,849 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:14:40,897 - main - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 18:14:40,897 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:14:40,913 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:14:40,913 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:14:40,928 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:14:40,928 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:14:40,944 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where usuario = ? AND matricula = ?
+INFO - 18:14:40,944 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:14:40,959 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:14:40,959 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:14:40,959 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:14:40,959 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:15:06,018 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:15:06,034 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:15:06,066 - main - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 18:15:06,066 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:15:06,066 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:15:06,066 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:15:06,097 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:15:06,097 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 18:15:06,113 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where usuario = ? AND matricula = ?
+INFO - 18:15:06,113 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:15:06,128 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 18:15:06,128 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 18:15:06,128 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 18:15:06,128 - main - es.deusto.grupo3.App - BD cerrada correctamente
