@@ -16,6 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <doxygen.config.file>src/main/resources/Doxyfile</doxygen.config.file>
   </properties>
 
   <dependencies>
@@ -130,6 +131,17 @@
 					</goals>
 				</execution>
 			</executions>
+		</plugin>
+		
+		<plugin>
+		<groupId>com.soebes.maven.plugins.dmg</groupId>
+		<artifactId>doxygen-maven-plugin</artifactId>
+		<version>1.0.1</version>
+		<configuration>
+			<configurationFile>${doxygen.config.file}</configurationFile>
+			<workingDirectory>C:\Program File\doxygen\bin</workingDirectory>
+			<executable>doxygen</executable>
+		</configuration>
 		</plugin>
 		
       </plugins>
