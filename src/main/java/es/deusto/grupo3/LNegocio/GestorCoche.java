@@ -147,8 +147,8 @@ public class GestorCoche {
             // update 
             int val1 = pstmt.executeUpdate();
 			
-	        //INSERT
-			String sentSQL = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
+	        //INSERT HISTORIAL_ASIGNACIONES
+			String sentSQL = "insert into HISTORIAL_ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
 			PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
             // set the corresponding param
             pstmt2.setString(1, asig.getUsuario());
@@ -159,8 +159,21 @@ public class GestorCoche {
             pstmt2.setInt(6, asig.getVehiculo());
             // insert 
             int val2 = pstmt2.executeUpdate();
+            
+          //INSERT ASIGNACIONES
+			String sentSQL2 = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
+			PreparedStatement pstmt3 = BaseDeDatos.getConnection().prepareStatement(sentSQL2);  
+            // set the corresponding param
+            pstmt3.setString(1, asig.getUsuario());
+            pstmt3.setString(2, asig.getMatricula());
+            pstmt3.setBoolean(3, true);
+            pstmt3.setBoolean(4, false);
+            pstmt3.setBoolean(5, false);
+            pstmt3.setInt(6, asig.getVehiculo());
+            // insert 
+            int val3 = pstmt3.executeUpdate();
 	        
-			if (val1!=1 && val2!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+			if (val1!=1 && val2!=1 && val3!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			log.error("Erro al alquilar coche");
@@ -187,8 +200,8 @@ public class GestorCoche {
             // update 
             int val1 = pstmt.executeUpdate();
 			
-	        //INSERT
-			String sentSQL = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
+	        //INSERT HISTORIAL_ASIGNACIONES
+			String sentSQL = "insert into HISTORIAL_ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
 			PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
             // set the corresponding param
             pstmt2.setString(1, asig.getUsuario());
@@ -199,8 +212,21 @@ public class GestorCoche {
             pstmt2.setInt(6, asig.getVehiculo());
             // insert 
             int val2 = pstmt2.executeUpdate();
+            
+          //INSERT ASIGNACIONES
+			String sentSQL2 = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
+			PreparedStatement pstmt3 = BaseDeDatos.getConnection().prepareStatement(sentSQL2);  
+            // set the corresponding param
+            pstmt3.setString(1, asig.getUsuario());
+            pstmt3.setString(2, asig.getMatricula());
+            pstmt3.setBoolean(3, false);
+            pstmt3.setBoolean(4, true);
+            pstmt3.setBoolean(5, false);
+            pstmt3.setInt(6, asig.getVehiculo());
+            // insert 
+            int val3 = pstmt3.executeUpdate();
 	        
-			if (val1!=1 && val2!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+			if (val1!=1 && val2!=1 && val3!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			log.error("Erro al comprar coche");
@@ -209,35 +235,7 @@ public class GestorCoche {
 		}
 	}
 	
-	/** Recuperar las asignaciones hechas a un usuario específico
-	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
-	 * @param nombre	Nombre del usuario logeado
-	 * @return	Array de las asignaciones de un usaurio dado
-	 */
-	public ArrayList<Asignaciones> getUsuarioHistorial(Statement st, String nombre){
-		
-		ResultSet rs;
-		ArrayList<Asignaciones> a = new ArrayList<Asignaciones>();
-		try {
-			String sentSQL = "select * from ASIGNACIONES where usuario = ?";
-			log.info(sentSQL);
-			PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
-            // set the corresponding param
-            pstmt.setString(1, nombre);
-            // INSERT 
-            rs = pstmt.executeQuery();
-
-			while (rs.next()) {
-				a.add(new Asignaciones (rs.getString(1), rs.getString(2), rs.getBoolean(3), rs.getBoolean(4), rs.getBoolean(5), rs.getInt(6)));
-			}			
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return a;
-	}
+	
 	
 	/** Modifica los datos de un coche en la tabla COCHE de BD, 
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al usuario)

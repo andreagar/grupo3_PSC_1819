@@ -85,6 +85,7 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		btnGuardar.setBounds(335, 228, 89, 23);
 		contentPane.add(btnGuardar);
 		btnGuardar.addActionListener(this);
+		
 	}
 
 	@Override

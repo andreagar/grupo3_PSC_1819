@@ -143,8 +143,8 @@ public class GestorMoto {
             // update 
             int val1 = pstmt.executeUpdate();
 			
-	        //INSERT
-			String sentSQL = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
+          //INSERT HISTORIAL_ASIGNACIONES
+			String sentSQL = "insert into HISTORIAL_ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
 			PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
             // set the corresponding param
             pstmt2.setString(1, asig.getUsuario());
@@ -155,8 +155,21 @@ public class GestorMoto {
             pstmt2.setInt(6, asig.getVehiculo());
             // insert 
             int val2 = pstmt2.executeUpdate();
+            
+          //INSERT ASIGNACIONES
+			String sentSQL2 = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
+			PreparedStatement pstmt3 = BaseDeDatos.getConnection().prepareStatement(sentSQL2);  
+            // set the corresponding param
+            pstmt3.setString(1, asig.getUsuario());
+            pstmt3.setString(2, asig.getMatricula());
+            pstmt3.setBoolean(3, true);
+            pstmt3.setBoolean(4, false);
+            pstmt3.setBoolean(5, false);
+            pstmt3.setInt(6, asig.getVehiculo());
+            // insert 
+            int val3 = pstmt3.executeUpdate();
 	        
-			if (val1!=1 && val2!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+			if (val1!=1 && val2!=1 && val3!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			log.error("Erro al alquilar moto");
@@ -182,8 +195,8 @@ public class GestorMoto {
             // update 
             int val1 = pstmt.executeUpdate();
 			
-	        //INSERT
-			String sentSQL = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
+          //INSERT HISTORIAL_ASIGNACIONES
+			String sentSQL = "insert into HISTORIAL_ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
 			PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
             // set the corresponding param
             pstmt2.setString(1, asig.getUsuario());
@@ -194,8 +207,21 @@ public class GestorMoto {
             pstmt2.setInt(6, asig.getVehiculo());
             // insert 
             int val2 = pstmt2.executeUpdate();
+            
+          //INSERT ASIGNACIONES
+			String sentSQL2 = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
+			PreparedStatement pstmt3 = BaseDeDatos.getConnection().prepareStatement(sentSQL2);  
+            // set the corresponding param
+            pstmt3.setString(1, asig.getUsuario());
+            pstmt3.setString(2, asig.getMatricula());
+            pstmt3.setBoolean(3, false);
+            pstmt3.setBoolean(4, true);
+            pstmt3.setBoolean(5, false);
+            pstmt3.setInt(6, asig.getVehiculo());
+            // insert 
+            int val3 = pstmt3.executeUpdate();
 	        
-			if (val1!=1 && val2!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+			if (val1!=1 && val2!=1 && val3!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			log.error("Erro al alquilar moto");

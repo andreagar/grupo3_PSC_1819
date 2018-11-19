@@ -28,6 +28,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 	private JButton btnMoto;
 	private JButton btnModificar;
 	private JButton btnHistorial;
+	private JButton btnEliminar;
 	private JButton btnSalir;
 	private String nombre;
 	private JLabel lblNewLabel;
@@ -79,6 +80,12 @@ public class menuUsuario extends JFrame implements ActionListener{
 		contentPane.add(btnSalir);
 		btnSalir.addActionListener(this);
 		
+		btnEliminar = new JButton("Cancelar alquiler");
+		btnEliminar.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnEliminar.setBounds(272, 375, 157, 88);
+		contentPane.add(btnEliminar);
+		btnEliminar.addActionListener(this);
+		
 		lblNewLabel = new JLabel("Alquiler/compra coches HyraCar", SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 20));
 		lblNewLabel.setBounds(52, 50, 383, 41);
@@ -102,13 +109,6 @@ public class menuUsuario extends JFrame implements ActionListener{
 		if (e.getSource() == btnHistorial){
 			historialAsignaciones asig = new historialAsignaciones(nombre);
 			asig.setVisible(true);
-//			GestorCoche g = new GestorCoche();
-//			ArrayList<Asignaciones> a = new ArrayList<Asignaciones>();
-//			a = g.getUsuarioHistorial(BaseDeDatos.getStatement(), nombre);
-//			for (int i = 0; i<a.size(); i++){
-//				a.get(i).toString();
-//			}
-			
 		}
 		
 		if (e.getSource() == btnCoche){
@@ -128,6 +128,11 @@ public class menuUsuario extends JFrame implements ActionListener{
 			perfilUsuario framePerfil = new perfilUsuario(nombre);
 			framePerfil.setVisible(true);
 			
+		}
+		
+		if (e.getSource() == btnEliminar){
+			cancelarAlquiler alq = new cancelarAlquiler(nombre);
+			alq.setVisible(true);
 		}
 		
 		if (e.getSource() == btnSalir){
