@@ -130,7 +130,7 @@ public class GestorMoto {
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @return	Array de los motos disponibles
 	 */
-	public ArrayList<Moto> GetArrayCochesSinComprar(Statement st)
+	public ArrayList<Moto> GetArrayMotosSinComprar(Statement st)
 	{
 		ArrayList<Moto> motosGlobal = new ArrayList<Moto>();
 		motosGlobal = this.GetArrayMotoGlobal(st);

@@ -2950,3 +2950,171 @@ INFO - 11:06:21,443 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from US
 WARN - 11:06:21,458 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
 INFO - 11:06:23,333 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
 INFO - 11:06:25,770 - AWT-EventQueue-0 - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:08,495 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:08,510 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:08,511 - main - es.deusto.grupo3.App - org.sqlite.SQLiteConnection@567d299b
+INFO - 16:49:08,512 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:08,519 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:08,519 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:08,522 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:08,526 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:08,529 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:08,529 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:08,532 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:08,532 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:08,534 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:08,535 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:25,859 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:25,870 - main - es.deusto.grupo3.App - update USUARIO set contrasenya = 'contrasenyaNueva' WHERE nombre = 'Simon'
+INFO - 16:49:25,884 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:25,896 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:25,897 - main - es.deusto.grupo3.App - select * from USUARIO where (nombre = 'Simon')
+WARN - 16:49:25,900 - main - es.deusto.grupo3.App - El usuario ya existe, prueba con otro
+INFO - 16:49:28,605 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:28,608 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:28,609 - main - es.deusto.grupo3.App - select * from USUARIO where (nombre = 'andrea')
+WARN - 16:49:28,610 - main - es.deusto.grupo3.App - El usuario ya existe, prueba con otro
+INFO - 16:49:29,769 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:29,772 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:29,773 - main - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'PruebaTest2' and contrasenya = 'estoEsPrueba')
+INFO - 16:49:29,774 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:41,376 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:41,407 - main - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 16:49:41,410 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:41,417 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:41,418 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+WARN - 16:49:41,419 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 16:49:41,420 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:41,423 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:41,424 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 16:49:41,451 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:41,454 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:41,455 - main - es.deusto.grupo3.App - select * from COCHE
+INFO - 16:49:41,456 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:41,459 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:41,460 - main - es.deusto.grupo3.App - select * from COCHE
+INFO - 16:49:41,462 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:41,469 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:41,469 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+WARN - 16:49:41,470 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 16:49:41,471 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:50,356 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:50,385 - main - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 16:49:50,387 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:50,394 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:50,394 - main - es.deusto.grupo3.App - select * from MOTO
+INFO - 16:49:50,396 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:50,399 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:50,400 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+WARN - 16:49:50,401 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 16:49:50,402 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:50,405 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:50,424 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:50,430 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:50,431 - main - es.deusto.grupo3.App - select * from MOTO
+INFO - 16:49:50,433 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:50,436 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:50,441 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+WARN - 16:49:50,442 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 16:49:50,443 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:58,464 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:58,477 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 16:49:58,512 - main - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 16:49:58,514 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:58,520 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:58,521 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 16:49:58,545 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 16:49:58,547 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 16:49:58,555 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where usuario = ? AND matricula = ?
+INFO - 16:49:58,563 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 16:49:58,565 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:49:58,568 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:49:58,569 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 16:49:58,570 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:52:22,728 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:52:22,782 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 16:52:22,820 - main - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 16:52:22,822 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:52:22,831 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:52:22,831 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 16:52:22,856 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 16:52:22,858 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 16:52:22,866 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where usuario = ? AND matricula = ?
+INFO - 16:52:22,875 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 16:52:22,876 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:52:22,879 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:52:22,880 - main - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 16:52:22,881 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:53:37,503 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:53:37,532 - main - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 16:53:37,534 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where matricula = ?
+INFO - 16:53:37,542 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where matricula = ?
+INFO - 16:53:37,543 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where matricula = ?
+INFO - 16:53:37,544 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where matricula = ?
+INFO - 16:53:37,546 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:53:37,552 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:53:37,552 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+WARN - 16:53:37,554 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 16:53:37,555 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:53:37,557 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:53:37,558 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 16:53:37,582 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:53:37,585 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:53:37,586 - main - es.deusto.grupo3.App - select * from COCHE
+INFO - 16:53:37,591 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:53:37,604 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:53:37,605 - main - es.deusto.grupo3.App - select * from COCHE
+INFO - 16:53:37,606 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:53:37,609 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:53:37,609 - main - es.deusto.grupo3.App - select * from COCHE
+INFO - 16:53:37,611 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:53:37,614 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:53:37,614 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+WARN - 16:53:37,615 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 16:53:37,616 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:53:59,917 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:53:59,947 - main - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 16:53:59,948 - main - es.deusto.grupo3.App - delete from ASIGNACIONES where matricula = ?
+INFO - 16:53:59,958 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:53:59,964 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:53:59,965 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+WARN - 16:53:59,966 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 16:53:59,967 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:53:59,970 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:53:59,971 - main - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 16:53:59,997 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:54:00,000 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:54:00,001 - main - es.deusto.grupo3.App - select * from COCHE
+INFO - 16:54:00,003 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:54:00,006 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:54:00,006 - main - es.deusto.grupo3.App - select * from COCHE
+INFO - 16:54:00,011 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:54:00,014 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:54:00,014 - main - es.deusto.grupo3.App - select * from COCHE
+INFO - 16:54:00,016 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:54:00,018 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:54:00,019 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+WARN - 16:54:00,020 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 16:54:00,021 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:56:15,684 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:56:15,714 - main - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 16:56:15,716 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:56:15,723 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:56:15,723 - main - es.deusto.grupo3.App - select * from MOTO
+INFO - 16:56:15,725 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:56:15,727 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:56:15,728 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+WARN - 16:56:15,730 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 16:56:15,730 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:56:15,733 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:56:15,750 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:56:15,753 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:56:15,753 - main - es.deusto.grupo3.App - select * from MOTO
+INFO - 16:56:15,755 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:56:15,757 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:56:15,761 - main - es.deusto.grupo3.App - select * from MOTO
+INFO - 16:56:15,762 - main - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 16:56:15,764 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 16:56:15,765 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+WARN - 16:56:15,766 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 16:56:15,766 - main - es.deusto.grupo3.App - BD cerrada correctamente

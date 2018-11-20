@@ -126,8 +126,5 @@ public class GestorAsignaciones {
 			return false;
 		}
 	}
-	
-	public boolean modificarCoche(Statement st){
-		return false;
-	}
+
 }

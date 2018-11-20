@@ -76,6 +76,21 @@ public class GestorCocheTest {
     }
 	
 	@Test
+    public void testGetArraySinComprar(){
+		ArrayList<Coche> cocheArray = new ArrayList<Coche>();
+		cocheArray = gestor.GetArrayCochesSinComprar(BaseDeDatos.getStatement());
+		boolean comprobacion = true;
+		
+		for (int i=0; i<cocheArray.size(); i++){
+			if(cocheArray.get(i).getComprado()==true){
+				comprobacion = false;
+			}
+		}
+		
+		assertTrue(comprobacion);
+    }
+	
+	@Test
 	public void AlquilarVehiculoUsuario(){
 		boolean prueba = gestor.AlquilarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
 		assertTrue(prueba);	
