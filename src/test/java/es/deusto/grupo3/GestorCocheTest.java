@@ -91,8 +91,14 @@ public class GestorCocheTest {
     }
 	
 	@Test
-	public void AlquilarVehiculoUsuario(){
+	public void testAlquilarVehiculoUsuario(){
 		boolean prueba = gestor.AlquilarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
+		assertTrue(prueba);	
+	}
+	
+	@Test
+	public void testComprarVehiculoUsuario(){
+		boolean prueba = gestor.ComprarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
 		assertTrue(prueba);	
 	}
 	
