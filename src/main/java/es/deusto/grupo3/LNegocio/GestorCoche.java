@@ -215,39 +215,33 @@ public class GestorCoche {
 			String sentUpdate = "update COCHE set comprado = ? where matricula = ?";
 			log.info(sentUpdate);
 			PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentUpdate);  
-            // set the corresponding param
             pstmt.setBoolean(1, asig.getComprado());
             pstmt.setString(2, asig.getMatricula());
-            // update 
             int val1 = pstmt.executeUpdate();
 			
 	        //INSERT HISTORIAL_ASIGNACIONES
 			String sentSQL = "insert into HISTORIAL_ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
 			PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
-            // set the corresponding param
             pstmt2.setString(1, asig.getUsuario());
             pstmt2.setString(2, asig.getMatricula());
             pstmt2.setBoolean(3, false);
             pstmt2.setBoolean(4, true);
             pstmt2.setBoolean(5, false);
             pstmt2.setInt(6, asig.getVehiculo());
-            // insert 
             int val2 = pstmt2.executeUpdate();
             
-          //INSERT ASIGNACIONES
+            //INSERT ASIGNACIONES
 			String sentSQL2 = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
 			PreparedStatement pstmt3 = BaseDeDatos.getConnection().prepareStatement(sentSQL2);  
-            // set the corresponding param
             pstmt3.setString(1, asig.getUsuario());
             pstmt3.setString(2, asig.getMatricula());
             pstmt3.setBoolean(3, false);
             pstmt3.setBoolean(4, true);
             pstmt3.setBoolean(5, false);
             pstmt3.setInt(6, asig.getVehiculo());
-            // insert 
             int val3 = pstmt3.executeUpdate();
 	        
-			if (val1!=1 && val2!=1 && val3!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+			if (val1!=1 && val2!=1 && val3!=1) return false;
 			return true;
 		} catch (SQLException e) {
 			log.error("Erro al comprar coche");
