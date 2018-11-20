@@ -104,6 +104,8 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 				
 			}
 		});
+		
+		
 	}
 	
 	@Override

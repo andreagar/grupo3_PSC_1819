@@ -126,8 +126,5 @@ public class GestorAsignaciones {
 			return false;
 		}
 	}
-	
-	public boolean CancelarCompra(Statement st){
-		return false;
-	}
+
 }

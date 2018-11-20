@@ -57,6 +57,15 @@ public class App
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
+//    	
+//    	String FF = "drop table HISTORIAL_ASIGNACIONES";
+//    	try {
+//			BaseDeDatos.getStatement().executeUpdate(FF);
+//			System.out.println(FF);
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
     	
 		BaseDeDatos.crearTablaBDUsuario();
 		BaseDeDatos.crearTablaBDCoche();

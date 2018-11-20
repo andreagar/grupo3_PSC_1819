@@ -126,6 +126,26 @@ public class GestorMoto {
 
 	}
 	
+	/** Seleccionar motos que estén sin comprar
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	 * @return	Array de los motos disponibles
+	 */
+	public ArrayList<Moto> GetArrayMotosSinComprar(Statement st)
+	{
+		ArrayList<Moto> motosGlobal = new ArrayList<Moto>();
+		motosGlobal = this.GetArrayMotoGlobal(st);
+		ArrayList<Moto> cochesDisp = new ArrayList<Moto>();
+		
+		for(int i=0; i<motosGlobal.size(); i++){
+			if(motosGlobal.get(i).isComprado() != true){
+				cochesDisp.add(motosGlobal.get(i));
+			}
+		}
+		
+		return motosGlobal;
+
+	}
+	
 	/** Alquilar una moto con un usuario específico: poner el atributo alquilado de MOTO a true e insertar una nueva línea en ASIGNACIONES
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @param asig	Objeto de clase Asignaciones
@@ -189,39 +209,33 @@ public class GestorMoto {
 			//UPDATE
 			String sentUpdate = "update MOTO set alquilado = ? where matricula = ?";
 			PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentUpdate);  
-            // set the corresponding param
             pstmt.setBoolean(1, asig.getAlquilado());
             pstmt.setString(2, asig.getMatricula());
-            // update 
             int val1 = pstmt.executeUpdate();
 			
-          //INSERT HISTORIAL_ASIGNACIONES
+            //INSERT HISTORIAL_ASIGNACIONES
 			String sentSQL = "insert into HISTORIAL_ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
 			PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
-            // set the corresponding param
             pstmt2.setString(1, asig.getUsuario());
             pstmt2.setString(2, asig.getMatricula());
             pstmt2.setBoolean(3, false);
             pstmt2.setBoolean(4, true);
             pstmt2.setBoolean(5, false);
             pstmt2.setInt(6, asig.getVehiculo());
-            // insert 
             int val2 = pstmt2.executeUpdate();
             
-          //INSERT ASIGNACIONES
+            //INSERT ASIGNACIONES
 			String sentSQL2 = "insert into ASIGNACIONES values(?, ?, ?, ?, ?, ?)"; 	
 			PreparedStatement pstmt3 = BaseDeDatos.getConnection().prepareStatement(sentSQL2);  
-            // set the corresponding param
             pstmt3.setString(1, asig.getUsuario());
             pstmt3.setString(2, asig.getMatricula());
             pstmt3.setBoolean(3, false);
             pstmt3.setBoolean(4, true);
             pstmt3.setBoolean(5, false);
             pstmt3.setInt(6, asig.getVehiculo());
-            // insert 
             int val3 = pstmt3.executeUpdate();
 	        
-			if (val1!=1 && val2!=1 && val3!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+			if (val1!=1 && val2!=1 && val3!=1) return false;
 			return true;
 		} catch (SQLException e) {
 			log.error("Erro al alquilar moto");
@@ -250,7 +264,35 @@ public class GestorMoto {
 	            pstmt.setString(6, matricula);
 	            // update 
 	            int val1 = pstmt.executeUpdate();
-	            if (val1!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+	            
+	            int val = 0;
+	            ArrayList<Asignaciones> asig;
+	            ResultSet rs;
+	            
+	            if((averiada == true && alquilada == false) || (averiada == true && alquilada == true) ||
+	            	(averiada == false && alquilada == true) || (averiada == false && alquilada == false)){
+	            	
+	            	String sentSQL = "select * from ASIGNACIONES";
+	        		asig = new ArrayList<Asignaciones>();
+        			log.info(sentSQL);
+        			rs = st.executeQuery( sentSQL );
+        			while (rs.next()) {
+        				asig.add(new Asignaciones (rs.getString(1),rs.getString(2), rs.getBoolean(3), rs.getBoolean(4), rs.getBoolean(5), rs.getInt(6)));
+
+        			}
+        			
+        			for(int i=0; i<asig.size(); i++){
+        				if(asig.get(i).getMatricula().equals(matricula)){
+        					String sentSQL2 = "delete from ASIGNACIONES where matricula = ?";
+        		    		PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL2);
+        		    		log.info(sentSQL2);
+        					pstmt2.setString(1, matricula);
+        			        val = pstmt2.executeUpdate();
+        				}
+        			}
+	            }
+	            
+	            if (val1!=1 && val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 				return true;
 			} catch (SQLException e) {
 				e.printStackTrace();
