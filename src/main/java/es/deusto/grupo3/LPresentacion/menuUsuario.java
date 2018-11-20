@@ -107,6 +107,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		
 		if (e.getSource() == btnHistorial){
+			dispose();
 			historialAsignaciones asig = new historialAsignaciones(nombre);
 			asig.setVisible(true);
 		}
@@ -136,8 +137,8 @@ public class menuUsuario extends JFrame implements ActionListener{
 		}
 		
 		if (e.getSource() == btnSalir){
-			nombre = null;
 			dispose();
+			nombre = null;
 			vistaPrincipal frame = new vistaPrincipal();
 			frame.setVisible(true);
 		}

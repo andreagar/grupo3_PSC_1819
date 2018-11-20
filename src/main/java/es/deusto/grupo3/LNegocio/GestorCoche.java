@@ -122,6 +122,7 @@ public class GestorCoche {
 		for(int i=0; i<cochesGlobal.size(); i++){
 			if(cochesGlobal.get(i).getAlquilado() == false && cochesGlobal.get(i).getComprado() == false && cochesGlobal.get(i).getAveriado() == false){
 				cochesDisp.add(cochesGlobal.get(i));
+				System.out.println(cochesGlobal.get(i));
 			}
 		}
 		
@@ -267,7 +268,7 @@ public class GestorCoche {
 			
 			try {
 				//UPDATE
-				String sentUpdate = "update COCHE set imagen = ?, precio = ?, alquilado = ?, comprado = ?, averiado = ?   where matricula = ?";
+				String sentUpdate = "update COCHE set imagen = ?, precio = ?, alquilado = ?, comprado = ?, averiado = ?  where matricula = ?";
 				PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentUpdate);  
 	            // set the corresponding param
 				pstmt.setString(1, imagen);
@@ -278,7 +279,35 @@ public class GestorCoche {
 	            pstmt.setString(6, matricula);
 	            // update 
 	            int val1 = pstmt.executeUpdate();
-	            if (val1!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+	            
+	            int val = 0;
+	            ArrayList<Asignaciones> asig;
+	            ResultSet rs;
+	            
+	            if((averiada == true && alquilada == false) || (averiada == true && alquilada == true) ||
+		            (averiada == false && alquilada == true) || (averiada == false && alquilada == false)){
+	            	
+	            	String sentSQL = "select * from ASIGNACIONES";
+	        		asig = new ArrayList<Asignaciones>();
+        			log.info(sentSQL);
+        			rs = st.executeQuery( sentSQL );
+        			while (rs.next()) {
+        				asig.add(new Asignaciones (rs.getString(1),rs.getString(2), rs.getBoolean(3), rs.getBoolean(4), rs.getBoolean(5), rs.getInt(6)));
+
+        			}
+        			
+        			for(int i=0; i<asig.size(); i++){
+        				if(asig.get(i).getMatricula().equals(matricula)){
+        					String sentSQL2 = "delete from ASIGNACIONES where matricula = ?";
+        		    		PreparedStatement pstmt2 = BaseDeDatos.getConnection().prepareStatement(sentSQL2);
+        		    		log.info(sentSQL2);
+        					pstmt2.setString(1, matricula);
+        			        val = pstmt2.executeUpdate();
+        				}
+        			}
+	            }
+	            
+	            if (val1!=1 && val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 				return true;
 			} catch (SQLException e) {
 				e.printStackTrace();

@@ -2662,3 +2662,291 @@ INFO - 10:32:52,381 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from CO
 INFO - 10:32:53,630 - AWT-EventQueue-0 - es.deusto.grupo3.App - update COCHE set comprado = ? where matricula = ?
 INFO - 10:33:04,760 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
 INFO - 10:33:09,784 - AWT-EventQueue-0 - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 10:52:09,667 - main - es.deusto.grupo3.App - iniciando BD
+INFO - 10:52:10,603 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 10:52:10,603 - main - es.deusto.grupo3.App - BD iniciada
+INFO - 10:52:10,618 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+WARN - 10:52:10,618 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 10:52:10,618 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+WARN - 10:52:10,634 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 10:52:10,634 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+WARN - 10:52:10,634 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 10:52:10,634 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+WARN - 10:52:10,634 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+WARN - 10:52:10,634 - main - es.deusto.grupo3.App - 1
+INFO - 10:52:10,634 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+WARN - 10:52:10,634 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+WARN - 10:52:10,634 - main - es.deusto.grupo3.App - 2
+INFO - 10:52:10,634 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+WARN - 10:52:10,651 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+WARN - 10:52:10,651 - main - es.deusto.grupo3.App - 3
+WARN - 10:52:10,651 - main - es.deusto.grupo3.App - Antes de visualizar
+WARN - 10:52:11,181 - main - es.deusto.grupo3.App - despues de visualizar
+INFO - 10:52:14,254 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 10:52:14,254 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 10:52:16,798 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 10:52:18,858 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 10:52:28,161 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:52:32,781 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 10:52:35,747 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 10:52:47,595 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 10:52:49,733 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 10:53:00,175 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+WARN - 10:53:00,175 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 10:53:00,191 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 10:53:00,191 - AWT-EventQueue-0 - es.deusto.grupo3.App - delete from ASIGNACIONES where matricula = ?
+INFO - 10:53:07,369 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 10:53:07,369 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 10:53:10,086 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 10:53:12,277 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 10:53:32,727 - AWT-EventQueue-0 - es.deusto.grupo3.App - BD cerrada correctamente
+INFO - 10:54:09,001 - main - es.deusto.grupo3.App - iniciando BD
+INFO - 10:54:09,984 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 10:54:09,984 - main - es.deusto.grupo3.App - BD iniciada
+INFO - 10:54:10,047 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 10:54:10,063 - main - es.deusto.grupo3.App - insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+INFO - 10:54:10,063 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 10:54:10,078 - main - es.deusto.grupo3.App - insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+INFO - 10:54:10,078 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 10:54:10,078 - main - es.deusto.grupo3.App - insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+INFO - 10:54:10,094 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 10:54:10,094 - main - es.deusto.grupo3.App - insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+WARN - 10:54:10,110 - main - es.deusto.grupo3.App - 1
+INFO - 10:54:10,110 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 10:54:10,110 - main - es.deusto.grupo3.App - insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+WARN - 10:54:10,110 - main - es.deusto.grupo3.App - 2
+INFO - 10:54:10,110 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 10:54:10,125 - main - es.deusto.grupo3.App - insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+WARN - 10:54:10,125 - main - es.deusto.grupo3.App - 3
+WARN - 10:54:10,125 - main - es.deusto.grupo3.App - Antes de visualizar
+WARN - 10:54:10,656 - main - es.deusto.grupo3.App - despues de visualizar
+INFO - 10:54:18,227 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 10:54:18,227 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 10:54:20,240 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 10:54:22,831 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 10:54:25,313 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:54:27,358 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:54:29,484 - AWT-EventQueue-0 - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 10:54:35,914 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:54:36,805 - AWT-EventQueue-0 - es.deusto.grupo3.App - update COCHE set comprado = ? where matricula = ?
+INFO - 10:54:38,645 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 10:54:43,483 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 10:54:52,352 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 10:54:52,352 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 10:55:02,717 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:55:06,025 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:55:18,307 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+WARN - 10:55:18,307 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 10:55:18,323 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 10:55:18,323 - AWT-EventQueue-0 - es.deusto.grupo3.App - delete from ASIGNACIONES where matricula = ?
+INFO - 10:55:21,649 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:55:23,291 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:55:32,749 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 10:55:32,749 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 10:55:34,703 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 10:55:39,244 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 10:55:42,006 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:57:56,772 - main - es.deusto.grupo3.App - iniciando BD
+INFO - 10:57:57,676 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 10:57:57,676 - main - es.deusto.grupo3.App - BD iniciada
+INFO - 10:57:57,755 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 10:57:57,755 - main - es.deusto.grupo3.App - insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+INFO - 10:57:57,755 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 10:57:57,771 - main - es.deusto.grupo3.App - insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+INFO - 10:57:57,771 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 10:57:57,771 - main - es.deusto.grupo3.App - insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+INFO - 10:57:57,787 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 10:57:57,787 - main - es.deusto.grupo3.App - insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+WARN - 10:57:57,802 - main - es.deusto.grupo3.App - 1
+INFO - 10:57:57,802 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 10:57:57,802 - main - es.deusto.grupo3.App - insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+WARN - 10:57:57,802 - main - es.deusto.grupo3.App - 2
+INFO - 10:57:57,802 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 10:57:57,818 - main - es.deusto.grupo3.App - insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+WARN - 10:57:57,818 - main - es.deusto.grupo3.App - 3
+WARN - 10:57:57,818 - main - es.deusto.grupo3.App - Antes de visualizar
+WARN - 10:57:58,379 - main - es.deusto.grupo3.App - despues de visualizar
+INFO - 10:58:00,787 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 10:58:00,787 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 10:58:03,254 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:58:13,274 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:58:14,415 - AWT-EventQueue-0 - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 10:58:23,793 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:58:25,074 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:58:27,681 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+WARN - 10:58:27,681 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 10:58:27,681 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 10:58:27,681 - AWT-EventQueue-0 - es.deusto.grupo3.App - delete from ASIGNACIONES where matricula = ?
+INFO - 10:58:30,884 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:58:32,679 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:58:39,919 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 10:58:39,919 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 10:58:42,152 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:58:44,555 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 10:58:46,367 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 10:59:03,725 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:59:05,349 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:59:07,112 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+WARN - 10:59:07,112 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 10:59:07,112 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 10:59:11,467 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 10:59:11,482 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 10:59:14,541 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:59:16,866 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:59:20,048 - AWT-EventQueue-0 - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 10:59:22,312 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 10:59:24,107 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 10:59:32,974 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 10:59:34,223 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:00:10,450 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+WARN - 11:00:10,450 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:00:10,450 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 11:00:10,450 - AWT-EventQueue-0 - es.deusto.grupo3.App - delete from ASIGNACIONES where matricula = ?
+INFO - 11:00:14,709 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:00:14,709 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:00:18,455 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES where usuario = ?
+INFO - 11:00:20,484 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:01:23,151 - main - es.deusto.grupo3.App - iniciando BD
+INFO - 11:01:24,056 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 11:01:24,056 - main - es.deusto.grupo3.App - BD iniciada
+INFO - 11:01:24,135 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 11:01:24,135 - main - es.deusto.grupo3.App - insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+INFO - 11:01:24,151 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 11:01:24,151 - main - es.deusto.grupo3.App - insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+INFO - 11:01:24,167 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 11:01:24,167 - main - es.deusto.grupo3.App - insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+INFO - 11:01:24,182 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 11:01:24,182 - main - es.deusto.grupo3.App - insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+WARN - 11:01:24,182 - main - es.deusto.grupo3.App - 1
+INFO - 11:01:24,182 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 11:01:24,182 - main - es.deusto.grupo3.App - insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+WARN - 11:01:24,198 - main - es.deusto.grupo3.App - 2
+INFO - 11:01:24,198 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 11:01:24,198 - main - es.deusto.grupo3.App - insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+WARN - 11:01:24,213 - main - es.deusto.grupo3.App - 3
+WARN - 11:01:24,213 - main - es.deusto.grupo3.App - Antes de visualizar
+WARN - 11:01:24,759 - main - es.deusto.grupo3.App - despues de visualizar
+INFO - 11:01:28,755 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:01:28,755 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:01:31,569 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:02:01,134 - main - es.deusto.grupo3.App - iniciando BD
+INFO - 11:02:02,066 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 11:02:02,066 - main - es.deusto.grupo3.App - BD iniciada
+INFO - 11:02:02,129 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+INFO - 11:02:02,129 - main - es.deusto.grupo3.App - insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+INFO - 11:02:02,145 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+INFO - 11:02:02,145 - main - es.deusto.grupo3.App - insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+INFO - 11:02:02,160 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+INFO - 11:02:02,160 - main - es.deusto.grupo3.App - insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+INFO - 11:02:02,176 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+INFO - 11:02:02,176 - main - es.deusto.grupo3.App - insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+WARN - 11:02:02,192 - main - es.deusto.grupo3.App - 1
+INFO - 11:02:02,192 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+INFO - 11:02:02,192 - main - es.deusto.grupo3.App - insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+WARN - 11:02:02,192 - main - es.deusto.grupo3.App - 2
+INFO - 11:02:02,192 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+INFO - 11:02:02,207 - main - es.deusto.grupo3.App - insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+WARN - 11:02:02,207 - main - es.deusto.grupo3.App - 3
+WARN - 11:02:02,207 - main - es.deusto.grupo3.App - Antes de visualizar
+WARN - 11:02:02,770 - main - es.deusto.grupo3.App - despues de visualizar
+INFO - 11:02:13,974 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:02:16,348 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:02:21,138 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+WARN - 11:02:21,138 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:02:21,154 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 11:02:26,602 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:02:26,602 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:02:29,208 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:02:40,587 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:02:41,851 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:02:43,429 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+WARN - 11:02:43,429 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:02:43,429 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 11:02:48,425 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:02:48,425 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:02:50,033 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:03:18,441 - main - es.deusto.grupo3.App - iniciando BD
+INFO - 11:03:19,361 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 11:03:19,361 - main - es.deusto.grupo3.App - BD iniciada
+INFO - 11:03:19,361 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+WARN - 11:03:19,377 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:03:19,377 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+WARN - 11:03:19,377 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:03:19,377 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+WARN - 11:03:19,377 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:03:19,377 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+WARN - 11:03:19,377 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+WARN - 11:03:19,377 - main - es.deusto.grupo3.App - 1
+INFO - 11:03:19,377 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+WARN - 11:03:19,377 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+WARN - 11:03:19,377 - main - es.deusto.grupo3.App - 2
+INFO - 11:03:19,377 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+WARN - 11:03:19,393 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+WARN - 11:03:19,393 - main - es.deusto.grupo3.App - 3
+WARN - 11:03:19,393 - main - es.deusto.grupo3.App - Antes de visualizar
+WARN - 11:03:19,924 - main - es.deusto.grupo3.App - despues de visualizar
+INFO - 11:03:24,342 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:03:24,342 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:03:26,277 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:03:36,971 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:03:38,470 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:03:41,261 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+WARN - 11:03:41,261 - AWT-EventQueue-0 - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:03:41,277 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 11:03:45,038 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:03:45,038 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:03:47,753 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 11:03:50,298 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:03:53,314 - AWT-EventQueue-0 - es.deusto.grupo3.App - update COCHE set alquilado = ? where matricula = ?
+INFO - 11:03:55,827 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from HISTORIAL_ASIGNACIONES where usuario = ?
+INFO - 11:04:57,384 - main - es.deusto.grupo3.App - iniciando BD
+INFO - 11:04:58,325 - main - es.deusto.grupo3.App - Nombre: nuestroBD.db / Base de datos conectada
+INFO - 11:04:58,325 - main - es.deusto.grupo3.App - BD iniciada
+INFO - 11:04:58,325 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '1234ABC')
+WARN - 11:04:58,325 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:04:58,325 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '9999BBB')
+WARN - 11:04:58,340 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:04:58,340 - main - es.deusto.grupo3.App - select * from COCHE where (matricula = '5678HHH')
+WARN - 11:04:58,340 - main - es.deusto.grupo3.App - El coche ya existe, prueba con otro
+INFO - 11:04:58,340 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '3344PPS')
+WARN - 11:04:58,340 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+WARN - 11:04:58,340 - main - es.deusto.grupo3.App - 1
+INFO - 11:04:58,340 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '1212ABA')
+WARN - 11:04:58,340 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+WARN - 11:04:58,340 - main - es.deusto.grupo3.App - 2
+INFO - 11:04:58,340 - main - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+WARN - 11:04:58,356 - main - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+WARN - 11:04:58,357 - main - es.deusto.grupo3.App - 3
+WARN - 11:04:58,357 - main - es.deusto.grupo3.App - Antes de visualizar
+WARN - 11:04:58,872 - main - es.deusto.grupo3.App - despues de visualizar
+INFO - 11:05:01,386 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:05:01,386 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:05:08,876 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:05:08,876 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:05:11,030 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 11:05:26,479 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from COCHE
+INFO - 11:05:29,947 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 11:05:31,369 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 11:05:34,006 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+WARN - 11:05:34,006 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 11:05:34,039 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 11:05:38,331 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:05:38,346 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:05:40,547 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 11:05:53,172 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 11:05:54,640 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 11:06:00,417 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+WARN - 11:06:00,417 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 11:06:00,432 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 11:06:04,118 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:06:04,118 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:06:06,240 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 11:06:14,622 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 11:06:15,980 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 11:06:17,666 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO where (matricula = '7892GFS')
+WARN - 11:06:17,666 - AWT-EventQueue-0 - es.deusto.grupo3.App - La moto ya existe, prueba con otro
+INFO - 11:06:17,666 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from ASIGNACIONES
+INFO - 11:06:21,443 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+WARN - 11:06:21,458 - AWT-EventQueue-0 - es.deusto.grupo3.App - Nombre de usuario y contrasenya correctas
+INFO - 11:06:23,333 - AWT-EventQueue-0 - es.deusto.grupo3.App - select * from MOTO
+INFO - 11:06:25,770 - AWT-EventQueue-0 - es.deusto.grupo3.App - BD cerrada correctamente
