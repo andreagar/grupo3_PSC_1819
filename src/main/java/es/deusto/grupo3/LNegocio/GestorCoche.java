@@ -129,6 +129,26 @@ public class GestorCoche {
 
 	}
 	
+	/** Seleccionar coches que estén sin comprar
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	 * @return	Array de los coches disponibles
+	 */
+	public ArrayList<Coche> GetArrayCochesSinComprar(Statement st)
+	{
+		ArrayList<Coche> cochesGlobal = new ArrayList<Coche>();
+		cochesGlobal = this.GetArrayCocheGlobal(st);
+		ArrayList<Coche> cochesDisp = new ArrayList<Coche>();
+		
+		for(int i=0; i<cochesGlobal.size(); i++){
+			if(cochesGlobal.get(i).getComprado() != true){
+				cochesDisp.add(cochesGlobal.get(i));
+			}
+		}
+		
+		return cochesDisp;
+
+	}
+	
 	/** Alquilar un coche con un usuario específico: poner el atributo alquilado de COCHE a true e insertar una nueva línea en ASIGNACIONES
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @param asig	Objeto de clase Asignaciones

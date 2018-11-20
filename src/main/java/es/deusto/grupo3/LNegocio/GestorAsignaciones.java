@@ -127,7 +127,7 @@ public class GestorAsignaciones {
 		}
 	}
 	
-	public boolean CancelarCompra(Statement st){
+	public boolean modificarCoche(Statement st){
 		return false;
 	}
 }

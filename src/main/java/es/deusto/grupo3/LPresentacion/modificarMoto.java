@@ -241,7 +241,7 @@ public class modificarMoto extends JFrame implements ActionListener{
 		modeloMoto=new DefaultListModel();
 		Statement st = BaseDeDatos.getStatement();
 	
-		for (Moto s : Moto.GetArrayMotoGlobal(st) ){
+		for (Moto s : Moto.GetArrayCochesSinComprar(st) ){
 				modeloMoto.addElement(s.getMatricula());
 		}
 		listMoto.setModel(modeloMoto);

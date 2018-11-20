@@ -126,6 +126,26 @@ public class GestorMoto {
 
 	}
 	
+	/** Seleccionar motos que estén sin comprar
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	 * @return	Array de los motos disponibles
+	 */
+	public ArrayList<Moto> GetArrayCochesSinComprar(Statement st)
+	{
+		ArrayList<Moto> motosGlobal = new ArrayList<Moto>();
+		motosGlobal = this.GetArrayMotoGlobal(st);
+		ArrayList<Moto> cochesDisp = new ArrayList<Moto>();
+		
+		for(int i=0; i<motosGlobal.size(); i++){
+			if(motosGlobal.get(i).isComprado() != true){
+				cochesDisp.add(motosGlobal.get(i));
+			}
+		}
+		
+		return motosGlobal;
+
+	}
+	
 	/** Alquilar una moto con un usuario específico: poner el atributo alquilado de MOTO a true e insertar una nueva línea en ASIGNACIONES
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @param asig	Objeto de clase Asignaciones
