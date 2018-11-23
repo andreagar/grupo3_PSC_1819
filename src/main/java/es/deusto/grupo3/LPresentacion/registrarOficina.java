@@ -140,13 +140,13 @@ public class registrarOficina extends JFrame implements ActionListener {
 		if (e.getSource() == btnAceptar){
 			this.anyadirOficina();
 			dispose();
-			menuAdmin vistaAdmin = new menuAdmin();
+			adminOficina vistaAdmin = new adminOficina();
 			vistaAdmin.setVisible(true);
 		}
 		
 		if (e.getSource() == btnCancelar){
 			dispose();
-			menuAdmin vistaAdmin = new menuAdmin();
+			adminOficina vistaAdmin = new adminOficina();
 			vistaAdmin.setVisible(true);
 		}
 	}

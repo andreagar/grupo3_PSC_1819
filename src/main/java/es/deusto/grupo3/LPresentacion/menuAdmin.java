@@ -88,7 +88,7 @@ public class menuAdmin extends JFrame implements ActionListener{
 		}
 		if (e.getSource() == btnOficina){
 			dispose();
-			registrarOficina vista = new registrarOficina();
+			adminOficina vista = new adminOficina();
 			vista.setVisible(true);
 		}
 		if (e.getSource() == btnCerrar){

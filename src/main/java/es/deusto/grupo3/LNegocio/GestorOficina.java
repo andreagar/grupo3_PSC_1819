@@ -1,5 +1,6 @@
 package es.deusto.grupo3.LNegocio;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -8,6 +9,7 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 import es.deusto.grupo3.App;
+import es.deusto.grupo3.LDatos.BaseDeDatos;
 
 public class GestorOficina {
 	
@@ -80,8 +82,6 @@ public class GestorOficina {
 			int i=0;
 			while (rs.next()) {
 				of.add(new Oficina (rs.getInt(1),rs.getString(2), rs.getString(3), rs.getString(4)));
-				System.out.println(of.get(i).getId() + " - " + of.get(i).getNombre());
-				i++;
 			}			
 			
 		} catch (SQLException e) {
@@ -91,5 +91,30 @@ public class GestorOficina {
 
 		return of;
 
+	}
+	
+	/** Eliminar una oficina de la tabla OFICINA de BD seleccionada por el usuario admin
+	 * Usa la sentencia INSERT de SQL.
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a la oficina)
+	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
+	 */
+	public boolean eliminarOficina( Statement st, Oficina oficina ) {
+	//DELETE 
+		try {
+        	String sentSQL = "delete from OFICINA where id = ? and nombre = ?";
+    		PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentSQL);
+    		log.info(sentSQL);
+			pstmt.setInt(1, oficina.getId());
+			pstmt.setString(2, oficina.getNombre());;
+	        int val = pstmt.executeUpdate();
+	        System.out.println(sentSQL);
+	        if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		
 	}
 }

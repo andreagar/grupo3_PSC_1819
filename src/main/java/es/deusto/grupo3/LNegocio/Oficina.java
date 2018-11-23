@@ -46,4 +46,7 @@ public class Oficina {
 		this.pais = pais;
 	}
 	
+	public String toString(){
+		return id + " - Oficina " + nombre + ", en la ciudad " + ciudad + " (" + pais + ").";
+	}
 }
