@@ -20,6 +20,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
 import javax.xml.crypto.dom.DOMStructure;
 
@@ -105,6 +106,12 @@ public class vistaPrincipal extends JFrame implements ActionListener{
 			}
 		});
 		
+		Timer timer = new Timer(5, new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+            	vistaPrincipal.this.repaint();
+            }
+        });
+        timer.start();
 		
 	}
 	

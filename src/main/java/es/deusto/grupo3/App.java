@@ -4,6 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.swing.SwingUtilities;
+
 import org.apache.log4j.Logger;
 
 
@@ -72,6 +74,7 @@ public class App
 		BaseDeDatos.crearTablaBDMoto();
 		BaseDeDatos.crearTablaBDAsignaciones();
 		BaseDeDatos.crearTablaBDHistorialAsignaciones();
+		BaseDeDatos.crearTablaBDOficina();
 	
 		/*
 		 * 
@@ -93,23 +96,15 @@ public class App
 		Moto moto;
 		moto = new Moto ("Honda", "CB1000R", "3344PPS", 30000, false, false, false, "/es/deusto/grupo3/img/Honda_CB_1000_R.jpg");
 		gestorMoto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), moto);
-		log.warn("1");
 		moto = new Moto ("Yamaha", "XV950R", "1212ABA", 36200, false, false, false, "/es/deusto/grupo3/img/Yamaha-xv950r.jpg");
 		gestorMoto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), moto);
-		log.warn("2");
 		moto = new Moto ("Ducati", "Monster", "7892GFS", 18600, false, false, false, "/es/deusto/grupo3/img/Ducati_Moster.jpg");
 		gestorMoto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), moto);
-		log.warn("3");
-		
-		log.warn("Antes de visualizar");
-		
 		
 		//menu de log in y registrarse
 		
 		vistaPrincipal frame = new vistaPrincipal();
 		
 		frame.setVisible(true);
-		
-		log.warn("despues de visualizar");
     }
 }

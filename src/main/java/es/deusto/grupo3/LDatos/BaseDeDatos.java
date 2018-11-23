@@ -188,5 +188,30 @@ public class BaseDeDatos {
 						log.info("NO se ha creado tabla HISTORIAL_ASIGNACIONES: ya existe");
 					}
 				 }
+				 
+				 /**
+					 * Crea la tabla Oficina si no existe
+					 * 
+					 * @param usuario
+					 * @param matricula
+					 * @param alquilado
+					 * @param comprado
+					 * @param averiado
+					 * @param vehiculo --> 1: coche, 2: moto
+					 */
+					 public static void crearTablaBDOficina(){
+						if (statement==null)
+							return ;
+						 try {
+
+							statement.executeUpdate("create table if not exists OFICINA (id int, nombre string, ciudad string, pais string)");
+
+						} catch (SQLException e) {
+							// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+							if (!e.getMessage().equals("table interaccion already exists"))
+								e.printStackTrace();  
+							log.info("NO se ha creado tabla HISTORIAL_ASIGNACIONES: ya existe");
+						}
+					 }
 	
 }

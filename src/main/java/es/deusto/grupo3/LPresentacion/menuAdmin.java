@@ -23,6 +23,7 @@ public class menuAdmin extends JFrame implements ActionListener{
 	private JButton btnCoche;
 	private JButton btnRegistrarMoto;
 	private JButton btnCerrar;
+	private JButton btnOficina;
 	private JLabel lblHyracarAdministracion;
 	
 	/**
@@ -48,7 +49,7 @@ public class menuAdmin extends JFrame implements ActionListener{
 		
 		btnCoche = new JButton("Coche");
 		btnCoche.setFont(new Font("Verdana", Font.PLAIN, 18));
-		btnCoche.setBounds(51, 97, 173, 51);
+		btnCoche.setBounds(51, 97, 150, 51);
 		contentPane.add(btnCoche);
 		btnCoche.addActionListener(this);
 		
@@ -57,6 +58,12 @@ public class menuAdmin extends JFrame implements ActionListener{
 		btnRegistrarMoto.setBounds(256, 97, 150, 51);
 		contentPane.add(btnRegistrarMoto);
 		btnRegistrarMoto.addActionListener(this);
+		
+		btnOficina = new JButton("Oficina");
+		btnOficina.setFont(new Font("Verdana", Font.PLAIN, 18));
+		btnOficina.setBounds(51, 160, 150, 51);
+		contentPane.add(btnOficina);
+		btnOficina.addActionListener(this);
 		
 		btnCerrar = new JButton("Cerrar");
 		btnCerrar.setFont(new Font("Verdana", Font.PLAIN, 11));
@@ -78,6 +85,11 @@ public class menuAdmin extends JFrame implements ActionListener{
 			adminMoto vistaMoto = new adminMoto();
 			vistaMoto.setVisible(true);
 			dispose();
+		}
+		if (e.getSource() == btnOficina){
+			dispose();
+			registrarOficina vista = new registrarOficina();
+			vista.setVisible(true);
 		}
 		if (e.getSource() == btnCerrar){
 			dispose();
