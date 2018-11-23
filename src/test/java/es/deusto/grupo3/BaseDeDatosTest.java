@@ -46,13 +46,26 @@ public class BaseDeDatosTest {
 	@Test
 	public void testcrearTablaBDCoche(){
 		assertNotNull(BaseDeDatos.getStatement());
+		BaseDeDatos.crearTablaBDCoche();
 	}
 	@Test
 	public void testcrearTablaBDMoto(){
 		assertNotNull(BaseDeDatos.getStatement());
+		BaseDeDatos.crearTablaBDMoto();
 	}
 	@Test
 	public void crearTablaBDAsignaciones(){
 		assertNotNull(BaseDeDatos.getStatement());
+		BaseDeDatos.crearTablaBDAsignaciones();
+	}
+	@Test
+	public void crearTablaBDHistorialAsignaciones(){
+		assertNotNull(BaseDeDatos.getStatement());
+		BaseDeDatos.crearTablaBDHistorialAsignaciones();
+	}
+	@Test
+	public void crearTablaBDOficina(){
+		assertNotNull(BaseDeDatos.getStatement());
+		BaseDeDatos.crearTablaBDOficina();
 	}
 }

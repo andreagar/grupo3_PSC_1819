@@ -1390,3 +1390,573 @@
 2018-11-23 13:21:43,434 INFO  es.deusto.grupo3.App ~ select * from ASIGNACIONES where usuario = ?
 2018-11-23 13:21:47,307 INFO  es.deusto.grupo3.App ~ select * from OFICINA
 2018-11-23 13:22:02,979 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:15:31,900 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:15:31,900 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:15:31,900 INFO  es.deusto.grupo3.App ~ org.sqlite.SQLiteConnection@3339ad8e
+2018-11-23 16:15:31,900 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:15:31,900 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:15:31,916 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:15:31,916 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:15:31,916 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:15:31,916 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:15:31,916 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:15:31,916 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:15:31,916 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:15:31,916 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:15:31,916 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:15:31,932 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:15:31,932 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:15:31,932 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:15:31,932 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:17:09,121 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:17:09,121 INFO  es.deusto.grupo3.App ~ update COCHE set alquilado = ? where matricula = ?
+2018-11-23 16:17:09,170 INFO  es.deusto.grupo3.App ~ select * from HISTORIAL_ASIGNACIONES where usuario = ?
+2018-11-23 16:17:09,173 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:17:09,178 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:17:09,178 INFO  es.deusto.grupo3.App ~ update COCHE set alquilado = ? where matricula = ?
+2018-11-23 16:17:09,193 INFO  es.deusto.grupo3.App ~ select * from ASIGNACIONES where usuario = ?
+2018-11-23 16:17:09,193 INFO  es.deusto.grupo3.App ~ update COCHE set alquilado = ? where matricula = ?
+2018-11-23 16:17:09,209 INFO  es.deusto.grupo3.App ~ delete from ASIGNACIONES where usuario = ? AND matricula = ?
+2018-11-23 16:17:09,209 INFO  es.deusto.grupo3.App ~ select * from ASIGNACIONES where usuario = ?
+2018-11-23 16:17:09,209 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:17:09,224 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:17:09,224 INFO  es.deusto.grupo3.App ~ select * from ASIGNACIONES where usuario = ?
+2018-11-23 16:17:09,224 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:22:49,936 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:22:49,938 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:22:49,941 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:22:49,941 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:22:49,941 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:22:49,956 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:22:49,956 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:22:49,956 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:22:49,956 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:22:49,956 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:26:04,438 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:26:04,438 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:26:04,438 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:26:04,438 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:26:04,438 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:26:04,454 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:26:04,470 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:26:04,470 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:26:04,470 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:26:04,470 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:26:04,470 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:26:04,470 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:26:43,307 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:26:43,307 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:26:43,323 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:26:43,323 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:26:43,323 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:26:43,323 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:26:43,339 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:26:43,339 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:26:43,339 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:26:43,339 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:26:43,339 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:26:43,339 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:27:42,646 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:27:42,646 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:27:42,646 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:27:42,646 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:27:42,661 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:27:42,661 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:27:42,661 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:27:42,661 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:27:42,661 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:27:42,661 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:27:42,677 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:27:42,677 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:28:10,845 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:28:10,860 INFO  es.deusto.grupo3.App ~ select * from ASIGNACIONES
+2018-11-23 16:28:10,860 INFO  es.deusto.grupo3.App ~ delete from ASIGNACIONES where matricula = ?
+2018-11-23 16:28:10,876 INFO  es.deusto.grupo3.App ~ delete from ASIGNACIONES where matricula = ?
+2018-11-23 16:28:10,876 INFO  es.deusto.grupo3.App ~ delete from ASIGNACIONES where matricula = ?
+2018-11-23 16:28:10,876 INFO  es.deusto.grupo3.App ~ delete from ASIGNACIONES where matricula = ?
+2018-11-23 16:28:10,876 INFO  es.deusto.grupo3.App ~ delete from ASIGNACIONES where matricula = ?
+2018-11-23 16:28:10,876 INFO  es.deusto.grupo3.App ~ delete from ASIGNACIONES where matricula = ?
+2018-11-23 16:28:10,876 INFO  es.deusto.grupo3.App ~ delete from ASIGNACIONES where matricula = ?
+2018-11-23 16:28:10,876 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:28:10,876 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:28:10,876 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-23 16:28:10,892 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-23 16:28:10,892 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:28:10,892 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:28:10,892 INFO  es.deusto.grupo3.App ~ select * from COCHE
+2018-11-23 16:28:10,892 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:28:10,892 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:28:10,892 INFO  es.deusto.grupo3.App ~ update COCHE set alquilado = ? where matricula = ?
+2018-11-23 16:28:10,923 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:28:10,923 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:28:10,923 INFO  es.deusto.grupo3.App ~ select * from COCHE
+2018-11-23 16:28:10,923 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:28:10,923 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:28:10,923 INFO  es.deusto.grupo3.App ~ update COCHE set comprado = ? where matricula = ?
+2018-11-23 16:28:10,954 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:28:10,954 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:28:10,954 INFO  es.deusto.grupo3.App ~ select * from COCHE
+2018-11-23 16:28:10,954 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:28:10,954 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:28:10,954 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-23 16:28:10,970 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-23 16:28:10,970 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:08,985 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:09,001 INFO  es.deusto.grupo3.App ~ select * from ASIGNACIONES
+2018-11-23 16:29:09,001 INFO  es.deusto.grupo3.App ~ delete from ASIGNACIONES where matricula = ?
+2018-11-23 16:29:09,016 INFO  es.deusto.grupo3.App ~ delete from ASIGNACIONES where matricula = ?
+2018-11-23 16:29:09,016 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:09,032 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:09,032 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-23 16:29:09,032 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-23 16:29:09,032 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:09,032 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:09,032 INFO  es.deusto.grupo3.App ~ select * from COCHE
+2018-11-23 16:29:09,032 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:09,032 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:09,032 INFO  es.deusto.grupo3.App ~ update COCHE set alquilado = ? where matricula = ?
+2018-11-23 16:29:09,063 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:09,063 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:09,063 INFO  es.deusto.grupo3.App ~ select * from COCHE
+2018-11-23 16:29:09,063 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:09,063 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:09,063 INFO  es.deusto.grupo3.App ~ update COCHE set comprado = ? where matricula = ?
+2018-11-23 16:29:09,094 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:09,094 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:09,094 INFO  es.deusto.grupo3.App ~ select * from COCHE
+2018-11-23 16:29:09,094 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:09,094 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:09,094 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-23 16:29:09,110 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-23 16:29:09,110 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:16,751 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:16,751 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:16,751 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:16,751 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:29:16,751 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:29:16,767 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:16,767 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:16,767 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:29:16,767 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:29:16,767 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:16,767 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:16,782 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:45,961 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:45,961 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:29:45,961 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:29:45,961 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:45,961 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:45,961 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:29:45,961 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:29:45,961 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:29:45,961 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:29:45,961 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:45,961 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:45,961 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:29:45,961 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:29:45,961 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:29:45,976 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:29:45,976 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:29:45,976 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:29:45,976 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:29:45,976 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:29:45,992 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:24,699 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:24,699 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:31:24,715 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:24,730 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:24,730 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:31:24,730 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:31:24,730 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:24,746 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:24,746 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:31:24,746 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:31:24,746 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:24,761 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:24,761 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:37,904 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:37,904 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:31:37,920 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:37,920 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:37,920 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:31:37,936 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:31:37,936 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:37,936 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:37,936 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:31:37,936 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:31:37,951 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:37,951 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:37,951 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:59,096 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:59,112 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:31:59,128 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:59,128 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:59,128 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:31:59,128 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:31:59,143 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:59,143 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:59,143 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:31:59,143 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:31:59,143 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:31:59,143 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:31:59,143 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:36:42,688 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:36:42,688 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:36:42,704 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:36:42,719 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:36:42,719 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:36:42,719 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:36:42,719 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:36:42,735 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:36:42,735 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:36:42,735 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:36:42,735 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:36:42,735 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:36:42,735 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:36:42,735 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('2', 'HyraCar02', 'Bilabo', 'España')
+2018-11-23 16:36:42,735 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:36:42,735 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('3', 'HyraCar03', 'Londres', 'Inglaterra')
+2018-11-23 16:36:42,751 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:36:42,751 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:39:40,458 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:39:40,473 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:39:40,489 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:39:40,489 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:39:40,489 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:39:40,489 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:39:40,505 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:39:40,505 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:39:40,505 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:39:40,505 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:39:40,505 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:39:40,505 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:39:40,505 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:39:40,505 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:39:40,505 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:39:40,505 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:39:40,505 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:39:40,505 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:41:13,050 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:41:13,060 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:41:13,070 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:41:13,080 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:41:13,080 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:41:13,080 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:41:13,090 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:41:13,090 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:41:13,090 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:41:13,090 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:41:13,090 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:41:13,100 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:41:13,100 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:41:13,100 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:41:13,100 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:41:13,100 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:41:13,100 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:41:13,100 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:41:45,793 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:41:45,803 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:41:45,813 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:41:45,813 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:41:45,813 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:41:45,823 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:41:45,833 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:41:45,833 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:41:45,833 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:41:45,833 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:41:45,833 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:41:45,833 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:41:45,833 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:41:45,833 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:41:45,833 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:41:45,843 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:41:45,843 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:41:45,843 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:04,663 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:04,663 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:42:04,673 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:04,683 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:04,683 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:42:04,683 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:42:04,693 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:04,703 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:04,703 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:42:04,703 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:04,703 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:04,703 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:04,703 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:42:04,703 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:04,703 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:42:04,703 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:04,703 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:42:04,703 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:31,401 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:31,411 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:42:31,421 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:31,431 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:31,431 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:42:31,431 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:42:31,433 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:31,443 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:31,443 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:42:31,443 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:31,443 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:31,443 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:31,443 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:42:31,443 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:31,443 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:42:31,443 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:31,443 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:42:31,443 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:31,443 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:42:31,453 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:54,886 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:54,896 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:42:54,906 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:54,916 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:54,916 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:42:54,916 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:42:54,926 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:54,936 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:54,936 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:42:54,936 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:54,936 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:42:54,936 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:42:54,936 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:42:54,936 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:54,936 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:42:54,936 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:54,936 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:42:54,936 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:42:54,936 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:42:54,946 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:43:34,280 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:43:34,280 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:43:34,296 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:43:34,311 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:43:34,311 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:43:34,311 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:43:34,327 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:43:34,327 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:43:34,327 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:43:34,327 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:43:34,327 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:43:34,327 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:43:34,327 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:43:34,327 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:43:34,327 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:43:34,327 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:43:34,327 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:43:34,327 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:43:34,327 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:43:34,327 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:43:55,252 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:43:55,262 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:43:55,272 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:43:55,282 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:43:55,282 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:43:55,282 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:43:55,292 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:43:55,292 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:43:55,292 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:43:55,292 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:43:55,292 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:43:55,302 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:43:55,302 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:43:55,302 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:43:55,302 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:43:55,302 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:43:55,302 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:43:55,302 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:43:55,302 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:43:55,302 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:44:25,821 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:44:25,831 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:44:25,841 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:44:25,851 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:44:25,851 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:44:25,851 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:44:25,861 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:44:25,871 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:44:25,871 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:44:25,871 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:44:25,871 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:44:25,871 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:44:25,871 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:44:25,871 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:44:25,871 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:44:25,871 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:44:25,871 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:44:25,871 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:44:25,871 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:44:25,871 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:44:47,024 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:44:47,034 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:44:47,044 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:44:47,054 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:44:47,054 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:44:47,054 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:44:47,064 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:44:47,064 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:44:47,064 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:44:47,064 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:44:47,064 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:44:47,074 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:44:47,074 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:44:47,074 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:44:47,074 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:44:47,074 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:44:47,074 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:44:47,074 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:44:47,074 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:44:47,074 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:45:17,591 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:45:17,601 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,611 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,621 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,631 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,631 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:45:17,651 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:45:17,651 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,651 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,651 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,651 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:45:17,651 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:45:17,669 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:45:17,669 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:45:17,669 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,679 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,679 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,679 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:45:17,679 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:45:17,679 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:45:17,679 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,689 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,689 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:17,689 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:45:17,689 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:45:17,689 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:45:17,699 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('2', 'HyraCar02', 'Bilbao', 'España')
+2018-11-23 16:45:17,699 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:45:17,699 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('3', 'HyraCar03', 'Londres', 'Inglaterra')
+2018-11-23 16:45:17,709 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:45:17,709 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:45:44,094 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:45:44,110 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:45:44,125 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:45:44,125 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:45:44,125 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:45:44,125 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:45:44,141 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:45:44,141 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:45:44,141 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:45:44,141 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:45:44,141 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:45:44,141 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:45:44,141 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:45:44,141 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:45:44,141 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:45:44,141 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:45:44,141 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:45:44,157 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:45:44,157 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:45:44,157 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:46:28,616 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:46:28,616 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:46:28,636 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:46:28,636 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:46:28,636 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:46:28,636 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:46:28,646 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:46:28,656 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:46:28,656 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:46:28,656 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:46:28,656 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:46:28,656 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:46:28,656 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:46:28,656 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:46:28,656 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:46:28,656 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:46:28,656 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:46:28,656 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:46:49,083 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:46:49,093 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:46:49,103 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:46:49,113 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:46:49,133 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:46:49,133 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:46:49,133 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:46:49,133 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:46:49,143 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:46:49,143 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:46:49,143 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:46:49,153 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:46:49,153 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:46:49,163 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:46:49,163 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:46:49,163 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:46:49,163 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:46:49,163 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:46:49,163 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:46:49,163 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:46:49,163 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:49:15,224 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:49:15,240 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:49:15,240 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:49:15,255 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:49:15,255 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:49:15,283 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:49:15,283 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:49:15,286 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:49:15,296 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:49:15,296 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('2', 'HyraCar02', 'Bilbao', 'España')
+2018-11-23 16:49:15,306 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:49:15,306 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('3', 'HyraCar03', 'Londres', 'Inglaterra')
+2018-11-23 16:49:15,313 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:49:15,316 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:49:15,316 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:49:15,318 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:49:15,318 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:49:15,321 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:49:15,321 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:49:15,323 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:50:09,352 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:50:09,362 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:50:09,372 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:50:09,382 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:50:09,392 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:50:09,402 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:50:09,402 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:50:09,402 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:50:09,412 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:50:09,412 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('2', 'HyraCar02', 'Bilbao', 'España')
+2018-11-23 16:50:09,422 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:50:09,422 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('3', 'HyraCar03', 'Londres', 'Inglaterra')
+2018-11-23 16:50:09,432 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:50:09,432 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:50:09,432 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:50:09,432 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:50:09,432 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:50:09,442 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:50:09,442 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:50:09,442 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:51:23,148 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:51:23,164 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:51:23,179 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:51:23,179 INFO  es.deusto.grupo3.App ~ delete from OFICINA where id = ? and nombre = ?
+2018-11-23 16:51:23,195 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:51:23,195 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:51:23,195 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:51:23,195 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('1', 'HyraCar01', 'Donostia', 'España')
+2018-11-23 16:51:23,211 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '2')
+2018-11-23 16:51:23,211 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('2', 'HyraCar02', 'Bilbao', 'España')
+2018-11-23 16:51:23,211 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '3')
+2018-11-23 16:51:23,211 INFO  es.deusto.grupo3.App ~ insert into OFICINA values('3', 'HyraCar03', 'Londres', 'Inglaterra')
+2018-11-23 16:51:23,226 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:51:23,226 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:51:23,226 INFO  es.deusto.grupo3.App ~ select * from OFICINA where (id = '1')
+2018-11-23 16:51:23,226 WARN  es.deusto.grupo3.App ~ La oficina ya existe, prueba con otro
+2018-11-23 16:51:23,226 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-23 16:51:23,226 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-23 16:51:23,226 INFO  es.deusto.grupo3.App ~ select * from OFICINA
+2018-11-23 16:51:23,242 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente

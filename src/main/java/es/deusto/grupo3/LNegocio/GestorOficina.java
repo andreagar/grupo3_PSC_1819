@@ -30,7 +30,6 @@ public class GestorOficina {
 				if (rs.next()) {  // Normalmente se recorre con un while, pero aqui solo hay que ver si ya existe
 					rs.close();
 					log.warn("La oficina ya existe, prueba con otro");
-					//JOptionPane.showMessageDialog(null, "El coche ya existe, prueba con otro","Mensaje de error",JOptionPane.ERROR_MESSAGE);
 					return true;
 				}
 				return false;
@@ -47,7 +46,7 @@ public class GestorOficina {
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a la oficina)
 	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
 	 */
-	public boolean anyadirFilaATablaCoche( Statement st, Oficina oficina ) {
+	public boolean anyadirFilaATablaOficina( Statement st, Oficina oficina ) {
 	//INSERT
 
 		if (chequearYaEnTabla(st, oficina.getId()) == false) {  // Si esta ya en la tabla

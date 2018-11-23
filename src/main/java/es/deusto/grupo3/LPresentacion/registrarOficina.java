@@ -161,7 +161,7 @@ public class registrarOficina extends JFrame implements ActionListener {
 
 		GestorOficina gestorOf = new GestorOficina();
 		//Si no existe, añadir fila con la oficina nueva y sus respectivos atributos
-		gestorOf.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), oficina);
+		gestorOf.anyadirFilaATablaOficina(BaseDeDatos.getStatement(), oficina);
 		
 		gestorOf.GetArrayOficinas(BaseDeDatos.getStatement());
 	}

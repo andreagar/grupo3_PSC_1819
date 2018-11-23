@@ -113,105 +113,105 @@ public class BaseDeDatos {
 	 }
 	 
 	 /**
-		 * Crea la tabla Moto si no existe
-		 * 
-		 * @param marca
-		 * @param modelo
-		 * @param matricula
-		 * @param precio
-		 * @param alquilado
-		 * @param comprado
-		 * @param averiado
-		 * @param imagen
-		 */
-		 public static void crearTablaBDMoto(){
-			if (statement==null)
-				return ;
-			 try {
+	 * Crea la tabla Moto si no existe
+	 * 
+	 * @param marca
+	 * @param modelo
+	 * @param matricula
+	 * @param precio
+	 * @param alquilado
+	 * @param comprado
+	 * @param averiado
+	 * @param imagen
+	 */
+	 public static void crearTablaBDMoto(){
+		if (statement==null)
+			return ;
+		 try {
 
-				statement.executeUpdate("create table if not exists MOTO (marca string, modelo string, matricula string, precio double, alquilado boolean, comprado boolean, averiado boolean, imagen string)");
+			statement.executeUpdate("create table if not exists MOTO (marca string, modelo string, matricula string, precio double, alquilado boolean, comprado boolean, averiado boolean, imagen string)");
 
-			} catch (SQLException e) {
-				// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
-				if (!e.getMessage().equals("table interaccion already exists"))
-					e.printStackTrace();  
-				log.info("NO se ha creado tabla MOTO: ya existe");
-			}
-		 }
+		} catch (SQLException e) {
+			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+			if (!e.getMessage().equals("table interaccion already exists"))
+				e.printStackTrace();  
+			log.info("NO se ha creado tabla MOTO: ya existe");
+		}
+	 }
 		 
-		 /**
-			 * Crea la tabla Asignaciones si no existe
-			 * 
-			 * @param usuario
-			 * @param matricula
-			 * @param alquilado
-			 * @param comprado
-			 * @param averiado
-			 * @param vehiculo --> 1: coche, 2: moto
-			 */
-			 public static void crearTablaBDAsignaciones(){
-				if (statement==null)
-					return ;
-				 try {
+	 /**
+	 * Crea la tabla Asignaciones si no existe
+	 * 
+	 * @param usuario
+	 * @param matricula
+	 * @param alquilado
+	 * @param comprado
+	 * @param averiado
+	 * @param vehiculo --> 1: coche, 2: moto
+	 */
+	 public static void crearTablaBDAsignaciones(){
+		if (statement==null)
+			return ;
+		 try {
 
-					statement.executeUpdate("create table if not exists ASIGNACIONES (usuario string, matricula string, alquilado boolean, comprado boolean, averiado boolean, vehiculo int)");
+			statement.executeUpdate("create table if not exists ASIGNACIONES (usuario string, matricula string, alquilado boolean, comprado boolean, averiado boolean, vehiculo int)");
 
-				} catch (SQLException e) {
-					// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
-					if (!e.getMessage().equals("table interaccion already exists"))
-						e.printStackTrace();  
-					log.info("NO se ha creado tabla ASIGNACIONES: ya existe");
-				}
-			 }
+		} catch (SQLException e) {
+			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+			if (!e.getMessage().equals("table interaccion already exists"))
+				e.printStackTrace();  
+			log.info("NO se ha creado tabla ASIGNACIONES: ya existe");
+		}
+	 }
 			 
-			 /**
-				 * Crea la tabla Historial_Asignaciones si no existe
-				 * 
-				 * @param usuario
-				 * @param matricula
-				 * @param alquilado
-				 * @param comprado
-				 * @param averiado
-				 * @param vehiculo --> 1: coche, 2: moto
-				 */
-				 public static void crearTablaBDHistorialAsignaciones(){
-					if (statement==null)
-						return ;
-					 try {
+	 /**
+	 * Crea la tabla Historial_Asignaciones si no existe
+	 * 
+	 * @param usuario
+	 * @param matricula
+	 * @param alquilado
+	 * @param comprado
+	 * @param averiado
+	 * @param vehiculo --> 1: coche, 2: moto
+	 */
+	 public static void crearTablaBDHistorialAsignaciones(){
+		if (statement==null)
+			return ;
+		 try {
 
-						statement.executeUpdate("create table if not exists HISTORIAL_ASIGNACIONES (usuario string, matricula string, alquilado boolean, comprado boolean, averiado boolean, vehiculo int)");
+			statement.executeUpdate("create table if not exists HISTORIAL_ASIGNACIONES (usuario string, matricula string, alquilado boolean, comprado boolean, averiado boolean, vehiculo int)");
 
-					} catch (SQLException e) {
-						// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
-						if (!e.getMessage().equals("table interaccion already exists"))
-							e.printStackTrace();  
-						log.info("NO se ha creado tabla HISTORIAL_ASIGNACIONES: ya existe");
-					}
-				 }
+		} catch (SQLException e) {
+			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+			if (!e.getMessage().equals("table interaccion already exists"))
+				e.printStackTrace();  
+			log.info("NO se ha creado tabla HISTORIAL_ASIGNACIONES: ya existe");
+		}
+	 }
 				 
-				 /**
-					 * Crea la tabla Oficina si no existe
-					 * 
-					 * @param usuario
-					 * @param matricula
-					 * @param alquilado
-					 * @param comprado
-					 * @param averiado
-					 * @param vehiculo --> 1: coche, 2: moto
-					 */
-					 public static void crearTablaBDOficina(){
-						if (statement==null)
-							return ;
-						 try {
+	 /**
+	 * Crea la tabla Oficina si no existe
+	 * 
+	 * @param usuario
+	 * @param matricula
+	 * @param alquilado
+	 * @param comprado
+	 * @param averiado
+	 * @param vehiculo --> 1: coche, 2: moto
+	 */
+	 public static void crearTablaBDOficina(){
+		if (statement==null)
+			return ;
+		 try {
 
-							statement.executeUpdate("create table if not exists OFICINA (id int, nombre string, ciudad string, pais string)");
+			statement.executeUpdate("create table if not exists OFICINA (id int, nombre string, ciudad string, pais string)");
 
-						} catch (SQLException e) {
-							// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
-							if (!e.getMessage().equals("table interaccion already exists"))
-								e.printStackTrace();  
-							log.info("NO se ha creado tabla HISTORIAL_ASIGNACIONES: ya existe");
-						}
-					 }
+		} catch (SQLException e) {
+			// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+			if (!e.getMessage().equals("table interaccion already exists"))
+				e.printStackTrace();  
+			log.info("NO se ha creado tabla HISTORIAL_ASIGNACIONES: ya existe");
+		}
+	 }
 	
 }
