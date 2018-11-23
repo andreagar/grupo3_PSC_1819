@@ -162,8 +162,6 @@ public class asignarCoche extends JFrame implements ActionListener{
 			
 			case "Atras":
 				dispose();
-				menuUsuario frame = new menuUsuario(usuario);
-				frame.setVisible(true);
 				break;
 		
 		}

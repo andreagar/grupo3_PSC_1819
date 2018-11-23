@@ -29,6 +29,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 	private JButton btnModificar;
 	private JButton btnHistorial;
 	private JButton btnEliminar;
+	private JButton btnOficinas;
 	private JButton btnSalir;
 	private String nombre;
 	private JLabel lblNewLabel;
@@ -52,39 +53,45 @@ public class menuUsuario extends JFrame implements ActionListener{
 		btnCoche = new JButton("<html><body>Alquilar/Comprar<br><center>COCHE</center></body></html>");
 		btnCoche.setToolTipText("");
 		btnCoche.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnCoche.setBounds(52, 145, 157, 78);
+		btnCoche.setBounds(52, 130, 157, 70);
 		contentPane.add(btnCoche);
 		btnCoche.addActionListener(this);
 		
 		btnMoto = new JButton("<html><body>Alquilar/Comprar<br><center>MOTO</center></body></html>");
 		btnMoto.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnMoto.setBounds(272, 145, 157, 78);
+		btnMoto.setBounds(272, 130, 157, 70);
 		contentPane.add(btnMoto);
 		btnMoto.addActionListener(this);
 		
 		btnHistorial = new JButton("Ver mi historial");
 		btnHistorial.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnHistorial.setBounds(52, 266, 157, 82);
+		btnHistorial.setBounds(52, 235, 157, 70);
 		contentPane.add(btnHistorial);
 		btnHistorial.addActionListener(this);
 		
 		btnModificar = new JButton("<html><body>Modificar mi<br><center>contraseña</center></body></html>");
 		btnModificar.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnModificar.setBounds(272, 260, 157, 88);
+		btnModificar.setBounds(272, 235, 157, 70);
 		contentPane.add(btnModificar);
 		btnModificar.addActionListener(this);
+		
+		btnEliminar = new JButton("Cancelar alquiler");
+		btnEliminar.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnEliminar.setBounds(52, 345, 157, 70);
+		contentPane.add(btnEliminar);
+		btnEliminar.addActionListener(this);
+		
+		btnOficinas = new JButton("Ver oficinas");
+		btnOficinas.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnOficinas.setBounds(272, 345, 157, 70);
+		contentPane.add(btnOficinas);
+		btnOficinas.addActionListener(this);
 		
 		btnSalir = new JButton("Cerrar sesion");
 		btnSalir.setFont(new Font("Verdana", Font.PLAIN, 12));
 		btnSalir.setBounds(10, 430, 120, 27);
 		contentPane.add(btnSalir);
 		btnSalir.addActionListener(this);
-		
-		btnEliminar = new JButton("Cancelar alquiler");
-		btnEliminar.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnEliminar.setBounds(272, 375, 157, 88);
-		contentPane.add(btnEliminar);
-		btnEliminar.addActionListener(this);
 		
 		lblNewLabel = new JLabel("Alquiler/compra coches HyraCar", SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 20));
@@ -107,25 +114,21 @@ public class menuUsuario extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		
 		if (e.getSource() == btnHistorial){
-			dispose();
 			historialAsignaciones asig = new historialAsignaciones(nombre);
 			asig.setVisible(true);
 		}
 		
 		if (e.getSource() == btnCoche){
-			dispose();
 			asignarCoche alquilar = new asignarCoche(nombre);
 			alquilar.setVisible(true);			
 		}
 		
 		if (e.getSource() == btnMoto){
-			dispose();
 			asignarMoto alquilarMoto = new asignarMoto(nombre);
 			alquilarMoto.setVisible(true);			
 		}
 		
 		if (e.getSource() == btnModificar){
-			dispose();
 			perfilUsuario framePerfil = new perfilUsuario(nombre);
 			framePerfil.setVisible(true);
 			
@@ -134,6 +137,11 @@ public class menuUsuario extends JFrame implements ActionListener{
 		if (e.getSource() == btnEliminar){
 			cancelarAlquiler alq = new cancelarAlquiler(nombre);
 			alq.setVisible(true);
+		}
+		
+		if (e.getSource() == btnOficinas){
+			verOficinas of = new verOficinas(nombre);
+			of.setVisible(true);
 		}
 		
 		if (e.getSource() == btnSalir){

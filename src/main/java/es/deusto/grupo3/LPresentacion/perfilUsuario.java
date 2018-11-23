@@ -127,8 +127,6 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		
 		if (e.getSource() == btnCancelar){
 			dispose();
-			menuUsuario frameMenu = new menuUsuario(nombre);
-			frameMenu.setVisible(true);
 		}
 		
 		

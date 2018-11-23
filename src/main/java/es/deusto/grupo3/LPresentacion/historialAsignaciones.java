@@ -83,8 +83,6 @@ public class historialAsignaciones extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		if (e.getSource() == button){
 			this.dispose();
-			menuUsuario frame = new menuUsuario(usuario);
-			frame.setVisible(true);
 		}
 	}
 	

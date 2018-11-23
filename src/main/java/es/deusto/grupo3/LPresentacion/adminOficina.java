@@ -19,7 +19,8 @@ public class adminOficina extends JFrame implements ActionListener{
 	private static final long serialVersionUID = 1L;
 	private PanelConImagen contentPane;
 	private JButton btnRegistrarOficina;
-	private JButton btnModificarOficina;
+	private JButton btnEliminarOficina;
+	private JButton btnVerOficina;
 	private JButton btnAtras;
 	private JLabel lblHyracarAdministracion;
 
@@ -47,11 +48,17 @@ public class adminOficina extends JFrame implements ActionListener{
 		contentPane.add(btnRegistrarOficina);
 		btnRegistrarOficina.addActionListener(this);
 		
-		btnModificarOficina = new JButton("Eliminar oficina");
-		btnModificarOficina.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnModificarOficina.setBounds(250, 97, 156, 51);
-		contentPane.add(btnModificarOficina);
-		btnModificarOficina.addActionListener(this);
+		btnEliminarOficina = new JButton("Eliminar oficina");
+		btnEliminarOficina.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnEliminarOficina.setBounds(250, 97, 156, 51);
+		contentPane.add(btnEliminarOficina);
+		btnEliminarOficina.addActionListener(this);
+		
+		btnVerOficina = new JButton("Ver oficinas");
+		btnVerOficina.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnVerOficina.setBounds(135, 175, 156, 51);
+		contentPane.add(btnVerOficina);
+		btnVerOficina.addActionListener(this);
 		
 		btnAtras = new JButton("Atrás");
 		btnAtras.setFont(new Font("Verdana", Font.PLAIN, 11));
@@ -70,12 +77,18 @@ public class adminOficina extends JFrame implements ActionListener{
 			vistaOficina.setVisible(true);
 			dispose();
 		}
-		if (e.getSource() == btnModificarOficina){
+		if (e.getSource() == btnEliminarOficina){
 			
 			eliminarOficina eliminarOf = new eliminarOficina();
 			eliminarOf.setVisible(true);
 			dispose();
 		}
+		if (e.getSource() == btnVerOficina){
+			
+			verOficinas verOf = new verOficinas("admin");
+			verOf.setVisible(true);
+			dispose();
+		}		
 		if (e.getSource() == btnAtras){
 			dispose();
 			menuAdmin vista = new menuAdmin();

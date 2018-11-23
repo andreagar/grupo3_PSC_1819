@@ -122,7 +122,6 @@ public class GestorCoche {
 		for(int i=0; i<cochesGlobal.size(); i++){
 			if(cochesGlobal.get(i).getAlquilado() == false && cochesGlobal.get(i).getComprado() == false && cochesGlobal.get(i).getAveriado() == false){
 				cochesDisp.add(cochesGlobal.get(i));
-				System.out.println(cochesGlobal.get(i));
 			}
 		}
 		

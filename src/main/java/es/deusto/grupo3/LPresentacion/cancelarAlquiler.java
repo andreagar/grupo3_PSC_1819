@@ -103,8 +103,6 @@ public class cancelarAlquiler extends JFrame implements ActionListener{
 		
 		if (e.getSource() == button){
 			this.dispose();
-			menuUsuario frame = new menuUsuario(usuario);
-			frame.setVisible(true);
 		}
 	}
 	

@@ -156,8 +156,6 @@ public class asignarMoto extends JFrame implements ActionListener{
 			
 			case "Atras":
 				dispose();
-				menuUsuario frame = new menuUsuario(usuario);
-				frame.setVisible(true);
 				break;
 		
 		}

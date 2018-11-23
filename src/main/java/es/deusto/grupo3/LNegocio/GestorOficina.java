@@ -107,7 +107,6 @@ public class GestorOficina {
 			pstmt.setInt(1, oficina.getId());
 			pstmt.setString(2, oficina.getNombre());;
 	        int val = pstmt.executeUpdate();
-	        System.out.println(sentSQL);
 	        if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
