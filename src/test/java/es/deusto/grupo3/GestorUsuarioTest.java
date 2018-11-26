@@ -49,8 +49,14 @@ public class GestorUsuarioTest {
     
     @Test
     public void testchequearYaEnTablaLOGIN(){
-    	boolean prueba = gestor.chequearYaEnTablaLOGIN(BaseDeDatos.getStatement(), "PruebaTest2", "estoEsPrueba");
-    	assertFalse(prueba);
+    	boolean prueba;
+    	int i;
+    	for(i=0; i<10000; i++){
+    		String aux  = Integer.toString(i);
+    		System.out.println(aux);
+	    	prueba = gestor.chequearYaEnTablaLOGIN(BaseDeDatos.getStatement(), aux, aux);
+	    	assertFalse(prueba);
+    	}
     }
     
 }
