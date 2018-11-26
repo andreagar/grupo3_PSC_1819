@@ -2,6 +2,8 @@ package es.deusto.grupo3.LNegocio;
 
 public class Usuario {
 
+	///OBJETO USUARIO: nombre, password
+	
 	String nombre;
 	String password;
 

@@ -1,6 +1,8 @@
 package es.deusto.grupo3.LNegocio;
 
 public class Coche {
+	
+	///OBJETO COCHE: matricula, marca, modelo, precio, alquilado, comprado, averiado, imagen
 
 	String marca, modelo, matricula, imagen;
 	double precio;

@@ -11,6 +11,8 @@ import org.apache.log4j.Logger;
 import es.deusto.grupo3.App;
 
 public class GestorUsuario {
+	
+	///GESTOR USUARIO PARA LA GESTIÓN DE USUARIOS
 
 	String password;
 	String nombre;
@@ -23,9 +25,7 @@ public class GestorUsuario {
 		
 	}
 	
-//  USUARIO!!    //
-	
-	/** Comprueba si un usuario ya esta en la tabla USUARIO de BD,considerando la trayectoria completa del disco como informacion clave.
+	/** Comprueba si un usuario ya esta en la tabla USUARIO de BD para su registro, considerando la trayectoria completa del disco como informacion clave.
 	 * @param st	Sentencia ya abierta de base de datos
 	 * @return	true si el usuario ya esta en la tabla, false en caso contrario
 	 */
@@ -51,6 +51,10 @@ public class GestorUsuario {
 			}
 		}
 	
+	/** Comprueba si un usuario ya esta en la tabla USUARIO de BD para logearse,considerando la trayectoria completa del disco como informacion clave.
+	 * @param st	Sentencia ya abierta de base de datos
+	 * @return	true si el usuario ya esta en la tabla, false en caso contrario
+	 */
 	public boolean chequearYaEnTablaLOGIN( Statement st, String nombre, String contrasenya ) {
 		//SELECT
 			try {
@@ -74,7 +78,7 @@ public class GestorUsuario {
 		}
 	
 		
-	/** AÃ±ade un usuario a la tabla USUARIO de BD, 
+	/** Añade un usuario a la tabla USUARIO de BD, 
 	 * que debe estar abierta y tener el formato y los nombres de campos apropiados: (int idUsuario, Sting nombre, String password)
 	 * Usa la sentencia INSERT de SQL.
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al usuario)
@@ -89,7 +93,7 @@ public class GestorUsuario {
 				String sentSQL = "insert into USUARIO values(" + "'" + nombre + "', " + "'" + password + "')"; 
 				log.info(sentSQL); 
 				int val = st.executeUpdate( sentSQL );
-				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+				if (val!=1) return false;  // Se tiene que añadir 1 - error si no
 				return true;
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -123,7 +127,11 @@ public class GestorUsuario {
 				return false;
 			}
 	}
-
+	
+	/** Bloquea un usuario (Funcionalidad para Mockito)
+	 * @param string	Nombre de usuario
+	 * @return	false si el usuario no ha sido bloqueado
+	 */
 	public boolean bloquearUsuario(String string) {
 		return false;
 		// TODO Auto-generated method stub

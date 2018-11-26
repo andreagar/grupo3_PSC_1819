@@ -2,6 +2,8 @@ package es.deusto.grupo3.LNegocio;
 
 public class Moto {
 	
+	///OBJETO MOTO: matricula, marca, modelo, precio, alquilado, comprado, averiado, imagen
+	
 	String marca, modelo, matricula, imagen;
 	double precio;
 	boolean alquilado, comprado, averiado;

@@ -1,6 +1,8 @@
 package es.deusto.grupo3.LNegocio;
 
 public class Asignaciones {
+	
+	///OBJETO ASIGNACIONES: matricula, usuario, alquilado, comprado, averiado, vehículo
 
 	String usuario, matricula;
 	boolean alquilado, comprado, averiado;
@@ -66,6 +68,7 @@ public class Asignaciones {
 	}
 	
 	public String toString(){
+	///Depediendo de si es coche o moto, toString diferente
 		String v = null;
 		if(this.getVehiculo() == 1){
 			v = "Coche";

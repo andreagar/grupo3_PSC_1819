@@ -12,6 +12,8 @@ import es.deusto.grupo3.App;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 
 public class GestorMoto {
+	
+	///GESTOR MOTO PARA LA GESTIÓN DE MOTOS
 
 	ArrayList<Moto> listaMoto;
 	
@@ -67,7 +69,7 @@ public class GestorMoto {
 															 + moto.averiado + "', '" + moto.imagen + "')";  
 				log.info(sentSQL);
 				int val = st.executeUpdate( sentSQL );
-				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+				if (val!=1) return false;  // Se tiene que añadir 1 - error si no
 				return true;
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -78,9 +80,9 @@ public class GestorMoto {
 		
 	}
 	
-	/** Seleccionar todos los coches de la BD
-	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
-	 * @return	Array de los coches de la BD
+	/** Seleccionar todas las motos de la BD
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a moto)
+	 * @return	Array de motos de la BD
 	 */
 	public ArrayList<Moto> GetArrayMotoGlobal(Statement st)
 	{
@@ -106,9 +108,9 @@ public class GestorMoto {
 
 	}
 	
-	/** Seleccionar coches que estén disponibles (no alquilados, no comprados y no averiados)
-	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
-	 * @return	Array de los coches disponibles
+	/** Seleccionar motos que estén disponibles (no alquilados, no comprados y no averiados)
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a moto)
+	 * @return	Array de motos disponibles
 	 */
 	public ArrayList<Moto> GetArrayMotosDisponibles(Statement st)
 	{
@@ -126,8 +128,8 @@ public class GestorMoto {
 
 	}
 	
-	/** Seleccionar motos que estén sin comprar
-	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	/** Seleccionar motos que estén sin comprar (comprado = false)
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a moto)
 	 * @return	Array de los motos disponibles
 	 */
 	public ArrayList<Moto> GetArrayMotosSinComprar(Statement st)
@@ -147,9 +149,9 @@ public class GestorMoto {
 	}
 	
 	/** Alquilar una moto con un usuario específico: poner el atributo alquilado de MOTO a true e insertar una nueva línea en ASIGNACIONES
-	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a moto)
 	 * @param asig	Objeto de clase Asignaciones
-	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
+	 * @return	true si la inserción es correcta, false en caso contrario
 	 */
 	public boolean AlquilarVehiculoUsuario(Statement st, Asignaciones asig){
 		
@@ -189,7 +191,7 @@ public class GestorMoto {
             // insert 
             int val3 = pstmt3.executeUpdate();
 	        
-			if (val1!=1 && val2!=1 && val3!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+			if (val1!=1 && val2!=1 && val3!=1) return false;  // Se tiene que añadir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			log.error("Erro al alquilar moto");
@@ -292,7 +294,7 @@ public class GestorMoto {
         			}
 	            }
 	            
-	            if (val1!=1 && val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+	            if (val1!=1 && val!=1) return false;  // Se tiene que añadir 1 - error si no
 				return true;
 			} catch (SQLException e) {
 				e.printStackTrace();

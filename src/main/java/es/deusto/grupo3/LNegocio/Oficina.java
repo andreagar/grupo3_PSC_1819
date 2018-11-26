@@ -1,6 +1,8 @@
 package es.deusto.grupo3.LNegocio;
 
 public class Oficina {
+	
+	///OBJETO OFICINA: id, nombre, ciudad, pais
 
 	int id;
 	String nombre;

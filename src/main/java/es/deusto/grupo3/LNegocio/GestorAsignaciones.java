@@ -15,8 +15,8 @@ public class GestorAsignaciones {
 	
 	private final static Logger log = Logger.getLogger(App.class.getName());
 
-	/** Recuperar las asignaciones hechas a un usuario específico
-	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	/** Recuperar las asignaciones realizadas a un usuario específico
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a asignaciones)
 	 * @param nombre	Nombre del usuario logeado
 	 * @return	Array de las asignaciones de un usaurio dado
 	 */
@@ -45,8 +45,8 @@ public class GestorAsignaciones {
 		return a;
 	}
 	
-	/** Seleccionar coches que estén disponibles (no alquilados, no comprados y no averiados)
-	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
+	/** Seleccionar asignaciones de la tabla ASIGNACIONES de BD
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a asignaciones)
 	 * @return	Array de los coches disponibles
 	 */
 	public ArrayList<Asignaciones> GetArrayUsuarioAlquilados(Statement st, String nombre)
@@ -83,9 +83,17 @@ public class GestorAsignaciones {
 
 	}
 	
+	/** Cancelar un alquiler realizado: 
+	 * 			1. Modificar el atributo alquilado a FALSE en tabla COCHE o MOTO
+	 * 			2. Borra la línea correspondiente al alquiler eliminado
+	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a asignaciones)
+	 * @param matricula		Matricula del vehículo
+	 * @param usuario		Usuario del alquiler
+	 * @param vehiculo		Tipo de vehículo alquilado: Coche o Moto
+	 * @return	Array de los coches disponibles
+	 */
 	public boolean CancelarAlquiler(Statement st, String matricula, String usuario, String vehiculo){
-  
-		
+  	
         try {
         	int val1 = 0;
         	
@@ -118,7 +126,7 @@ public class GestorAsignaciones {
 			pstmt2.setString(2, matricula);
 	        int val = pstmt2.executeUpdate();
 	        
-	        if (val1!=1 && val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+	        if (val1!=1 && val!=1) return false;  // Se tiene que añadir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

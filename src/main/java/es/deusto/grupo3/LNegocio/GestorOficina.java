@@ -13,6 +13,8 @@ import es.deusto.grupo3.LDatos.BaseDeDatos;
 
 public class GestorOficina {
 	
+	///GESTOR OFICINA PARA LA GESTIÓN DE OFICINAS
+	
 	private final static Logger log = Logger.getLogger(App.class.getName());
 
 	/** Comprueba si una oficina ya esta en la tabla OFICINA de BD,
@@ -56,7 +58,7 @@ public class GestorOficina {
 															 + oficina.ciudad + "', '" + oficina.pais + "')"; 
 				log.info(sentSQL);
 				int val = st.executeUpdate( sentSQL );
-				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+				if (val!=1) return false;  // Se tiene que añadir 1 - error si no
 				return true;
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -106,7 +108,7 @@ public class GestorOficina {
 			pstmt.setInt(1, oficina.getId());
 			pstmt.setString(2, oficina.getNombre());;
 	        int val = pstmt.executeUpdate();
-	        if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+	        if (val!=1) return false;  // Se tiene que añadir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

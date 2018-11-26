@@ -18,6 +18,8 @@ import es.deusto.grupo3.App;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 
 public class GestorCoche {
+	
+	///GESTOR COCHE PARA LA GESTIÓN DE COCHES
 
 	ArrayList<Coche> listaCoche;
 	
@@ -71,7 +73,7 @@ public class GestorCoche {
 															 + coche.averiado + "', '" + coche.imagen + "')"; 
 				log.info(sentSQL);
 				int val = st.executeUpdate( sentSQL );
-				if (val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+				if (val!=1) return false;  // Se tiene que añadir 1 - error si no
 				return true;
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -129,7 +131,7 @@ public class GestorCoche {
 
 	}
 	
-	/** Seleccionar coches que estén sin comprar
+	/** Seleccionar coches que estén sin comprar (comprado = false)
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @return	Array de los coches disponibles
 	 */
@@ -193,7 +195,7 @@ public class GestorCoche {
             // insert 
             int val3 = pstmt3.executeUpdate();
 	        
-			if (val1!=1 && val2!=1 && val3!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+			if (val1!=1 && val2!=1 && val3!=1) return false;  // Se tiene que añadir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			log.error("Erro al alquilar coche");
@@ -205,7 +207,7 @@ public class GestorCoche {
 	/** Comprar un coche con un usuario específico: poner el atributo comprado de COCHE a true e insertar una nueva línea en ASIGNACIONES
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al coche)
 	 * @param asig	Objeto de clase Asignaciones
-	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
+	 * @return	true si la inserción es correcta, false en caso contrario
 	 */
 	public boolean ComprarVehiculoUsuario(Statement st, Asignaciones asig){
 		
@@ -300,7 +302,7 @@ public class GestorCoche {
         			}
 	            }
 	            
-	            if (val1!=1 && val!=1) return false;  // Se tiene que aÃ±adir 1 - error si no
+	            if (val1!=1 && val!=1) return false;  // Se tiene que añadir 1 - error si no
 				return true;
 			} catch (SQLException e) {
 				e.printStackTrace();

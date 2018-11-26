@@ -27,8 +27,7 @@ public class App
 	private final static Logger log = Logger.getLogger(App.class.getName());
     public static void main( String[] args )
     {
-    	//inicialización de BD
-
+    	///inicialización de BD
     	log.info("iniciando BD");
     	BaseDeDatos.initBD("nuestroBD.db");
     	log.info("BD iniciada");
@@ -69,29 +68,25 @@ public class App
 //			e.printStackTrace();
 //		}
     	
+    	///Creación de tablas
 		BaseDeDatos.crearTablaBDUsuario();
 		BaseDeDatos.crearTablaBDCoche();
 		BaseDeDatos.crearTablaBDMoto();
 		BaseDeDatos.crearTablaBDAsignaciones();
 		BaseDeDatos.crearTablaBDHistorialAsignaciones();
 		BaseDeDatos.crearTablaBDOficina();
-	
-		/*
-		 * 
-		 * Insertamos los coches predeterminados para poder trabajar con ellos
-		 */
+ 
+		 ///Insertamos los coches predeterminados para poder trabajar con ellos
 		GestorCoche gestorCoche  = new GestorCoche();
 		Coche coche;
-		
 		coche = new Coche ("Audi", "A7", "1234ABC", 74000, false, false, false, "/es/deusto/grupo3/img/Audi_A7.jpg");
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
-		
 		coche = new Coche ("Audi", "Q3", "9999BBB", 43000, false, false, false, "/es/deusto/grupo3/img/Audi_Q3.jpg");
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
-		
 		coche = new Coche ("Ford", "Kuga", "5678HHH", 24600, false, false, false, "/es/deusto/grupo3/img/Ford_Kuga.png");
 		gestorCoche.anyadirFilaATablaCoche(BaseDeDatos.getStatement(), coche);
 		
+		///Insertamos las motos predeterminados para poder trabajar con ellas
 		GestorMoto gestorMoto = new GestorMoto();
 		Moto moto;
 		moto = new Moto ("Honda", "CB1000R", "3344PPS", 30000, false, false, false, "/es/deusto/grupo3/img/Honda_CB_1000_R.jpg");
@@ -101,10 +96,8 @@ public class App
 		moto = new Moto ("Ducati", "Monster", "7892GFS", 18600, false, false, false, "/es/deusto/grupo3/img/Ducati_Moster.jpg");
 		gestorMoto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), moto);
 		
-		//menu de log in y registrarse
-		
+		///menu de log in y registrarse
 		vistaPrincipal frame = new vistaPrincipal();
-		
 		frame.setVisible(true);
     }
 }
