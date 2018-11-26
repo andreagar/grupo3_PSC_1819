@@ -33,14 +33,16 @@ public class climaPlantilla extends JFrame implements ActionListener{
 	private DefaultListModel modeloOficinas;
 	private GestorOficina objOficina;
 	private JLabel lblOficinas;
+	private String nombre, ciudad;
 	private String tipoUsuario;
 	private final static Logger log = Logger.getLogger(App.class.getName());
 	
 	/**
 	 * Create the frame.
 	 */
-	public climaPlantilla(String tipoUsuario) {
-		this.tipoUsuario = tipoUsuario;
+	public climaPlantilla(String nombre, String ciudad) {
+		this.nombre = nombre;
+		this.ciudad = ciudad;
 		
 		Toolkit toolkit = getToolkit();
 		setIconImage(toolkit.getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
@@ -74,12 +76,8 @@ public class climaPlantilla extends JFrame implements ActionListener{
 	
 		if (e.getSource() == btnAtras){
 			dispose();
-			if(tipoUsuario.equals("admin")){
-				adminOficina vistaAdmin = new adminOficina();
-				vistaAdmin.setVisible(true);
-			}else{
-				this.dispose();
-			}
+			menuUsuario frame = new menuUsuario(nombre);
+			frame.setVisible(true);
 		}
 	}
 	

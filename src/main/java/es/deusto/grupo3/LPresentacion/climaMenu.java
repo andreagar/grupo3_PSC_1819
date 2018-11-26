@@ -84,13 +84,13 @@ import javax.swing.ImageIcon;
 		
 		if (e.getSource() == btnDonostia){
 			dispose();
-			menuUsuario frame = new menuUsuario(nombre);
+			climaPlantilla frame = new climaPlantilla(nombre, "donostia");
 			frame.setVisible(true);
 		}
 		
 		if (e.getSource() == btnBilbao){
 			dispose();
-			menuUsuario frame = new menuUsuario(nombre);
+			climaPlantilla frame = new climaPlantilla(nombre, "bilbao");
 			frame.setVisible(true);
 		}
 	}

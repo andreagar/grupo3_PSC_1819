@@ -227,7 +227,7 @@ public class BaseDeDatos {
 			if (statement==null)
 				return ;
 			 try {
-				statement.executeUpdate("create table if not exists CLIMA (pais string, ciudad string, temperatura double, estado string, precipitacion boolean)");
+				statement.executeUpdate("create table if not exists CLIMA (ciudad string, temperatura double, estado string, precipitacion int)");
 			} catch (SQLException e) {
 				// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
 				if (!e.getMessage().equals("table interaccion already exists"))
