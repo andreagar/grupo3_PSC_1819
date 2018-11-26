@@ -29,6 +29,8 @@ public class GestorUsuarioMockTest {
     @Test
     public void testbloquearUsuario(){
     	assertTrue(gesUsu.bloquearUsuario("grupo3"));
+    	Mockito.verify(gesUsu, Mockito.times(1)).bloquearUsuario("grupo3");
+    	Mockito.verify(gesUsu, Mockito.never()).bloquearUsuario("oscar");
     }
 
 }
