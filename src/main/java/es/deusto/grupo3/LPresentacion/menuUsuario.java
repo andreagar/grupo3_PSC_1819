@@ -32,6 +32,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 	private JButton btnOficinas;
 	private JButton btnSalir;
 	private String nombre;
+	private JButton btnAemet;
 	private JLabel lblNewLabel;
 	
 	public menuUsuario (String nombre){
@@ -86,6 +87,11 @@ public class menuUsuario extends JFrame implements ActionListener{
 		btnOficinas.setBounds(272, 345, 157, 70);
 		contentPane.add(btnOficinas);
 		btnOficinas.addActionListener(this);
+		
+		btnAemet = new JButton("AEMET");
+		btnAemet.setBounds(80, 387, 89, 23);
+		contentPane.add(btnAemet);
+		btnAemet.addActionListener(this);
 		
 		btnSalir = new JButton("Cerrar sesion");
 		btnSalir.setFont(new Font("Verdana", Font.PLAIN, 12));
@@ -142,6 +148,12 @@ public class menuUsuario extends JFrame implements ActionListener{
 		if (e.getSource() == btnOficinas){
 			verOficinas of = new verOficinas(nombre);
 			of.setVisible(true);
+		}
+		
+		if (e.getSource() == btnAemet){
+			dispose();
+			clima cl = new clima(nombre);
+			cl.setVisible(true);			
 		}
 		
 		if (e.getSource() == btnSalir){
