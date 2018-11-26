@@ -152,7 +152,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 		
 		if (e.getSource() == btnAemet){
 			dispose();
-			clima cl = new clima(nombre);
+			climaMenu cl = new climaMenu(nombre);
 			cl.setVisible(true);			
 		}
 		
