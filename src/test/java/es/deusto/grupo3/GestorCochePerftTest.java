@@ -37,7 +37,7 @@ public class GestorCochePerftTest {
 	
 	@Test
 	@PerfTest(invocations = 1000, threads = 20, duration=1500)   //PerfTest convierte un JUnit en una prueba Contiperf. A definir número de iteraciones y los hilos que se disponen
-	@Required(max = 150, average = 110, median=500)  //Required define las requisitos de rendimiento, si no los cumple --> rojo
+	@Required(max = 200, average = 110, median=500)  //Required define las requisitos de rendimiento, si no los cumple --> rojo
     public void testanyadirFilaATablaCoche() throws Exception{
 		Thread.sleep(100);
     }
