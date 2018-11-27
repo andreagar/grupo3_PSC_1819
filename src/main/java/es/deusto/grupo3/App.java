@@ -12,7 +12,9 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.Logger;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Clima;
 import es.deusto.grupo3.LNegocio.Coche;
+import es.deusto.grupo3.LNegocio.GestorClima;
 import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorMoto;
 import es.deusto.grupo3.LNegocio.Moto;
@@ -75,8 +77,12 @@ public class App
 		BaseDeDatos.crearTablaBDAsignaciones();
 		BaseDeDatos.crearTablaBDHistorialAsignaciones();
 		BaseDeDatos.crearTablaBDOficina();
- 
-		 ///Insertamos los coches predeterminados para poder trabajar con ellos
+		BaseDeDatos.crearTablaBDClima();
+	
+		/*
+		 * 
+		 * Insertamos los coches predeterminados para poder trabajar con ellos
+		 */
 		GestorCoche gestorCoche  = new GestorCoche();
 		Coche coche;
 		coche = new Coche ("Audi", "A7", "1234ABC", 74000, false, false, false, "/es/deusto/grupo3/img/Audi_A7.jpg");
@@ -96,7 +102,18 @@ public class App
 		moto = new Moto ("Ducati", "Monster", "7892GFS", 18600, false, false, false, "/es/deusto/grupo3/img/Ducati_Moster.jpg");
 		gestorMoto.anyadirFilaATablaMoto(BaseDeDatos.getStatement(), moto);
 		
-		///menu de log in y registrarse
+		
+		GestorClima gestorClima = new GestorClima();
+		Clima clima;
+		
+		clima = new Clima("donostia", 15.5, "nublado", 60);
+		gestorClima.anyadirFilaATablaClima(BaseDeDatos.getStatement(), clima);
+		
+		clima = new Clima("bilbao", 17, "sol y nubes", 15);
+		gestorClima.anyadirFilaATablaClima(BaseDeDatos.getStatement(), clima);
+		
+		//menu de log in y registrarse
+	
 		vistaPrincipal frame = new vistaPrincipal();
 		frame.setVisible(true);
 		

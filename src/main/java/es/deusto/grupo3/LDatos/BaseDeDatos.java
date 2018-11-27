@@ -213,5 +213,27 @@ public class BaseDeDatos {
 			log.info("NO se ha creado tabla HISTORIAL_ASIGNACIONES: ya existe");
 		}
 	 }
+	 
+	 /**
+		 * Crea la tabla Clima si no existe
+		 * 
+		 * @param pais
+		 * @param ciudad
+		 * @param temperatura
+		 * @param estado
+		 * @param precipitacion
+		 */
+		 public static void crearTablaBDClima(){
+			if (statement==null)
+				return ;
+			 try {
+				statement.executeUpdate("create table if not exists CLIMA (ciudad string, temperatura double, estado string, precipitacion int)");
+			} catch (SQLException e) {
+				// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+				if (!e.getMessage().equals("table interaccion already exists"))
+					e.printStackTrace();  
+				log.info("NO se ha creado tabla CLIMA: ya existe");
+			}
+		 }
 	
 }
