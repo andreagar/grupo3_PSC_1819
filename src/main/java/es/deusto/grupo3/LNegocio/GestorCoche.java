@@ -22,11 +22,13 @@ public class GestorCoche {
 	///GESTOR COCHE PARA LA GESTIÓN DE COCHES
 
 	ArrayList<Coche> listaCoche;
+	ArrayList<String> vehiculos;
 	
 	private final static Logger log = Logger.getLogger(App.class.getName());
 		
 	public GestorCoche (){
 		listaCoche = new ArrayList<Coche>();
+		vehiculos = new ArrayList<String>();
 	}
 		
 	/** Comprueba si un coche ya esta en la tabla COCHE de BD,
@@ -308,6 +310,52 @@ public class GestorCoche {
 				e.printStackTrace();
 				return false;
 			}
+	}
+	
+	public ArrayList<String> getVehiculosCoches(Statement st){
+		
+		///COCHES
+		try {
+			String sentSQL1 = "select matricula from COCHE";
+			log.info(sentSQL1);
+			ResultSet rs1 = st.executeQuery( sentSQL1 );
+			while (rs1.next()) {
+				vehiculos.add(rs1.getString(1));
+			}
+			rs1.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return vehiculos;
+	}
+	
+	public ArrayList<String> getVehiculosMotos(Statement st){
+		
+		try {
+			///MOTOS
+			String sentSQL2 = "select matricula from MOTO";
+			log.info(sentSQL2);
+			ResultSet rs2 = st.executeQuery( sentSQL2 );
+			while (rs2.next()) {
+				vehiculos.add(rs2.getString(1));
+				
+			}
+			rs2.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return vehiculos;
+	}
+	
+	public void vehiculos(){
+		for(int i=0; i<vehiculos.size(); i++){
+			System.out.println(vehiculos.get(i));
+		}
+		
 	}
 }
 	

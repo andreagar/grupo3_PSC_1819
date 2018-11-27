@@ -39,28 +39,28 @@ public class GestorCochePerftTest {
 	@PerfTest(invocations = 1000, threads = 20, duration=1500)   //PerfTest convierte un JUnit en una prueba Contiperf. A definir número de iteraciones y los hilos que se disponen
 	@Required(max = 200, average = 110, median=500)  //Required define las requisitos de rendimiento, si no los cumple --> rojo
     public void testanyadirFilaATablaCoche() throws Exception{
-		Thread.sleep(100);
+		//Thread.sleep(100);
     }
 	
 	@Test
 	@PerfTest(invocations = 1000, threads = 20, duration=1500)   //PerfTest convierte un JUnit en una prueba Contiperf. A definir número de iteraciones y los hilos que se disponen
 	@Required(max = 150, average = 109, median=500)  //Required define las requisitos de rendimiento, si no los cumple --> rojo
     public void testGetArrayCocheGlobal() throws Exception{
-		Thread.sleep(100);
+		//Thread.sleep(100);
     }
 	
 	@Test
 	@PerfTest(invocations = 500, threads = 20, duration=500)
 	@Required(max = 200, average = 110, median=300)
     public void testGetArrayCochesDisponibles() throws Exception{
-		Thread.sleep(100);
+		//Thread.sleep(100);
     }
 	
 	@Test
 	@PerfTest(invocations = 1000, threads = 20, duration=1000)
 	@Required(max = 170, average = 112, median=300)
 	public void AlquilarVehiculoUsuario() throws Exception{
-		Thread.sleep(100);
+		//Thread.sleep(100);
 	}
 
 }

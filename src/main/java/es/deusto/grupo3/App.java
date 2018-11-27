@@ -99,5 +99,6 @@ public class App
 		///menu de log in y registrarse
 		vistaPrincipal frame = new vistaPrincipal();
 		frame.setVisible(true);
+		
     }
 }
