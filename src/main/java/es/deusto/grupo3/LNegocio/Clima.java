@@ -15,6 +15,11 @@ public class Clima {
 	}
 	
 	
+	public Clima() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public String getCiudad() {
 		return ciudad;
 	}

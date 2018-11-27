@@ -89,7 +89,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 		btnOficinas.addActionListener(this);
 		
 		btnAemet = new JButton("AEMET");
-		btnAemet.setBounds(80, 387, 89, 23);
+		btnAemet.setBounds(185, 424, 120, 41);
 		contentPane.add(btnAemet);
 		btnAemet.addActionListener(this);
 		

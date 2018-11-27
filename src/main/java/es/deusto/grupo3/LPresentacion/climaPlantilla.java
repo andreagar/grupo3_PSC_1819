@@ -19,8 +19,12 @@ import org.apache.log4j.Logger;
 
 import es.deusto.grupo3.App;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Clima;
+import es.deusto.grupo3.LNegocio.GestorClima;
 import es.deusto.grupo3.LNegocio.GestorOficina;
 import es.deusto.grupo3.LNegocio.Oficina;
+
+import javax.swing.JTextArea;
 
 public class climaPlantilla extends JFrame implements ActionListener{
 
@@ -35,14 +39,17 @@ public class climaPlantilla extends JFrame implements ActionListener{
 	private JLabel lblOficinas;
 	private String nombre, ciudad;
 	private String tipoUsuario;
+	GestorClima clima;
 	private final static Logger log = Logger.getLogger(App.class.getName());
-	
+	private JLabel aaa;
 	/**
 	 * Create the frame.
 	 */
 	public climaPlantilla(String nombre, String ciudad) {
 		this.nombre = nombre;
 		this.ciudad = ciudad;
+		Statement st = BaseDeDatos.getStatement();
+		Clima cli = clima.getClima(st, ciudad);
 		
 		Toolkit toolkit = getToolkit();
 		setIconImage(toolkit.getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
@@ -55,7 +62,7 @@ public class climaPlantilla extends JFrame implements ActionListener{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel aaa = new JLabel("El tiempo");
+		aaa = new JLabel("El tiempo");
 		aaa.setFont(new Font("Verdana", Font.BOLD, 18));
 		aaa.setHorizontalAlignment(SwingConstants.CENTER);
 		aaa.setBounds(66, 11, 286, 36);
@@ -65,6 +72,42 @@ public class climaPlantilla extends JFrame implements ActionListener{
 		btnAtras.setFont(new Font("Verdana", Font.PLAIN, 11));
 		btnAtras.setBounds(10, 289, 89, 23);
 		contentPane.add(btnAtras);
+		
+		JLabel lblCiudad = new JLabel("Ciudad:");
+		lblCiudad.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblCiudad.setBounds(66, 68, 120, 23);
+		contentPane.add(lblCiudad);
+		
+		JLabel lblTemperatura = new JLabel("Temperatura:");
+		lblTemperatura.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblTemperatura.setBounds(66, 102, 113, 23);
+		contentPane.add(lblTemperatura);
+		
+		JLabel lblEstado = new JLabel("Estado:");
+		lblEstado.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblEstado.setBounds(66, 143, 89, 23);
+		contentPane.add(lblEstado);
+		
+		JLabel lblPrecipitacion = new JLabel("Precipitacion %:");
+		lblPrecipitacion.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblPrecipitacion.setBounds(66, 189, 120, 18);
+		contentPane.add(lblPrecipitacion);
+		
+		JTextArea textAreaCiudad = new JTextArea(cli.getCiudad());
+		textAreaCiudad.setBounds(172, 68, 113, 18);
+		contentPane.add(textAreaCiudad);
+		
+		JTextArea textAreaTemp = new JTextArea(Double.toString(cli.getTemperatura()));
+		textAreaTemp.setBounds(172, 102, 113, 18);
+		contentPane.add(textAreaTemp);
+		
+		JTextArea textAreaEstado = new JTextArea(cli.getEstado());
+		textAreaEstado.setBounds(173, 143, 113, 18);
+		contentPane.add(textAreaEstado);
+		
+		JTextArea textAreaPrecip = new JTextArea(Integer.toString(cli.getPrecipitacion()));
+		textAreaPrecip.setBounds(172, 187, 113, 18);
+		contentPane.add(textAreaPrecip);
 		btnAtras.addActionListener(this);
 
 	}
