@@ -63,5 +63,29 @@ public class GestorClima {
 				return false;
 			}
 	}
+	
+	public Clima getClima(Statement st, String ciudad){
+		Clima clima = null;
+		
+		String sentSQL = "select * from CLIMA where (ciudad = '" + ciudad + "')";
+		log.info(sentSQL);
+		try {
+			ResultSet rs = st.executeQuery( sentSQL );
+			log.info("El clima "+ciudad+" seleccionado correctamente");
+			if (rs.next()) {  // Normalmente se recorre con un while, pero aqui solo hay que ver si ya existe
+				clima = new Clima(rs.getString(1), rs.getDouble(2), rs.getString(3), rs.getInt(4)) ;
+				
+				log.info(clima.ciudad+", "+clima.estado+", "+clima.temperatura+", "+clima.precipitacion);
+				rs.close();
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			log.error("error en select clima: "+ciudad);
+		}
+		return clima;
+		
+	}
 
 }
