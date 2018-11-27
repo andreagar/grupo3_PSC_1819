@@ -14,32 +14,26 @@ public class Clima {
 		this.precipitacion = precipitacion;
 	}
 	
-	
-	public Clima() {
-		// TODO Auto-generated constructor stub
-	}
-
-
 	public String getCiudad() {
-		return ciudad;
+		return this.ciudad;
 	}
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
 	}
 	public double getTemperatura() {
-		return temperatura;
+		return this.temperatura;
 	}
 	public void setTemperatura(double temperatura) {
 		this.temperatura = temperatura;
 	}
 	public String getEstado() {
-		return estado;
+		return this.estado;
 	}
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
 	public int getPrecipitacion() {
-		return precipitacion;
+		return this.precipitacion;
 	}
 	public void setPrecipitacion(int precipitacion) {
 		this.precipitacion = precipitacion;

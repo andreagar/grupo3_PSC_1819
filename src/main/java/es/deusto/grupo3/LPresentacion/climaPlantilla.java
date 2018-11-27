@@ -39,9 +39,11 @@ public class climaPlantilla extends JFrame implements ActionListener{
 	private JLabel lblOficinas;
 	private String nombre, ciudad;
 	private String tipoUsuario;
-	GestorClima clima;
+	GestorClima gestorClima;
 	private final static Logger log = Logger.getLogger(App.class.getName());
 	private JLabel aaa;
+	//Clima clima = new Clima("juan",2,"prueba",3);
+	Clima clima = new Clima(null, 0, null, 0);
 	/**
 	 * Create the frame.
 	 */
@@ -49,7 +51,12 @@ public class climaPlantilla extends JFrame implements ActionListener{
 		this.nombre = nombre;
 		this.ciudad = ciudad;
 		Statement st = BaseDeDatos.getStatement();
-		Clima cli = clima.getClima(st, ciudad);
+		double precip = gestorClima.getClima(st, ciudad).getTemperatura(); //esto es para ver si tambien falla esto o fallaba en la inicializacion del objeto Clima
+		//Clima clima = new Clima (gestorClima.getClima(st, ciudad).getCiudad(), gestorClima.getClima(st, ciudad).getTemperatura(), gestorClima.getClima(st, ciudad).getEstado(), gestorClima.getClima(st, ciudad).getPrecipitacion());//AQUI ESTA EL ERROR
+		clima.setCiudad(gestorClima.getClima(st, ciudad).getCiudad());
+		clima.setTemperatura(gestorClima.getClima(st, ciudad).getTemperatura());
+		clima.setEstado(gestorClima.getClima(st, ciudad).getEstado());
+		clima.setPrecipitacion(gestorClima.getClima(st, ciudad).getPrecipitacion());
 		
 		Toolkit toolkit = getToolkit();
 		setIconImage(toolkit.getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
@@ -93,19 +100,19 @@ public class climaPlantilla extends JFrame implements ActionListener{
 		lblPrecipitacion.setBounds(66, 189, 120, 18);
 		contentPane.add(lblPrecipitacion);
 		
-		JTextArea textAreaCiudad = new JTextArea(cli.getCiudad());
+		JTextArea textAreaCiudad = new JTextArea(clima.getCiudad());
 		textAreaCiudad.setBounds(172, 68, 113, 18);
 		contentPane.add(textAreaCiudad);
 		
-		JTextArea textAreaTemp = new JTextArea(Double.toString(cli.getTemperatura()));
+		JTextArea textAreaTemp = new JTextArea(Double.toString(clima.getTemperatura()));
 		textAreaTemp.setBounds(172, 102, 113, 18);
 		contentPane.add(textAreaTemp);
 		
-		JTextArea textAreaEstado = new JTextArea(cli.getEstado());
+		JTextArea textAreaEstado = new JTextArea(clima.getEstado());
 		textAreaEstado.setBounds(173, 143, 113, 18);
 		contentPane.add(textAreaEstado);
 		
-		JTextArea textAreaPrecip = new JTextArea(Integer.toString(cli.getPrecipitacion()));
+		JTextArea textAreaPrecip = new JTextArea(Integer.toString(clima.getPrecipitacion()));
 		textAreaPrecip.setBounds(172, 187, 113, 18);
 		contentPane.add(textAreaPrecip);
 		btnAtras.addActionListener(this);

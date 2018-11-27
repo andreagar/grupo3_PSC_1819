@@ -65,7 +65,7 @@ public class GestorClima {
 	}
 	
 	public Clima getClima(Statement st, String ciudad){
-		Clima clima = null;
+		Clima clima = new Clima(null,0,null,0);
 		
 		String sentSQL = "select * from CLIMA where (ciudad = '" + ciudad + "')";
 		log.info(sentSQL);
@@ -76,7 +76,7 @@ public class GestorClima {
 				clima = new Clima(rs.getString(1), rs.getDouble(2), rs.getString(3), rs.getInt(4)) ;
 				
 				log.info(clima.ciudad+", "+clima.estado+", "+clima.temperatura+", "+clima.precipitacion);
-				rs.close();
+				
 				
 			}
 		} catch (SQLException e) {
