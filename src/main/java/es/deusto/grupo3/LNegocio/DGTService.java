@@ -14,6 +14,14 @@ public class DGTService {
 	public String estadoCarreterasCiudad(String ciudad){
 		return dgt.estadoCarreteras(ciudad);
 	}
+	
+	public IDGT getDGT(){
+		return dgt;
+	}
+	
+	public void setCal(IDGT dgt) {
+		this.dgt = dgt;
+	}
 
 }
 
