@@ -77,7 +77,6 @@ public class GestorClima {
 				
 				log.info(clima.ciudad+", "+clima.estado+", "+clima.temperatura+", "+clima.precipitacion);
 				
-				
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

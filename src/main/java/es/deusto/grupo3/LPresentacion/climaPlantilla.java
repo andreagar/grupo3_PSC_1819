@@ -43,15 +43,18 @@ public class climaPlantilla extends JFrame implements ActionListener{
 	private final static Logger log = Logger.getLogger(App.class.getName());
 	private JLabel aaa;
 	//Clima clima = new Clima("juan",2,"prueba",3);
-	Clima clima = new Clima(null, 0, null, 0);
+	Clima clima;
 	/**
 	 * Create the frame.
 	 */
 	public climaPlantilla(String nombre, String ciudad) {
+		clima = new Clima(null, 0, null, 0);
+		gestorClima = new GestorClima();
 		this.nombre = nombre;
 		this.ciudad = ciudad;
 		Statement st = BaseDeDatos.getStatement();
 		double precip = gestorClima.getClima(st, ciudad).getTemperatura(); //esto es para ver si tambien falla esto o fallaba en la inicializacion del objeto Clima
+		
 		//Clima clima = new Clima (gestorClima.getClima(st, ciudad).getCiudad(), gestorClima.getClima(st, ciudad).getTemperatura(), gestorClima.getClima(st, ciudad).getEstado(), gestorClima.getClima(st, ciudad).getPrecipitacion());//AQUI ESTA EL ERROR
 		clima.setCiudad(gestorClima.getClima(st, ciudad).getCiudad());
 		clima.setTemperatura(gestorClima.getClima(st, ciudad).getTemperatura());
