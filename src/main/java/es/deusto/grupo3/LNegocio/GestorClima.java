@@ -64,6 +64,11 @@ public class GestorClima {
 			}
 	}
 	
+	/** Devuelve el clima de la ciudad que se ha solicitado mediante parámetro.
+	 * @param st	Sentencia ya abierta de base de datos
+	 * @param ciudad nombre de la ciudad que se va a seleccionar
+	 * @return	objeto tipo clima con la información de la BD
+	 */
 	public Clima getClima(Statement st, String ciudad){
 		Clima clima = new Clima(null,0,null,0);
 		

@@ -2,6 +2,8 @@ package es.deusto.grupo3.LNegocio;
 
 public class Clima {
 
+	///OBJETO CLIMA: ciudad, temperatura, estado, precipitacion
+	
 	String ciudad;
 	double temperatura;
 	String estado;
