@@ -1,5 +1,9 @@
 package es.deusto.grupo3.LNegocio;
 
+import org.apache.log4j.Logger;
+
+import es.deusto.grupo3.App;
+
 public class Clima {
 
 	///OBJETO CLIMA: ciudad, temperatura, estado, precipitacion
@@ -8,12 +12,14 @@ public class Clima {
 	double temperatura;
 	String estado;
 	int precipitacion;
+	private final static Logger log = Logger.getLogger(App.class.getName());
 	
 	public Clima(String ciudad, double temperatura, String estado, int precipitacion){
 		this.ciudad = ciudad;
 		this.temperatura = temperatura;
 		this.estado = estado;
 		this.precipitacion = precipitacion;
+		log.info("se ha construido correctamente: Clima");
 	}
 	
 	public String getCiudad() {

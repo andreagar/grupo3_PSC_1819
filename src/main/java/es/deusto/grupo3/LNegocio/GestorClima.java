@@ -16,6 +16,7 @@ public class GestorClima {
 	 * de campos apropiados: (String ciudad, double temperatura, String estado, int precipitacion)
 	 * Usa la sentencia INSERT de SQL.
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al clima)
+	 * @param clima clima que se va a añadir
 	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
 	 */
 	public boolean anyadirFilaATablaClima( Statement st, Clima clima ) {
@@ -42,6 +43,7 @@ public class GestorClima {
 	/** Comprueba si un clima ya esta en la tabla COCHE de BD,
 	 * considerando la trayectoria completa del disco como informacion clave.
 	 * @param st	Sentencia ya abierta de base de datos
+	 * @param ciudad nombre de la ciudad que se va a seleccionar
 	 * @return	true si el clima ya esta en la tabla, false en caso contrario
 	 */
 	public boolean chequearYaEnTabla( Statement st, String ciudad ) {
