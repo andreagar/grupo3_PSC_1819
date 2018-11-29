@@ -235,5 +235,29 @@ public class BaseDeDatos {
 				log.info("NO se ha creado tabla CLIMA: ya existe");
 			}
 		 }
+		 
+		 
+		 /**
+			 * Crea la tabla OPINIONES si no existe
+			 * 
+			 * @param usurio
+			 * @param matricula
+			 * @param puntuacion
+			 * @param comentario
+			 */
+		 public static void crearTablaBDOpiniones(){
+			if (statement==null)
+				return ;
+			 try {
+
+				statement.executeUpdate("create table if not exists OPINIONES (usuario string, matricula string, puntuacion int, comentario string)");
+
+			} catch (SQLException e) {
+				// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)
+				if (!e.getMessage().equals("table interaccion already exists"))
+					e.printStackTrace();  
+				log.info("NO se ha creado tabla OPINIONES: ya existe");
+			}
+		 }
 	
 }

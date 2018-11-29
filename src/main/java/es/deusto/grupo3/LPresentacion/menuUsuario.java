@@ -30,6 +30,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 	private JButton btnHistorial;
 	private JButton btnEliminar;
 	private JButton btnOficinas;
+	private JButton btnOpinion;
 	private JButton btnSalir;
 	private String nombre;
 	private JButton btnAemet;
@@ -44,7 +45,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 500, 500);
+		setBounds(100, 100, 627, 500);
 		contentPane = new PanelConImagen();
 		contentPane.setBackgroundImage(toolkit.getImage(login.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -54,54 +55,61 @@ public class menuUsuario extends JFrame implements ActionListener{
 		btnCoche = new JButton("<html><body>Alquilar/Comprar<br><center>COCHE</center></body></html>");
 		btnCoche.setToolTipText("");
 		btnCoche.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnCoche.setBounds(52, 130, 157, 70);
+		btnCoche.setBounds(52, 114, 157, 70);
 		contentPane.add(btnCoche);
 		btnCoche.addActionListener(this);
 		
 		btnMoto = new JButton("<html><body>Alquilar/Comprar<br><center>MOTO</center></body></html>");
 		btnMoto.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnMoto.setBounds(272, 130, 157, 70);
+		btnMoto.setBounds(248, 114, 157, 70);
 		contentPane.add(btnMoto);
 		btnMoto.addActionListener(this);
 		
 		btnHistorial = new JButton("Ver mi historial");
 		btnHistorial.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnHistorial.setBounds(52, 235, 157, 70);
+		btnHistorial.setBounds(435, 218, 157, 70);
 		contentPane.add(btnHistorial);
 		btnHistorial.addActionListener(this);
 		
 		btnModificar = new JButton("<html><body>Modificar mi<br><center>contraseña</center></body></html>");
 		btnModificar.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnModificar.setBounds(272, 235, 157, 70);
+		btnModificar.setBounds(52, 218, 157, 70);
 		contentPane.add(btnModificar);
 		btnModificar.addActionListener(this);
 		
 		btnEliminar = new JButton("Cancelar alquiler");
 		btnEliminar.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnEliminar.setBounds(52, 345, 157, 70);
+		btnEliminar.setBounds(248, 218, 157, 70);
 		contentPane.add(btnEliminar);
 		btnEliminar.addActionListener(this);
 		
 		btnOficinas = new JButton("Ver oficinas");
 		btnOficinas.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnOficinas.setBounds(272, 345, 157, 70);
+		btnOficinas.setBounds(371, 319, 157, 70);
 		contentPane.add(btnOficinas);
 		btnOficinas.addActionListener(this);
 		
 		btnAemet = new JButton("AEMET");
-		btnAemet.setBounds(185, 424, 120, 41);
+		btnAemet.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnAemet.setBounds(146, 319, 157, 70);
 		contentPane.add(btnAemet);
 		btnAemet.addActionListener(this);
 		
+		btnOpinion = new JButton("Reseñas");
+		btnOpinion.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnOpinion.setBounds(435, 114, 157, 70);
+		contentPane.add(btnOpinion);
+		btnOpinion.addActionListener(this);
+		
 		btnSalir = new JButton("Cerrar sesion");
 		btnSalir.setFont(new Font("Verdana", Font.PLAIN, 12));
-		btnSalir.setBounds(10, 430, 120, 27);
+		btnSalir.setBounds(24, 423, 120, 27);
 		contentPane.add(btnSalir);
 		btnSalir.addActionListener(this);
 		
-		lblNewLabel = new JLabel("Alquiler/compra coches HyraCar", SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 20));
-		lblNewLabel.setBounds(52, 50, 383, 41);
+		lblNewLabel = new JLabel("Alquiler/compra de coches HyraCar", SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 22));
+		lblNewLabel.setBounds(52, 28, 540, 50);
 		lblNewLabel.setVerticalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
 	
@@ -156,6 +164,12 @@ public class menuUsuario extends JFrame implements ActionListener{
 			cl.setVisible(true);			
 		}
 		
+		if (e.getSource() == btnOpinion){
+			dispose();
+			opinionMenu cl = new opinionMenu(nombre);
+			cl.setVisible(true);			
+		}
+		
 		if (e.getSource() == btnSalir){
 			dispose();
 			nombre = null;
@@ -163,5 +177,4 @@ public class menuUsuario extends JFrame implements ActionListener{
 			frame.setVisible(true);
 		}
 	}
-
 }
