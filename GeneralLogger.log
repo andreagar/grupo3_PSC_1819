@@ -763,3 +763,157 @@
 2018-11-29 13:03:41,892 INFO  es.deusto.grupo3.App ~ select matricula from ASIGNACIONES where usuario = ?
 2018-11-29 13:03:45,045 INFO  es.deusto.grupo3.App ~ select * from OPINIONES where (matricula = ''and usuario = 'andrea')
 2018-11-29 13:03:56,799 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-29 13:34:15,847 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-29 13:34:16,970 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-29 13:34:16,970 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-29 13:34:16,986 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-29 13:34:16,986 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 13:34:16,986 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-29 13:34:16,986 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 13:34:16,986 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-29 13:34:16,986 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 13:34:16,986 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-29 13:34:16,986 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 13:34:16,986 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-29 13:34:16,986 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 13:34:16,986 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-29 13:34:16,986 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 13:34:16,986 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-29 13:34:16,986 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-29 13:34:16,986 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-29 13:34:16,986 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-29 20:37:15,467 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-29 20:37:16,621 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-29 20:37:16,621 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-29 20:37:16,637 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-29 20:37:16,637 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 20:37:16,637 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-29 20:37:16,637 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 20:37:16,637 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-29 20:37:16,637 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 20:37:16,637 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-29 20:37:16,637 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 20:37:16,637 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-29 20:37:16,637 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 20:37:16,637 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-29 20:37:16,637 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 20:37:16,637 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-29 20:37:16,637 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-29 20:37:16,637 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-29 20:37:16,637 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-29 20:37:29,640 INFO  es.deusto.grupo3.App ~ select * from USUARIO where ( nombre = 'z' and contrasenya = 'z')
+2018-11-29 20:37:38,146 INFO  es.deusto.grupo3.App ~ select * from USUARIO where (nombre = 'a')
+2018-11-29 20:37:38,146 INFO  es.deusto.grupo3.App ~ insert into USUARIO values('a', 'a')
+2018-11-29 20:37:41,726 INFO  es.deusto.grupo3.App ~ select * from USUARIO where ( nombre = 'a' and contrasenya = 'a')
+2018-11-29 20:37:41,726 WARN  es.deusto.grupo3.App ~ Nombre de usuario y contrasenya correctas
+2018-11-29 20:37:45,708 INFO  es.deusto.grupo3.App ~ select * from COCHE
+2018-11-29 20:37:47,619 INFO  es.deusto.grupo3.App ~ select * from COCHE
+2018-11-29 20:37:56,614 INFO  es.deusto.grupo3.App ~ select * from MOTO
+2018-11-29 20:37:58,735 INFO  es.deusto.grupo3.App ~ select * from MOTO
+2018-11-29 20:47:31,894 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-29 20:47:33,066 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-29 20:47:33,066 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-29 20:47:33,082 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-29 20:47:33,082 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 20:47:33,082 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-29 20:47:33,082 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 20:47:33,082 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-29 20:47:33,082 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 20:47:33,097 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-29 20:47:33,097 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 20:47:33,097 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-29 20:47:33,097 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 20:47:33,097 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-29 20:47:33,097 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 20:47:33,097 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-29 20:47:33,097 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-29 20:47:33,097 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-29 20:47:33,097 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-29 20:47:40,846 INFO  es.deusto.grupo3.App ~ select * from USUARIO where ( nombre = 'a' and contrasenya = 'a')
+2018-11-29 20:47:40,846 WARN  es.deusto.grupo3.App ~ Nombre de usuario y contrasenya correctas
+2018-11-29 20:47:43,411 INFO  es.deusto.grupo3.App ~ select * from COCHE
+2018-11-29 20:47:48,719 INFO  es.deusto.grupo3.App ~ select * from COCHE
+2018-11-29 20:47:49,639 INFO  es.deusto.grupo3.App ~ update COCHE set alquilado = ? where matricula = ?
+2018-11-29 20:48:28,977 INFO  es.deusto.grupo3.App ~ select matricula from ASIGNACIONES where usuario = ?
+2018-11-29 20:48:37,845 INFO  es.deusto.grupo3.App ~ select * from OPINIONES where (matricula = '1234ABC'and usuario = 'a')
+2018-11-29 20:48:40,437 INFO  es.deusto.grupo3.App ~ select * from HISTORIAL_ASIGNACIONES where usuario = ?
+2018-11-29 20:49:19,789 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-29 21:07:24,271 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-29 21:07:25,476 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-29 21:07:25,476 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-29 21:07:25,486 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-29 21:07:25,486 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:07:25,486 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-29 21:07:25,486 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:07:25,486 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-29 21:07:25,486 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:07:25,486 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-29 21:07:25,486 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:07:25,486 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-29 21:07:25,486 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:07:25,486 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-29 21:07:25,486 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:07:25,496 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-29 21:07:25,496 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-29 21:07:25,496 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-29 21:07:25,496 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-29 21:07:28,999 INFO  es.deusto.grupo3.App ~ select * from USUARIO where ( nombre = 'a' and contrasenya = 'a')
+2018-11-29 21:07:28,999 WARN  es.deusto.grupo3.App ~ Nombre de usuario y contrasenya correctas
+2018-11-29 21:07:31,014 INFO  es.deusto.grupo3.App ~ select * from HISTORIAL_ASIGNACIONES where usuario = ?
+2018-11-29 21:08:46,834 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-29 21:08:47,916 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-29 21:08:47,916 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-29 21:08:47,931 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-29 21:08:47,931 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:08:47,931 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-29 21:08:47,931 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:08:47,931 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-29 21:08:47,931 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:08:47,931 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-29 21:08:47,931 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:08:47,931 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-29 21:08:47,931 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:08:47,931 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-29 21:08:47,931 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:08:47,947 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-29 21:08:47,947 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-29 21:08:47,947 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-29 21:08:47,947 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-29 21:12:31,450 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-29 21:12:32,547 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-29 21:12:32,547 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-29 21:12:32,563 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-29 21:12:32,563 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:12:32,563 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-29 21:12:32,563 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:12:32,563 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-29 21:12:32,563 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:12:32,563 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-29 21:12:32,563 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:12:32,563 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-29 21:12:32,563 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:12:32,563 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-29 21:12:32,563 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:12:32,579 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-29 21:12:32,579 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-29 21:12:32,579 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-29 21:12:32,579 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-29 21:15:35,163 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-29 21:15:36,286 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-29 21:15:36,286 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-29 21:15:36,301 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-29 21:15:36,301 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:15:36,301 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-29 21:15:36,301 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:15:36,301 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-29 21:15:36,301 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-29 21:15:36,301 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-29 21:15:36,301 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:15:36,301 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-29 21:15:36,301 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:15:36,301 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-29 21:15:36,301 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-29 21:15:36,301 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-29 21:15:36,301 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-29 21:15:36,301 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-29 21:15:36,301 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro

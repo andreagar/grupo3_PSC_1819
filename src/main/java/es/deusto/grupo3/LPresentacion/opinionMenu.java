@@ -205,10 +205,10 @@ public class opinionMenu extends JFrame implements ActionListener{
 		Statement st = BaseDeDatos.getStatement();
 	
 		for (String asig : vehiculo.getUsuarioMatriculas(st, usuario) ){
-			modeloAsig.addElement( asig.toString() );
+			modeloAsig.addElement(asig.toString());
 		}
 	
-		listVehiculo.setModel( modeloAsig );
+		listVehiculo.setModel(modeloAsig);
 	}
 
 

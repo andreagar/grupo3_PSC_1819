@@ -23,8 +23,10 @@ public class menuAdmin extends JFrame implements ActionListener{
 	private JButton btnCoche;
 	private JButton btnRegistrarMoto;
 	private JButton btnCerrar;
+	private JButton btnOpiniones;
 	private JButton btnOficina;
 	private JLabel lblHyracarAdministracion;
+	
 	
 	/**
 	 * Create the frame.
@@ -55,7 +57,7 @@ public class menuAdmin extends JFrame implements ActionListener{
 		
 		btnRegistrarMoto = new JButton("Moto");
 		btnRegistrarMoto.setFont(new Font("Verdana", Font.PLAIN, 18));
-		btnRegistrarMoto.setBounds(256, 97, 150, 51);
+		btnRegistrarMoto.setBounds(245, 97, 150, 51);
 		contentPane.add(btnRegistrarMoto);
 		btnRegistrarMoto.addActionListener(this);
 		
@@ -69,6 +71,11 @@ public class menuAdmin extends JFrame implements ActionListener{
 		btnCerrar.setFont(new Font("Verdana", Font.PLAIN, 11));
 		btnCerrar.setBounds(21, 236, 89, 23);
 		contentPane.add(btnCerrar);
+		
+		btnOpiniones = new JButton("Reseñas");
+		btnOpiniones.setFont(new Font("Verdana", Font.PLAIN, 18));
+		btnOpiniones.setBounds(245, 159, 150, 51);
+		contentPane.add(btnOpiniones);
 		btnCerrar.addActionListener(this);
 	}
 
@@ -81,16 +88,25 @@ public class menuAdmin extends JFrame implements ActionListener{
 			adminCoche menuCoche = new adminCoche();
 			menuCoche.setVisible(true);
 		}
+		
 		if (e.getSource() == btnRegistrarMoto){
 			adminMoto vistaMoto = new adminMoto();
 			vistaMoto.setVisible(true);
 			dispose();
 		}
+		
 		if (e.getSource() == btnOficina){
 			dispose();
 			adminOficina vista = new adminOficina();
 			vista.setVisible(true);
 		}
+		
+		if (e.getSource() == btnOpiniones){
+			dispose();
+			adminOpiniones vista = new adminOpiniones();
+			vista.setVisible(true);
+		}
+		
 		if (e.getSource() == btnCerrar){
 			dispose();
 			vistaPrincipal vista = new vistaPrincipal();
