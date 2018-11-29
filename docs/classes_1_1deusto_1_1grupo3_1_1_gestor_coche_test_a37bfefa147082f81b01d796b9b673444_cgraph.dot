@@ -1,0 +1,24 @@
+digraph "es.deusto.grupo3.GestorCocheTest.getUsuarioHistorial"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node9 [label="es.deusto.grupo3.GestorCoche\lTest.getUsuarioHistorial",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="es.deusto.grupo3.LNegocio.\lGestorCoche.AlquilarVehiculoUsuario",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1grupo3_1_1_l_negocio_1_1_gestor_coche.html#ad3cba45ce93f12441766c112e2378448"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="es.deusto.grupo3.LDatos.\lBaseDeDatos.getConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1grupo3_1_1_l_datos_1_1_base_de_datos.html#a1c5069726bf3121d34bd186fd6f76972"];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="es.deusto.grupo3.LNegocio.\lAsignaciones.getAlquilado",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1grupo3_1_1_l_negocio_1_1_asignaciones.html#afe5ede9aa58b6ada74b935f2db975d79"];
+  Node10 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="es.deusto.grupo3.LNegocio.\lAsignaciones.getMatricula",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1grupo3_1_1_l_negocio_1_1_asignaciones.html#aa941de4269d65bf0d72cbda9dacd2aae"];
+  Node10 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="es.deusto.grupo3.LNegocio.\lAsignaciones.getUsuario",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1grupo3_1_1_l_negocio_1_1_asignaciones.html#a5dadaadc87140e1fadfa690ae04467fe"];
+  Node10 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="es.deusto.grupo3.LNegocio.\lAsignaciones.getVehiculo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1grupo3_1_1_l_negocio_1_1_asignaciones.html#a009dc9c9cda362567f5029104d433f59"];
+  Node9 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="es.deusto.grupo3.LDatos.\lBaseDeDatos.getStatement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1grupo3_1_1_l_datos_1_1_base_de_datos.html#a9657b1feb4c9852ab9d5f438239cb7b4"];
+  Node9 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="es.deusto.grupo3.LNegocio.\lGestorCoche.getUsuarioHistorial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1grupo3_1_1_l_negocio_1_1_gestor_coche.html#a1e5cc3a582a77a2de37ef1be311bb172"];
+  Node17 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
