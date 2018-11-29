@@ -249,8 +249,7 @@ public class BaseDeDatos {
 			if (statement==null)
 				return ;
 			 try {
-
-				statement.executeUpdate("create table if not exists OPINIONES (usuario string, matricula string, puntuacion int, comentario string)");
+				statement.executeUpdate("create table if not exists OPINIONES (usuario string, matricula string, puntuacion string, comentario string)");
 
 			} catch (SQLException e) {
 				// Si hay excepcion es que la tabla ya existï¿½a (lo cual es correcto)

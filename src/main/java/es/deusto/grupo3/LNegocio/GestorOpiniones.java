@@ -49,14 +49,13 @@ public class GestorOpiniones {
 		//SELECT
 			try {
 
-				String sentSQL = "select * from OPINIONES where (matricula = '" + matricula + ", usuario = '" + nombre + "')";
+				String sentSQL = "select * from OPINIONES where (matricula = '" + matricula + "'and usuario = '" + nombre + "')";
 				log.info(sentSQL);
 				ResultSet rs = st.executeQuery( sentSQL );
 				
 				if (rs.next()) {  // Normalmente se recorre con un while, pero aqui solo hay que ver si ya existe
 					rs.close();
 					log.warn("La reseña ya existe");
-					//JOptionPane.showMessageDialog(null, "El coche ya existe, prueba con otro","Mensaje de error",JOptionPane.ERROR_MESSAGE);
 					return true;
 				}
 				return false;
@@ -70,7 +69,7 @@ public class GestorOpiniones {
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a asignaciones)
 	 * @param nombre	Nombre del usuario logeado
 	 */
-	public boolean guardarOpinion(Statement st, String nombre, String matricula, int puntuacion, String comentario){
+	public boolean guardarOpinion(Statement st, String nombre, String matricula, String puntuacion, String comentario){
 		
 		if (chequearYaEnTabla(st, matricula, nombre) == false) {  // Si esta ya en la tabla
 			// Insercion normal

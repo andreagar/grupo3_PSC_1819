@@ -1,14 +1,13 @@
 package es.deusto.grupo3.LPresentacion;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.URL;
 import java.sql.Statement;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
 
+import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -17,20 +16,20 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
 import es.deusto.grupo3.App;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
-import es.deusto.grupo3.LNegocio.Asignaciones;
-import es.deusto.grupo3.LNegocio.Coche;
 import es.deusto.grupo3.LNegocio.GestorOpiniones;
-import es.deusto.grupo3.LNegocio.Moto;
 
 import java.awt.Toolkit;
 
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
+import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EtchedBorder;
 
@@ -67,12 +66,14 @@ public class opinionMenu extends JFrame implements ActionListener{
 	private GestorOpiniones objVehiculo;
 	private JComboBox comboBox;
 	private JTextField txtMatricula;
+	private JTextArea txtComentario;
 	private int lim;
 	
 	
 	/**
 	 * Create the frame.
 	 */
+	@SuppressWarnings("unchecked")
 	public opinionMenu(String nombre) {
 		
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(asignarCoche.class.getResource("/es/deusto/grupo3/img/icon.png")));
@@ -131,33 +132,45 @@ public class opinionMenu extends JFrame implements ActionListener{
 		
 		lblPuntos = new JLabel("Puntuación:");
 		lblPuntos.setFont(new Font("Verdana", Font.PLAIN, 14));
-		lblPuntos.setBounds(284, 112, 100, 28);
+		lblPuntos.setBounds(222, 112, 100, 28);
 		contentPane.add(lblPuntos);
 		
 		lblMatrcula = new JLabel("Matrícula:");
 		lblMatrcula.setFont(new Font("Verdana", Font.PLAIN, 14));
-		lblMatrcula.setBounds(284, 73, 100, 28);
+		lblMatrcula.setBounds(222, 73, 100, 28);
 		contentPane.add(lblMatrcula);
 		
 		lblComentario = new JLabel("Comentario:");
 		lblComentario.setFont(new Font("Verdana", Font.PLAIN, 14));
-		lblComentario.setBounds(284, 149, 100, 28);
+		lblComentario.setBounds(222, 149, 100, 28);
 		contentPane.add(lblComentario);
 		
 		comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
 		comboBox.setSelectedIndex(4);
 		comboBox.setFont(new Font("Verdana", Font.PLAIN, 14));
-		comboBox.setBounds(391, 112, 38, 26);
+		comboBox.setBounds(329, 112, 38, 26);
 		contentPane.add(comboBox);
 		
 		txtMatricula = new JTextField();
+		txtMatricula.setEditable(false);
 		txtMatricula.setEnabled(false);
 		txtMatricula.setColumns(10);
-		txtMatricula.setBounds(391, 79, 154, 20);
+		txtMatricula.setBounds(329, 79, 154, 20);
 		contentPane.add(txtMatricula);
 		
-		txtMatricula.setEnabled(false);
+		txtComentario = new JTextArea();
+		txtComentario.setFont(new Font("Verdana", Font.PLAIN, 13));
+		txtComentario.setBounds(222, 176, 386, 108);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		txtComentario.setColumns(20);
+		txtComentario.setLineWrap(true);
+		txtComentario.setRows(5);
+		txtComentario.setWrapStyleWord(true);
+		Border border = BorderFactory.createLineBorder(Color.BLACK);
+		txtComentario.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+		contentPane.add(txtComentario);
+
 		
 		objVehiculo=new GestorOpiniones();
 		this.CargarLista(objVehiculo);
@@ -174,7 +187,7 @@ public class opinionMenu extends JFrame implements ActionListener{
 		}
 		
 		if (e.getSource() == btnGuardar){
-			//añadir lo de guardar
+			this.guardar();
 			menuUsuario menu1 = new menuUsuario(this.usuario);
 			menu1.setVisible(true);
 			dispose();
@@ -189,7 +202,6 @@ public class opinionMenu extends JFrame implements ActionListener{
 	public void CargarLista(GestorOpiniones vehiculo){
 		
 		modeloAsig = new DefaultListModel();
-		
 		Statement st = BaseDeDatos.getStatement();
 	
 		for (String asig : vehiculo.getUsuarioMatriculas(st, usuario) ){
@@ -197,7 +209,6 @@ public class opinionMenu extends JFrame implements ActionListener{
 		}
 	
 		listVehiculo.setModel( modeloAsig );
-	
 	}
 
 
@@ -213,4 +224,27 @@ public class opinionMenu extends JFrame implements ActionListener{
 					"Mensaje de error",JOptionPane.ERROR_MESSAGE);
 		}
 	}	
+	
+	public void guardar(){
+		
+		Statement st = BaseDeDatos.getStatement();
+		GestorOpiniones gestor = new GestorOpiniones();
+		
+		String puntuacion = txtComentario.getSelectedText();
+		String matricula = txtMatricula.getText();
+		String comentario = txtComentario.getText();
+		
+		boolean correcto = gestor.chequearYaEnTabla(st, matricula, this.usuario);
+		
+		if(correcto == true){
+			boolean cambio = gestor.guardarOpinion(st, this.usuario, matricula, puntuacion, comentario);
+			
+			if (cambio == true){
+				System.out.println("Reseña guardada");
+				menuAdmin vista = new menuAdmin();
+				vista.setVisible(true);
+				dispose();
+			}
+		}
+	}
 }

@@ -78,6 +78,7 @@ public class App
 		BaseDeDatos.crearTablaBDHistorialAsignaciones();
 		BaseDeDatos.crearTablaBDOficina();
 		BaseDeDatos.crearTablaBDClima();
+		BaseDeDatos.crearTablaBDOpiniones();
 	
 		/*
 		 * 
