@@ -25,6 +25,7 @@ import es.deusto.grupo3.LNegocio.GestorOficina;
 import es.deusto.grupo3.LNegocio.Oficina;
 
 import javax.swing.JTextArea;
+import javax.swing.ImageIcon;
 
 public class climaPlantilla extends JFrame implements ActionListener{
 
@@ -65,7 +66,7 @@ public class climaPlantilla extends JFrame implements ActionListener{
 		setIconImage(toolkit.getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
 		setTitle("HyraCar: AEMET");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 446, 361);
+		setBounds(100, 100, 469, 361);
 		contentPane = new PanelConImagen();
 		contentPane.setBackgroundImage(toolkit.getImage(login.class.getResource("/es/deusto/grupo3/img/fondo.jpg")));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -75,50 +76,63 @@ public class climaPlantilla extends JFrame implements ActionListener{
 		aaa = new JLabel("El tiempo");
 		aaa.setFont(new Font("Verdana", Font.BOLD, 18));
 		aaa.setHorizontalAlignment(SwingConstants.CENTER);
-		aaa.setBounds(66, 11, 286, 36);
+		aaa.setBounds(70, 80, 286, 36);
 		contentPane.add(aaa);
 		
 		btnAtras = new JButton("Atras");
 		btnAtras.setFont(new Font("Verdana", Font.PLAIN, 11));
 		btnAtras.setBounds(10, 289, 89, 23);
 		contentPane.add(btnAtras);
+		btnAtras.addActionListener(this);
 		
 		JLabel lblCiudad = new JLabel("Ciudad:");
 		lblCiudad.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblCiudad.setBounds(66, 68, 120, 23);
+		lblCiudad.setBounds(21, 134, 120, 23);
 		contentPane.add(lblCiudad);
 		
 		JLabel lblTemperatura = new JLabel("Temperatura:");
 		lblTemperatura.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblTemperatura.setBounds(66, 102, 113, 23);
+		lblTemperatura.setBounds(20, 168, 98, 23);
 		contentPane.add(lblTemperatura);
 		
 		JLabel lblEstado = new JLabel("Estado:");
 		lblEstado.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblEstado.setBounds(66, 143, 89, 23);
+		lblEstado.setBounds(229, 134, 89, 23);
 		contentPane.add(lblEstado);
 		
 		JLabel lblPrecipitacion = new JLabel("Precipitacion %:");
 		lblPrecipitacion.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblPrecipitacion.setBounds(66, 189, 120, 18);
+		lblPrecipitacion.setBounds(229, 168, 113, 18);
 		contentPane.add(lblPrecipitacion);
 		
-		JTextArea textAreaCiudad = new JTextArea(clima.getCiudad());
-		textAreaCiudad.setBounds(172, 68, 113, 18);
-		contentPane.add(textAreaCiudad);
+		JLabel lblVarPrecip = new JLabel(Integer.toString(clima.getPrecipitacion()));
+		lblVarPrecip.setFont(new Font("Source Code Pro Light", Font.ITALIC, 13));
+		lblVarPrecip.setBounds(352, 168, 58, 23);
+		contentPane.add(lblVarPrecip);
 		
-		JTextArea textAreaTemp = new JTextArea(Double.toString(clima.getTemperatura()));
-		textAreaTemp.setBounds(172, 102, 113, 18);
-		contentPane.add(textAreaTemp);
+		JLabel lblVarEstado = new JLabel(clima.getEstado());
+		lblVarEstado.setFont(new Font("Source Code Pro Light", Font.ITALIC, 13));
+		lblVarEstado.setBounds(293, 134, 115, 23);
+		contentPane.add(lblVarEstado);
 		
-		JTextArea textAreaEstado = new JTextArea(clima.getEstado());
-		textAreaEstado.setBounds(173, 143, 113, 18);
-		contentPane.add(textAreaEstado);
+		JLabel lblVarTemp = new JLabel(Double.toString(clima.getTemperatura()));
+		lblVarTemp.setFont(new Font("Source Code Pro Light", Font.ITALIC, 13));
+		lblVarTemp.setBounds(125, 168, 48, 23);
+		contentPane.add(lblVarTemp);
 		
-		JTextArea textAreaPrecip = new JTextArea(Integer.toString(clima.getPrecipitacion()));
-		textAreaPrecip.setBounds(172, 187, 113, 18);
-		contentPane.add(textAreaPrecip);
-		btnAtras.addActionListener(this);
+		JLabel lblVarCiudad = new JLabel(clima.getCiudad());
+		lblVarCiudad.setFont(new Font("Source Code Pro Light", Font.ITALIC, 13));
+		lblVarCiudad.setBounds(87, 134, 120, 23);
+		contentPane.add(lblVarCiudad);
+		
+		JLabel logoSol = new JLabel(new ImageIcon(toolkit.getImage(login.class.getResource("/es/deusto/grupo3/img/sol.png"))));
+		logoSol.setBounds(354, 11, 89, 58);
+		contentPane.add(logoSol);
+		
+		JLabel logoAemet = new JLabel(new ImageIcon(toolkit.getImage(login.class.getResource("/es/deusto/grupo3/img/met.png"))));
+		logoAemet.setBounds(0, 0, 173, 78);
+		contentPane.add(logoAemet);
+		
 
 	}
 
@@ -133,5 +147,4 @@ public class climaPlantilla extends JFrame implements ActionListener{
 			frame.setVisible(true);
 		}
 	}
-	
 }
