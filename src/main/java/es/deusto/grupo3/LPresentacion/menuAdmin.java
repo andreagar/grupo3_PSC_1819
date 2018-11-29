@@ -71,12 +71,13 @@ public class menuAdmin extends JFrame implements ActionListener{
 		btnCerrar.setFont(new Font("Verdana", Font.PLAIN, 11));
 		btnCerrar.setBounds(21, 236, 89, 23);
 		contentPane.add(btnCerrar);
+		btnCerrar.addActionListener(this);
 		
 		btnOpiniones = new JButton("Reseñas");
 		btnOpiniones.setFont(new Font("Verdana", Font.PLAIN, 18));
 		btnOpiniones.setBounds(245, 159, 150, 51);
 		contentPane.add(btnOpiniones);
-		btnCerrar.addActionListener(this);
+		btnOpiniones.addActionListener(this);
 	}
 
 	@Override

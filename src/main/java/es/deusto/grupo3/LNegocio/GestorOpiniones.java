@@ -90,33 +90,28 @@ public class GestorOpiniones {
 		return false;
 	}
 	
-	/** Recuperar las asignaciones realizadas a un usuario específico
+	
+	/** Recuperar las opiniones realizadas por los usuarios
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a asignaciones)
-	 * @param nombre	Nombre del usuario logeado
-	 * @return	Array de las asignaciones de un usaurio dado
+	 * @return	Array de las opiniones
 	 */
 	public ArrayList<Opinion> getUsuarioHistorial(Statement st){
 		
 		ResultSet rs;
-		ArrayList<Opinion> a = new ArrayList<Opinion>();
+		ArrayList<Opinion> of = new ArrayList<Opinion>();
 		try {
 			String sentSQL = "select * from OPINIONES";
 			log.info(sentSQL);
-			PreparedStatement pstmt = BaseDeDatos.getConnection().prepareStatement(sentSQL);  
-            // set the corresponding param
-            pstmt.setString(1, null);
-            // INSERT 
-            rs = pstmt.executeQuery();
-            
+			rs = st.executeQuery( sentSQL );
+			int i=0;
 			while (rs.next()) {
-				a.add(new Opinion (rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
+				of.add(new Opinion (rs.getString(1),rs.getString(2), rs.getString(3), rs.getString(4)));
 			}			
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		return a;
+		return of;
 	}
 }

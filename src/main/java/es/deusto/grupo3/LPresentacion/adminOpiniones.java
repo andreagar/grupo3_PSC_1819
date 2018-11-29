@@ -76,8 +76,8 @@ public class adminOpiniones extends JFrame implements ActionListener{
 		btnAtras.addActionListener(this);
 		btnAtras.setActionCommand("Atras");
 		
-		//objOpinion=new GestorOpiniones();
-		//this.CargarLista(objOpinion);
+		objOpinion=new GestorOpiniones();
+		this.CargarLista(objOpinion);
 	}
 
 	@Override
@@ -90,15 +90,15 @@ public class adminOpiniones extends JFrame implements ActionListener{
 		}
 	}
 	
-	/*public void CargarLista(GestorOpiniones op){
+	public void CargarLista(GestorOpiniones op){
 		
 		modeloAsig=new DefaultListModel();
 		Statement st = BaseDeDatos.getStatement();
 	
-		for (Opinion o : objOpinion.getUsuarioHistorial(st)){
+		for (Opinion o : op.getUsuarioHistorial(st)){
 			modeloAsig.addElement( o.toString() );
 		}
 	
 		listAsig.setModel( modeloAsig );
-	}*/
+	}
 }

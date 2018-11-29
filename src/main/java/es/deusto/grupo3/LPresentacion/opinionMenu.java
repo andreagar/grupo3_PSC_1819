@@ -187,7 +187,7 @@ public class opinionMenu extends JFrame implements ActionListener{
 		}
 		
 		if (e.getSource() == btnGuardar){
-			this.guardar();
+			this.Guardar();
 			menuUsuario menu1 = new menuUsuario(this.usuario);
 			menu1.setVisible(true);
 			dispose();
@@ -225,12 +225,12 @@ public class opinionMenu extends JFrame implements ActionListener{
 		}
 	}	
 	
-	public void guardar(){
+	public void Guardar(){
 		
 		Statement st = BaseDeDatos.getStatement();
 		GestorOpiniones gestor = new GestorOpiniones();
 		
-		String puntuacion = txtComentario.getSelectedText();
+		String puntuacion = (String)comboBox.getSelectedItem();	
 		String matricula = txtMatricula.getText();
 		String comentario = txtComentario.getText();
 		
