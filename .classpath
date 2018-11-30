@@ -27,5 +27,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/ALUMNO/Downloads/visualvm_launcher_u2_eclipse/features/VisualVM_Launcher_1.1.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

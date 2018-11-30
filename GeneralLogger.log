@@ -4465,3 +4465,256 @@
 2018-11-30 18:47:08,617 INFO  es.deusto.grupo3.App ~ select matricula from MOTO
 2018-11-30 18:47:08,617 INFO  es.deusto.grupo3.App ~ select matricula from COCHE
 2018-11-30 18:47:08,617 INFO  es.deusto.grupo3.App ~ select matricula from MOTO
+2018-11-30 19:00:47,811 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:00:48,865 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:00:48,865 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:00:49,007 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:00:49,007 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:00:49,023 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:00:49,023 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:00:49,038 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:00:49,038 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:00:49,085 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:00:49,085 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:00:49,085 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:00:49,085 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:00:49,101 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:00:49,101 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:00:49,152 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:00:49,152 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:00:49,152 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:00:49,152 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:00:49,152 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:00:49,152 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:00:57,276 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:00:58,386 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:00:58,386 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:00:58,481 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:00:58,481 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:00:58,496 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:00:58,496 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:00:58,512 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:00:58,512 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:00:58,512 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:00:58,528 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:00:58,528 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:00:58,528 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:00:58,543 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:00:58,543 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:00:58,559 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:00:58,559 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:00:58,559 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:00:58,559 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:00:58,559 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:00:58,559 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:01:48,259 INFO  es.deusto.grupo3.App ~ select * from USUARIO where ( nombre = 'ainhoa' and contrasenya = 'ainhoa')
+2018-11-30 19:01:52,564 INFO  es.deusto.grupo3.App ~ select * from USUARIO where ( nombre = 'ainhoa' and contrasenya = 'elola')
+2018-11-30 19:01:52,564 WARN  es.deusto.grupo3.App ~ Nombre de usuario y contrasenya correctas
+2018-11-30 19:01:56,828 INFO  es.deusto.grupo3.App ~ select matricula from ASIGNACIONES where usuario = ?
+2018-11-30 19:01:58,906 INFO  es.deusto.grupo3.App ~ select * from OPINIONES
+2018-11-30 19:02:01,976 INFO  es.deusto.grupo3.App ~ select matricula from ASIGNACIONES where usuario = ?
+2018-11-30 19:02:06,456 INFO  es.deusto.grupo3.App ~ select * from MOTO
+2018-11-30 19:02:08,564 INFO  es.deusto.grupo3.App ~ select * from MOTO
+2018-11-30 19:02:12,464 INFO  es.deusto.grupo3.App ~ select matricula from ASIGNACIONES where usuario = ?
+2018-11-30 19:02:23,401 INFO  es.deusto.grupo3.App ~ insert into OPINIONES values('ainhoa', '3344PPS', '5', 'Muy bien, perfecto')
+2018-11-30 19:02:25,354 INFO  es.deusto.grupo3.App ~ select * from OPINIONES
+2018-11-30 19:02:35,885 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 19:02:49,028 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:02:50,120 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:02:50,120 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:02:50,246 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:02:50,246 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:02:50,261 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:02:50,261 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:02:50,261 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:02:50,261 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:02:50,277 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:02:50,277 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:02:50,292 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:02:50,292 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:02:50,308 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:02:50,308 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:02:50,324 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:02:50,324 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:02:50,324 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:02:50,324 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:02:50,324 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:02:50,324 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:05:47,399 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 19:10:00,317 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:10:01,480 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:10:01,480 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:10:01,712 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:10:01,712 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:10:01,743 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:10:01,743 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:10:01,790 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:10:01,790 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:10:01,946 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:10:01,946 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:10:01,946 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:10:01,946 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:10:02,149 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:10:02,149 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:10:02,320 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:10:02,320 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:10:02,320 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:10:02,320 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:10:02,320 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:10:02,320 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:11:28,234 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:11:29,279 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:11:29,279 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:11:29,420 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:11:29,420 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:11:29,436 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:11:29,436 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:11:29,451 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:11:29,451 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:11:29,467 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:11:29,467 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:11:29,467 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:11:29,467 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:11:29,498 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:11:29,498 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:11:29,514 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:11:29,514 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:11:29,514 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:11:29,514 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:11:29,514 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:11:29,514 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:11:51,048 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 19:18:15,232 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:18:16,402 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:18:16,402 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:18:16,528 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:18:16,528 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:18:16,543 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:18:16,543 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:18:16,543 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:18:16,543 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:18:16,575 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:18:16,575 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:18:16,590 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:18:16,590 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:18:16,606 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:18:16,606 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:18:16,621 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:18:16,621 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:18:16,621 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:18:16,621 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:18:16,621 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:18:16,621 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:28:05,318 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:28:06,628 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:28:06,628 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:28:06,739 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:28:06,739 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:28:06,754 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:28:06,754 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:28:06,754 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:28:06,754 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:28:06,785 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:28:06,785 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:28:06,785 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:28:06,785 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:28:06,801 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:28:06,801 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:28:06,817 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:28:06,817 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:28:06,817 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:28:06,817 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:28:06,817 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:28:06,817 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:29:17,431 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 19:29:21,738 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 19:32:51,383 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:32:52,508 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:32:52,508 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:32:52,649 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:32:52,649 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:32:52,649 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:32:52,649 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:32:52,665 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:32:52,665 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:32:52,681 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:32:52,696 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:32:52,696 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:32:52,696 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:32:52,712 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:32:52,712 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:32:52,743 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:32:52,743 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:32:52,743 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:32:52,743 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:32:52,743 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:32:52,743 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:38:37,984 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 19:38:46,483 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:38:47,684 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:38:47,684 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:38:47,919 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:38:47,919 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:38:48,028 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:38:48,044 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:38:48,137 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:38:48,137 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:38:48,340 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:38:48,340 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:38:48,356 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:38:48,356 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:38:48,512 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:38:48,512 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:38:48,871 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:38:48,871 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:38:48,871 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:38:48,871 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:38:48,871 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:38:48,871 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:39:31,048 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 19:39:33,028 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:39:34,120 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:39:34,120 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:39:34,246 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:39:34,246 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:39:34,261 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:39:34,261 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:39:34,277 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:39:34,277 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:39:34,292 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:39:34,292 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:39:34,292 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:39:34,292 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:39:34,308 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:39:34,308 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:39:34,448 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:39:34,448 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:39:34,448 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:39:34,448 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:39:34,448 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:39:34,448 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:52:12,787 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 19:52:14,969 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 19:52:16,140 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 19:52:16,140 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 19:52:16,234 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 19:52:16,234 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'A7', '1234ABC', '74000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_A7.jpg')
+2018-11-30 19:52:16,250 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 19:52:16,250 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Audi', 'Q3', '9999BBB', '43000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Audi_Q3.jpg')
+2018-11-30 19:52:16,297 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 19:52:16,297 INFO  es.deusto.grupo3.App ~ insert into COCHE values('Ford', 'Kuga', '5678HHH', '24600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ford_Kuga.png')
+2018-11-30 19:52:16,297 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 19:52:16,312 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Honda', 'CB1000R', '3344PPS', '30000.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Honda_CB_1000_R.jpg')
+2018-11-30 19:52:16,375 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 19:52:16,375 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Yamaha', 'XV950R', '1212ABA', '36200.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Yamaha-xv950r.jpg')
+2018-11-30 19:52:16,406 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 19:52:16,406 INFO  es.deusto.grupo3.App ~ insert into MOTO values('Ducati', 'Monster', '7892GFS', '18600.0', 'false', 'false', 'false', '/es/deusto/grupo3/img/Ducati_Moster.jpg')
+2018-11-30 19:52:16,437 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:52:16,437 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 19:52:16,437 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 19:52:16,437 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 19:52:16,437 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 19:52:16,437 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 19:52:52,647 INFO  es.deusto.grupo3.App ~ select * from USUARIO where ( nombre = 'ainhoa' and contrasenya = 'elola')
+2018-11-30 19:52:53,006 WARN  es.deusto.grupo3.App ~ Nombre de usuario y contrasenya correctas
+2018-11-30 20:03:28,704 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
