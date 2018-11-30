@@ -105,15 +105,18 @@ public class RendimientoTest {
 	@Required(max = 1200, average = 300, median = 500)  //Required define las requisitos de rendimiento, si no los cumple --> rojo
 	public void getZVehiculos (){
 		
-		/** TEST OK! 
+		/** TEST ERROR! 
 		 * 
-		 * Si se recogen coches + motos en un mismo método, nos da error con ResulSet porque debe haber 
-		 * un solo ResultSet por cada método: "SQLite JDBC internal error: rs.isOpen() on exec."
+		 * Nos da error con ResulSet porque debe haber un solo ResultSet por cada método de testeo: 
+		 * "SQLite JDBC internal error: rs.isOpen() on exec."
+		 * Es decir, suponemos que hay que ejecutar el segundo método de getVehiculosMotos depués
+		 * de terminar con el primero getVehiculosCoches. La cuestión es que empieza antes de que
+		 * termine, lo que produce el error.
 		*/
 		
 		gestorCoche.getVehiculosCoches(BaseDeDatos.getStatement());
 		gestorCoche.getVehiculosMotos(BaseDeDatos.getStatement());
-		//gestorCoche.vehiculos();
+		gestorCoche.vehiculos();
 	}
 	
 }
