@@ -40,11 +40,13 @@ public class adminOpiniones extends JFrame implements ActionListener{
 	private DefaultListModel modeloAsig;
 	private JLabel lblabel;
 	private GestorOpiniones objOpinion;
-	
+
 	/**
 	 * Create the frame.
 	 */
-	public adminOpiniones() {
+	public adminOpiniones(String usuario) {
+		
+		this.usuario = usuario;
 		
 		Toolkit toolkit = getToolkit();
 		setIconImage(toolkit.getImage(adminMoto.class.getResource("/es/deusto/grupo3/img/icon.png")));
@@ -85,8 +87,16 @@ public class adminOpiniones extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		if (e.getSource() == btnAtras){
 			this.dispose();
-			menuAdmin menu = new menuAdmin();
-			menu.setVisible(true);
+			if (usuario.equals("admin")){
+				menuAdmin menu = new menuAdmin();
+				menu.setVisible(true);
+			}
+			else{
+				menuUsuario menuU = new menuUsuario(usuario);
+				menuU.setVisible(true);
+			}
+			
+			
 		}
 	}
 	
@@ -94,9 +104,12 @@ public class adminOpiniones extends JFrame implements ActionListener{
 		
 		modeloAsig=new DefaultListModel();
 		Statement st = BaseDeDatos.getStatement();
-	
-		for (Opinion o : op.getUsuarioHistorial(st)){
-			modeloAsig.addElement( o.toString() );
+		int i=1;
+		for (Opinion o : op.getOpiniones(st)){
+			String texto = "<html>" + i + ". Matricula: " + o.getMatricula()
+				+ ", Puntuacion: " + o.getPuntuacion() + ",</br><pre> Comentario: " + o.getComentario();
+			modeloAsig.addElement( texto );
+			i++;
 		}
 	
 		listAsig.setModel( modeloAsig );

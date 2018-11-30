@@ -112,11 +112,10 @@ public class perfilUsuario extends JFrame implements ActionListener {
 			boolean correcto = gestor.chequearYaEnTablaLOGIN(st, nombre, antigua);
 			
 			if(correcto == true){
-				dispose();
+				
 				boolean cambio = gestor.cambiarContrasenya(st, nombre, nueva);
 				if (cambio == true){
-					menuUsuario frameMenu = new menuUsuario(nombre);
-					frameMenu.setVisible(true);
+					dispose();
 				}
 			}
 			else{

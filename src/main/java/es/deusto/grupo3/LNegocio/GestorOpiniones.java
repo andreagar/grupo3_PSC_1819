@@ -47,25 +47,25 @@ public class GestorOpiniones {
 		return alquilados;
 	}
 	
-	public boolean chequearYaEnTabla( Statement st, String matricula, String nombre ) {
-		//SELECT
-			try {
-
-				String sentSQL = "select * from OPINIONES where (matricula = '" + matricula + "'and usuario = '" + nombre + "')";
-				log.info(sentSQL);
-				ResultSet rs = st.executeQuery( sentSQL );
-				
-				if (rs.next()) {  // Normalmente se recorre con un while, pero aqui solo hay que ver si ya existe
-					rs.close();
-					log.warn("La reseña ya existe");
-					return true;
-				}
-				return false;
-			} catch (SQLException e) {
-				e.printStackTrace();
-				return false;
-			}
-		}
+//	public boolean chequearYaEnTabla( Statement st, String matricula, String nombre ) {
+//		//SELECT
+//			try {
+//
+//				String sentSQL = "select * from OPINIONES where (matricula = '" + matricula + "'and usuario = '" + nombre + "')";
+//				log.info(sentSQL);
+//				ResultSet rs = st.executeQuery( sentSQL );
+//				
+//				if (rs.next()) {  // Normalmente se recorre con un while, pero aqui solo hay que ver si ya existe
+//					rs.close();
+//					log.warn("La reseña ya existe");
+//					return true;
+//				}
+//				return false;
+//			} catch (SQLException e) {
+//				e.printStackTrace();
+//				return false;
+//			}
+//		}
 	
 	/** Guardar las reseñas
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a asignaciones)
@@ -73,8 +73,8 @@ public class GestorOpiniones {
 	 */
 	public boolean guardarOpinion(Statement st, String nombre, String matricula, String puntuacion, String comentario){
 		
-		if (chequearYaEnTabla(st, matricula, nombre) == false) {  // Si esta ya en la tabla
-			// Insercion normal
+//		if (chequearYaEnTabla(st, matricula, nombre) == false) {  // Si esta ya en la tabla
+//			// Insercion normal
 			try {
 				String sentSQL = "insert into OPINIONES values(" + "'" + nombre + "', '" + matricula + "', '" 
 															 + puntuacion + "', '" + comentario + "')";  
@@ -86,8 +86,8 @@ public class GestorOpiniones {
 				e.printStackTrace();
 				return false;
 			}
-		}
-		return false;
+//		}
+//		return false;
 	}
 	
 	
@@ -95,7 +95,7 @@ public class GestorOpiniones {
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a asignaciones)
 	 * @return	Array de las opiniones
 	 */
-	public ArrayList<Opinion> getUsuarioHistorial(Statement st){
+	public ArrayList<Opinion> getOpiniones(Statement st){
 		
 		ResultSet rs;
 		ArrayList<Opinion> of = new ArrayList<Opinion>();

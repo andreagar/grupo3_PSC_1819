@@ -31,6 +31,7 @@ public class menuUsuario extends JFrame implements ActionListener{
 	private JButton btnEliminar;
 	private JButton btnOficinas;
 	private JButton btnOpinion;
+	private JButton btnHistoOp;
 	private JButton btnSalir;
 	private String nombre;
 	private JButton btnAemet;
@@ -61,15 +62,21 @@ public class menuUsuario extends JFrame implements ActionListener{
 		
 		btnMoto = new JButton("<html><body>Alquilar/Comprar<br><center>MOTO</center></body></html>");
 		btnMoto.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnMoto.setBounds(248, 114, 157, 70);
+		btnMoto.setBounds(241, 114, 157, 70);
 		contentPane.add(btnMoto);
 		btnMoto.addActionListener(this);
 		
-		btnHistorial = new JButton("Ver mi historial");
-		btnHistorial.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnHistorial.setBounds(435, 218, 157, 70);
-		contentPane.add(btnHistorial);
-		btnHistorial.addActionListener(this);
+		btnOpinion = new JButton("Añadir Reseña");
+		btnOpinion.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnOpinion.setBounds(430, 114, 157, 70);
+		contentPane.add(btnOpinion);
+		btnOpinion.addActionListener(this);
+		
+		btnHistoOp = new JButton("Ver reseñas");
+		btnHistoOp.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnHistoOp.setBounds(430, 218, 157, 70);
+		contentPane.add(btnHistoOp);
+		btnHistoOp.addActionListener(this);
 		
 		btnModificar = new JButton("<html><body>Modificar mi<br><center>contraseña</center></body></html>");
 		btnModificar.setFont(new Font("Verdana", Font.PLAIN, 15));
@@ -79,27 +86,27 @@ public class menuUsuario extends JFrame implements ActionListener{
 		
 		btnEliminar = new JButton("Cancelar alquiler");
 		btnEliminar.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnEliminar.setBounds(248, 218, 157, 70);
+		btnEliminar.setBounds(241, 218, 157, 70);
 		contentPane.add(btnEliminar);
 		btnEliminar.addActionListener(this);
 		
-		btnOficinas = new JButton("Ver oficinas");
-		btnOficinas.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnOficinas.setBounds(371, 319, 157, 70);
-		contentPane.add(btnOficinas);
-		btnOficinas.addActionListener(this);
-		
 		btnAemet = new JButton("AEMET");
 		btnAemet.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnAemet.setBounds(146, 319, 157, 70);
+		btnAemet.setBounds(52, 319, 157, 70);
 		contentPane.add(btnAemet);
 		btnAemet.addActionListener(this);
 		
-		btnOpinion = new JButton("Reseñas");
-		btnOpinion.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnOpinion.setBounds(435, 114, 157, 70);
-		contentPane.add(btnOpinion);
-		btnOpinion.addActionListener(this);
+		btnOficinas = new JButton("Ver oficinas");
+		btnOficinas.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnOficinas.setBounds(241, 319, 157, 70);
+		contentPane.add(btnOficinas);
+		btnOficinas.addActionListener(this);
+		
+		btnHistorial = new JButton("Ver mi historial");
+		btnHistorial.setFont(new Font("Verdana", Font.PLAIN, 15));
+		btnHistorial.setBounds(430, 319, 157, 70);
+		contentPane.add(btnHistorial);
+		btnHistorial.addActionListener(this);
 		
 		btnSalir = new JButton("Cerrar sesion");
 		btnSalir.setFont(new Font("Verdana", Font.PLAIN, 12));
@@ -168,6 +175,12 @@ public class menuUsuario extends JFrame implements ActionListener{
 			dispose();
 			opinionMenu cl = new opinionMenu(nombre);
 			cl.setVisible(true);			
+		}
+		
+		if (e.getSource() == btnHistoOp){
+			dispose();
+			adminOpiniones op = new adminOpiniones(nombre);
+			op.setVisible(true);
 		}
 		
 		if (e.getSource() == btnSalir){

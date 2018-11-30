@@ -50,7 +50,7 @@ public class Opinion {
 		/*return "Opinion [usuario=" + usuario + ", matricula=" + matricula
 				+ ", puntuacion=" + puntuacion + ", comentario="
 				+ comentario + "]";*/
-		return "Matricula: " + matricula
-				+ ", Puntuacion: " + puntuacion + ", Comentario: " + comentario;
+		return "<html>Matricula: " + matricula
+				+ ", Puntuacion: " + puntuacion + ",\n Comentario: " + comentario;
 	}
 }

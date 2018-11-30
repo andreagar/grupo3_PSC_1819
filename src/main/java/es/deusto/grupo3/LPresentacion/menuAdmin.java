@@ -104,7 +104,7 @@ public class menuAdmin extends JFrame implements ActionListener{
 		
 		if (e.getSource() == btnOpiniones){
 			dispose();
-			adminOpiniones vista = new adminOpiniones();
+			adminOpiniones vista = new adminOpiniones("admin");
 			vista.setVisible(true);
 		}
 		

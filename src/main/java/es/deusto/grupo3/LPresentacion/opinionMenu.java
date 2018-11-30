@@ -234,9 +234,7 @@ public class opinionMenu extends JFrame implements ActionListener{
 		String matricula = txtMatricula.getText();
 		String comentario = txtComentario.getText();
 		
-		boolean correcto = gestor.chequearYaEnTabla(st, matricula, this.usuario);
-		
-		if(correcto == true){
+		//if(correcto == true){
 			boolean cambio = gestor.guardarOpinion(st, this.usuario, matricula, puntuacion, comentario);
 			
 			if (cambio == true){
@@ -245,6 +243,6 @@ public class opinionMenu extends JFrame implements ActionListener{
 				vista.setVisible(true);
 				dispose();
 			}
-		}
+		//}
 	}
 }

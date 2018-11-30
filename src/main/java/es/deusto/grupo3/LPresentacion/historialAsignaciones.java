@@ -64,7 +64,7 @@ public class historialAsignaciones extends JFrame implements ActionListener{
 		
 		listAsig = new JList();
 		listAsig.setFont(new Font("Candara", Font.BOLD, 14));
-		listAsig.setBounds(30, 36, 330, 38);
+		listAsig.setBounds(30, 36, 330, 250);
 		contentPane.add(listAsig);
 	
 		button = new JButton("Atras");

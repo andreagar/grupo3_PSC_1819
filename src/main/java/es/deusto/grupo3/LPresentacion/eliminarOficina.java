@@ -93,10 +93,10 @@ public class eliminarOficina extends JFrame implements ActionListener {
 		// TODO Auto-generated method stub
 		
 		if (e.getSource() == btnEliminar){
-			this.Eliminar();;
-			//dispose();
-			//menuAdmin vistaAdmin = new menuAdmin();
-			//vistaAdmin.setVisible(true);
+			this.Eliminar();
+			dispose();
+			menuAdmin vistaAdmin = new menuAdmin();
+			vistaAdmin.setVisible(true);
 		}
 		
 		if (e.getSource() == btnCancelar){
