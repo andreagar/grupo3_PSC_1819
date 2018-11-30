@@ -1,0 +1,9 @@
+digraph "es.deusto.grupo3.LNegocio.GestorCoche.getUsuarioHistorial"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node61 [label="es.deusto.grupo3.LNegocio.\lGestorCoche.getUsuarioHistorial",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node61 -> Node62 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node62 [label="es.deusto.grupo3.LDatos.\lBaseDeDatos.getConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1grupo3_1_1_l_datos_1_1_base_de_datos.html#a1c5069726bf3121d34bd186fd6f76972"];
+}
