@@ -869,3 +869,28 @@
 2018-11-30 17:49:13,898 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
 2018-11-30 17:49:13,898 INFO  es.deusto.grupo3.App ~ select * from OPINIONES
 2018-11-30 17:49:13,898 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 17:57:01,947 INFO  es.deusto.grupo3.App ~ iniciando BD
+2018-11-30 17:57:03,099 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 17:57:03,099 INFO  es.deusto.grupo3.App ~ BD iniciada
+2018-11-30 17:57:03,115 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '1234ABC')
+2018-11-30 17:57:03,115 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-30 17:57:03,115 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '9999BBB')
+2018-11-30 17:57:03,115 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-30 17:57:03,115 INFO  es.deusto.grupo3.App ~ select * from COCHE where (matricula = '5678HHH')
+2018-11-30 17:57:03,115 WARN  es.deusto.grupo3.App ~ El coche ya existe, prueba con otro
+2018-11-30 17:57:03,131 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '3344PPS')
+2018-11-30 17:57:03,131 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-30 17:57:03,131 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '1212ABA')
+2018-11-30 17:57:03,131 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-30 17:57:03,131 INFO  es.deusto.grupo3.App ~ select * from MOTO where (matricula = '7892GFS')
+2018-11-30 17:57:03,131 WARN  es.deusto.grupo3.App ~ La moto ya existe, prueba con otro
+2018-11-30 17:57:03,146 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 17:57:03,146 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'donostia')
+2018-11-30 17:57:03,146 WARN  es.deusto.grupo3.App ~ El clima para donostia ya existe, prueba con otro
+2018-11-30 17:57:03,146 INFO  es.deusto.grupo3.App ~ se ha construido correctamente: Clima
+2018-11-30 17:57:03,146 INFO  es.deusto.grupo3.App ~ select * from CLIMA where (ciudad = 'bilbao')
+2018-11-30 17:57:03,146 WARN  es.deusto.grupo3.App ~ El clima para bilbao ya existe, prueba con otro
+2018-11-30 17:57:06,828 INFO  es.deusto.grupo3.App ~ select * from USUARIO where ( nombre = 'aaa' and contrasenya = 'aaa')
+2018-11-30 17:57:06,828 WARN  es.deusto.grupo3.App ~ Nombre de usuario y contrasenya correctas
+2018-11-30 17:57:10,644 INFO  es.deusto.grupo3.App ~ select * from OPINIONES
+2018-11-30 17:57:24,060 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente

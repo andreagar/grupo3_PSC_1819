@@ -51,6 +51,6 @@ public class Opinion {
 				+ ", puntuacion=" + puntuacion + ", comentario="
 				+ comentario + "]";*/
 		return "<html>Matricula: " + matricula
-				+ ", Puntuacion: " + puntuacion + ",\n Comentario: " + comentario;
+				+ ", Puntuacion: " + puntuacion + ",</br><pre> Comentario: " + comentario;
 	}
 }
