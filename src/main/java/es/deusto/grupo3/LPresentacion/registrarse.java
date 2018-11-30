@@ -87,10 +87,10 @@ public class registrarse extends JFrame implements ActionListener{
 		String contrasenya = String.valueOf(elChar);						
 		
 		if (e.getSource() == btnAceptar){
-			GestorUsuario usuario = new GestorUsuario(nombre, contrasenya);
+			GestorUsuario usuario = new GestorUsuario();
 			BaseDeDatos.crearTablaBDUsuario();	
 		//Si no existe, añadir fila con el usuario nuevo y sus respectivos atributos
-			usuario.anyadirFilaATablauUsuario(BaseDeDatos.getStatement(), nombre);	
+			usuario.anyadirFilaATablauUsuario(BaseDeDatos.getStatement(), nombre, contrasenya);	
 			dispose();
 		}
 		

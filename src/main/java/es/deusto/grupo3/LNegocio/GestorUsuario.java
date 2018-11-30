@@ -14,14 +14,10 @@ public class GestorUsuario {
 	
 	///GESTOR USUARIO PARA LA GESTIÓN DE USUARIOS
 
-	String password;
-	String nombre;
 	
 	private final static Logger log = Logger.getLogger(App.class.getName());
 		
-	public GestorUsuario (String nombre, String password){
-		this.nombre = nombre;
-		this.password = password;
+	public GestorUsuario (){
 		
 	}
 	
@@ -84,7 +80,7 @@ public class GestorUsuario {
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente al usuario)
 	 * @return	true si la inserciÃ³n es correcta, false en caso contrario
 	 */
-	public boolean anyadirFilaATablauUsuario( Statement st, String nombre ) {
+	public boolean anyadirFilaATablauUsuario( Statement st, String nombre, String password ) {
 	//INSERT
 
 		if (chequearYaEnTabla(st, nombre) == false) {  // Si esta ya en la tabla

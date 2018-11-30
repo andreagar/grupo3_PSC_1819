@@ -9,18 +9,22 @@ import org.junit.Before;
 import org.junit.Test;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
+import es.deusto.grupo3.LNegocio.Asignaciones;
+import es.deusto.grupo3.LNegocio.GestorCoche;
 import es.deusto.grupo3.LNegocio.GestorOpiniones;
 import es.deusto.grupo3.LNegocio.Opinion;
 
 public class GestorOpinionesTest {
 
 	GestorOpiniones gestor;
+	GestorCoche gestorCoche;
 	Opinion opinion;
 	
 	@Before
 	public void setUp() throws Exception {
 		BaseDeDatos.initBD("nuestroBD.db");
 		gestor = new GestorOpiniones();
+		gestorCoche = new GestorCoche();
 		opinion = new Opinion ("Ekaitz", "1121WSA", "4", "Buen coche y comodo");
 	}
 	
@@ -53,7 +57,9 @@ public class GestorOpinionesTest {
 	@Test
 	public void testZgetUsuarioMatriculas(){
 		int size = 0;
-		size = gestor.getUsuarioMatriculas(BaseDeDatos.getStatement(), "aaa").size();
+		Asignaciones asig = new Asignaciones("Ekaitz", "1121WSA", true, false, false, 1);
+		gestorCoche.AlquilarVehiculoUsuario(BaseDeDatos.getStatement(), asig);
+		size = gestor.getUsuarioMatriculas(BaseDeDatos.getStatement(), "Ekaitz").size();
 		boolean comprobacion = false;
 		if (size == 0){
 			comprobacion = false;

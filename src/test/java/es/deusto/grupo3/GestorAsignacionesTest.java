@@ -53,7 +53,7 @@ public class GestorAsignacionesTest {
 		asigArray = gestor.GetArrayUsuarioAlquilados(BaseDeDatos.getStatement(), "Ainhoa");
 		boolean comprobacion = true;
 		
-		assertSame(asigArray.get(1).getAlquilado(), comprobacion);
+		assertSame(asigArray.get(0).getAlquilado(), comprobacion);
 	}
 	
 	@Test

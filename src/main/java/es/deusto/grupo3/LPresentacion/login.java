@@ -93,7 +93,7 @@ public class login extends JFrame implements ActionListener{
 		String nombre = textField.getText();
 		char[] elChar = passwordField.getPassword();
 		String contrasenya = String.valueOf(elChar);
-		GestorUsuario gestor = new GestorUsuario(nombre, contrasenya);
+		GestorUsuario gestor = new GestorUsuario();
 			
 		if (e.getSource() == btnAceptar){
 			Statement st = BaseDeDatos.getStatement();

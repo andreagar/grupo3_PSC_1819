@@ -318,11 +318,11 @@ public class GestorCoche {
 		try {
 			String sentSQL1 = "select matricula from COCHE";
 			log.info(sentSQL1);
-			ResultSet rs1 = st.executeQuery( sentSQL1 );
-			while (rs1.next()) {
-				vehiculos.add(rs1.getString(1));
+			ResultSet rsCOCHES = st.executeQuery( sentSQL1 );
+			while (rsCOCHES.next()) {
+				vehiculos.add(rsCOCHES.getString(1));
 			}
-			rs1.close();
+			rsCOCHES.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -337,12 +337,12 @@ public class GestorCoche {
 			///MOTOS
 			String sentSQL2 = "select matricula from MOTO";
 			log.info(sentSQL2);
-			ResultSet rs2 = st.executeQuery( sentSQL2 );
-			while (rs2.next()) {
-				vehiculos.add(rs2.getString(1));
+			ResultSet rsMOTOS = st.executeQuery( sentSQL2 );
+			while (rsMOTOS.next()) {
+				vehiculos.add(rsMOTOS.getString(1));
 				
 			}
-			rs2.close();
+			rsMOTOS.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -353,9 +353,10 @@ public class GestorCoche {
 	
 	public void vehiculos(){
 		for(int i=0; i<vehiculos.size(); i++){
+			
 			System.out.println(vehiculos.get(i));
 		}
-		
+		System.out.println(vehiculos.size());
 	}
 }
 	

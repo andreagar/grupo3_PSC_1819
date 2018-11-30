@@ -34,41 +34,50 @@ public class App
     	BaseDeDatos.initBD("nuestroBD.db");
     	log.info("BD iniciada");
     	
-//    	String s = "drop table MOTO";
-//    	try {
-//			BaseDeDatos.getStatement().executeUpdate(s);
-//			System.out.println(s);
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//    	
-//    	String a = "drop table COCHE";
-//    	try {
-//			BaseDeDatos.getStatement().executeUpdate(a);
-//			System.out.println(a);
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//    	
-//    	String b = "drop table ASIGNACIONES";
-//    	try {
-//			BaseDeDatos.getStatement().executeUpdate(b);
-//			System.out.println(b);
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//    	
-//    	String FF = "drop table HISTORIAL_ASIGNACIONES";
-//    	try {
-//			BaseDeDatos.getStatement().executeUpdate(FF);
-//			System.out.println(FF);
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+    	String s = "drop table MOTO";
+    	try {
+			BaseDeDatos.getStatement().executeUpdate(s);
+			System.out.println(s);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	String a = "drop table COCHE";
+    	try {
+			BaseDeDatos.getStatement().executeUpdate(a);
+			System.out.println(a);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	String b = "drop table ASIGNACIONES";
+    	try {
+			BaseDeDatos.getStatement().executeUpdate(b);
+			System.out.println(b);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	String FF = "drop table HISTORIAL_ASIGNACIONES";
+    	try {
+			BaseDeDatos.getStatement().executeUpdate(FF);
+			System.out.println(FF);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	String EE = "drop table OPINIONES";
+    	try {
+			BaseDeDatos.getStatement().executeUpdate(EE);
+			System.out.println(EE);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	
     	///Creación de tablas
 		BaseDeDatos.crearTablaBDUsuario();

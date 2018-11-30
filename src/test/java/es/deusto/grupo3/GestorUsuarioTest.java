@@ -20,7 +20,7 @@ public class GestorUsuarioTest {
 	@Before
 	public void setUp() throws Exception {
 		BaseDeDatos.initBD("nuestroBD.db");
-		gestor = new GestorUsuario("andrea","andrea");
+		gestor = new GestorUsuario();
 	}
 	
 	@After
@@ -37,7 +37,7 @@ public class GestorUsuarioTest {
     
     @Test
     public void testanyadirFilaATablauUsuario(){
-    	boolean prueba = gestor.anyadirFilaATablauUsuario(BaseDeDatos.getStatement(), "Simon");
+    	boolean prueba = gestor.anyadirFilaATablauUsuario(BaseDeDatos.getStatement(), "Simon", "xxx");
     	assertFalse(prueba);
     }
     

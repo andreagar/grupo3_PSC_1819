@@ -8,6 +8,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
+import org.apache.log4j.Logger;
+
 import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 
@@ -19,6 +22,7 @@ import java.sql.Statement;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 
+import es.deusto.grupo3.App;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.GestorUsuario;
 import es.deusto.grupo3.LNegocio.Usuario;
@@ -37,6 +41,8 @@ public class perfilUsuario extends JFrame implements ActionListener {
 	
 	private String nombre;
 
+	private final static Logger log = Logger.getLogger(App.class.getName());
+	
 	/**
 	 * Create the frame.
 	 */
@@ -98,11 +104,11 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		char[] elChar2 = passwordOld.getPassword();
 		String antigua = String.valueOf(elChar2);
 		
-		GestorUsuario gestor = new GestorUsuario(nombre, antigua);
+		GestorUsuario gestor = new GestorUsuario();
 		
-		System.out.println(nombre);
-		System.out.println(antigua);
-		System.out.println(nueva);
+		log.info("Nombre usuario: " + nombre);
+		log.info("Contrasenya antigua: " + antigua);
+		log.info("Nueva contrasenya: " + nueva);
 		
 		//llanar al gestor para que me devuelva el nombre del usuario
 		//crear dos variables para guardar las dos contraseñas
@@ -127,8 +133,6 @@ public class perfilUsuario extends JFrame implements ActionListener {
 		if (e.getSource() == btnCancelar){
 			dispose();
 		}
-		
-		
 		
 		
 	}
