@@ -860,3 +860,12 @@
 2018-11-30 17:27:52,180 INFO  es.deusto.grupo3.App ~ select * from MOTO
 2018-11-30 17:27:53,728 INFO  es.deusto.grupo3.App ~ select * from MOTO
 2018-11-30 17:27:55,568 INFO  es.deusto.grupo3.App ~ select * from MOTO
+2018-11-30 17:49:13,867 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 17:49:13,867 INFO  es.deusto.grupo3.App ~ insert into OPINIONES values('Ekaitz', '1121WSA', '4', 'Buen coche y comodo')
+2018-11-30 17:49:13,882 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 17:49:13,882 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 17:49:13,882 INFO  es.deusto.grupo3.App ~ select matricula from ASIGNACIONES where usuario = ?
+2018-11-30 17:49:13,898 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente
+2018-11-30 17:49:13,898 INFO  es.deusto.grupo3.App ~ Nombre: nuestroBD.db / Base de datos conectada
+2018-11-30 17:49:13,898 INFO  es.deusto.grupo3.App ~ select * from OPINIONES
+2018-11-30 17:49:13,898 INFO  es.deusto.grupo3.App ~ BD cerrada correctamente

@@ -24,6 +24,7 @@ import javax.swing.border.EmptyBorder;
 import es.deusto.grupo3.App;
 import es.deusto.grupo3.LDatos.BaseDeDatos;
 import es.deusto.grupo3.LNegocio.GestorOpiniones;
+import es.deusto.grupo3.LNegocio.Opinion;
 
 import java.awt.Toolkit;
 
@@ -234,15 +235,16 @@ public class opinionMenu extends JFrame implements ActionListener{
 		String matricula = txtMatricula.getText();
 		String comentario = txtComentario.getText();
 		
-		//if(correcto == true){
-			boolean cambio = gestor.guardarOpinion(st, this.usuario, matricula, puntuacion, comentario);
-			
-			if (cambio == true){
-				System.out.println("Reseña guardada");
-				menuAdmin vista = new menuAdmin();
-				vista.setVisible(true);
-				dispose();
-			}
-		//}
+		Opinion objOpinion = new Opinion (usuario, matricula, puntuacion, comentario);
+
+		boolean cambio = gestor.guardarOpinion(st, objOpinion);
+		
+		if (cambio == true){
+			System.out.println("Reseña guardada");
+			menuAdmin vista = new menuAdmin();
+			vista.setVisible(true);
+			dispose();
+		}
+
 	}
 }

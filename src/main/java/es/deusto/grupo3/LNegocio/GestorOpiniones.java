@@ -47,37 +47,16 @@ public class GestorOpiniones {
 		return alquilados;
 	}
 	
-//	public boolean chequearYaEnTabla( Statement st, String matricula, String nombre ) {
-//		//SELECT
-//			try {
-//
-//				String sentSQL = "select * from OPINIONES where (matricula = '" + matricula + "'and usuario = '" + nombre + "')";
-//				log.info(sentSQL);
-//				ResultSet rs = st.executeQuery( sentSQL );
-//				
-//				if (rs.next()) {  // Normalmente se recorre con un while, pero aqui solo hay que ver si ya existe
-//					rs.close();
-//					log.warn("La reseña ya existe");
-//					return true;
-//				}
-//				return false;
-//			} catch (SQLException e) {
-//				e.printStackTrace();
-//				return false;
-//			}
-//		}
-	
 	/** Guardar las reseñas
 	 * @param st	Sentencia ya abierta de Base de Datos (con la estructura de tabla correspondiente a asignaciones)
 	 * @param nombre	Nombre del usuario logeado
 	 */
-	public boolean guardarOpinion(Statement st, String nombre, String matricula, String puntuacion, String comentario){
+	public boolean guardarOpinion(Statement st, Opinion opinion){
 		
-//		if (chequearYaEnTabla(st, matricula, nombre) == false) {  // Si esta ya en la tabla
-//			// Insercion normal
+		// Insercion normal
 			try {
-				String sentSQL = "insert into OPINIONES values(" + "'" + nombre + "', '" + matricula + "', '" 
-															 + puntuacion + "', '" + comentario + "')";  
+				String sentSQL = "insert into OPINIONES values(" + "'" + opinion.getUsuario() + "', '" + opinion.getMatricula() + "', '" 
+															 + opinion.getPuntuacion() + "', '" + opinion.getComentario() + "')";  
 				log.info(sentSQL);
 				int val = st.executeUpdate( sentSQL );
 				if (val!=1) return false;  // Se tiene que añadir 1 - error si no
@@ -86,8 +65,7 @@ public class GestorOpiniones {
 				e.printStackTrace();
 				return false;
 			}
-//		}
-//		return false;
+
 	}
 	
 	
