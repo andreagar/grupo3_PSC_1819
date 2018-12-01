@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 
 import es.deusto.grupo3.LDatos.BaseDeDatos;
@@ -35,7 +36,7 @@ public class GestorOficinaTest {
 	}
 	
 	@Test
-	public void testanyadirFilaATablaOficina() {
+	public void test01anyadirFilaATablaOficina() {
 		boolean comprobacion1 = gestor.anyadirFilaATablaOficina(BaseDeDatos.getStatement(), oficina);
 		boolean comprobacion2 = gestor.anyadirFilaATablaOficina(BaseDeDatos.getStatement(), oficina2);
 		boolean comprobacion3 = gestor.anyadirFilaATablaOficina(BaseDeDatos.getStatement(), oficina3);
@@ -44,19 +45,13 @@ public class GestorOficinaTest {
 			comprobacion = true;
 		}
 		assertTrue(comprobacion);
-	}
-	
-	@Test
-	public void testchequearYaEnTabla() {
-		boolean comprobacion1 = true;
-		boolean comprobacion2 = false;
-		comprobacion2 = gestor.chequearYaEnTabla(BaseDeDatos.getStatement(), oficina.getId());
-		assertSame(comprobacion1, comprobacion2);
-	}
-	
-	
-	@Test
-	public void testGetArrayOficinas() {
+		
+		
+		boolean comprobacion11 = true;
+		boolean comprobacion21 = false;
+		comprobacion21 = gestor.chequearYaEnTabla(BaseDeDatos.getStatement(), oficina.getId());
+		assertSame(comprobacion11, comprobacion21);
+		
 		ArrayList<Oficina> arrayOficina = new ArrayList<Oficina>();
 		arrayOficina = gestor.GetArrayOficinas(BaseDeDatos.getStatement());
 		
@@ -69,17 +64,15 @@ public class GestorOficinaTest {
 		assertEquals(nombre1, "HyraCar01");
 		assertEquals(ciudad2, "Bilbao");
 		assertSame(id3, 3);
+		
+		
+		boolean comprobacion111 = gestor.eliminarOficina(BaseDeDatos.getStatement(), oficina);
+		boolean comprobacion211 = gestor.eliminarOficina(BaseDeDatos.getStatement(), oficina2);
+		boolean comprobacion31 = gestor.eliminarOficina(BaseDeDatos.getStatement(), oficina3);
+		
+		assertTrue(comprobacion111);
+		assertTrue(comprobacion211);
+		assertTrue(comprobacion31);
 	}
 	
-	@Test
-	public void testeliminarOficina() {
-		boolean comprobacion1 = gestor.eliminarOficina(BaseDeDatos.getStatement(), oficina);
-		boolean comprobacion2 = gestor.eliminarOficina(BaseDeDatos.getStatement(), oficina2);
-		boolean comprobacion3 = gestor.eliminarOficina(BaseDeDatos.getStatement(), oficina3);
-		
-		assertTrue(comprobacion1);
-		assertTrue(comprobacion2);
-		assertTrue(comprobacion3);
-	}
-
 }

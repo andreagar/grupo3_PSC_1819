@@ -33,30 +33,21 @@ public class GestorUsuarioTest {
    	public void testchequearTablaUsuario() {
     	boolean prueba = gestor.chequearYaEnTabla(BaseDeDatos.getStatement(), "andrea");
        	assertTrue(prueba);		
-   	}
-    
-    @Test
-    public void testanyadirFilaATablauUsuario(){
-    	boolean prueba = gestor.anyadirFilaATablauUsuario(BaseDeDatos.getStatement(), "Simon", "xxx");
-    	assertFalse(prueba);
-    }
-    
-    @Test
-    public void testcambiarContrasenya(){
-    	boolean prueba = gestor.cambiarContrasenya(BaseDeDatos.getStatement(), "Simon", "contrasenyaNueva");
-    	assertTrue(prueba);
-    }
-    
-    @Test
-    public void testchequearYaEnTablaLOGIN(){
-    	boolean prueba;
+       	
+       	boolean prueba1 = gestor.anyadirFilaATablauUsuario(BaseDeDatos.getStatement(), "Simon", "xxx");
+    	assertFalse(prueba1);
+    	
+    	boolean prueba11 = gestor.cambiarContrasenya(BaseDeDatos.getStatement(), "Simon", "contrasenyaNueva");
+    	assertTrue(prueba11);
+    	
+    	boolean prueba111;
     	int i;
-    	for(i=0; i<10000; i++){
+    	for(i=0; i<1000; i++){
     		String aux  = Integer.toString(i);
-    		System.out.println(aux);
-	    	prueba = gestor.chequearYaEnTablaLOGIN(BaseDeDatos.getStatement(), aux, aux);
-	    	assertFalse(prueba);
+	    	prueba111 = gestor.chequearYaEnTablaLOGIN(BaseDeDatos.getStatement(), aux, aux);
+	    	assertFalse(prueba111);
     	}
-    }
-    
+    	    	
+   	}
+        
 }
